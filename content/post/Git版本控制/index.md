@@ -3,13 +3,13 @@ title: Git Practice
 description: 实际开发过程中的git使用
 # slug: hello-world
 date: 2025-03-24 00:00:00+0000
-image: cover.png
+
 categories:
     - Tools
 tags:
     - Git
     - vscode
-weight: 1       # You can add weight to some posts to override the default sorting (date descending)
+weight: 2      # You can add weight to some posts to override the default sorting (date descending)
 ---
 
 
