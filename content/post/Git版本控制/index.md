@@ -12,8 +12,13 @@ tags:
 weight: 2      # You can add weight to some posts to override the default sorting (date descending)
 ---
 
+## 学习网站
+[Learn Git Branching](https://learngitbranching.js.org/?locale=zh_CN)
 
-# git代码（基于实际开发流程）
+[Git文档](https://git-scm.com/doc)
+
+
+## git代码（基于实际开发流程）
 
 ps:在vscode中可以可视化仓库的变化情况
 
