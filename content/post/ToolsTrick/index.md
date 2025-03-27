@@ -9,7 +9,7 @@ tags:
     - copliot
 ---
 
-## VSCode中Github Copilot在SSH远程环境中无法登录问题
+## 1. VSCode中Github Copilot在SSH远程环境中无法登录问题
 
 ### 1. 在VS Code中，按F1键调出命令行，输入settings.json，选择远程环境中的配置文件：
 ![alt text](asserts/copliot.png)

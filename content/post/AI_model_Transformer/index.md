@@ -1,13 +1,29 @@
+---
+title: AI_model_Transformer
+description: NLP领域Transformer模型学习
+date: 2025-03-26 00:00:00+0000
+image: cover.png
+categories:
+    - AI
+tags:
+    - NLP
+
+---
+
 [Transformer模型详解（图解最完整版）](https://zhuanlan.zhihu.com/p/338817680)
 
 
 [Transformer模型](https://mp.weixin.qq.com/s/WDq8tUpfiKHNC6y_8pgHoA)
 
+[Transformer代码详解](https://zhuanlan.zhihu.com/p/403433120)
+
 **如果你开始提问，那说明你开始进步了！**
 
-    前言：一直有个困惑？看完了整个过程，具体是怎么是怎么实现翻译功能的？后知后觉的理解：一连串的变换矩阵变换，最终只是为了找到不同词库中的位置！
+    前言：一直有个困惑？看完了整个过程，具体是怎么是怎么实现翻译功能的？
+    
+    后知后觉的理解：一连串的变换矩阵变换，最终只是为了找到不同词库中的位置！
 
-## 词的Embedding怎么表示的？
+## 1. 词的Embedding怎么表示的？
 
 **简洁回答：使用训练模型得出一串向量！**
 
@@ -53,7 +69,7 @@ GloVe 适用于静态的词向量训练，一旦训练完成，所有单词的�
 - Word2Vec 和 GloVe 生成的词向量是固定的，适用于大部分 NLP 任务。  
 - Transformer（如 BERT）生成的词向量是动态的，更适用于需要理解上下文的任务（如问答、文本生成）。
 ？
-## 位置Embedding怎么表示？
+## 2. 位置Embedding怎么表示？
 
 **简介回答：公式计算**
 ![alt text](image.png)
@@ -104,22 +120,22 @@ Transformer 需要将这个句子转换为向量表示，其中包含单词的�
 - **Position Embedding** 通过正弦和余弦函数编码位置，使模型能感知单词的顺序。  
 - **二者相加** 形成 Transformer 的输入，使得模型在不使用 RNN 的情况下仍然能捕捉句子结构信息。
 
-## Encode是怎么工作的？
+## 3. Encode是怎么工作的？
 
 内部`Multi-Head Attention`，是由多个 `Self-Attention`组成的。一些列的矩阵变换最终得到C矩阵。
 
-## 怎么得到C矩阵？
+## 4. 怎么得到C矩阵？
 
 上一个问题实际已经回答。
 
-## C矩阵的内部信息是什么样的?
+## 5. C矩阵的内部信息是什么样的?
 
 经过特殊编码，且的维度和原始矩阵X一致的输入信息。
 
-## Decode内部是怎么实现的？
+## 6. Decode内部是怎么实现的？
 
 两个`Multi-Head Attention`，第一个负责 `Masked`
 
-## Masked怎么实现？
+## 7. Masked怎么实现？
 
 Mask矩阵，将数据掩盖。
