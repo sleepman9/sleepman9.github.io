@@ -1,7 +1,8 @@
 ---
 title: Tools Trick
 description: 一些关于开发过程中解决的配置技巧
-date: 2025-03-24 00:00:00+0000
+date: 2025-03-24 
+image: cover.jpg
 categories:
     - Tools
 tags:

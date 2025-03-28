@@ -129,8 +129,9 @@
   //文章封面高度更改
   .article-list article .article-image img {
     width: 100%;
-    height: 100px;
+    height: 200px;
     object-fit: cover;
+  
   
     @include respond(md) {
       height: 200px;
