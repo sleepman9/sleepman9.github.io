@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Markdown on UNO的个人主页</title><link>https://sleepman9.github.io/tags/markdown/</link><description>Recent content in Markdown on UNO的个人主页</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 27 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sleepman9.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml"/><item><title>Template Format</title><link>https://sleepman9.github.io/p/format/</link><pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/format/</guid><description>&lt;img src="https://sleepman9.github.io/p/format/cover.jpg" alt="Featured image of post Template Format" />&lt;h2 id="颜色块-提示">颜色块-提示
+&lt;/h2>&lt;blockquote>
+&lt;p>Photo by &lt;a class="link" href="https://unsplash.com/@pawel_czerwinski" target="_blank" rel="noopener"
+>Pawel Czerwinski&lt;/a> on &lt;a class="link" href="https://unsplash.com/" target="_blank" rel="noopener"
+>Unsplash&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;h2 id="可视化展示">可视化展示
+&lt;/h2>&lt;!-- https://github.com/kyechan99/capsule-render -->
+&lt;p align="center">
+&lt;img src="https://capsule-render.vercel.app/api?type=waving&amp;height=300&amp;color=timeGradient&amp;text=Raincarnator&amp;desc=Programming%20/%20Design%20/%20ACGN&amp;descAlignY=54&amp;fontAlignY=40&amp;fontSize=80&amp;descAlign=62&amp;animation=fadeIn" />
+&lt;/p>
+&lt;p align="center">
+&lt;p align="center">你好，我是&lt;b>失迹&lt;/b>。&lt;br/>一位 &lt;b>编程 / 设计 / ACGN&lt;/b> 爱好者。&lt;/p>
+&lt;p align="center">Hi, I am &lt;b>Raincarnator&lt;/b>.&lt;br/>A &lt;b>Programming / Design / ACGN&lt;/b> enthusiast.&lt;/p>
+&lt;/p>
+&lt;p align="center">
+&lt;!-- https://github.com/anuraghazra/github-readme-stats -->
+&lt;img align="center" width="400" src="https://github-readme-stats.vercel.app/api?username=Raincarnator&amp;theme=transparent&amp;show_icons=true&amp;hide_border=true&amp;rank_icon=github" />
+&lt;!-- https://github.com/DenverCoder1/github-readme-streak-stats -->
+&lt;img align="center" width="400" src="https://streak-stats.demolab.com?user=Raincarnator&amp;theme=transparent&amp;date_format=%5BY.%5Dn.j&amp;hide_border=true" />
+&lt;br/>
+&lt;!-- https://github.com/Ashutosh00710/github-readme-activity-graph -->
+&lt;img width="800" src="https://github-readme-activity-graph.vercel.app/graph?username=Raincarnator&amp;theme=github-compact&amp;hide_border=true&amp;area=true" />
+&lt;br/>
+&lt;!-- https://github.com/anuraghazra/github-readme-stats -->
+&lt;img align="center" src="https://github-readme-stats.vercel.app/api/wakatime?username=ArauKaede&amp;theme=transparent&amp;hide_border=true&amp;layout=compact&amp;langs_count=22" />
+&lt;!-- https://github.com/anuraghazra/github-readme-stats -->
+&lt;img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Raincarnator&amp;theme=transparent&amp;hide_border=true&amp;layout=donut-vertical&amp;langs_count=6" />
+&lt;br/>
+&lt;!-- https://github.com/tandpfun/skill-icons -->
+&lt;img align="center" src="https://skillicons.dev/icons?i=cpp,kotlin,html,css,js,ts,java,md,latex,windows,vscode,androidstudio,ps,azure,netlify,cloudflare,github,git,npm,materialui&amp;theme=light&amp;perline=10" />
+&lt;/p>
+&lt;!-- https://github.com/badges/shields -->
+&lt;p align="center">
+&lt;a href="https://wakatime.com/@ArauKaede">&lt;img src="https://wakatime.com/badge/user/9b029946-d3d7-4021-993b-1ee294b8297a.svg" >&lt;/a>
+&lt;img src="https://komarev.com/ghpvc/?username=Raincarnator&amp;abbreviated=true"/>
+&lt;img src="https://img.shields.io/github/stars/Raincarnator?style=flat&amp;logoColor=%231677ff&amp;labelColor=rgb(89, 89, 89)&amp;color=rgb(3, 126, 187)"/>
+&lt;img src="https://img.shields.io/github/followers/Raincarnator?style=flat&amp;logoColor=%231677ff&amp;labelColor=rgb(89, 89, 89)&amp;color=rgb(3, 126, 187)"/>
+&lt;/p>
+&lt;!-- https://github.com/kyechan99/capsule-render -->
+&lt;p align="center">
+&lt;img src="https://capsule-render.vercel.app/api?type=waving&amp;height=300&amp;color=timeGradient&amp;text=Flowers%20will%20bloom%20in%20the%20world,%20and%20magnificent%20and%20immortal%20things%20will%20follow.&amp;desc=Reincarnatey%20Network%20Co.,%20Ltd&amp;descAlignY=93&amp;fontAlignY=60&amp;fontSize=20&amp;descAlign=50&amp;animation=fadeIn&amp;descSize=15&amp;section=footer&amp;fontAlign=50" />
+&lt;/p>
+&lt;h2 id="video">video
+&lt;/h2>&lt;p>For more details, check out the &lt;a class="link" href="https://stack.jimmycai.com/writing/shortcodes" target="_blank" rel="noopener"
+>documentation&lt;/a>.&lt;/p>
+&lt;h3 id="bilibili-video">Bilibili video
+&lt;/h3>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1d4411N7zD"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h3 id="tencent-video">Tencent video
+&lt;/h3>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://v.qq.com/txp/iframe/player.html?vid=g0014r3khdw&amp;auto=0"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h3 id="youtube-video">YouTube video
+&lt;/h3>&lt;div class="video-wrapper">
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/0qwALOOvUik"
+allowfullscreen
+title="YouTube Video"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h3 id="generic-video-file">Generic video file
+&lt;/h3>&lt;div class="video-wrapper">
+&lt;video
+controls
+src="https://www.w3schools.com/tags/movie.mp4"
+>
+&lt;p>
+Your browser doesn't support HTML5 video. Here is a
+&lt;a href="https://www.w3schools.com/tags/movie.mp4">link to the video&lt;/a> instead.
+&lt;/p>
+&lt;/video>
+&lt;/div>
+&lt;h2 id="gist">Gist
+&lt;/h2>&lt;script src="https://gist.github.com/CaiJimmy/e2751a943de10b2a5b3a8a6c2120cb86.js">&lt;/script>
+&lt;h2 id="gitlab">GitLab
+&lt;/h2>&lt;script
+type="application/javascript"
+src="https://gitlab.com/-/snippets/2589724.js"
+>&lt;/script>
+&lt;h2 id="quote">Quote
+&lt;/h2>&lt;blockquote>
+&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>&lt;span class="cite">&lt;span>― &lt;/span>&lt;span>A famous person, &lt;/span>&lt;a href="https://en.wikipedia.org/wiki/Book">&lt;cite>The book they wrote&lt;/cite>&lt;/a>&lt;/span>&lt;/blockquote>
+&lt;hr></description></item></channel></rss>

@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UNO的个人主页</title><link>https://sleepman9.github.io/</link><description>Recent content on UNO的个人主页</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sleepman9.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Template Format</title><link>https://sleepman9.github.io/p/format/</link><pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/format/</guid><description>&lt;img src="https://sleepman9.github.io/p/format/cover.jpg" alt="Featured image of post Template Format" />&lt;h2 id="颜色块-提示">颜色块-提示
+&lt;/h2>&lt;blockquote>
+&lt;p>Photo by &lt;a class="link" href="https://unsplash.com/@pawel_czerwinski" target="_blank" rel="noopener"
+>Pawel Czerwinski&lt;/a> on &lt;a class="link" href="https://unsplash.com/" target="_blank" rel="noopener"
+>Unsplash&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;h2 id="可视化展示">可视化展示
+&lt;/h2>&lt;!-- https://github.com/kyechan99/capsule-render -->
+&lt;p align="center">
+&lt;img src="https://capsule-render.vercel.app/api?type=waving&amp;height=300&amp;color=timeGradient&amp;text=Raincarnator&amp;desc=Programming%20/%20Design%20/%20ACGN&amp;descAlignY=54&amp;fontAlignY=40&amp;fontSize=80&amp;descAlign=62&amp;animation=fadeIn" />
+&lt;/p>
+&lt;p align="center">
+&lt;p align="center">你好，我是&lt;b>失迹&lt;/b>。&lt;br/>一位 &lt;b>编程 / 设计 / ACGN&lt;/b> 爱好者。&lt;/p>
+&lt;p align="center">Hi, I am &lt;b>Raincarnator&lt;/b>.&lt;br/>A &lt;b>Programming / Design / ACGN&lt;/b> enthusiast.&lt;/p>
+&lt;/p>
+&lt;p align="center">
+&lt;!-- https://github.com/anuraghazra/github-readme-stats -->
+&lt;img align="center" width="400" src="https://github-readme-stats.vercel.app/api?username=Raincarnator&amp;theme=transparent&amp;show_icons=true&amp;hide_border=true&amp;rank_icon=github" />
+&lt;!-- https://github.com/DenverCoder1/github-readme-streak-stats -->
+&lt;img align="center" width="400" src="https://streak-stats.demolab.com?user=Raincarnator&amp;theme=transparent&amp;date_format=%5BY.%5Dn.j&amp;hide_border=true" />
+&lt;br/>
+&lt;!-- https://github.com/Ashutosh00710/github-readme-activity-graph -->
+&lt;img width="800" src="https://github-readme-activity-graph.vercel.app/graph?username=Raincarnator&amp;theme=github-compact&amp;hide_border=true&amp;area=true" />
+&lt;br/>
+&lt;!-- https://github.com/anuraghazra/github-readme-stats -->
+&lt;img align="center" src="https://github-readme-stats.vercel.app/api/wakatime?username=ArauKaede&amp;theme=transparent&amp;hide_border=true&amp;layout=compact&amp;langs_count=22" />
+&lt;!-- https://github.com/anuraghazra/github-readme-stats -->
+&lt;img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Raincarnator&amp;theme=transparent&amp;hide_border=true&amp;layout=donut-vertical&amp;langs_count=6" />
+&lt;br/>
+&lt;!-- https://github.com/tandpfun/skill-icons -->
+&lt;img align="center" src="https://skillicons.dev/icons?i=cpp,kotlin,html,css,js,ts,java,md,latex,windows,vscode,androidstudio,ps,azure,netlify,cloudflare,github,git,npm,materialui&amp;theme=light&amp;perline=10" />
+&lt;/p>
+&lt;!-- https://github.com/badges/shields -->
+&lt;p align="center">
+&lt;a href="https://wakatime.com/@ArauKaede">&lt;img src="https://wakatime.com/badge/user/9b029946-d3d7-4021-993b-1ee294b8297a.svg" >&lt;/a>
+&lt;img src="https://komarev.com/ghpvc/?username=Raincarnator&amp;abbreviated=true"/>
+&lt;img src="https://img.shields.io/github/stars/Raincarnator?style=flat&amp;logoColor=%231677ff&amp;labelColor=rgb(89, 89, 89)&amp;color=rgb(3, 126, 187)"/>
+&lt;img src="https://img.shields.io/github/followers/Raincarnator?style=flat&amp;logoColor=%231677ff&amp;labelColor=rgb(89, 89, 89)&amp;color=rgb(3, 126, 187)"/>
+&lt;/p>
+&lt;!-- https://github.com/kyechan99/capsule-render -->
+&lt;p align="center">
+&lt;img src="https://capsule-render.vercel.app/api?type=waving&amp;height=300&amp;color=timeGradient&amp;text=Flowers%20will%20bloom%20in%20the%20world,%20and%20magnificent%20and%20immortal%20things%20will%20follow.&amp;desc=Reincarnatey%20Network%20Co.,%20Ltd&amp;descAlignY=93&amp;fontAlignY=60&amp;fontSize=20&amp;descAlign=50&amp;animation=fadeIn&amp;descSize=15&amp;section=footer&amp;fontAlign=50" />
+&lt;/p>
+&lt;h2 id="video">video
+&lt;/h2>&lt;p>For more details, check out the &lt;a class="link" href="https://stack.jimmycai.com/writing/shortcodes" target="_blank" rel="noopener"
+>documentation&lt;/a>.&lt;/p>
+&lt;h3 id="bilibili-video">Bilibili video
+&lt;/h3>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1d4411N7zD"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h3 id="tencent-video">Tencent video
+&lt;/h3>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://v.qq.com/txp/iframe/player.html?vid=g0014r3khdw&amp;auto=0"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h3 id="youtube-video">YouTube video
+&lt;/h3>&lt;div class="video-wrapper">
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/0qwALOOvUik"
+allowfullscreen
+title="YouTube Video"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h3 id="generic-video-file">Generic video file
+&lt;/h3>&lt;div class="video-wrapper">
+&lt;video
+controls
+src="https://www.w3schools.com/tags/movie.mp4"
+>
+&lt;p>
+Your browser doesn't support HTML5 video. Here is a
+&lt;a href="https://www.w3schools.com/tags/movie.mp4">link to the video&lt;/a> instead.
+&lt;/p>
+&lt;/video>
+&lt;/div>
+&lt;h2 id="gist">Gist
+&lt;/h2>&lt;script src="https://gist.github.com/CaiJimmy/e2751a943de10b2a5b3a8a6c2120cb86.js">&lt;/script>
+&lt;h2 id="gitlab">GitLab
+&lt;/h2>&lt;script
+type="application/javascript"
+src="https://gitlab.com/-/snippets/2589724.js"
+>&lt;/script>
+&lt;h2 id="quote">Quote
+&lt;/h2>&lt;blockquote>
+&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>&lt;span class="cite">&lt;span>― &lt;/span>&lt;span>A famous person, &lt;/span>&lt;a href="https://en.wikipedia.org/wiki/Book">&lt;cite>The book they wrote&lt;/cite>&lt;/a>&lt;/span>&lt;/blockquote>
+&lt;hr></description></item><item><title>Git Practice</title><link>https://sleepman9.github.io/p/git-practice/</link><pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/git-practice/</guid><description>&lt;img src="https://sleepman9.github.io/p/git-practice/cover.webp" alt="Featured image of post Git Practice" />&lt;h2 id="学习网站">学习网站
+&lt;/h2>&lt;p>&lt;a class="link" href="https://learngitbranching.js.org/?locale=zh_CN" target="_blank" rel="noopener"
+>Learn Git Branching&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://git-scm.com/doc" target="_blank" rel="noopener"
+>Git文档&lt;/a>&lt;/p>
+&lt;h2 id="git代码基于实际开发流程">git代码（基于实际开发流程）
+&lt;/h2>&lt;p>ps:在vscode中可以可视化仓库的变化情况&lt;/p>
+&lt;p>ps:本文件主要使用命令行的形式，在vscode中可视化验证自己的操作是否正确&lt;/p>
+&lt;h2 id="1-clone代码">1. Clone代码
+&lt;/h2>&lt;ol>
+&lt;li>假设已经将代码&lt;code>clone&lt;/code>​到本地了&lt;/li>
+&lt;/ol>
+&lt;h2 id="2-拉取远程仓库最新代码">2. 拉取远程仓库最新代码
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>​&lt;code>git fetch&lt;/code>​拉取远程所有更新。&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03.png"
+width="431"
+height="401"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03_hu_b2ceea911ac98b96.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03_hu_eb844255352a0b8e.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="107"
+data-flex-basis="257px"
+>​&lt;/p>
+&lt;ul>
+&lt;li>可以点击粉色节点查看变化内容。（这里不再使用git diff命令，可视化方便直观）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>​&lt;code>git merge&lt;/code>​合并到当前分支&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65.png"
+width="425"
+height="388"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65_hu_58c9919f94ff609c.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65_hu_bd0840c3a991e83f.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="109"
+data-flex-basis="262px"
+>​&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="3提交代码">3.提交代码
+&lt;/h2>&lt;ol>
+&lt;li>​&lt;code>git add .&lt;/code>​将修改存入暂存区（stage）&lt;/li>
+&lt;li>​&lt;code>git commit -m &amp;quot;备注信息&amp;quot;&lt;/code>​提交已经存入到stage的内容&lt;/li>
+&lt;li>​&lt;code>git push origin wwh_dev&lt;/code>​将本地的&lt;code>wwh_dev&lt;/code>​分支，推送到&lt;code>origin&lt;/code>​远端&lt;/li>
+&lt;/ol>
+&lt;p>‍&lt;/p>
+&lt;p>背景：在main分支开发完毕后，在没有commit的情况下，新建了分支mph_generator_dev当作是本次开发的备份，同样在没有commit的情况下，又新建了一个分支wwh_dev当作是提交分支。&lt;/p>
+&lt;p>warning：当我执行完&lt;code>git push origin wwh_dev&lt;/code>​ 后，其他分支的内容都回到了修改前&lt;br>
+​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr.png"
+width="378"
+height="197"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr_hu_67b891a07e6d5a87.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr_hu_827500bc74a74ce3.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="460px"
+>​&lt;br>
+​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p.png"
+width="363"
+height="198"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p_hu_1d76fda89d3b8169.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p_hu_3cc845b386b99610.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="183"
+data-flex-basis="440px"
+>​&lt;/p>
+&lt;p>error:猜想造成的原因是，创建其他分支之前没有&lt;code>commit&lt;/code>​ 造成的。此想法还没有验证。（TODO）&lt;/p>
+&lt;p>main分支没有commit的情况下新建了A分支，A分支git commit之后，main分支所有修改都消失了&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;h2 id="4向管理者提交pull-requests">4.向管理者提交pull requests
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>在GUI页面中进行的。&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm.png"
+width="642"
+height="846"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm_hu_8da8d81258755ae6.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm_hu_56f223bb94384da9.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="182px"
+>​&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41.png"
+width="2072"
+height="390"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41_hu_8b1f94b446f00a0f.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41_hu_f6730684ae34fb9a.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="531"
+data-flex-basis="1275px"
+>​&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>源分支：开发完成的分支&lt;/p>
+&lt;p>目标分支：项目分支&lt;/p>
+&lt;ol start="2">
+&lt;li>
+&lt;p>解决冲突&lt;/p>
+&lt;p>在GUI界面上解决，并且在GUI界面，&lt;code>git add .&lt;/code>​和&lt;code>git commit -m &amp;quot;备注信息&amp;quot;&lt;/code>​&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>等待管理员接受PR,合并代码后，以此开发任务就完成了。&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;h3 id="41查看是否提交成功">4.1查看是否提交成功
+&lt;/h3>&lt;p>背景：在wwh_dev分支上开发，提交代码后，merge之后，想在其他分支看我提交的内容，同时保证一个分支时刻保持最新。问题来了。在Thermal5.0（想要保持最新的分支）看不到我提交的内容。&lt;/p>
+&lt;p>原因在于没有进行分支追踪：&lt;br>
+执行 &lt;code>git pull &amp;lt;远程&amp;gt; &amp;lt;分支&amp;gt;&lt;/code>​ 例如：git pull origin Thermal5.0&lt;br>
+执行之后，即可得到最新提交代码&lt;/p>
+&lt;h3 id="42-添加分支跟踪">4.2 添加分支跟踪
+&lt;/h3>&lt;p>手动：&lt;/p>
+&lt;p>​&lt;code>git branch --set-upstream-to=&amp;lt;remote_name&amp;gt;/&amp;lt;remote_branch&amp;gt; &amp;lt;branch_name&amp;gt;&lt;/code>​&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>新建分支的时候建立追踪关系：&lt;/p>
+&lt;p>​&lt;code>git checkout -b my_branch origin/develop&lt;/code>​&lt;/p>
+&lt;p>​&lt;code>git switch -c my_branch origin/develop&lt;/code>​&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;h3 id="43-查看跟踪分支">4.3 查看跟踪分支
+&lt;/h3>&lt;p>‍&lt;/p>
+&lt;p>git branch -vv&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;h2 id="5-再开启一个新开发任务">5. 再开启一个新开发任务
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>分支分配&lt;/p>
+&lt;ol>
+&lt;li>​&lt;code>main&lt;/code>​分支，保持和origin远端的同步，不要在这个上面开发&lt;/li>
+&lt;li>​&lt;code>dev&lt;/code>​分支，每次最新任务的开发分支&lt;/li>
+&lt;li>​&lt;code>dev_xx_backup&lt;/code>​分支，开发完一个任务后的备份，拷贝来自&lt;code>dev&lt;/code>​分支，包含任务测试代码&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>分支管理&lt;/p>
+&lt;ol>
+&lt;li>每次&lt;code>push&lt;/code>​提交后，等待管理员检查无误后，将&lt;code>dev&lt;/code>​分支删除&lt;/li>
+&lt;li>保证&lt;code>main&lt;/code>​分支最新，从&lt;code>main&lt;/code>​分支中新建一个分支当成当前任务的分支&lt;/li>
+&lt;li>此时&lt;code>branch&lt;/code>​结构中只包含，一个&lt;code>main&lt;/code>​分支，一个&lt;code>dev&lt;/code>​分支，和&lt;code>每次任务的备份&lt;/code>​分支&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;p>‍&lt;/p>
+&lt;h2 id="6source-control-graph">6.SOURCE CONTROL GRAPH
+&lt;/h2>&lt;p>ps：图片都来自&lt;code>vscode&lt;/code>​&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>来自于&lt;code>git fetch&lt;/code>​之后&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/assets/%e5%b1%8f%e5%b9%95%e6%88%aa%e5%9b%be%202024-11-12%20143950-20241112152941-6iufqqs.png"
+loading="lazy"
+alt="屏幕截图 2024-11-12 143950"
+>​&lt;/p>
+&lt;p>解释：&lt;/p>
+&lt;ol>
+&lt;li>每一个实心圆代表每一次提交节点&lt;/li>
+&lt;li>不同颜色的线，表示不同开发人员的开发路线&lt;/li>
+&lt;li>&lt;span data-type="text" style="background-color: var(--b3-card-info-background); color: var(--b3-card-info-color);">蓝色空心圆&lt;/span>表示当前所在的节点&lt;/li>
+&lt;li>圆环表示合并操作&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>来自&lt;code>git merge&lt;/code>​之后&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33.png"
+width="458"
+height="286"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33_hu_a74d3a04e2b71395.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33_hu_2690fe9e1b9906c4.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="384px"
+>​&lt;/p>
+&lt;ol>
+&lt;li>框中标注的部分，当时是在GUI界面上修改分支冲突的，所以会从蓝色线程中分出一个分支到橙色线程的合并&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p></description></item><item><title>AI_Model_Sep2Sep</title><link>https://sleepman9.github.io/p/ai_model_sep2sep/</link><pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/ai_model_sep2sep/</guid><description>&lt;img src="https://sleepman9.github.io/p/ai_model_sep2sep/cover.png" alt="Featured image of post AI_Model_Sep2Sep" />&lt;p>所谓Seq2Seq(Sequence to Sequence)，即序列到序列模型，就是一种能够根据给定的序列，通过特定的生成方法生成另一个序列的方法，同时这两个序列可以不等长。这种结构又叫Encoder-Decoder模型，即编码-解码模型，其是RNN的一个变种，为了解决RNN要求序列等长的问题。&lt;/p></description></item><item><title>Hugo Github Pages 搭建个人博客</title><link>https://sleepman9.github.io/p/hugo-github-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link><pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/hugo-github-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid><description>&lt;img src="https://sleepman9.github.io/p/hugo-github-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/cover.png" alt="Featured image of post Hugo Github Pages 搭建个人博客" />&lt;h2 id="手动搭建博客经历">手动搭建博客经历
+&lt;/h2>&lt;h3 id="手动方式">手动方式：
+&lt;/h3>&lt;ol>
+&lt;li>安装：&lt;code>hugo&lt;/code>, &lt;code>go&lt;/code>.&lt;/li>
+&lt;li>clone 主题：&lt;code>git submodule add theme&lt;/code>.&lt;/li>
+&lt;li>hugo server 本地调试。&lt;/li>
+&lt;li>设置GitHub Pages主页信息&lt;/li>
+&lt;li>使用GitHub Actions 自动构建/部署（CI/CD）&lt;/li>
+&lt;li>本地提交到GitHub仓库&lt;/li>
+&lt;/ol>
+&lt;p>上述过程可以参考
+&lt;a class="link" href="https://blog.taoluyuan.com/blog/github-workflows" target="_blank" rel="noopener"
+>通过 Github workflows CI/CD 自动化部署 Github Pages hugo 免费博客&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://jianzhnie.github.io/post/hugo_site/" target="_blank" rel="noopener"
+>Hugo + Github Pages 搭建个人博客&lt;/a>&lt;/p>
+&lt;h3 id="template方式">template方式
+&lt;/h3>&lt;p>直到后来遇到了&lt;strong>自动挡&lt;/strong>，直接使用 theme template套模板即可（修改个人信息，写post）&lt;/p>
+&lt;h3 id="个人感悟">个人感悟
+&lt;/h3>&lt;p>最近在接触软件开发的内容，其中对于CI/CD部分一直存在一些疑惑，直到自己搭建博客，对这一块的工作流有了进一步的理解。&lt;/p>
+&lt;h2 id="hugo-stack-theme-魔改">hugo stack theme 魔改
+&lt;/h2>&lt;blockquote>
+&lt;p>多看优秀的主题，才知道怎么魔改；链接及其评论作者都是与此相关的主题；&lt;/p>&lt;/blockquote>
+&lt;p>&lt;a class="link" href="https://linsnow.cn/posts/bloglab/hugo-stack/modify-hugo/" target="_blank" rel="noopener"
+>bloger1&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.xalaok.top/post/stack-modify/" target="_blank" rel="noopener"
+>stack 魔改美化&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://thirdshire.com/hugo-stack-renovation/" target="_blank" rel="noopener"
+>stack 魔改美化_2&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.reincarnatey.net/2023/build-hugo-blog-with-stack-mod/" target="_blank" rel="noopener"
+>建站技术 | 使用 Hugo + Stack 简单搭建一个博客&lt;/a>&lt;/p></description></item><item><title>Investment</title><link>https://sleepman9.github.io/p/investment/</link><pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/investment/</guid><description>&lt;img src="https://sleepman9.github.io/p/investment/cover.jpg" alt="Featured image of post Investment" />&lt;blockquote>
+&lt;p>Big Market决定了一家公司的上限。&lt;/p>&lt;/blockquote>
+&lt;h2 id="评估一家公司质地的指标">评估一家公司质地的指标
+&lt;/h2>&lt;p>&lt;img src="https://sleepman9.github.io/p/investment/%E6%94%B6%E6%94%AF%E6%8B%86%E8%A7%A3.jpg"
+width="2670"
+height="1200"
+srcset="https://sleepman9.github.io/p/investment/%E6%94%B6%E6%94%AF%E6%8B%86%E8%A7%A3_hu_c6698bd3f0a516bb.jpg 480w, https://sleepman9.github.io/p/investment/%E6%94%B6%E6%94%AF%E6%8B%86%E8%A7%A3_hu_abaf1c272e628335.jpg 1024w"
+loading="lazy"
+alt="收支拆解"
+class="gallery-image"
+data-flex-grow="222"
+data-flex-basis="534px"
+>&lt;/p>
+&lt;h3 id="归母净利润">归母净利润
+&lt;/h3>&lt;p>归母净利润（归属于母公司股东的净利润，Net Profit Attributable to Parent Company）是企业财务报表中的一个关键指标，指的是企业在扣除所有成本、费用、税费后，最终归属于母公司股东的净利润。&lt;/p>
+$$
+\text{归母净利润} = \text{净利润} - \text{少数股东损益}
+$$&lt;p>其中：&lt;/p>
+&lt;p>净利润：企业的总利润扣除所得税后的最终利润。&lt;/p>
+&lt;p>少数股东损益：子公司中属于非母公司股东（少数股东）的部分利润。&lt;/p>
+&lt;pre>&lt;code>净利润:指企业在一定会计期间内，营业收入扣除营业成本、税费、各项费用、投资损益等后的最终利润，反映了企业的最终盈利水平。
+&lt;/code>&lt;/pre>
+&lt;h3 id="负债率">负债率
+&lt;/h3>$$ \text{负债率} = \frac{\text{总负债}}{\text{总资产}} \times 100\% $$&lt;p>负债分有息负债与无息负债。有息负债指银行贷款可转债，发行债券等需要还本还息的借款。无息负债一般是指拖欠上下游的经营负债，要还本不用还息。当然如果公司足够强势，其实可以在资产负债表上形成一笔长期经营负债供公司使用。当然从我的角度出发，一切负债都是不稳定的因素。&lt;/p>
+&lt;p>比如在经营困难的时候，负债是会压倒骆驼的最后一根稻草。我喜欢选择一些低负债率帐面现金多的公司，哪怕公司今年没有一分钱营业收入，把上下游欠款和银行贷款一还，还能靠着资产负债表的现金，产生投资收益利息收入，这样利润表上面不会出现亏损，分红也能持续。这一点很关键，它可以避免股票因为亏损而出现st。哪怕出现最糟糕的情况，清算价值也能拿回70%本金。&lt;/p>
+&lt;p>流动比率也是一个衡量指标（流动资产/流动负债），这个指标可以反映企业的短期偿债能力，一般我喜欢这个指标大于2的企业。&lt;/p>
+&lt;h2 id="可转债的几个措施">可转债的几个措施
+&lt;/h2>&lt;h3 id="强赎">强赎
+&lt;/h3>&lt;p>满足特定条件后，公司将可转债强制从持有人手中提前赎回。（强赎条件苛刻）&lt;/p>
+&lt;p>满足强赎后为什么不发强赎条款 (&lt;a class="link" href="https://mp.weixin.qq.com/s/Pj1VF6vwEBqVhyHmGD7n1" target="_blank" rel="noopener"
+>https://mp.weixin.qq.com/s/Pj1VF6vwEBqVhyHmGD7n1&lt;/a>)&lt;/p>
+&lt;h3 id="回售">回售
+&lt;/h3>&lt;p>股价下跌太厉害，要求公司赎回转债。&lt;/p>
+&lt;h3 id="下修">下修
+&lt;/h3>&lt;p>股价下跌太厉害，修改转股价值，将可转债的价格拉回到100面值左右。&lt;/p></description></item><item><title>AI_Model_Transformer</title><link>https://sleepman9.github.io/p/ai_model_transformer/</link><pubDate>Wed, 26 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/ai_model_transformer/</guid><description>&lt;img src="https://sleepman9.github.io/p/ai_model_transformer/cover.png" alt="Featured image of post AI_Model_Transformer" />&lt;p>&lt;strong>如果你开始提问，那说明你开始进步了！&lt;/strong>&lt;/p>
+&lt;pre>&lt;code>前言：一直有个困惑？看完了整个过程，具体是怎么是怎么实现翻译功能的？
+后知后觉的理解：一连串的变换矩阵变换，最终只是为了找到不同词库中的位置！
+&lt;/code>&lt;/pre>
+&lt;h2 id="词的embedding怎么表示的">词的Embedding怎么表示的？
+&lt;/h2>&lt;p>&lt;strong>简洁回答：使用训练模型得出一串向量！&lt;/strong>&lt;/p>
+&lt;p>单词的 Embedding 有很多种方式可以获取，例如可以采用 Word2Vec、Glove 等算法预训练得到，也可以在 Transformer 中训练得到。举个例子&lt;/p>
+&lt;p>假设我们有一个句子：&lt;/p>
+&lt;p>&lt;strong>&amp;ldquo;I love machine learning.&amp;rdquo;&lt;/strong>&lt;/p>
+&lt;p>我们希望将其中的单词转换为向量表示（Embedding）。下面分别介绍三种方式：&lt;/p>
+&lt;h3 id="1-使用-word2vec-获取单词-embedding">&lt;strong>1. 使用 Word2Vec 获取单词 Embedding&lt;/strong>
+&lt;/h3>&lt;p>Word2Vec 通过上下文关系学习单词的语义，通常有 &lt;strong>CBOW（Continuous Bag of Words）&lt;/strong> 和 &lt;strong>Skip-gram&lt;/strong> 两种方式。假设我们使用了 Word2Vec 训练的预训练模型：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Word2Vec(&amp;quot;I&amp;quot;) → [0.12, -0.45, 0.88, ...]&lt;/code>&lt;/li>
+&lt;li>&lt;code>Word2Vec(&amp;quot;love&amp;quot;) → [-0.56, 0.77, -0.34, ...]&lt;/code>&lt;/li>
+&lt;li>&lt;code>Word2Vec(&amp;quot;machine&amp;quot;) → [0.67, -0.12, 0.45, ...]&lt;/code>&lt;/li>
+&lt;li>&lt;code>Word2Vec(&amp;quot;learning&amp;quot;) → [-0.23, 0.56, -0.78, ...]&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>这些向量是从大量文本中学习到的，可以用于 NLP 任务，比如情感分析、文本分类等。&lt;/p>
+&lt;h3 id="2-使用-glove-获取单词-embedding">&lt;strong>2. 使用 GloVe 获取单词 Embedding&lt;/strong>
+&lt;/h3>&lt;p>GloVe（Global Vectors for Word Representation）基于词共现矩阵构建词向量，它关注整个文本语料中词与词的共现关系。例如：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>GloVe(&amp;quot;I&amp;quot;) → [0.08, -0.34, 0.91, ...]&lt;/code>&lt;/li>
+&lt;li>&lt;code>GloVe(&amp;quot;love&amp;quot;) → [-0.63, 0.80, -0.25, ...]&lt;/code>&lt;/li>
+&lt;li>&lt;code>GloVe(&amp;quot;machine&amp;quot;) → [0.72, -0.10, 0.50, ...]&lt;/code>&lt;/li>
+&lt;li>&lt;code>GloVe(&amp;quot;learning&amp;quot;) → [-0.18, 0.50, -0.65, ...]&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>GloVe 适用于静态的词向量训练，一旦训练完成，所有单词的表示不会随上下文变化。&lt;/p>
+&lt;h3 id="3-使用-transformer-训练得到单词-embedding">&lt;strong>3. 使用 Transformer 训练得到单词 Embedding&lt;/strong>
+&lt;/h3>&lt;p>在 Transformer 模型（如 BERT、GPT）中，单词 Embedding 是在 &lt;strong>自注意力机制&lt;/strong> 的作用下动态生成的。例如，在 BERT 预训练模型中，我们可以将句子输入到 BERT 中，得到动态的单词表示：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>BERT(&amp;quot;I&amp;quot;) → [0.10, -0.22, 0.75, ...]&lt;/code>&lt;/li>
+&lt;li>&lt;code>BERT(&amp;quot;love&amp;quot;) → [-0.50, 0.70, -0.30, ...]&lt;/code>&lt;/li>
+&lt;li>&lt;code>BERT(&amp;quot;machine&amp;quot;) → [0.65, -0.15, 0.40, ...]&lt;/code>&lt;/li>
+&lt;li>&lt;code>BERT(&amp;quot;learning&amp;quot;) → [-0.20, 0.55, -0.70, ...]&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>与 Word2Vec 和 GloVe 不同，&lt;strong>BERT 生成的单词向量会根据上下文变化&lt;/strong>，例如“bank”在“river bank”（河岸）和“bank account”（银行账户）中的表示会不同。&lt;/p>
+&lt;p>&lt;strong>总结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>Word2Vec 和 GloVe 生成的词向量是固定的，适用于大部分 NLP 任务。&lt;/li>
+&lt;li>Transformer（如 BERT）生成的词向量是动态的，更适用于需要理解上下文的任务（如问答、文本生成）。
+？&lt;/li>
+&lt;/ul>
+&lt;h2 id="位置embedding怎么表示">位置Embedding怎么表示？
+&lt;/h2>&lt;p>&lt;strong>简介回答：公式计算&lt;/strong>
+&lt;img src="https://sleepman9.github.io/p/ai_model_transformer/image.png"
+width="640"
+height="136"
+srcset="https://sleepman9.github.io/p/ai_model_transformer/image_hu_77f379bbb6b8026b.png 480w, https://sleepman9.github.io/p/ai_model_transformer/image_hu_6c9c64d4025d316d.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="470"
+data-flex-basis="1129px"
+>&lt;/p>
+&lt;p>假设我们有一个句子：&lt;/p>
+&lt;p>&lt;strong>&amp;ldquo;I love NLP models.&amp;rdquo;&lt;/strong>&lt;/p>
+&lt;p>Transformer 需要将这个句子转换为向量表示，其中包含单词的词向量（Word Embedding）和位置向量（Position Embedding）。假设我们使用 4 维的嵌入表示（为了简化示例），即每个单词的词向量和位置向量的维度均为 4。&lt;/p>
+&lt;h3 id="1-计算单词的-embeddingword-embedding">&lt;strong>1. 计算单词的 Embedding（Word Embedding）&lt;/strong>
+&lt;/h3>&lt;p>假设使用预训练的 Word2Vec 或 Transformer 训练得到的单词嵌入：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Embedding(&amp;quot;I&amp;quot;) = [0.1, 0.3, 0.5, 0.7]&lt;/code>&lt;/li>
+&lt;li>&lt;code>Embedding(&amp;quot;love&amp;quot;) = [0.2, 0.4, 0.6, 0.8]&lt;/code>&lt;/li>
+&lt;li>&lt;code>Embedding(&amp;quot;NLP&amp;quot;) = [0.3, 0.5, 0.7, 0.9]&lt;/code>&lt;/li>
+&lt;li>&lt;code>Embedding(&amp;quot;models&amp;quot;) = [0.4, 0.6, 0.8, 1.0]&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-计算位置-embeddingposition-embedding">&lt;strong>2. 计算位置 Embedding（Position Embedding）&lt;/strong>
+&lt;/h3>&lt;p>按照 Transformer 提出的正弦/余弦公式计算位置编码（这里只是示例，实际计算会更复杂）：&lt;/p>
+&lt;p>假设：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>pos = 0&lt;/code>（第一个单词 “I” 的位置），&lt;/li>
+&lt;li>&lt;code>pos = 1&lt;/code>（第二个单词 “love” 的位置），&lt;/li>
+&lt;li>&lt;code>pos = 2&lt;/code>（第三个单词 “NLP” 的位置），&lt;/li>
+&lt;li>&lt;code>pos = 3&lt;/code>（第四个单词 “models” 的位置）。&lt;/li>
+&lt;/ul>
+&lt;p>使用正弦和余弦函数计算的示例值（假设 4 维度 PE）：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>PE(0) = [sin(0), cos(0), sin(0/10000^(2/4)), cos(0/10000^(2/4))] = [0.0, 1.0, 0.0, 1.0]&lt;/code>&lt;/li>
+&lt;li>&lt;code>PE(1) = [sin(1), cos(1), sin(1/10000^(2/4)), cos(1/10000^(2/4))] = [0.84, 0.54, 0.01, 0.99]&lt;/code>&lt;/li>
+&lt;li>&lt;code>PE(2) = [sin(2), cos(2), sin(2/10000^(2/4)), cos(2/10000^(2/4))] = [0.91, -0.42, 0.02, 0.98]&lt;/code>&lt;/li>
+&lt;li>&lt;code>PE(3) = [sin(3), cos(3), sin(3/10000^(2/4)), cos(3/10000^(2/4))] = [0.14, -0.99, 0.03, 0.97]&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-计算最终的-transformer-输入">&lt;strong>3. 计算最终的 Transformer 输入&lt;/strong>
+&lt;/h3>&lt;p>将单词 Embedding 和位置 Embedding 相加，得到 Transformer 的输入向量：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>X(&amp;quot;I&amp;quot;) = [0.1, 0.3, 0.5, 0.7] + [0.0, 1.0, 0.0, 1.0] = [0.1, 1.3, 0.5, 1.7]&lt;/code>&lt;/li>
+&lt;li>&lt;code>X(&amp;quot;love&amp;quot;) = [0.2, 0.4, 0.6, 0.8] + [0.84, 0.54, 0.01, 0.99] = [1.04, 0.94, 0.61, 1.79]&lt;/code>&lt;/li>
+&lt;li>&lt;code>X(&amp;quot;NLP&amp;quot;) = [0.3, 0.5, 0.7, 0.9] + [0.91, -0.42, 0.02, 0.98] = [1.21, 0.08, 0.72, 1.88]&lt;/code>&lt;/li>
+&lt;li>&lt;code>X(&amp;quot;models&amp;quot;) = [0.4, 0.6, 0.8, 1.0] + [0.14, -0.99, 0.03, 0.97] = [0.54, -0.39, 0.83, 1.97]&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-解释">&lt;strong>4. 解释&lt;/strong>
+&lt;/h3>&lt;p>最终输入的向量 &lt;code>X&lt;/code> 结合了单词的语义信息（Word Embedding）和单词在句子中的顺序信息（Position Embedding）。这样 Transformer 在处理时就可以利用这些信息进行有效的注意力计算。&lt;/p>
+&lt;p>&lt;strong>总结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Word Embedding&lt;/strong> 代表了单词的语义信息。&lt;/li>
+&lt;li>&lt;strong>Position Embedding&lt;/strong> 通过正弦和余弦函数编码位置，使模型能感知单词的顺序。&lt;/li>
+&lt;li>&lt;strong>二者相加&lt;/strong> 形成 Transformer 的输入，使得模型在不使用 RNN 的情况下仍然能捕捉句子结构信息。&lt;/li>
+&lt;/ul>
+&lt;h2 id="encode是怎么工作的">Encode是怎么工作的？
+&lt;/h2>&lt;p>内部&lt;code>Multi-Head Attention&lt;/code>，是由多个 &lt;code>Self-Attention&lt;/code>组成的。一些列的矩阵变换最终得到C矩阵。&lt;/p>
+&lt;h2 id="怎么得到c矩阵">怎么得到C矩阵？
+&lt;/h2>&lt;p>上一个问题实际已经回答。&lt;/p>
+&lt;h2 id="c矩阵的内部信息是什么样的">C矩阵的内部信息是什么样的?
+&lt;/h2>&lt;p>经过特殊编码，且的维度和原始矩阵X一致的输入信息。&lt;/p>
+&lt;h2 id="decode内部是怎么实现的">Decode内部是怎么实现的？
+&lt;/h2>&lt;p>两个&lt;code>Multi-Head Attention&lt;/code>，第一个负责 &lt;code>Masked&lt;/code>&lt;/p>
+&lt;h2 id="masked怎么实现">Masked怎么实现？
+&lt;/h2>&lt;p>Mask矩阵，将数据掩盖。&lt;/p>
+&lt;h2 id="attention-机制是什么">Attention 机制是什么
+&lt;/h2>&lt;p>大概意思就是让Encoder编码出的c向量跟Decoder解码过程中的每一个输出进行加权运算，在解码的每一个过程中调整权重取到不一样的c向量，更通俗的讲就是c 就是包含“欢迎来北京”这句话的意思，翻译到第一个词“welcome”的时候，需要着重去看“欢迎”这个词&lt;/p>
+&lt;p>这里借用一个大佬说过的话：Attention听上去就是一个很屌，不明觉厉的东西，实际实现起来就是，哦原来是这么回事。总结一下吧，Attention机制就是让编码器编码出来的向量根据解码器要解码的东西动态变化的一种机制，貌似来源灵感就是人类视觉在看某一个东西的时候会有选择的针对重要的地方看。&lt;/p>
+&lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/194308943" target="_blank" rel="noopener"
+>Seq2Seq模型介绍&lt;/a>&lt;/p>
+&lt;h2 id="reference">reference
+&lt;/h2>&lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/338817680" target="_blank" rel="noopener"
+>Transformer模型详解（图解最完整版）&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://mp.weixin.qq.com/s/WDq8tUpfiKHNC6y_8pgHoA" target="_blank" rel="noopener"
+>Transformer模型&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/403433120" target="_blank" rel="noopener"
+>Transformer代码详解&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.baihezi.com/post/224153.html" target="_blank" rel="noopener"
+>神经网络算法 – 一文搞懂 Transformer（总体架构 &amp;amp; 三种注意力层）&lt;/a>&lt;/p></description></item><item><title>Tools Trick</title><link>https://sleepman9.github.io/p/tools-trick/</link><pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/tools-trick/</guid><description>&lt;img src="https://sleepman9.github.io/p/tools-trick/cover.jpg" alt="Featured image of post Tools Trick" />&lt;h2 id="1-vscode中github-copilot在ssh远程环境中无法登录问题">1. VSCode中Github Copilot在SSH远程环境中无法登录问题
+&lt;/h2>&lt;h3 id="1-在vs-code中按f1键调出命令行输入settingsjson选择远程环境中的配置文件">1. 在VS Code中，按F1键调出命令行，输入settings.json，选择远程环境中的配置文件：
+&lt;/h3>&lt;p>&lt;img src="https://sleepman9.github.io/p/tools-trick/asserts/copliot.png"
+width="825"
+height="502"
+srcset="https://sleepman9.github.io/p/tools-trick/asserts/copliot_hu_d04c34523884441.png 480w, https://sleepman9.github.io/p/tools-trick/asserts/copliot_hu_f6631b22a2511959.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="164"
+data-flex-basis="394px"
+>&lt;/p>
+&lt;h3 id="2-添加如下配置">2. 添加如下配置：
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;remote.extensionKind&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;GitHub.copilot&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;ui&amp;#34;&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;GitHub.copilot-chat&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;ui&amp;#34;&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>&lt;span class="err">,&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="3-重启vs-code即可">3. 重启VS Code即可。
+&lt;/h3>&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_43948052/article/details/146123406" target="_blank" rel="noopener"
+>原文链接&lt;/a>&lt;/p></description></item><item><title>Archives</title><link>https://sleepman9.github.io/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/archives/</guid><description/></item><item><title>Links</title><link>https://sleepman9.github.io/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/links/</guid><description>&lt;p>To use this feature, add &lt;code>links&lt;/code> section to frontmatter.&lt;/p>
+&lt;p>This page&amp;rsquo;s frontmatter:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">links&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GitHub&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GitHub is the world&amp;#39;s largest software development platform.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">website&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.com&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">TypeScript&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">website&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://www.typescriptlang.org&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ts-logo-128.jpg&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>image&lt;/code> field accepts both local and external images.&lt;/p></description></item><item><title>Search</title><link>https://sleepman9.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/search/</guid><description/></item></channel></rss>

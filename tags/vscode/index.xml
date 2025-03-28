@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vscode on UNO的个人主页</title><link>https://sleepman9.github.io/tags/vscode/</link><description>Recent content in Vscode on UNO的个人主页</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 24 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sleepman9.github.io/tags/vscode/index.xml" rel="self" type="application/rss+xml"/><item><title>Git Practice</title><link>https://sleepman9.github.io/p/git-practice/</link><pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/git-practice/</guid><description>&lt;img src="https://sleepman9.github.io/p/git-practice/cover.webp" alt="Featured image of post Git Practice" />&lt;h2 id="学习网站">学习网站
+&lt;/h2>&lt;p>&lt;a class="link" href="https://learngitbranching.js.org/?locale=zh_CN" target="_blank" rel="noopener"
+>Learn Git Branching&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://git-scm.com/doc" target="_blank" rel="noopener"
+>Git文档&lt;/a>&lt;/p>
+&lt;h2 id="git代码基于实际开发流程">git代码（基于实际开发流程）
+&lt;/h2>&lt;p>ps:在vscode中可以可视化仓库的变化情况&lt;/p>
+&lt;p>ps:本文件主要使用命令行的形式，在vscode中可视化验证自己的操作是否正确&lt;/p>
+&lt;h2 id="1-clone代码">1. Clone代码
+&lt;/h2>&lt;ol>
+&lt;li>假设已经将代码&lt;code>clone&lt;/code>​到本地了&lt;/li>
+&lt;/ol>
+&lt;h2 id="2-拉取远程仓库最新代码">2. 拉取远程仓库最新代码
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>​&lt;code>git fetch&lt;/code>​拉取远程所有更新。&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03.png"
+width="431"
+height="401"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03_hu_b2ceea911ac98b96.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03_hu_eb844255352a0b8e.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="107"
+data-flex-basis="257px"
+>​&lt;/p>
+&lt;ul>
+&lt;li>可以点击粉色节点查看变化内容。（这里不再使用git diff命令，可视化方便直观）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>​&lt;code>git merge&lt;/code>​合并到当前分支&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65.png"
+width="425"
+height="388"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65_hu_58c9919f94ff609c.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65_hu_bd0840c3a991e83f.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="109"
+data-flex-basis="262px"
+>​&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="3提交代码">3.提交代码
+&lt;/h2>&lt;ol>
+&lt;li>​&lt;code>git add .&lt;/code>​将修改存入暂存区（stage）&lt;/li>
+&lt;li>​&lt;code>git commit -m &amp;quot;备注信息&amp;quot;&lt;/code>​提交已经存入到stage的内容&lt;/li>
+&lt;li>​&lt;code>git push origin wwh_dev&lt;/code>​将本地的&lt;code>wwh_dev&lt;/code>​分支，推送到&lt;code>origin&lt;/code>​远端&lt;/li>
+&lt;/ol>
+&lt;p>‍&lt;/p>
+&lt;p>背景：在main分支开发完毕后，在没有commit的情况下，新建了分支mph_generator_dev当作是本次开发的备份，同样在没有commit的情况下，又新建了一个分支wwh_dev当作是提交分支。&lt;/p>
+&lt;p>warning：当我执行完&lt;code>git push origin wwh_dev&lt;/code>​ 后，其他分支的内容都回到了修改前&lt;br>
+​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr.png"
+width="378"
+height="197"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr_hu_67b891a07e6d5a87.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr_hu_827500bc74a74ce3.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="460px"
+>​&lt;br>
+​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p.png"
+width="363"
+height="198"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p_hu_1d76fda89d3b8169.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p_hu_3cc845b386b99610.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="183"
+data-flex-basis="440px"
+>​&lt;/p>
+&lt;p>error:猜想造成的原因是，创建其他分支之前没有&lt;code>commit&lt;/code>​ 造成的。此想法还没有验证。（TODO）&lt;/p>
+&lt;p>main分支没有commit的情况下新建了A分支，A分支git commit之后，main分支所有修改都消失了&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;h2 id="4向管理者提交pull-requests">4.向管理者提交pull requests
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>在GUI页面中进行的。&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm.png"
+width="642"
+height="846"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm_hu_8da8d81258755ae6.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm_hu_56f223bb94384da9.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="182px"
+>​&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41.png"
+width="2072"
+height="390"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41_hu_8b1f94b446f00a0f.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41_hu_f6730684ae34fb9a.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="531"
+data-flex-basis="1275px"
+>​&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>源分支：开发完成的分支&lt;/p>
+&lt;p>目标分支：项目分支&lt;/p>
+&lt;ol start="2">
+&lt;li>
+&lt;p>解决冲突&lt;/p>
+&lt;p>在GUI界面上解决，并且在GUI界面，&lt;code>git add .&lt;/code>​和&lt;code>git commit -m &amp;quot;备注信息&amp;quot;&lt;/code>​&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>等待管理员接受PR,合并代码后，以此开发任务就完成了。&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;h3 id="41查看是否提交成功">4.1查看是否提交成功
+&lt;/h3>&lt;p>背景：在wwh_dev分支上开发，提交代码后，merge之后，想在其他分支看我提交的内容，同时保证一个分支时刻保持最新。问题来了。在Thermal5.0（想要保持最新的分支）看不到我提交的内容。&lt;/p>
+&lt;p>原因在于没有进行分支追踪：&lt;br>
+执行 &lt;code>git pull &amp;lt;远程&amp;gt; &amp;lt;分支&amp;gt;&lt;/code>​ 例如：git pull origin Thermal5.0&lt;br>
+执行之后，即可得到最新提交代码&lt;/p>
+&lt;h3 id="42-添加分支跟踪">4.2 添加分支跟踪
+&lt;/h3>&lt;p>手动：&lt;/p>
+&lt;p>​&lt;code>git branch --set-upstream-to=&amp;lt;remote_name&amp;gt;/&amp;lt;remote_branch&amp;gt; &amp;lt;branch_name&amp;gt;&lt;/code>​&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>新建分支的时候建立追踪关系：&lt;/p>
+&lt;p>​&lt;code>git checkout -b my_branch origin/develop&lt;/code>​&lt;/p>
+&lt;p>​&lt;code>git switch -c my_branch origin/develop&lt;/code>​&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;h3 id="43-查看跟踪分支">4.3 查看跟踪分支
+&lt;/h3>&lt;p>‍&lt;/p>
+&lt;p>git branch -vv&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;h2 id="5-再开启一个新开发任务">5. 再开启一个新开发任务
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>分支分配&lt;/p>
+&lt;ol>
+&lt;li>​&lt;code>main&lt;/code>​分支，保持和origin远端的同步，不要在这个上面开发&lt;/li>
+&lt;li>​&lt;code>dev&lt;/code>​分支，每次最新任务的开发分支&lt;/li>
+&lt;li>​&lt;code>dev_xx_backup&lt;/code>​分支，开发完一个任务后的备份，拷贝来自&lt;code>dev&lt;/code>​分支，包含任务测试代码&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>分支管理&lt;/p>
+&lt;ol>
+&lt;li>每次&lt;code>push&lt;/code>​提交后，等待管理员检查无误后，将&lt;code>dev&lt;/code>​分支删除&lt;/li>
+&lt;li>保证&lt;code>main&lt;/code>​分支最新，从&lt;code>main&lt;/code>​分支中新建一个分支当成当前任务的分支&lt;/li>
+&lt;li>此时&lt;code>branch&lt;/code>​结构中只包含，一个&lt;code>main&lt;/code>​分支，一个&lt;code>dev&lt;/code>​分支，和&lt;code>每次任务的备份&lt;/code>​分支&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;p>‍&lt;/p>
+&lt;h2 id="6source-control-graph">6.SOURCE CONTROL GRAPH
+&lt;/h2>&lt;p>ps：图片都来自&lt;code>vscode&lt;/code>​&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>来自于&lt;code>git fetch&lt;/code>​之后&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/assets/%e5%b1%8f%e5%b9%95%e6%88%aa%e5%9b%be%202024-11-12%20143950-20241112152941-6iufqqs.png"
+loading="lazy"
+alt="屏幕截图 2024-11-12 143950"
+>​&lt;/p>
+&lt;p>解释：&lt;/p>
+&lt;ol>
+&lt;li>每一个实心圆代表每一次提交节点&lt;/li>
+&lt;li>不同颜色的线，表示不同开发人员的开发路线&lt;/li>
+&lt;li>&lt;span data-type="text" style="background-color: var(--b3-card-info-background); color: var(--b3-card-info-color);">蓝色空心圆&lt;/span>表示当前所在的节点&lt;/li>
+&lt;li>圆环表示合并操作&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>来自&lt;code>git merge&lt;/code>​之后&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33.png"
+width="458"
+height="286"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33_hu_a74d3a04e2b71395.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33_hu_2690fe9e1b9906c4.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="384px"
+>​&lt;/p>
+&lt;ol>
+&lt;li>框中标注的部分，当时是在GUI界面上修改分支冲突的，所以会从蓝色线程中分出一个分支到橙色线程的合并&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p></description></item><item><title>Tools Trick</title><link>https://sleepman9.github.io/p/tools-trick/</link><pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/tools-trick/</guid><description>&lt;img src="https://sleepman9.github.io/p/tools-trick/cover.jpg" alt="Featured image of post Tools Trick" />&lt;h2 id="1-vscode中github-copilot在ssh远程环境中无法登录问题">1. VSCode中Github Copilot在SSH远程环境中无法登录问题
+&lt;/h2>&lt;h3 id="1-在vs-code中按f1键调出命令行输入settingsjson选择远程环境中的配置文件">1. 在VS Code中，按F1键调出命令行，输入settings.json，选择远程环境中的配置文件：
+&lt;/h3>&lt;p>&lt;img src="https://sleepman9.github.io/p/tools-trick/asserts/copliot.png"
+width="825"
+height="502"
+srcset="https://sleepman9.github.io/p/tools-trick/asserts/copliot_hu_d04c34523884441.png 480w, https://sleepman9.github.io/p/tools-trick/asserts/copliot_hu_f6631b22a2511959.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="164"
+data-flex-basis="394px"
+>&lt;/p>
+&lt;h3 id="2-添加如下配置">2. 添加如下配置：
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;remote.extensionKind&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;GitHub.copilot&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;ui&amp;#34;&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;GitHub.copilot-chat&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;ui&amp;#34;&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>&lt;span class="err">,&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="3-重启vs-code即可">3. 重启VS Code即可。
+&lt;/h3>&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_43948052/article/details/146123406" target="_blank" rel="noopener"
+>原文链接&lt;/a>&lt;/p></description></item></channel></rss>

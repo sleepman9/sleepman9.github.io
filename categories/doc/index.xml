@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Doc on UNO的个人主页</title><link>https://sleepman9.github.io/categories/doc/</link><description>Recent content in Doc on UNO的个人主页</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sleepman9.github.io/categories/doc/index.xml" rel="self" type="application/rss+xml"/><item><title>Template Format</title><link>https://sleepman9.github.io/p/format/</link><pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/format/</guid><description>&lt;img src="https://sleepman9.github.io/p/format/cover.jpg" alt="Featured image of post Template Format" />&lt;h2 id="颜色块-提示">颜色块-提示
+&lt;/h2>&lt;blockquote>
+&lt;p>Photo by &lt;a class="link" href="https://unsplash.com/@pawel_czerwinski" target="_blank" rel="noopener"
+>Pawel Czerwinski&lt;/a> on &lt;a class="link" href="https://unsplash.com/" target="_blank" rel="noopener"
+>Unsplash&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;h2 id="可视化展示">可视化展示
+&lt;/h2>&lt;!-- https://github.com/kyechan99/capsule-render -->
+&lt;p align="center">
+&lt;img src="https://capsule-render.vercel.app/api?type=waving&amp;height=300&amp;color=timeGradient&amp;text=Raincarnator&amp;desc=Programming%20/%20Design%20/%20ACGN&amp;descAlignY=54&amp;fontAlignY=40&amp;fontSize=80&amp;descAlign=62&amp;animation=fadeIn" />
+&lt;/p>
+&lt;p align="center">
+&lt;p align="center">你好，我是&lt;b>失迹&lt;/b>。&lt;br/>一位 &lt;b>编程 / 设计 / ACGN&lt;/b> 爱好者。&lt;/p>
+&lt;p align="center">Hi, I am &lt;b>Raincarnator&lt;/b>.&lt;br/>A &lt;b>Programming / Design / ACGN&lt;/b> enthusiast.&lt;/p>
+&lt;/p>
+&lt;p align="center">
+&lt;!-- https://github.com/anuraghazra/github-readme-stats -->
+&lt;img align="center" width="400" src="https://github-readme-stats.vercel.app/api?username=Raincarnator&amp;theme=transparent&amp;show_icons=true&amp;hide_border=true&amp;rank_icon=github" />
+&lt;!-- https://github.com/DenverCoder1/github-readme-streak-stats -->
+&lt;img align="center" width="400" src="https://streak-stats.demolab.com?user=Raincarnator&amp;theme=transparent&amp;date_format=%5BY.%5Dn.j&amp;hide_border=true" />
+&lt;br/>
+&lt;!-- https://github.com/Ashutosh00710/github-readme-activity-graph -->
+&lt;img width="800" src="https://github-readme-activity-graph.vercel.app/graph?username=Raincarnator&amp;theme=github-compact&amp;hide_border=true&amp;area=true" />
+&lt;br/>
+&lt;!-- https://github.com/anuraghazra/github-readme-stats -->
+&lt;img align="center" src="https://github-readme-stats.vercel.app/api/wakatime?username=ArauKaede&amp;theme=transparent&amp;hide_border=true&amp;layout=compact&amp;langs_count=22" />
+&lt;!-- https://github.com/anuraghazra/github-readme-stats -->
+&lt;img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Raincarnator&amp;theme=transparent&amp;hide_border=true&amp;layout=donut-vertical&amp;langs_count=6" />
+&lt;br/>
+&lt;!-- https://github.com/tandpfun/skill-icons -->
+&lt;img align="center" src="https://skillicons.dev/icons?i=cpp,kotlin,html,css,js,ts,java,md,latex,windows,vscode,androidstudio,ps,azure,netlify,cloudflare,github,git,npm,materialui&amp;theme=light&amp;perline=10" />
+&lt;/p>
+&lt;!-- https://github.com/badges/shields -->
+&lt;p align="center">
+&lt;a href="https://wakatime.com/@ArauKaede">&lt;img src="https://wakatime.com/badge/user/9b029946-d3d7-4021-993b-1ee294b8297a.svg" >&lt;/a>
+&lt;img src="https://komarev.com/ghpvc/?username=Raincarnator&amp;abbreviated=true"/>
+&lt;img src="https://img.shields.io/github/stars/Raincarnator?style=flat&amp;logoColor=%231677ff&amp;labelColor=rgb(89, 89, 89)&amp;color=rgb(3, 126, 187)"/>
+&lt;img src="https://img.shields.io/github/followers/Raincarnator?style=flat&amp;logoColor=%231677ff&amp;labelColor=rgb(89, 89, 89)&amp;color=rgb(3, 126, 187)"/>
+&lt;/p>
+&lt;!-- https://github.com/kyechan99/capsule-render -->
+&lt;p align="center">
+&lt;img src="https://capsule-render.vercel.app/api?type=waving&amp;height=300&amp;color=timeGradient&amp;text=Flowers%20will%20bloom%20in%20the%20world,%20and%20magnificent%20and%20immortal%20things%20will%20follow.&amp;desc=Reincarnatey%20Network%20Co.,%20Ltd&amp;descAlignY=93&amp;fontAlignY=60&amp;fontSize=20&amp;descAlign=50&amp;animation=fadeIn&amp;descSize=15&amp;section=footer&amp;fontAlign=50" />
+&lt;/p>
+&lt;h2 id="video">video
+&lt;/h2>&lt;p>For more details, check out the &lt;a class="link" href="https://stack.jimmycai.com/writing/shortcodes" target="_blank" rel="noopener"
+>documentation&lt;/a>.&lt;/p>
+&lt;h3 id="bilibili-video">Bilibili video
+&lt;/h3>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1d4411N7zD"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h3 id="tencent-video">Tencent video
+&lt;/h3>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://v.qq.com/txp/iframe/player.html?vid=g0014r3khdw&amp;auto=0"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h3 id="youtube-video">YouTube video
+&lt;/h3>&lt;div class="video-wrapper">
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/0qwALOOvUik"
+allowfullscreen
+title="YouTube Video"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h3 id="generic-video-file">Generic video file
+&lt;/h3>&lt;div class="video-wrapper">
+&lt;video
+controls
+src="https://www.w3schools.com/tags/movie.mp4"
+>
+&lt;p>
+Your browser doesn't support HTML5 video. Here is a
+&lt;a href="https://www.w3schools.com/tags/movie.mp4">link to the video&lt;/a> instead.
+&lt;/p>
+&lt;/video>
+&lt;/div>
+&lt;h2 id="gist">Gist
+&lt;/h2>&lt;script src="https://gist.github.com/CaiJimmy/e2751a943de10b2a5b3a8a6c2120cb86.js">&lt;/script>
+&lt;h2 id="gitlab">GitLab
+&lt;/h2>&lt;script
+type="application/javascript"
+src="https://gitlab.com/-/snippets/2589724.js"
+>&lt;/script>
+&lt;h2 id="quote">Quote
+&lt;/h2>&lt;blockquote>
+&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>&lt;span class="cite">&lt;span>― &lt;/span>&lt;span>A famous person, &lt;/span>&lt;a href="https://en.wikipedia.org/wiki/Book">&lt;cite>The book they wrote&lt;/cite>&lt;/a>&lt;/span>&lt;/blockquote>
+&lt;hr></description></item><item><title>Investment</title><link>https://sleepman9.github.io/p/investment/</link><pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/investment/</guid><description>&lt;img src="https://sleepman9.github.io/p/investment/cover.jpg" alt="Featured image of post Investment" />&lt;blockquote>
+&lt;p>Big Market决定了一家公司的上限。&lt;/p>&lt;/blockquote>
+&lt;h2 id="评估一家公司质地的指标">评估一家公司质地的指标
+&lt;/h2>&lt;p>&lt;img src="https://sleepman9.github.io/p/investment/%E6%94%B6%E6%94%AF%E6%8B%86%E8%A7%A3.jpg"
+width="2670"
+height="1200"
+srcset="https://sleepman9.github.io/p/investment/%E6%94%B6%E6%94%AF%E6%8B%86%E8%A7%A3_hu_c6698bd3f0a516bb.jpg 480w, https://sleepman9.github.io/p/investment/%E6%94%B6%E6%94%AF%E6%8B%86%E8%A7%A3_hu_abaf1c272e628335.jpg 1024w"
+loading="lazy"
+alt="收支拆解"
+class="gallery-image"
+data-flex-grow="222"
+data-flex-basis="534px"
+>&lt;/p>
+&lt;h3 id="归母净利润">归母净利润
+&lt;/h3>&lt;p>归母净利润（归属于母公司股东的净利润，Net Profit Attributable to Parent Company）是企业财务报表中的一个关键指标，指的是企业在扣除所有成本、费用、税费后，最终归属于母公司股东的净利润。&lt;/p>
+$$
+\text{归母净利润} = \text{净利润} - \text{少数股东损益}
+$$&lt;p>其中：&lt;/p>
+&lt;p>净利润：企业的总利润扣除所得税后的最终利润。&lt;/p>
+&lt;p>少数股东损益：子公司中属于非母公司股东（少数股东）的部分利润。&lt;/p>
+&lt;pre>&lt;code>净利润:指企业在一定会计期间内，营业收入扣除营业成本、税费、各项费用、投资损益等后的最终利润，反映了企业的最终盈利水平。
+&lt;/code>&lt;/pre>
+&lt;h3 id="负债率">负债率
+&lt;/h3>$$ \text{负债率} = \frac{\text{总负债}}{\text{总资产}} \times 100\% $$&lt;p>负债分有息负债与无息负债。有息负债指银行贷款可转债，发行债券等需要还本还息的借款。无息负债一般是指拖欠上下游的经营负债，要还本不用还息。当然如果公司足够强势，其实可以在资产负债表上形成一笔长期经营负债供公司使用。当然从我的角度出发，一切负债都是不稳定的因素。&lt;/p>
+&lt;p>比如在经营困难的时候，负债是会压倒骆驼的最后一根稻草。我喜欢选择一些低负债率帐面现金多的公司，哪怕公司今年没有一分钱营业收入，把上下游欠款和银行贷款一还，还能靠着资产负债表的现金，产生投资收益利息收入，这样利润表上面不会出现亏损，分红也能持续。这一点很关键，它可以避免股票因为亏损而出现st。哪怕出现最糟糕的情况，清算价值也能拿回70%本金。&lt;/p>
+&lt;p>流动比率也是一个衡量指标（流动资产/流动负债），这个指标可以反映企业的短期偿债能力，一般我喜欢这个指标大于2的企业。&lt;/p>
+&lt;h2 id="可转债的几个措施">可转债的几个措施
+&lt;/h2>&lt;h3 id="强赎">强赎
+&lt;/h3>&lt;p>满足特定条件后，公司将可转债强制从持有人手中提前赎回。（强赎条件苛刻）&lt;/p>
+&lt;p>满足强赎后为什么不发强赎条款 (&lt;a class="link" href="https://mp.weixin.qq.com/s/Pj1VF6vwEBqVhyHmGD7n1" target="_blank" rel="noopener"
+>https://mp.weixin.qq.com/s/Pj1VF6vwEBqVhyHmGD7n1&lt;/a>)&lt;/p>
+&lt;h3 id="回售">回售
+&lt;/h3>&lt;p>股价下跌太厉害，要求公司赎回转债。&lt;/p>
+&lt;h3 id="下修">下修
+&lt;/h3>&lt;p>股价下跌太厉害，修改转股价值，将可转债的价格拉回到100面值左右。&lt;/p></description></item></channel></rss>
