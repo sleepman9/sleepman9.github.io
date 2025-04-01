@@ -5,7 +5,7 @@ slug: Format
 date: 2025-03-27 
 image: cover.jpg
 categories:
-    - Doc
+    - Base
 tags:
     - markdown
 weight: 1       # You can add weight to some posts to override the default sorting (date descending)

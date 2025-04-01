@@ -5,9 +5,9 @@ slug:
 date: 2025-03-28 
 image: cover.jpg
 categories:
-    - Doc
+    - Finance
 tags:
-    - Invest
+    - 可转债
 ---
 
 > Big Market决定了一家公司的上限。
