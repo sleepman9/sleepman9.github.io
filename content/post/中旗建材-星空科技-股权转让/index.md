@@ -2,7 +2,7 @@
 title: 中旗建材-星空科技-股权转让
 description: 完美错过20厘米大肉
 date: 2025-04-01 
-image: cover.jpg
+image: cover.png
 categories:
     - Finance
 tags:
