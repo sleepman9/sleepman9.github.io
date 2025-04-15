@@ -157,7 +157,30 @@ ps：图片都来自`vscode`​
 
     1. 框中标注的部分，当时是在GUI界面上修改分支冲突的，所以会从蓝色线程中分出一个分支到橙色线程的合并
 
-‍
+
+## 删除远程分支
+
+‍要删除 Git 仓库中的**远程分支**，你可以使用以下命令：
+
+```bash
+git push <remote_name> --delete <branch_name>
+```
+
+**示例**：
+```bash
+git push origin --delete feature/login
+```
+
+这条命令会将远程名为 `origin` 的仓库中的 `feature/login` 分支删除。
+
+---
+
+**常见说明**：
+- `<remote_name>` 通常是 `origin`，可以通过 `git remote -v` 查看。
+- 删除远程分支不会影响本地的分支，如果你也想删除本地的，可以用：
+  ```bash
+  git branch -d <branch_name>
+  ```
 
 ‍
 
