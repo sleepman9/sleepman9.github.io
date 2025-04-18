@@ -9,6 +9,8 @@ tags:
     - C++
 ---
 
+[吴师兄学算法](https://blog.algomooc.com/)
+
 ## 为什么要使用引用 &
 
 [两数之和](https://leetcode.cn/problems/two-sum/?envType=study-plan-v2&envId=top-100-liked)
