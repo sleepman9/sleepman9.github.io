@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IC on UNO的个人主页</title><link>https://sleepman9.github.io/categories/ic/</link><description>Recent content in IC on UNO的个人主页</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 10 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sleepman9.github.io/categories/ic/index.xml" rel="self" type="application/rss+xml"/><item><title>网表相关</title><link>https://sleepman9.github.io/p/%E7%BD%91%E8%A1%A8%E7%9B%B8%E5%85%B3/</link><pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E7%BD%91%E8%A1%A8%E7%9B%B8%E5%85%B3/</guid><description>&lt;img src="https://sleepman9.github.io/p/%E7%BD%91%E8%A1%A8%E7%9B%B8%E5%85%B3/cover.png" alt="Featured image of post 网表相关" />&lt;h2 id="hspice-quick-reference-guide">HSPICE Quick Reference Guide
+&lt;/h2>&lt;p>&lt;a class="link" href="https://amarketplaceofideas.com/wp-content/uploads/2014/09/hspice_qr1.pdf" target="_blank" rel="noopener"
+>HSPICE Quick Reference Guide&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://iccircle.com/static/upload/img20240809173315.pdf" target="_blank" rel="noopener"
+>HSPICE® User Guide: Basic Simulation and Analysis&lt;/a>&lt;/p>
+&lt;h2 id="网表求解的本质">网表求解的本质
+&lt;/h2>&lt;p>网表求解的本质在于将电路中各个元件和它们的连接关系转化为数学方程（通常基于基尔霍夫定律和元件的本构关系），然后利用数值计算方法求解这些方程组，从而得到各个节点电压和支路电流等信息。简单来说，就是把电路“翻译”成数学问题，再使用求解器进行数值求解。&lt;/p>
+&lt;h2 id="不同仿真类型的的本质">不同仿真类型的的本质
+&lt;/h2>&lt;p>不同仿真类型的本质都在于：将电路的物理行为转化为数学模型，然后求解相应的数学方程以获得电路在特定条件下的响应。不过，它们侧重关注的方面不同，具体说明如下：&lt;/p>
+&lt;ul>
+&lt;li>直流工作点分析 (.op) 和直流扫描分析 (.DC)&lt;/li>
+&lt;/ul>
+&lt;p>直流工作点分析：求解电路在直流稳态下（没有时间变化因素）的电压、电流等参数。它的本质是求解一组非线性代数方程，确定电路各节点的静态工作状态。&lt;/p>
+&lt;p>直流扫描分析：在直流工作点分析的基础上，通过改变一个或多个直流激励源（如电压或电流），观察器件或电路参数随偏置变化的趋势。其本质依然是求解静态非线性代数方程，但需要遍历一系列激励值。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>瞬态分析 (.TRAN)
+瞬态分析关注电路响应随时间的动态变化。它将电路描述为一组微分方程（可能还包含非线性部分），然后利用数值积分算法（如欧拉法、龙格-库塔法等）求解时间域响应，从而揭示电路在施加激励后随时间变化的动态行为。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>交流小信号分析 (.AC)
+该分析是在电路的直流工作点附近对电路进行线性化，转换到频率域求解。它的本质是将电路的非线性行为在小激励条件下近似为线性模型，通过求解复数域中的方程（使用如拉普拉斯变换或者直接建立导纳矩阵）得到电路的频率响应、相位特性等。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>总之，无论是哪种仿真类型，基本思路都是“建立数学模型 – 数值求解 – 得到物理量”，只是不同的仿真关注于电路静态状态、动态响应或频率特性等不同方面。&lt;/p></description></item><item><title>一些芯片设计的冷知识</title><link>https://sleepman9.github.io/p/%E4%B8%80%E4%BA%9B%E8%8A%AF%E7%89%87%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%86%B7%E7%9F%A5%E8%AF%86/</link><pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E4%B8%80%E4%BA%9B%E8%8A%AF%E7%89%87%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%86%B7%E7%9F%A5%E8%AF%86/</guid><description>&lt;img src="https://sleepman9.github.io/p/%E4%B8%80%E4%BA%9B%E8%8A%AF%E7%89%87%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%86%B7%E7%9F%A5%E8%AF%86/cover.png" alt="Featured image of post 一些芯片设计的冷知识" />&lt;h2 id="原理图-芯片物理版图">原理图-&amp;gt;芯片物理版图
+&lt;/h2>&lt;p>根据电路设计图（也称为原理图或HDL代码）生成芯片物理版图&lt;/p>
+&lt;h3 id="逻辑综合">逻辑综合
+&lt;/h3>&lt;p>这是将电路设计图转换为门级网表的过程，门级网表是由基本逻辑门（如与门、或门、非门等）和触发器（如D触发器、JK触发器等）组成的电路结构，它可以反映电路设计图的功能和性能。逻辑综合需要设定约束条件，就是希望综合出来的电路在面积、时序等目标参数上达到的标准；逻辑综合还需要指定基于的库，使用不同的综合库，在时序和面积上会有差异。常用的逻辑综合工具有Synopsys的Design Compiler，Cadence的PKS，Synplicity的Synplify等。&lt;/p>
+&lt;h3 id="布局规划">布局规划
+&lt;/h3>&lt;p>这是在确定芯片的总体尺寸和形状后，将芯片中的各个模块（如IP核、存储器、I/O引脚等）分配到合适的位置的过程，布局规划需要考虑各个模块之间的连接关系、信号延迟、功耗分布、热效应等因素，以优化芯片的性能和可靠性。布局规划后，芯片的大小，Core的面积，Row的形式、电源及地线的Ring和Strip都确定下来了。常用的布局规划工具有Cadence的Encounter/Innovus，Synopsys的ICC等。&lt;/p>
+&lt;h3 id="时钟树综合">时钟树综合
+&lt;/h3>&lt;p>这是在布局规划后，对芯片中的时钟信号进行专门的布线设计的过程，时钟信号在数字芯片中起着全局指挥作用，它需要对称地分配到各个寄存器单元，以保证时钟从同一个时钟源到达各个寄存器时，时钟延迟差异最小。时钟树综合需要考虑时钟频率、抖动、偏移等因素，以提高芯片的时序性能。常用的时钟树综合工具有Cadence Encounter/Innovus, Synopsys ICC, Synopsys PrimeTime SI等。&lt;/p>
+&lt;h3 id="布局布线">布局布线
+&lt;/h3>&lt;p>这是将门级网表转换为具体的物理版图的过程，包括标准单元（如基本逻辑门电路）的放置和各种层之间的走线。布局布线需要遵循特定工艺的设计规则（如最小宽度、最小间距等），以保证版图可以被正确地加工出来。布局布线还需要考虑面积、功耗、时序、噪声、串扰等因素，以优化芯片的质量和效率。常用的布局布线工具有Cadence Encounter/Innovus, Synopsys ICC, Synopsys Astro等。&lt;/p>
+&lt;h3 id="物理验证">物理验证
+&lt;/h3>&lt;p>这是在完成物理版图后，对其进行检查和修正的过程&lt;/p>
+&lt;h4 id="设计规则检查drc">设计规则检查（DRC）
+&lt;/h4>&lt;p>这是检查物理版图是否符合工艺设计规则的过程，如果发现任何违反规则的地方，就需要进行修改。常用的设计规则检查工具有Synopsys的Hercules/ICV，Cadence的Assura/PVS，Mentor的Calibre等。&lt;/p>
+&lt;h4 id="布局与网表比较lvs">布局与网表比较（LVS）
+&lt;/h4>&lt;p>这是检查物理版图是否与门级网表在功能上完全一致的过程，如果发现任何不匹配或缺失的地方，就需要进行调整。常用的布局与网表比较工具有Synopsys的Hercules/ICV，Cadence的Assura/PVS，Mentor的Calibre等。&lt;/p>
+&lt;h4 id="寄生参数提取pex">寄生参数提取（PEX）
+&lt;/h4>&lt;p>这是从物理版图中提取出电阻、电容、电感等寄生参数的过程，这些参数会影响电路的性能和信号完整性，需要进行后仿真和分析。常用的寄生参数提取工具有Synopsys的Star-RC, Cadence的QRC, Mentor的Calibre XRC等。&lt;/p>
+&lt;h4 id="时序验证sta">时序验证（STA）
+&lt;/h4>&lt;p>这是基于寄生参数提取的结果，对电路的时序性能进行验证的过程，主要检查电路是否存在建立时间（setup time）和保持时间（hold time）的违例，如果发现任何时序问题，就需要进行优化。常用的时序验证工具有Synopsys的PrimeTime, Cadence’s Tempus等。&lt;/p>
+&lt;h4 id="信号完整性分析si">信号完整性分析（SI）
+&lt;/h4>&lt;p>这是基于寄生参数提取的结果，对电路的信号质量进行分析的过程，主要检查电路是否存在噪声、串扰、反射等问题，如果发现任何信号完整性问题，就需要进行改善。常用的信号完整性分析工具有Synopsys PrimeTime SI, Cadence Sigrity, Ansys Totem/Redhawk等。&lt;/p>
+&lt;p>物理版图验证完成后，就可以将GDSII文件交给芯片代工厂（称为Foundry），在晶圆硅片上通过多道工艺步骤（如光刻、刻蚀、离子注入、沉积等）实现芯片的制造，再进行封装和测试，就得到了我们实际看见的芯片。&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/Jailman/article/details/132761728" target="_blank" rel="noopener"
+>一些芯片设计的冷知识&lt;/a>&lt;/p></description></item><item><title>手机SOC基础</title><link>https://sleepman9.github.io/p/%E6%89%8B%E6%9C%BAsoc%E5%9F%BA%E7%A1%80/</link><pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E6%89%8B%E6%9C%BAsoc%E5%9F%BA%E7%A1%80/</guid><description>&lt;img src="https://sleepman9.github.io/p/%E6%89%8B%E6%9C%BAsoc%E5%9F%BA%E7%A1%80/cover.png" alt="Featured image of post 手机SOC基础" />&lt;h2 id="手机soc包含的组件">手机SOC包含的组件
+&lt;/h2>&lt;h3 id="cpu">CPU：
+&lt;/h3>&lt;p>在SOC里面，CPU的面积其实很小，但是它却很重要。ARM是一家英国的芯片设计公司，但是呢，它卖的不是芯片，而是芯片的授权。只有经过它授权，才能生产ARM架构的处理器。那么为什么主流的SOC都必须用ARM呢？在漫长的历史演变中，手机SOC也使用过其它架构，比如X86（PC端的处理器架构），但是都因为性能和功耗不理想，被淘汰了。&lt;/p>
+&lt;p>ARM授权的同时，也给了一套公版内核方案，领到授权的芯片设计厂商，可以对公版内核进行大修改，也可以照搬。打个比方，ARM是一个生产熟食的厨师，各大芯片厂商（主妇们）可以将食物买回去直接吃，也可以对食物进行二次加工，让它变得更好吃。目前有“二次加工”能力的主要有苹果、高通、三星，海思在麒麟980上也迈出了第一步，其上所用A76内核有些修改。&lt;/p>
+&lt;p>之前我也发布过一篇推文，讲美国将华为列入“实体名单”之后，华为不能使用新的架构，只能在现有ARMv8架构指令集（已经永久授权给了海思）的基础上进行魔改。而这个ARMv8架构，已经用了整整7年，这期间所有的内核都是基于它设计的，等于说先有架构，再有内核，一个架构可以衍生出多种内核。虽然这7年间由于工艺和设计水平的进步，手机CPU性能翻了很多倍，但是毕竟这么久了，也面临着换代，因此这才是华为“最大的危机”。&lt;/p>
+&lt;p>现在的手机CPU普遍采用“大小核”的设计，不同内核组合起来。这里的“大小”是指芯片的大小，芯片面积越大，堆的晶体管越多，性能越强。打个比方，就像拉一车人去打架，你车越大，装的人越多，战斗力就越强，但是如果SOC全部都是大核，电池顶不住啊。以麒麟980为例，它采用2个A76大核，2个A76中核，4个A55小核的设计，根据不同的应用来决定开什么核，还是全部开，不同芯片设计厂商的调度不同，性能发挥也有差异。所以，手机CPU绝对不是核心数越多越好的，芯片厂商的设计至关重要。&lt;/p>
+&lt;h3 id="gpu">GPU
+&lt;/h3>&lt;p>GPU全称是“图形处理器”，如字面含义，它负责处理图形数据，并向显示屏输送图形的任务，而智能手机上的SOC也要处理各种各样复杂的数据，因此也需要一个强大的GPU。ARM自己也有提供GPU方案，就是大名鼎鼎的Mali系列，这是目前较为主流的一种GPU，而高通则是自家的Adreno系列（其实跟AMD有很深的渊源）。&lt;/p>
+&lt;h3 id="npu">NPU
+&lt;/h3>&lt;p>这可以说是最近两年的手机SOC才出现的新的芯片种类，它的全称叫neural-network process units，翻译成中文叫“嵌入式神经网络处理器”。这个名字听起来很高端，简单来说，它主要负责处理涉及神经网络算法和机器学习的海量数据，因为神经网络算法及机器学习需要处理大量信息，而当下的 CPU / GPU 都无法达到如此高效的处理能力，需要一个独立的处理芯片来做这个事，才有NPU的诞生。现在的“人工智能”AI的概念可以说非常火热，而NPU就是让手机变得更智能、更聪明的必要条件。&lt;/p>
+&lt;p>目前，苹果A系列和海思麒麟系列都有独立的NPU，而高通则不然，它叫“AIE”，就是“人工智能引擎”的意思，它通过CPU+GPU+DSP来实现AI运算，也能达到比较强的AI算力。&lt;/p>
+&lt;h3 id="isp">ISP
+&lt;/h3>&lt;p>很多人可能觉得，手机拍照的强弱只取决于传感器CMOS的强弱，殊不知，搭载同一款CMOS的同一品牌不同型号手机拍出来的效果可能略有差异。在这其中，SOC里面的ISP起到了至关重要的作用。&lt;/p>
+&lt;p>ISP，全称Image Signal Processor，中文叫“图像处理器”，不是GPU的“图形处理器”哦！它负责接收感光原件CMOS的原始数据，对这些数据进行“粗加工”，得到最后我们看到的照片。ISP需要与CMOS匹配，为什么去年不少手机都没有用4800W像素的CMOS呢？很简单，去年高通旗舰SOC骁龙845不支持4800W像素，如图：&lt;/p>
+&lt;p>骁龙845最高支持1600W像素&lt;/p>
+&lt;p>所以去年的手机厂商都使用了IMX363或者IMX380这两款1200W像素的CMOS。&lt;/p>
+&lt;h3 id="dsp">DSP
+&lt;/h3>&lt;p>DSP虽然看起来不起眼，但实际对手机体验影响很大。它全称叫Digital Signal Processor，中文名叫“数字信号处理器”，不仅在手机中应用，在雷达、通信、图像处理、医疗电子、工业机器人等高密集计算领域都有广泛应用。在手机上，它主要负责语音处理，包括通话和语音输入，也负责一些图像处理的任务。&lt;/p>
+&lt;h3 id="基带modem">基带(modem)
+&lt;/h3>&lt;p>手机最根本的功能还是通信，而掌管通信的芯片叫基带芯片，也有人称之为“调制解调器modem”，但实际上，手机的基带芯片不止包含modem。这个调制解调器的主要作用就是负责信号传输——所谓调制，就是把需要传输的信号通过一定的规则调制到载波上，让后通过无线收发器发送出去；解调则是相反的过程，类似把基站的语言“翻译成”手机能懂的，从而保证双方的顺畅交流，使我们能够接打电话、连接网络。&lt;/p>
+&lt;p>目前SOC上的基带有两种不同的形式：一种叫集成基带，即厂商有能力将基带集成到SOC中，比如海思和高通都有这个能力；另一种则需要外挂，例如苹果。这也解释了为何XS系列信号不佳，因为使用了Intel的外挂基带，这个基带表现不给力。手机要支持某种网络，需要对应的基带，比如当前火热的5G，高通X55和华为巴龙5000都是基带芯片，但现在的骁龙855和麒麟980都没有集成5G基带，因此你看到的5G手机都是外挂基带的。&lt;/p>
+&lt;h3 id="协处理器">协处理器
+&lt;/h3>&lt;p>这个相对来说比较容易解释，就如同它的名字一样，它负责一些比较轻量级的数据处理任务，比如指南针、气压计等，不需要每次都唤醒CPU处理，从而节省电量。苹果很早就在A7处理器上引入了M7协处理器，其他厂商的SOC也渐渐跟进了。&lt;/p>
+&lt;h3 id="存储与内存控制">存储与内存控制
+&lt;/h3>&lt;h3 id="电源管理">电源管理
+&lt;/h3>&lt;h2 id="reference">Reference
+&lt;/h2>&lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/419093227" target="_blank" rel="noopener"
+>掌中核心——手机SOC基础知识科普&lt;/a>&lt;/p></description></item></channel></rss>
