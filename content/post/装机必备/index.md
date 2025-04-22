@@ -5,7 +5,10 @@ date: 2025-04-17
 image: 
 categories:
     - Base
+    - Software
 tags:
 ---
 
 ## Application
+### Vscode
+伟大的IDE(IDE 是 Integrated Development Environment 的缩写，中文叫做“集成开发环境”)
