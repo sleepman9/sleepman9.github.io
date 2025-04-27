@@ -344,3 +344,6 @@ Hello from dynamic library!
 ```
 
 ---
+
+## 动态库调用外部函数
+[应用程序设计：在动态库中如何调用外部函数？](https://www.cnblogs.com/sewain/p/14798200.html)
