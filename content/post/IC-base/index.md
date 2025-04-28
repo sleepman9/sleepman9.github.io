@@ -79,3 +79,5 @@ tags:
 写入扰动（错误写入别的单元）
 
 [傻白入门芯片设计，史上最最最全DRAM介绍](https://blog.csdn.net/qq_46675545/article/details/128210207)
+
+[【DC】逻辑综合基础](https://blog.csdn.net/Tranquil_ovo/article/details/129876980)
