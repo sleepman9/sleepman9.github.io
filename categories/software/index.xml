@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software on UNO的个人主页</title><link>https://sleepman9.github.io/categories/software/</link><description>Recent content in Software on UNO的个人主页</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 24 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sleepman9.github.io/categories/software/index.xml" rel="self" type="application/rss+xml"/><item><title>如何制定软件设计开发计划</title><link>https://sleepman9.github.io/p/%E5%A6%82%E4%BD%95%E5%88%B6%E5%AE%9A%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91%E8%AE%A1%E5%88%92/</link><pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E5%A6%82%E4%BD%95%E5%88%B6%E5%AE%9A%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91%E8%AE%A1%E5%88%92/</guid><description>&lt;h2 id="架构分层分模块">架构分层，分模块
+&lt;/h2>&lt;p>&lt;a class="link" href="https://www.cnblogs.com/sewain/p/14497769.html" target="_blank" rel="noopener"
+>都说软件架构要分层、分模块，具体应该怎么做 一&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.cnblogs.com/sewain/p/14527392.html" target="_blank" rel="noopener"
+>都说软件架构要分层、分模块，具体应该怎么做 二&lt;/a>&lt;/p></description></item><item><title>软件开发——编译</title><link>https://sleepman9.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%BC%96%E8%AF%91/</link><pubDate>Fri, 18 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%BC%96%E8%AF%91/</guid><description>&lt;blockquote>
+&lt;p>伟大的UNO一般会问几个为什么！&lt;/p>&lt;/blockquote>
+&lt;h2 id="qa">QA
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>Q：为什么要编译成动态库&lt;/p>
+&lt;p>A:为了&lt;strong>节省资源、方便更新、支持模块化和跨语言调用&lt;/strong>，还能实现插件式架构。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Q: CMake的构建和编译&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Q：怎么通过error信息定位解决&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="动态库">动态库
+&lt;/h2>&lt;h3 id="基本概念">基本概念
+&lt;/h3>&lt;p>动态库就是 &lt;code>.so&lt;/code>（Linux）、&lt;code>.dll&lt;/code>（Windows）、&lt;code>.dylib&lt;/code>（macOS） 这样的文件，在程序运行时被“动态加载”。&lt;/p>
+&lt;p>它跟 &lt;strong>静态库&lt;/strong>（&lt;code>.a&lt;/code> 或 &lt;code>.lib&lt;/code>）的区别在于：&lt;/p>
+&lt;ul>
+&lt;li>静态库是&lt;strong>编译时就嵌入程序里&lt;/strong>的，生成的可执行文件比较大。&lt;/li>
+&lt;li>动态库是&lt;strong>运行时才加载&lt;/strong>的，可执行文件会“引用”这个库，而不是包含它本体。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>✅ 为什么编译成动态库？有哪些优点？
+&lt;strong>节省内存和磁盘空间&lt;/strong>
+多个程序都能使用同一个动态库，比如系统的 libc.so、OpenCV、Qt 这些常用库，不用每个程序都各自编译一份，节省资源。&lt;/p>
+&lt;hr>
+&lt;p>&lt;strong>支持模块化设计&lt;/strong>
+程序可以把功能拆成多个模块，比如：&lt;/p>
+&lt;ul>
+&lt;li>一个主程序（main app）&lt;/li>
+&lt;li>一些插件/功能模块（编译成动态库）&lt;/li>
+&lt;/ul>
+&lt;p>这样设计更灵活、更易维护。&lt;/p>
+&lt;hr>
+&lt;p>&lt;strong>支持“热更新”或“热插拔”&lt;/strong>
+当你想更新某个模块的功能，只需要替换掉对应的动态库，而不用重新编译整个程序。&lt;/p>
+&lt;p>&lt;strong>插件机制&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Python 的 &lt;code>.pyd&lt;/code> 文件&lt;/li>
+&lt;li>MATLAB 的 MEX 动态库&lt;/li>
+&lt;li>浏览器的扩展插件&lt;/li>
+&lt;/ul>
+&lt;p>这些都是通过动态库的形式扩展主程序的功能。&lt;/p>
+&lt;hr>
+&lt;p>&lt;strong>跨语言调用&lt;/strong>
+很多时候，我们用 C/C++ 写一个高性能的核心模块，然后 Python、Java 等其他语言用 FFI（Foreign Function Interface） 调用这些库。&lt;/p>
+&lt;p>例如：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Python 通过 ctypes 加载 .so 或 .dll&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">ctypes&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">cdll&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lib&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">cdll&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">LoadLibrary&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;./libexample.so&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h3 id="怎么生成动态库链接使用动态库">怎么生成动态库，链接使用动态库
+&lt;/h3>&lt;ol>
+&lt;li>源代码&lt;/li>
+&lt;li>编译生成动态库&lt;/li>
+&lt;li>写主程序&lt;/li>
+&lt;li>编译主程序时链接动态库&lt;/li>
+&lt;li>运行主程序&lt;/li>
+&lt;/ol>
+&lt;p>太好了，我们就用最常见的 &lt;strong>C/C++&lt;/strong> 来举个例子，展示一下 &lt;strong>怎么编译生成动态库&lt;/strong>（以 Linux 下为例，也会顺便说下 Windows 和 macOS 的差异）。&lt;/p>
+&lt;hr>
+&lt;h4 id="创建源代码文件">创建源代码文件
+&lt;/h4>&lt;p>👉 动态库源文件：&lt;code>mymath.c&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// mymath.c
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="nf">say_hello&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Hello from dynamic library!&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">a&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>👉 头文件：&lt;code>mymath.h&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// mymath.h
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="cp">#ifndef MYMATH_H
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#define MYMATH_H
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="nf">say_hello&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#endif
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h4 id="-2-编译生成动态库">🛠️ 2. 编译生成动态库
+&lt;/h4>&lt;p>&lt;strong>Linux / macOS：&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">gcc -fPIC -shared -o libmymath.so mymath.c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>解释：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>-fPIC&lt;/code>：生成位置无关代码（Position Independent Code），动态库需要这个&lt;/li>
+&lt;li>&lt;code>-shared&lt;/code>：告诉编译器要生成共享库&lt;/li>
+&lt;li>&lt;code>-o libmymath.so&lt;/code>：输出文件名，&lt;code>lib&lt;/code> 开头是习惯命名方式&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Windows（使用 MinGW）：&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">gcc -shared -o mymath.dll mymath.c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h4 id="-3-写主程序调用它mainc">🧪 3. 写主程序调用它：&lt;code>main.c&lt;/code>
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// main.c
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;#34;mymath.h&amp;#34;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">say_hello&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;3 + 5 = %d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">result&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h4 id="-4-编译主程序时链接动态库">🏗️ 4. 编译主程序时链接动态库
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">gcc -o main main.c -L. -lmymath
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>解释：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>-L.&lt;/code> 表示在当前目录找库&lt;/li>
+&lt;li>&lt;code>-lmymath&lt;/code> 表示链接名为 &lt;code>libmymath.so&lt;/code> 的库（&lt;code>lib&lt;/code> 开头省略，&lt;code>.so&lt;/code> 后缀省略）&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h4 id="-5-运行程序linux">🏃 5. 运行程序（Linux）
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">LD_LIBRARY_PATH&lt;/span>&lt;span class="o">=&lt;/span>. ./main
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;code>LD_LIBRARY_PATH=.&lt;/code> 是告诉系统动态库就放在当前目录&lt;/p>&lt;/blockquote>
+&lt;hr>
+&lt;p>🎉 &lt;strong>输出结果&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">Hello from dynamic library!
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3 + 5 = 8
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;p>✅ &lt;strong>小结一波&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>步骤&lt;/th>
+&lt;th>命令或操作&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>写库代码&lt;/td>
+&lt;td>&lt;code>mymath.c&lt;/code>、&lt;code>mymath.h&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>编译库&lt;/td>
+&lt;td>&lt;code>gcc -fPIC -shared -o libmymath.so mymath.c&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>写主程序&lt;/td>
+&lt;td>&lt;code>main.c&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>编译主程序&lt;/td>
+&lt;td>&lt;code>gcc -o main main.c -L. -lmymath&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>运行程序&lt;/td>
+&lt;td>&lt;code>LD_LIBRARY_PATH=. ./main&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2 id="cmake">CMake
+&lt;/h2>&lt;p>CMake 是一个 跨平台的自动化构建系统工具，它使用一种称为 CMakeLists.txt 的配置文件来描述如何生成项目的构建文件（例如 Makefile 或 Visual Studio 工程）。&lt;/p>
+&lt;p>构建文件中有编译命令GCC,G++等；编译程序；&lt;/p>
+&lt;h3 id="基本概念-1">基本概念
+&lt;/h3>&lt;h4 id="-cmake-的基本构建流程">📁 CMake 的基本构建流程
+&lt;/h4>&lt;p>CMake 的构建过程分为两个阶段：&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>配置（Configure）阶段&lt;/strong>
+这一阶段的目标是生成平台相关的构建文件。&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cmake -S . -B build
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;code>-S .&lt;/code> 指定源码路径&lt;/li>
+&lt;li>&lt;code>-B build&lt;/code> 指定生成的构建文件放在哪个目录（可以叫 &lt;code>build&lt;/code>）&lt;/li>
+&lt;/ul>
+&lt;p>此时，CMake 会读取 &lt;code>CMakeLists.txt&lt;/code>，根据系统环境、编译器等生成合适的构建系统（比如 Makefile）。&lt;/p>
+&lt;hr>
+&lt;ol start="2">
+&lt;li>&lt;strong>构建（Build）阶段&lt;/strong>
+使用上一步生成的构建文件，开始真正的&lt;strong>编译&lt;/strong>操作。&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cmake --build build
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这一步等价于执行 &lt;code>make&lt;/code>（如果你使用的是 Unix/Linux 上的默认生成器），将源代码编译成可执行文件或者库。&lt;/p>
+&lt;hr>
+&lt;h4 id="-cmakeliststxt-基础结构">📜 CMakeLists.txt 基础结构
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmake" data-lang="cmake">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cmake_minimum_required&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">VERSION&lt;/span> &lt;span class="s">3.10&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nb">project&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">MyProject&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># 指定 C++ 标准
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nb">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">CMAKE_CXX_STANDARD&lt;/span> &lt;span class="s">17&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># 添加源文件并构建成可执行文件
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nb">add_executable&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">my_app&lt;/span> &lt;span class="s">main.cpp&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;code>project(...)&lt;/code>：定义项目名称&lt;/li>
+&lt;li>&lt;code>set(...)&lt;/code>：设置变量，比如 C++ 标准&lt;/li>
+&lt;li>&lt;code>add_executable(...)&lt;/code>：指定编译可执行文件的目标&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>🔁 &lt;strong>常见命令一览&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>操作&lt;/th>
+&lt;th>命令示例&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>配置&lt;/td>
+&lt;td>&lt;code>cmake -S . -B build&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>构建&lt;/td>
+&lt;td>&lt;code>cmake --build build&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>清除构建目录&lt;/td>
+&lt;td>&lt;code>rm -rf build&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>设置编译器&lt;/td>
+&lt;td>&lt;code>CC=gcc CXX=g++ cmake -S . -B build&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;p>💡 &lt;strong>小技巧&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>始终将构建目录和源代码目录分离（Out-of-Source Build），便于管理。&lt;/li>
+&lt;li>可以加上 &lt;code>-DCMAKE_BUILD_TYPE=Release&lt;/code> 或 &lt;code>Debug&lt;/code> 来控制编译类型。&lt;/li>
+&lt;li>使用 &lt;code>target_include_directories&lt;/code> 和 &lt;code>target_link_libraries&lt;/code> 来管理依赖更清晰。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="应用">应用
+&lt;/h3>&lt;p>使用 CMake 来构建上述小项目：生成动态库 &lt;code>libmymath.so&lt;/code>，并编译主程序 &lt;code>main.c&lt;/code> 来调用它。&lt;/p>
+&lt;hr>
+&lt;h4 id="项目结构">项目结构
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">my_project/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── CMakeLists.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── mymath.c
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── mymath.h
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">└── main.c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h4 id="cmakeliststxt-内容">CMakeLists.txt 内容
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmake" data-lang="cmake">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cmake_minimum_required&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">VERSION&lt;/span> &lt;span class="s">3.10&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nb">project&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">MyDynamicLibExample&lt;/span> &lt;span class="s">C&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># 设置编译为 C99
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nb">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">CMAKE_C_STANDARD&lt;/span> &lt;span class="s">99&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># 设置输出目录
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nb">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">CMAKE_LIBRARY_OUTPUT_DIRECTORY&lt;/span> &lt;span class="o">${&lt;/span>&lt;span class="nv">CMAKE_BINARY_DIR&lt;/span>&lt;span class="o">}&lt;/span>&lt;span class="s">/lib&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nb">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">CMAKE_RUNTIME_OUTPUT_DIRECTORY&lt;/span> &lt;span class="o">${&lt;/span>&lt;span class="nv">CMAKE_BINARY_DIR&lt;/span>&lt;span class="o">}&lt;/span>&lt;span class="s">/bin&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># 创建动态库
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nb">add_library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">mymath&lt;/span> &lt;span class="s">SHARED&lt;/span> &lt;span class="s">mymath.c&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># 创建可执行文件
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nb">add_executable&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">main_exec&lt;/span> &lt;span class="s">main.c&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># 链接动态库到可执行程序
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nb">target_link_libraries&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">main_exec&lt;/span> &lt;span class="s">PRIVATE&lt;/span> &lt;span class="s">mymath&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># 设置头文件路径（可选）
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nb">target_include_directories&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">main_exec&lt;/span> &lt;span class="s">PRIVATE&lt;/span> &lt;span class="o">${&lt;/span>&lt;span class="nv">CMAKE_CURRENT_SOURCE_DIR&lt;/span>&lt;span class="o">}&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h4 id="构建步骤在-linuxmacos-上">构建步骤（在 Linux/macOS 上）
+&lt;/h4>&lt;p>打开终端：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir build
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> build
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cmake ..
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cmake --build .
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h4 id="行程序">行程序
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">LD_LIBRARY_PATH&lt;/span>&lt;span class="o">=&lt;/span>./lib ./bin/main_exec
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;p>&lt;strong>输出&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Hello from dynamic library!
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3 + 5 = 8
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h2 id="动态库调用外部函数">动态库调用外部函数
+&lt;/h2>&lt;p>&lt;a class="link" href="https://www.cnblogs.com/sewain/p/14798200.html" target="_blank" rel="noopener"
+>应用程序设计：在动态库中如何调用外部函数？&lt;/a>&lt;/p></description></item><item><title>装机必备</title><link>https://sleepman9.github.io/p/%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/</link><pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/</guid><description>&lt;h2 id="application">Application
+&lt;/h2>&lt;h3 id="vscode">Vscode
+&lt;/h3>&lt;p>伟大的IDE(IDE 是 Integrated Development Environment 的缩写，中文叫做“集成开发环境”)&lt;/p></description></item></channel></rss>
