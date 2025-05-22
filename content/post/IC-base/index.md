@@ -81,3 +81,8 @@ tags:
 [傻白入门芯片设计，史上最最最全DRAM介绍](https://blog.csdn.net/qq_46675545/article/details/128210207)
 
 [【DC】逻辑综合基础](https://blog.csdn.net/Tranquil_ovo/article/details/129876980)
+
+
+## LC谐振
+电容，电感，反复充放电。
+[还搞不懂 LC振荡电路原理？看这一文就够了，图文结合，立马带你搞定](https://zhuanlan.zhihu.com/p/532163425)
