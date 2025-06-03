@@ -87,5 +87,8 @@ tags:
 电容，电感，反复充放电。
 [还搞不懂 LC振荡电路原理？看这一文就够了，图文结合，立马带你搞定](https://zhuanlan.zhihu.com/p/532163425)
 
-# 正片和负片
+##  正片和负片
 [PCB正片和负片的区别与使用](https://blog.csdn.net/weixin_42837669/article/details/110411765)
+
+## Allegro加密文件密码破解和解除读写导出限制
+[Allegro加密文件密码破解和解除读写导出限制](https://blog.csdn.net/vanfone/article/details/116275609)
