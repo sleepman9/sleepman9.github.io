@@ -53,3 +53,11 @@ public:
 在算法题目中，特别是输入规模可能很大的情况下，使用引用是更优的选择。
 
 
+## 十大经典排序算法（动图演示）
+[十大经典排序算法（动图演示）](https://www.cnblogs.com/onepixel/p/7674659.html)
+
+## 设计模式
+[设计模式](https://www.yuque.com/nathan-kd4ra/soft_exam/yqqus1x0752qwt9y#70e53119)
+
+[C++设计模式（全23种）](https://blog.csdn.net/weixin_45712636/article/details/124328504)
+
