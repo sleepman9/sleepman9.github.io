@@ -7,6 +7,7 @@ categories:
     - AI
 tags:
     - NLP
+weight: 5
 
 ---
 

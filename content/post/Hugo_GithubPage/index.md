@@ -7,6 +7,8 @@ categories:
     - Tools
 tags:
     - hugo
+
+weight: 2
 ---
 
 
