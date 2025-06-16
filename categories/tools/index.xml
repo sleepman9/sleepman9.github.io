@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tools on UNO's Page</title><link>https://sleepman9.github.io/categories/tools/</link><description>Recent content in Tools on UNO's Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 03 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sleepman9.github.io/categories/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>Git Practice</title><link>https://sleepman9.github.io/p/git-practice/</link><pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/git-practice/</guid><description>&lt;img src="https://sleepman9.github.io/p/git-practice/cover.webp" alt="Featured image of post Git Practice" />&lt;h2 id="学习网站">学习网站
+&lt;/h2>&lt;p>&lt;a class="link" href="https://learngitbranching.js.org/?locale=zh_CN" target="_blank" rel="noopener"
+>Learn Git Branching&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://git-scm.com/doc" target="_blank" rel="noopener"
+>Git文档&lt;/a>&lt;/p>
+&lt;h2 id="git代码基于实际开发流程">git代码（基于实际开发流程）
+&lt;/h2>&lt;p>ps:在vscode中可以可视化仓库的变化情况&lt;/p>
+&lt;p>ps:本文件主要使用命令行的形式，在vscode中可视化验证自己的操作是否正确&lt;/p>
+&lt;h2 id="1-clone代码">1. Clone代码
+&lt;/h2>&lt;ol>
+&lt;li>假设已经将代码&lt;code>clone&lt;/code>​到本地了&lt;/li>
+&lt;/ol>
+&lt;h2 id="2-拉取远程仓库最新代码">2. 拉取远程仓库最新代码
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>​&lt;code>git fetch&lt;/code>​拉取远程所有更新。&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03.png"
+width="431"
+height="401"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03_hu_b2ceea911ac98b96.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03_hu_eb844255352a0b8e.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="107"
+data-flex-basis="257px"
+>​&lt;/p>
+&lt;ul>
+&lt;li>可以点击粉色节点查看变化内容。（这里不再使用git diff命令，可视化方便直观）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>​&lt;code>git merge&lt;/code>​合并到当前分支&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65.png"
+width="425"
+height="388"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65_hu_58c9919f94ff609c.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65_hu_bd0840c3a991e83f.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="109"
+data-flex-basis="262px"
+>​&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="3提交代码">3.提交代码
+&lt;/h2>&lt;ol>
+&lt;li>​&lt;code>git add .&lt;/code>​将修改存入暂存区（stage）&lt;/li>
+&lt;li>​&lt;code>git commit -m &amp;quot;备注信息&amp;quot;&lt;/code>​提交已经存入到stage的内容&lt;/li>
+&lt;li>​&lt;code>git push origin wwh_dev&lt;/code>​将本地的&lt;code>wwh_dev&lt;/code>​分支，推送到&lt;code>origin&lt;/code>​远端&lt;/li>
+&lt;/ol>
+&lt;p>‍&lt;/p>
+&lt;p>背景：在main分支开发完毕后，在没有commit的情况下，新建了分支mph_generator_dev当作是本次开发的备份，同样在没有commit的情况下，又新建了一个分支wwh_dev当作是提交分支。&lt;/p>
+&lt;p>warning：当我执行完&lt;code>git push origin wwh_dev&lt;/code>​ 后，其他分支的内容都回到了修改前&lt;br>
+​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr.png"
+width="378"
+height="197"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr_hu_67b891a07e6d5a87.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr_hu_827500bc74a74ce3.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="460px"
+>​&lt;br>
+​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p.png"
+width="363"
+height="198"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p_hu_1d76fda89d3b8169.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p_hu_3cc845b386b99610.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="183"
+data-flex-basis="440px"
+>​&lt;/p>
+&lt;p>error:猜想造成的原因是，创建其他分支之前没有&lt;code>commit&lt;/code>​ 造成的。此想法还没有验证。（TODO）&lt;/p>
+&lt;p>main分支没有commit的情况下新建了A分支，A分支git commit之后，main分支所有修改都消失了&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;h2 id="4向管理者提交pull-requests">4.向管理者提交pull requests
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>在GUI页面中进行的。&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm.png"
+width="642"
+height="846"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm_hu_8da8d81258755ae6.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm_hu_56f223bb94384da9.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="182px"
+>​&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41.png"
+width="2072"
+height="390"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41_hu_8b1f94b446f00a0f.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41_hu_f6730684ae34fb9a.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="531"
+data-flex-basis="1275px"
+>​&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>源分支：开发完成的分支&lt;/p>
+&lt;p>目标分支：项目分支&lt;/p>
+&lt;ol start="2">
+&lt;li>
+&lt;p>解决冲突&lt;/p>
+&lt;p>在GUI界面上解决，并且在GUI界面，&lt;code>git add .&lt;/code>​和&lt;code>git commit -m &amp;quot;备注信息&amp;quot;&lt;/code>​&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>等待管理员接受PR,合并代码后，以此开发任务就完成了。&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;h3 id="41查看是否提交成功">4.1查看是否提交成功
+&lt;/h3>&lt;p>背景：在wwh_dev分支上开发，提交代码后，merge之后，想在其他分支看我提交的内容，同时保证一个分支时刻保持最新。问题来了。在Thermal5.0（想要保持最新的分支）看不到我提交的内容。&lt;/p>
+&lt;p>原因在于没有进行分支追踪：&lt;br>
+执行 &lt;code>git pull &amp;lt;远程&amp;gt; &amp;lt;分支&amp;gt;&lt;/code>​ 例如：git pull origin Thermal5.0&lt;br>
+执行之后，即可得到最新提交代码&lt;/p>
+&lt;h3 id="42-添加分支跟踪">4.2 添加分支跟踪
+&lt;/h3>&lt;p>手动：&lt;/p>
+&lt;p>​&lt;code>git branch --set-upstream-to=&amp;lt;remote_name&amp;gt;/&amp;lt;remote_branch&amp;gt; &amp;lt;branch_name&amp;gt;&lt;/code>​&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>新建分支的时候建立追踪关系：&lt;/p>
+&lt;p>​&lt;code>git checkout -b my_branch origin/develop&lt;/code>​&lt;/p>
+&lt;p>​&lt;code>git switch -c my_branch origin/develop&lt;/code>​&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;h3 id="43-查看跟踪分支">4.3 查看跟踪分支
+&lt;/h3>&lt;p>‍&lt;/p>
+&lt;p>git branch -vv&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;h2 id="5-再开启一个新开发任务">5. 再开启一个新开发任务
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>分支分配&lt;/p>
+&lt;ol>
+&lt;li>​&lt;code>main&lt;/code>​分支，保持和origin远端的同步，不要在这个上面开发&lt;/li>
+&lt;li>​&lt;code>dev&lt;/code>​分支，每次最新任务的开发分支&lt;/li>
+&lt;li>​&lt;code>dev_xx_backup&lt;/code>​分支，开发完一个任务后的备份，拷贝来自&lt;code>dev&lt;/code>​分支，包含任务测试代码&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>分支管理&lt;/p>
+&lt;ol>
+&lt;li>每次&lt;code>push&lt;/code>​提交后，等待管理员检查无误后，将&lt;code>dev&lt;/code>​分支删除&lt;/li>
+&lt;li>保证&lt;code>main&lt;/code>​分支最新，从&lt;code>main&lt;/code>​分支中新建一个分支当成当前任务的分支&lt;/li>
+&lt;li>此时&lt;code>branch&lt;/code>​结构中只包含，一个&lt;code>main&lt;/code>​分支，一个&lt;code>dev&lt;/code>​分支，和&lt;code>每次任务的备份&lt;/code>​分支&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;p>‍&lt;/p>
+&lt;h2 id="6source-control-graph">6.SOURCE CONTROL GRAPH
+&lt;/h2>&lt;p>ps：图片都来自&lt;code>vscode&lt;/code>​&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>来自于&lt;code>git fetch&lt;/code>​之后&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/assets/%e5%b1%8f%e5%b9%95%e6%88%aa%e5%9b%be%202024-11-12%20143950-20241112152941-6iufqqs.png"
+loading="lazy"
+alt="屏幕截图 2024-11-12 143950"
+>​&lt;/p>
+&lt;p>解释：&lt;/p>
+&lt;ol>
+&lt;li>每一个实心圆代表每一次提交节点&lt;/li>
+&lt;li>不同颜色的线，表示不同开发人员的开发路线&lt;/li>
+&lt;li>&lt;span data-type="text" style="background-color: var(--b3-card-info-background); color: var(--b3-card-info-color);">蓝色空心圆&lt;/span>表示当前所在的节点&lt;/li>
+&lt;li>圆环表示合并操作&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>来自&lt;code>git merge&lt;/code>​之后&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33.png"
+width="458"
+height="286"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33_hu_a74d3a04e2b71395.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33_hu_2690fe9e1b9906c4.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="384px"
+>​&lt;/p>
+&lt;ol>
+&lt;li>框中标注的部分，当时是在GUI界面上修改分支冲突的，所以会从蓝色线程中分出一个分支到橙色线程的合并&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="删除远程分支">删除远程分支
+&lt;/h2>&lt;p>‍要删除 Git 仓库中的&lt;strong>远程分支&lt;/strong>，你可以使用以下命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git push &amp;lt;remote_name&amp;gt; --delete &amp;lt;branch_name&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>示例&lt;/strong>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git push origin --delete feature/login
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这条命令会将远程名为 &lt;code>origin&lt;/code> 的仓库中的 &lt;code>feature/login&lt;/code> 分支删除。&lt;/p>
+&lt;hr>
+&lt;p>&lt;strong>常见说明&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;remote_name&amp;gt;&lt;/code> 通常是 &lt;code>origin&lt;/code>，可以通过 &lt;code>git remote -v&lt;/code> 查看。&lt;/li>
+&lt;li>删除远程分支不会影响本地的分支，如果你也想删除本地的，可以用：
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git branch -d &amp;lt;branch_name&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p></description></item><item><title>Hugo Github Pages 搭建个人博客</title><link>https://sleepman9.github.io/p/hugo-github-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link><pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/hugo-github-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid><description>&lt;img src="https://sleepman9.github.io/p/hugo-github-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/cover.png" alt="Featured image of post Hugo Github Pages 搭建个人博客" />&lt;h2 id="手动搭建博客经历">手动搭建博客经历
+&lt;/h2>&lt;h3 id="手动方式">手动方式：
+&lt;/h3>&lt;ol>
+&lt;li>安装：&lt;code>hugo&lt;/code>, &lt;code>go&lt;/code>.&lt;/li>
+&lt;li>clone 主题：&lt;code>git submodule add theme&lt;/code>.&lt;/li>
+&lt;li>hugo server 本地调试。&lt;/li>
+&lt;li>设置GitHub Pages主页信息&lt;/li>
+&lt;li>使用GitHub Actions 自动构建/部署（CI/CD）&lt;/li>
+&lt;li>本地提交到GitHub仓库&lt;/li>
+&lt;/ol>
+&lt;p>上述过程可以参考
+&lt;a class="link" href="https://blog.taoluyuan.com/blog/github-workflows" target="_blank" rel="noopener"
+>通过 Github workflows CI/CD 自动化部署 Github Pages hugo 免费博客&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://jianzhnie.github.io/post/hugo_site/" target="_blank" rel="noopener"
+>Hugo + Github Pages 搭建个人博客&lt;/a>&lt;/p>
+&lt;h3 id="template方式">template方式
+&lt;/h3>&lt;p>直到后来遇到了&lt;strong>自动挡&lt;/strong>，直接使用 theme template套模板即可（修改个人信息，写post）&lt;/p>
+&lt;h3 id="个人感悟">个人感悟
+&lt;/h3>&lt;p>最近在接触软件开发的内容，其中对于CI/CD部分一直存在一些疑惑，直到自己搭建博客，对这一块的工作流有了进一步的理解。&lt;/p>
+&lt;h2 id="hugo-stack-theme-魔改">hugo stack theme 魔改
+&lt;/h2>&lt;blockquote>
+&lt;p>多看优秀的主题，才知道怎么魔改；链接及其评论作者都是与此相关的主题；&lt;/p>&lt;/blockquote>
+&lt;p>&lt;a class="link" href="https://linsnow.cn/posts/bloglab/hugo-stack/modify-hugo/" target="_blank" rel="noopener"
+>bloger1&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.xalaok.top/post/stack-modify/" target="_blank" rel="noopener"
+>stack 魔改美化&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://thirdshire.com/hugo-stack-renovation/" target="_blank" rel="noopener"
+>stack 魔改美化_2&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.reincarnatey.net/2023/build-hugo-blog-with-stack-mod/" target="_blank" rel="noopener"
+>建站技术 | 使用 Hugo + Stack 简单搭建一个博客&lt;/a>&lt;/p></description></item><item><title>SCP_传输文件</title><link>https://sleepman9.github.io/p/scp_%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6/</link><pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/scp_%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6/</guid><description>&lt;p>&lt;code>scp&lt;/code>（Secure Copy Protocol）用于在本地与远程服务器之间、或者两台远程服务器之间安全地复制文件。&lt;/p>
+&lt;hr>
+&lt;h2 id="从本地复制到远程服务器">从本地复制到远程服务器
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp /path/to/local/file username@remote_host:/path/to/remote/directory
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>示例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp myfile.txt user@192.168.1.100:/home/user/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这会将 &lt;code>myfile.txt&lt;/code> 复制到远程服务器 &lt;code>192.168.1.100&lt;/code> 的 &lt;code>/home/user/&lt;/code> 目录。&lt;/p>
+&lt;hr>
+&lt;h2 id="从远程服务器复制到本地">从远程服务器复制到本地
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp username@remote_host:/path/to/remote/file /path/to/local/directory
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>示例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp user@192.168.1.100:/home/user/myfile.txt /home/localuser/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这会把远程服务器 &lt;code>/home/user/myfile.txt&lt;/code> 复制到本地 &lt;code>/home/localuser/&lt;/code> 目录。&lt;/p>
+&lt;hr>
+&lt;h2 id="复制整个文件夹加--r-选项">复制整个文件夹（加 &lt;code>-r&lt;/code> 选项）
+&lt;/h2>&lt;h3 id="本地--远程">本地 → 远程
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp -r /path/to/local/directory username@remote_host:/path/to/remote/directory
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>示例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp -r myfolder user@192.168.1.100:/home/user/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>将 &lt;code>myfolder&lt;/code> 目录及其内容复制到远程服务器 &lt;code>/home/user/&lt;/code>。&lt;/p>
+&lt;h3 id="远程--本地">远程 → 本地
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp -r username@remote_host:/path/to/remote/directory /path/to/local/directory
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>示例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp -r user@192.168.1.100:/home/user/myfolder /home/localuser/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>将远程服务器上的 &lt;code>myfolder&lt;/code> 复制到本地 &lt;code>/home/localuser/&lt;/code> 目录。&lt;/p>
+&lt;hr>
+&lt;h2 id="从一台远程服务器复制到另一台远程服务器">从一台远程服务器复制到另一台远程服务器
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp username1@remote_host1:/path/to/file username2@remote_host2:/path/to/destination
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>示例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp user1@192.168.1.101:/home/user1/file.txt user2@192.168.1.102:/home/user2/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这会直接把 &lt;code>192.168.1.101&lt;/code> 上的 &lt;code>file.txt&lt;/code> 复制到 &lt;code>192.168.1.102&lt;/code> 上的 &lt;code>/home/user2/&lt;/code> 目录。&lt;/p>
+&lt;hr>
+&lt;h2 id="指定端口-p-选项大写-p">指定端口（&lt;code>-P&lt;/code> 选项，大写 P）
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp -P &lt;span class="m">2222&lt;/span> myfile.txt user@192.168.1.100:/home/user/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果远程服务器的 SSH 端口不是默认 &lt;code>22&lt;/code>，可以使用 &lt;code>-P&lt;/code> 指定端口，如 &lt;code>2222&lt;/code>。&lt;/p>
+&lt;hr>
+&lt;h2 id="使用--c-启用压缩加速传输">使用 &lt;code>-C&lt;/code> 启用压缩加速传输
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp -C myfile.txt user@192.168.1.100:/home/user/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>对于大文件或慢速网络，可以使用 &lt;code>-C&lt;/code> 进行压缩，提高传输效率。&lt;/p>
+&lt;hr>
+&lt;h2 id="限制带宽-l-选项单位-kbits">限制带宽（&lt;code>-l&lt;/code> 选项，单位 Kbit/s）
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp -l &lt;span class="m">1000&lt;/span> myfile.txt user@192.168.1.100:/home/user/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>上面命令限制最大带宽为 &lt;code>1000 Kbit/s&lt;/code>，即 &lt;code>125 KB/s&lt;/code>。&lt;/p>
+&lt;hr>
+&lt;h2 id="总结">总结
+&lt;/h2>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>需求&lt;/th>
+&lt;th>命令示例&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>本地 → 远程&lt;/td>
+&lt;td>&lt;code>scp file.txt user@remote:/home/user/&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>远程 → 本地&lt;/td>
+&lt;td>&lt;code>scp user@remote:/home/user/file.txt ./&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>复制文件夹&lt;/td>
+&lt;td>&lt;code>scp -r folder user@remote:/home/user/&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>远程 → 远程&lt;/td>
+&lt;td>&lt;code>scp user1@host1:/file user2@host2:/dir/&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>指定端口&lt;/td>
+&lt;td>&lt;code>scp -P 2222 file user@remote:/home/user/&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>启用压缩&lt;/td>
+&lt;td>&lt;code>scp -C file user@remote:/home/user/&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>限制带宽&lt;/td>
+&lt;td>&lt;code>scp -l 1000 file user@remote:/home/user/&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>💡 &lt;strong>&lt;code>scp&lt;/code> 适用于小型文件传输，大规模文件推荐 &lt;code>rsync&lt;/code> 进行增量传输！&lt;/strong> 🚀&lt;/p></description></item><item><title>Vscode Debug</title><link>https://sleepman9.github.io/p/vscode-debug/</link><pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/vscode-debug/</guid><description>&lt;p>&lt;strong>.vscode launch.json 调试设置&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;version&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;0.2.0&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 配置文件的版本号
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;configurations&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Python: Run run.py&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 配置的名称，用于在调试配置列表中标识此配置
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;python&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 调试器的类型，这里使用的是 Python 调试器
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;request&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;launch&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 请求类型，表示启动一个新的调试会话
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;program&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;${workspaceFolder}/run.py&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 要调试的 Python 程序的路径（需要是一个可以运行的程序）
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;args&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span> &lt;span class="c1">//所有参数的列表
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;thermal&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 第一个参数，表示运行模式
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;-i&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 输入文件参数
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;${workspaceFolder}/case/3DIC_real_case/test_simulation.json&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 输入文件的路径
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;-o&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 输出文件参数
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;${workspaceFolder}/case/3DIC_real_case/output&amp;#34;&lt;/span> &lt;span class="c1">// 输出文件夹的路径
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;console&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;integratedTerminal&amp;#34;&lt;/span> &lt;span class="c1">// 指定调试时使用的控制台类型，这里使用集成终端
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这段 JSON 配置文件是为 Visual Studio Code (VSCode) 中的调试器或运行器设置的，特别是用于运行 Python 脚本 &lt;code>run.py&lt;/code>。这是 VSCode 的 &lt;strong>launch.json&lt;/strong> 文件配置的一部分，用于设置如何运行 Python 程序以及传递的参数。下面是每个部分的解释：&lt;/p>
+&lt;h3 id="version-020">&lt;strong>version&lt;/strong>: &amp;ldquo;0.2.0&amp;rdquo;
+&lt;/h3>&lt;ul>
+&lt;li>这是 VSCode 配置文件的版本号，表示该配置文件遵循的格式版本。&lt;code>0.2.0&lt;/code> 是比较老的版本，但它仍然被广泛使用。&lt;/li>
+&lt;/ul>
+&lt;h3 id="configurations-">&lt;strong>configurations&lt;/strong>: []
+&lt;/h3>&lt;ul>
+&lt;li>该数组包含一个或多个配置对象，每个配置代表一种不同的调试或运行方式。在这里，只有一个配置对象。&lt;/li>
+&lt;/ul>
+&lt;h3 id="配置对象解释">配置对象解释：
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Python: Run run.py&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;python&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;request&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;launch&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;program&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;${workspaceFolder}/run.py&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;args&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;thermal&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-i&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;${workspaceFolder}/case/3DIC_real_case/test_simulation.json&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-o&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;${workspaceFolder}/case/3DIC_real_case/output&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;console&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;integratedTerminal&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="name-python-run-runpy">&lt;strong>name&lt;/strong>: &lt;code>&amp;quot;Python: Run run.py&amp;quot;&lt;/code>
+&lt;/h4>&lt;ul>
+&lt;li>这是配置的名称，用于标识和显示该配置。这个名称在 VSCode 的调试配置选择器中会出现，方便用户选择执行哪个配置。&lt;/li>
+&lt;/ul>
+&lt;h4 id="type-python">&lt;strong>type&lt;/strong>: &lt;code>&amp;quot;python&amp;quot;&lt;/code>
+&lt;/h4>&lt;ul>
+&lt;li>这表示配置类型为 Python，告诉 VSCode 使用 Python 解释器来执行程序。&lt;/li>
+&lt;/ul>
+&lt;h4 id="request-launch">&lt;strong>request&lt;/strong>: &lt;code>&amp;quot;launch&amp;quot;&lt;/code>
+&lt;/h4>&lt;ul>
+&lt;li>该设置表明这是一个启动配置，而不是附加配置（&lt;code>attach&lt;/code>）。即，当点击 &amp;ldquo;启动&amp;rdquo; 或 &amp;ldquo;调试&amp;rdquo; 按钮时，VSCode 会运行这个配置来启动 Python 脚本。&lt;/li>
+&lt;/ul>
+&lt;h4 id="program-workspacefolderrunpy">&lt;strong>program&lt;/strong>: &lt;code>&amp;quot;${workspaceFolder}/run.py&amp;quot;&lt;/code>
+&lt;/h4>&lt;ul>
+&lt;li>指定要执行的 Python 程序。&lt;code>${workspaceFolder}&lt;/code> 是一个内置变量，代表当前工作区的根文件夹路径。所以这里表示执行 &lt;code>run.py&lt;/code> 脚本，该脚本位于工作区根目录下。&lt;/li>
+&lt;/ul>
+&lt;h4 id="args--thermal--i-workspacefoldercase3dic_real_casetest_simulationjson--o-workspacefoldercase3dic_real_caseoutput-">&lt;strong>args&lt;/strong>: &lt;code>[ &amp;quot;thermal&amp;quot;, &amp;quot;-i&amp;quot;, &amp;quot;${workspaceFolder}/case/3DIC_real_case/test_simulation.json&amp;quot;, &amp;quot;-o&amp;quot;, &amp;quot;${workspaceFolder}/case/3DIC_real_case/output&amp;quot; ]&lt;/code>
+&lt;/h4>&lt;ul>
+&lt;li>
+&lt;p>这是传递给 Python 脚本 &lt;code>run.py&lt;/code> 的命令行参数。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>&amp;quot;thermal&amp;quot;&lt;/code>：传递给脚本的第一个参数，可能是某种运行模式或功能的标志。&lt;/li>
+&lt;li>&lt;code>&amp;quot;-i&amp;quot;&lt;/code> 和 &lt;code>&amp;quot;${workspaceFolder}/case/3DIC_real_case/test_simulation.json&amp;quot;&lt;/code>：&lt;code>-i&lt;/code> 可能是输入文件的标志，后面跟着路径指向一个 JSON 配置文件。&lt;/li>
+&lt;li>&lt;code>&amp;quot;-o&amp;quot;&lt;/code> 和 &lt;code>&amp;quot;${workspaceFolder}/case/3DIC_real_case/output&amp;quot;&lt;/code>：&lt;code>-o&lt;/code> 可能是输出目录或文件的标志，后面跟着路径指向输出目录。&lt;/li>
+&lt;/ul>
+&lt;p>这些参数可以让 &lt;code>run.py&lt;/code> 根据输入的 JSON 配置文件进行仿真，并将结果输出到指定目录。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="console-integratedterminal">&lt;strong>console&lt;/strong>: &lt;code>&amp;quot;integratedTerminal&amp;quot;&lt;/code>
+&lt;/h4>&lt;ul>
+&lt;li>该设置指定程序输出将在 VSCode 内部集成的终端中显示，而不是在外部终端中显示。这样，用户可以直接在 VSCode 的终端面板中查看程序输出。&lt;/li>
+&lt;/ul>
+&lt;h3 id="总结">总结：
+&lt;/h3>&lt;p>这段配置文件的作用是设置一个 Python 调试或运行配置，在运行时：&lt;/p>
+&lt;ul>
+&lt;li>执行 &lt;code>run.py&lt;/code> 脚本。&lt;/li>
+&lt;li>传递三个命令行参数：&lt;code>thermal&lt;/code>（运行模式），&lt;code>-i&lt;/code> 后跟输入文件的路径，&lt;code>-o&lt;/code> 后跟输出目录的路径。&lt;/li>
+&lt;li>输出将显示在 VSCode 的集成终端中。&lt;/li>
+&lt;/ul>
+&lt;p>这是设置调试或运行 Python 脚本的常见方式，尤其是在涉及到多个输入输出参数时。&lt;/p></description></item><item><title>Tools Trick</title><link>https://sleepman9.github.io/p/tools-trick/</link><pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/tools-trick/</guid><description>&lt;img src="https://sleepman9.github.io/p/tools-trick/cover.jpg" alt="Featured image of post Tools Trick" />&lt;h2 id="1-vscode中github-copilot在ssh远程环境中无法登录问题">1. VSCode中Github Copilot在SSH远程环境中无法登录问题
+&lt;/h2>&lt;h3 id="1-在vs-code中按f1键调出命令行输入settingsjson选择远程环境中的配置文件">1. 在VS Code中，按F1键调出命令行，输入settings.json，选择远程环境中的配置文件：
+&lt;/h3>&lt;p>&lt;img src="https://sleepman9.github.io/p/tools-trick/asserts/copliot.png"
+width="825"
+height="502"
+srcset="https://sleepman9.github.io/p/tools-trick/asserts/copliot_hu_d04c34523884441.png 480w, https://sleepman9.github.io/p/tools-trick/asserts/copliot_hu_f6631b22a2511959.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="164"
+data-flex-basis="394px"
+>&lt;/p>
+&lt;h3 id="2-添加如下配置">2. 添加如下配置：
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;remote.extensionKind&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;GitHub.copilot&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;ui&amp;#34;&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;GitHub.copilot-chat&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;ui&amp;#34;&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>&lt;span class="err">,&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="3-重启vs-code即可">3. 重启VS Code即可。
+&lt;/h3>&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_43948052/article/details/146123406" target="_blank" rel="noopener"
+>原文链接&lt;/a>&lt;/p></description></item></channel></rss>

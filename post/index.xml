@@ -1,0 +1,2144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on UNO's Page</title><link>https://sleepman9.github.io/post/</link><description>Recent content in Posts on UNO's Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 24 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sleepman9.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Git Practice</title><link>https://sleepman9.github.io/p/git-practice/</link><pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/git-practice/</guid><description>&lt;img src="https://sleepman9.github.io/p/git-practice/cover.webp" alt="Featured image of post Git Practice" />&lt;h2 id="学习网站">学习网站
+&lt;/h2>&lt;p>&lt;a class="link" href="https://learngitbranching.js.org/?locale=zh_CN" target="_blank" rel="noopener"
+>Learn Git Branching&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://git-scm.com/doc" target="_blank" rel="noopener"
+>Git文档&lt;/a>&lt;/p>
+&lt;h2 id="git代码基于实际开发流程">git代码（基于实际开发流程）
+&lt;/h2>&lt;p>ps:在vscode中可以可视化仓库的变化情况&lt;/p>
+&lt;p>ps:本文件主要使用命令行的形式，在vscode中可视化验证自己的操作是否正确&lt;/p>
+&lt;h2 id="1-clone代码">1. Clone代码
+&lt;/h2>&lt;ol>
+&lt;li>假设已经将代码&lt;code>clone&lt;/code>​到本地了&lt;/li>
+&lt;/ol>
+&lt;h2 id="2-拉取远程仓库最新代码">2. 拉取远程仓库最新代码
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>​&lt;code>git fetch&lt;/code>​拉取远程所有更新。&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03.png"
+width="431"
+height="401"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03_hu_b2ceea911ac98b96.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03_hu_eb844255352a0b8e.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="107"
+data-flex-basis="257px"
+>​&lt;/p>
+&lt;ul>
+&lt;li>可以点击粉色节点查看变化内容。（这里不再使用git diff命令，可视化方便直观）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>​&lt;code>git merge&lt;/code>​合并到当前分支&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65.png"
+width="425"
+height="388"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65_hu_58c9919f94ff609c.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65_hu_bd0840c3a991e83f.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="109"
+data-flex-basis="262px"
+>​&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="3提交代码">3.提交代码
+&lt;/h2>&lt;ol>
+&lt;li>​&lt;code>git add .&lt;/code>​将修改存入暂存区（stage）&lt;/li>
+&lt;li>​&lt;code>git commit -m &amp;quot;备注信息&amp;quot;&lt;/code>​提交已经存入到stage的内容&lt;/li>
+&lt;li>​&lt;code>git push origin wwh_dev&lt;/code>​将本地的&lt;code>wwh_dev&lt;/code>​分支，推送到&lt;code>origin&lt;/code>​远端&lt;/li>
+&lt;/ol>
+&lt;p>‍&lt;/p>
+&lt;p>背景：在main分支开发完毕后，在没有commit的情况下，新建了分支mph_generator_dev当作是本次开发的备份，同样在没有commit的情况下，又新建了一个分支wwh_dev当作是提交分支。&lt;/p>
+&lt;p>warning：当我执行完&lt;code>git push origin wwh_dev&lt;/code>​ 后，其他分支的内容都回到了修改前&lt;br>
+​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr.png"
+width="378"
+height="197"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr_hu_67b891a07e6d5a87.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr_hu_827500bc74a74ce3.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="460px"
+>​&lt;br>
+​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p.png"
+width="363"
+height="198"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p_hu_1d76fda89d3b8169.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p_hu_3cc845b386b99610.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="183"
+data-flex-basis="440px"
+>​&lt;/p>
+&lt;p>error:猜想造成的原因是，创建其他分支之前没有&lt;code>commit&lt;/code>​ 造成的。此想法还没有验证。（TODO）&lt;/p>
+&lt;p>main分支没有commit的情况下新建了A分支，A分支git commit之后，main分支所有修改都消失了&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;h2 id="4向管理者提交pull-requests">4.向管理者提交pull requests
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>在GUI页面中进行的。&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm.png"
+width="642"
+height="846"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm_hu_8da8d81258755ae6.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm_hu_56f223bb94384da9.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="182px"
+>​&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41.png"
+width="2072"
+height="390"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41_hu_8b1f94b446f00a0f.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41_hu_f6730684ae34fb9a.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="531"
+data-flex-basis="1275px"
+>​&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>源分支：开发完成的分支&lt;/p>
+&lt;p>目标分支：项目分支&lt;/p>
+&lt;ol start="2">
+&lt;li>
+&lt;p>解决冲突&lt;/p>
+&lt;p>在GUI界面上解决，并且在GUI界面，&lt;code>git add .&lt;/code>​和&lt;code>git commit -m &amp;quot;备注信息&amp;quot;&lt;/code>​&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>等待管理员接受PR,合并代码后，以此开发任务就完成了。&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;h3 id="41查看是否提交成功">4.1查看是否提交成功
+&lt;/h3>&lt;p>背景：在wwh_dev分支上开发，提交代码后，merge之后，想在其他分支看我提交的内容，同时保证一个分支时刻保持最新。问题来了。在Thermal5.0（想要保持最新的分支）看不到我提交的内容。&lt;/p>
+&lt;p>原因在于没有进行分支追踪：&lt;br>
+执行 &lt;code>git pull &amp;lt;远程&amp;gt; &amp;lt;分支&amp;gt;&lt;/code>​ 例如：git pull origin Thermal5.0&lt;br>
+执行之后，即可得到最新提交代码&lt;/p>
+&lt;h3 id="42-添加分支跟踪">4.2 添加分支跟踪
+&lt;/h3>&lt;p>手动：&lt;/p>
+&lt;p>​&lt;code>git branch --set-upstream-to=&amp;lt;remote_name&amp;gt;/&amp;lt;remote_branch&amp;gt; &amp;lt;branch_name&amp;gt;&lt;/code>​&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>新建分支的时候建立追踪关系：&lt;/p>
+&lt;p>​&lt;code>git checkout -b my_branch origin/develop&lt;/code>​&lt;/p>
+&lt;p>​&lt;code>git switch -c my_branch origin/develop&lt;/code>​&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;h3 id="43-查看跟踪分支">4.3 查看跟踪分支
+&lt;/h3>&lt;p>‍&lt;/p>
+&lt;p>git branch -vv&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p>
+&lt;h2 id="5-再开启一个新开发任务">5. 再开启一个新开发任务
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>分支分配&lt;/p>
+&lt;ol>
+&lt;li>​&lt;code>main&lt;/code>​分支，保持和origin远端的同步，不要在这个上面开发&lt;/li>
+&lt;li>​&lt;code>dev&lt;/code>​分支，每次最新任务的开发分支&lt;/li>
+&lt;li>​&lt;code>dev_xx_backup&lt;/code>​分支，开发完一个任务后的备份，拷贝来自&lt;code>dev&lt;/code>​分支，包含任务测试代码&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>分支管理&lt;/p>
+&lt;ol>
+&lt;li>每次&lt;code>push&lt;/code>​提交后，等待管理员检查无误后，将&lt;code>dev&lt;/code>​分支删除&lt;/li>
+&lt;li>保证&lt;code>main&lt;/code>​分支最新，从&lt;code>main&lt;/code>​分支中新建一个分支当成当前任务的分支&lt;/li>
+&lt;li>此时&lt;code>branch&lt;/code>​结构中只包含，一个&lt;code>main&lt;/code>​分支，一个&lt;code>dev&lt;/code>​分支，和&lt;code>每次任务的备份&lt;/code>​分支&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;p>‍&lt;/p>
+&lt;h2 id="6source-control-graph">6.SOURCE CONTROL GRAPH
+&lt;/h2>&lt;p>ps：图片都来自&lt;code>vscode&lt;/code>​&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>来自于&lt;code>git fetch&lt;/code>​之后&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/assets/%e5%b1%8f%e5%b9%95%e6%88%aa%e5%9b%be%202024-11-12%20143950-20241112152941-6iufqqs.png"
+loading="lazy"
+alt="屏幕截图 2024-11-12 143950"
+>​&lt;/p>
+&lt;p>解释：&lt;/p>
+&lt;ol>
+&lt;li>每一个实心圆代表每一次提交节点&lt;/li>
+&lt;li>不同颜色的线，表示不同开发人员的开发路线&lt;/li>
+&lt;li>&lt;span data-type="text" style="background-color: var(--b3-card-info-background); color: var(--b3-card-info-color);">蓝色空心圆&lt;/span>表示当前所在的节点&lt;/li>
+&lt;li>圆环表示合并操作&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>来自&lt;code>git merge&lt;/code>​之后&lt;/p>
+&lt;p>​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33.png"
+width="458"
+height="286"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33_hu_a74d3a04e2b71395.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33_hu_2690fe9e1b9906c4.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="384px"
+>​&lt;/p>
+&lt;ol>
+&lt;li>框中标注的部分，当时是在GUI界面上修改分支冲突的，所以会从蓝色线程中分出一个分支到橙色线程的合并&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="删除远程分支">删除远程分支
+&lt;/h2>&lt;p>‍要删除 Git 仓库中的&lt;strong>远程分支&lt;/strong>，你可以使用以下命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git push &amp;lt;remote_name&amp;gt; --delete &amp;lt;branch_name&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>示例&lt;/strong>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git push origin --delete feature/login
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这条命令会将远程名为 &lt;code>origin&lt;/code> 的仓库中的 &lt;code>feature/login&lt;/code> 分支删除。&lt;/p>
+&lt;hr>
+&lt;p>&lt;strong>常见说明&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;remote_name&amp;gt;&lt;/code> 通常是 &lt;code>origin&lt;/code>，可以通过 &lt;code>git remote -v&lt;/code> 查看。&lt;/li>
+&lt;li>删除远程分支不会影响本地的分支，如果你也想删除本地的，可以用：
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git branch -d &amp;lt;branch_name&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;p>‍&lt;/p>
+&lt;p>‍&lt;/p></description></item><item><title>Hugo Github Pages 搭建个人博客</title><link>https://sleepman9.github.io/p/hugo-github-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link><pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/hugo-github-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid><description>&lt;img src="https://sleepman9.github.io/p/hugo-github-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/cover.png" alt="Featured image of post Hugo Github Pages 搭建个人博客" />&lt;h2 id="手动搭建博客经历">手动搭建博客经历
+&lt;/h2>&lt;h3 id="手动方式">手动方式：
+&lt;/h3>&lt;ol>
+&lt;li>安装：&lt;code>hugo&lt;/code>, &lt;code>go&lt;/code>.&lt;/li>
+&lt;li>clone 主题：&lt;code>git submodule add theme&lt;/code>.&lt;/li>
+&lt;li>hugo server 本地调试。&lt;/li>
+&lt;li>设置GitHub Pages主页信息&lt;/li>
+&lt;li>使用GitHub Actions 自动构建/部署（CI/CD）&lt;/li>
+&lt;li>本地提交到GitHub仓库&lt;/li>
+&lt;/ol>
+&lt;p>上述过程可以参考
+&lt;a class="link" href="https://blog.taoluyuan.com/blog/github-workflows" target="_blank" rel="noopener"
+>通过 Github workflows CI/CD 自动化部署 Github Pages hugo 免费博客&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://jianzhnie.github.io/post/hugo_site/" target="_blank" rel="noopener"
+>Hugo + Github Pages 搭建个人博客&lt;/a>&lt;/p>
+&lt;h3 id="template方式">template方式
+&lt;/h3>&lt;p>直到后来遇到了&lt;strong>自动挡&lt;/strong>，直接使用 theme template套模板即可（修改个人信息，写post）&lt;/p>
+&lt;h3 id="个人感悟">个人感悟
+&lt;/h3>&lt;p>最近在接触软件开发的内容，其中对于CI/CD部分一直存在一些疑惑，直到自己搭建博客，对这一块的工作流有了进一步的理解。&lt;/p>
+&lt;h2 id="hugo-stack-theme-魔改">hugo stack theme 魔改
+&lt;/h2>&lt;blockquote>
+&lt;p>多看优秀的主题，才知道怎么魔改；链接及其评论作者都是与此相关的主题；&lt;/p>&lt;/blockquote>
+&lt;p>&lt;a class="link" href="https://linsnow.cn/posts/bloglab/hugo-stack/modify-hugo/" target="_blank" rel="noopener"
+>bloger1&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.xalaok.top/post/stack-modify/" target="_blank" rel="noopener"
+>stack 魔改美化&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://thirdshire.com/hugo-stack-renovation/" target="_blank" rel="noopener"
+>stack 魔改美化_2&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.reincarnatey.net/2023/build-hugo-blog-with-stack-mod/" target="_blank" rel="noopener"
+>建站技术 | 使用 Hugo + Stack 简单搭建一个博客&lt;/a>&lt;/p></description></item><item><title>软件开发——编译</title><link>https://sleepman9.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%BC%96%E8%AF%91/</link><pubDate>Fri, 18 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%BC%96%E8%AF%91/</guid><description>&lt;blockquote>
+&lt;p>伟大的UNO一般会问几个为什么！&lt;/p>&lt;/blockquote>
+&lt;h2 id="qa">QA
+&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>Q：为什么要编译成动态库&lt;/p>
+&lt;p>A:为了&lt;strong>节省资源、方便更新、支持模块化和跨语言调用&lt;/strong>，还能实现插件式架构。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Q: CMake的构建和编译&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Q：怎么通过error信息定位解决&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="动态库">动态库
+&lt;/h2>&lt;h3 id="基本概念">基本概念
+&lt;/h3>&lt;p>动态库就是 &lt;code>.so&lt;/code>（Linux）、&lt;code>.dll&lt;/code>（Windows）、&lt;code>.dylib&lt;/code>（macOS） 这样的文件，在程序运行时被“动态加载”。&lt;/p>
+&lt;p>它跟 &lt;strong>静态库&lt;/strong>（&lt;code>.a&lt;/code> 或 &lt;code>.lib&lt;/code>）的区别在于：&lt;/p>
+&lt;ul>
+&lt;li>静态库是&lt;strong>编译时就嵌入程序里&lt;/strong>的，生成的可执行文件比较大。&lt;/li>
+&lt;li>动态库是&lt;strong>运行时才加载&lt;/strong>的，可执行文件会“引用”这个库，而不是包含它本体。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>✅ 为什么编译成动态库？有哪些优点？
+&lt;strong>节省内存和磁盘空间&lt;/strong>
+多个程序都能使用同一个动态库，比如系统的 libc.so、OpenCV、Qt 这些常用库，不用每个程序都各自编译一份，节省资源。&lt;/p>
+&lt;hr>
+&lt;p>&lt;strong>支持模块化设计&lt;/strong>
+程序可以把功能拆成多个模块，比如：&lt;/p>
+&lt;ul>
+&lt;li>一个主程序（main app）&lt;/li>
+&lt;li>一些插件/功能模块（编译成动态库）&lt;/li>
+&lt;/ul>
+&lt;p>这样设计更灵活、更易维护。&lt;/p>
+&lt;hr>
+&lt;p>&lt;strong>支持“热更新”或“热插拔”&lt;/strong>
+当你想更新某个模块的功能，只需要替换掉对应的动态库，而不用重新编译整个程序。&lt;/p>
+&lt;p>&lt;strong>插件机制&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Python 的 &lt;code>.pyd&lt;/code> 文件&lt;/li>
+&lt;li>MATLAB 的 MEX 动态库&lt;/li>
+&lt;li>浏览器的扩展插件&lt;/li>
+&lt;/ul>
+&lt;p>这些都是通过动态库的形式扩展主程序的功能。&lt;/p>
+&lt;hr>
+&lt;p>&lt;strong>跨语言调用&lt;/strong>
+很多时候，我们用 C/C++ 写一个高性能的核心模块，然后 Python、Java 等其他语言用 FFI（Foreign Function Interface） 调用这些库。&lt;/p>
+&lt;p>例如：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Python 通过 ctypes 加载 .so 或 .dll&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">ctypes&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">cdll&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">lib&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">cdll&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">LoadLibrary&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;./libexample.so&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h3 id="怎么生成动态库链接使用动态库">怎么生成动态库，链接使用动态库
+&lt;/h3>&lt;ol>
+&lt;li>源代码&lt;/li>
+&lt;li>编译生成动态库&lt;/li>
+&lt;li>写主程序&lt;/li>
+&lt;li>编译主程序时链接动态库&lt;/li>
+&lt;li>运行主程序&lt;/li>
+&lt;/ol>
+&lt;p>太好了，我们就用最常见的 &lt;strong>C/C++&lt;/strong> 来举个例子，展示一下 &lt;strong>怎么编译生成动态库&lt;/strong>（以 Linux 下为例，也会顺便说下 Windows 和 macOS 的差异）。&lt;/p>
+&lt;hr>
+&lt;h4 id="创建源代码文件">创建源代码文件
+&lt;/h4>&lt;p>👉 动态库源文件：&lt;code>mymath.c&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// mymath.c
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="nf">say_hello&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Hello from dynamic library!&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">a&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>👉 头文件：&lt;code>mymath.h&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// mymath.h
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="cp">#ifndef MYMATH_H
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#define MYMATH_H
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="nf">say_hello&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#endif
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h4 id="-2-编译生成动态库">🛠️ 2. 编译生成动态库
+&lt;/h4>&lt;p>&lt;strong>Linux / macOS：&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">gcc -fPIC -shared -o libmymath.so mymath.c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>解释：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>-fPIC&lt;/code>：生成位置无关代码（Position Independent Code），动态库需要这个&lt;/li>
+&lt;li>&lt;code>-shared&lt;/code>：告诉编译器要生成共享库&lt;/li>
+&lt;li>&lt;code>-o libmymath.so&lt;/code>：输出文件名，&lt;code>lib&lt;/code> 开头是习惯命名方式&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Windows（使用 MinGW）：&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">gcc -shared -o mymath.dll mymath.c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h4 id="-3-写主程序调用它mainc">🧪 3. 写主程序调用它：&lt;code>main.c&lt;/code>
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// main.c
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;#34;mymath.h&amp;#34;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">say_hello&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;3 + 5 = %d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">result&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h4 id="-4-编译主程序时链接动态库">🏗️ 4. 编译主程序时链接动态库
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">gcc -o main main.c -L. -lmymath
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>解释：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>-L.&lt;/code> 表示在当前目录找库&lt;/li>
+&lt;li>&lt;code>-lmymath&lt;/code> 表示链接名为 &lt;code>libmymath.so&lt;/code> 的库（&lt;code>lib&lt;/code> 开头省略，&lt;code>.so&lt;/code> 后缀省略）&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h4 id="-5-运行程序linux">🏃 5. 运行程序（Linux）
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">LD_LIBRARY_PATH&lt;/span>&lt;span class="o">=&lt;/span>. ./main
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;code>LD_LIBRARY_PATH=.&lt;/code> 是告诉系统动态库就放在当前目录&lt;/p>&lt;/blockquote>
+&lt;hr>
+&lt;p>🎉 &lt;strong>输出结果&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">Hello from dynamic library!
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3 + 5 = 8
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;p>✅ &lt;strong>小结一波&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>步骤&lt;/th>
+&lt;th>命令或操作&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>写库代码&lt;/td>
+&lt;td>&lt;code>mymath.c&lt;/code>、&lt;code>mymath.h&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>编译库&lt;/td>
+&lt;td>&lt;code>gcc -fPIC -shared -o libmymath.so mymath.c&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>写主程序&lt;/td>
+&lt;td>&lt;code>main.c&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>编译主程序&lt;/td>
+&lt;td>&lt;code>gcc -o main main.c -L. -lmymath&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>运行程序&lt;/td>
+&lt;td>&lt;code>LD_LIBRARY_PATH=. ./main&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;h2 id="cmake">CMake
+&lt;/h2>&lt;p>CMake 是一个 跨平台的自动化构建系统工具，它使用一种称为 CMakeLists.txt 的配置文件来描述如何生成项目的构建文件（例如 Makefile 或 Visual Studio 工程）。&lt;/p>
+&lt;p>构建文件中有编译命令GCC,G++等；编译程序；&lt;/p>
+&lt;h3 id="基本概念-1">基本概念
+&lt;/h3>&lt;h4 id="-cmake-的基本构建流程">📁 CMake 的基本构建流程
+&lt;/h4>&lt;p>CMake 的构建过程分为两个阶段：&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>配置（Configure）阶段&lt;/strong>
+这一阶段的目标是生成平台相关的构建文件。&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cmake -S . -B build
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;code>-S .&lt;/code> 指定源码路径&lt;/li>
+&lt;li>&lt;code>-B build&lt;/code> 指定生成的构建文件放在哪个目录（可以叫 &lt;code>build&lt;/code>）&lt;/li>
+&lt;/ul>
+&lt;p>此时，CMake 会读取 &lt;code>CMakeLists.txt&lt;/code>，根据系统环境、编译器等生成合适的构建系统（比如 Makefile）。&lt;/p>
+&lt;hr>
+&lt;ol start="2">
+&lt;li>&lt;strong>构建（Build）阶段&lt;/strong>
+使用上一步生成的构建文件，开始真正的&lt;strong>编译&lt;/strong>操作。&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cmake --build build
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这一步等价于执行 &lt;code>make&lt;/code>（如果你使用的是 Unix/Linux 上的默认生成器），将源代码编译成可执行文件或者库。&lt;/p>
+&lt;hr>
+&lt;h4 id="-cmakeliststxt-基础结构">📜 CMakeLists.txt 基础结构
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmake" data-lang="cmake">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cmake_minimum_required&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">VERSION&lt;/span> &lt;span class="s">3.10&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nb">project&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">MyProject&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># 指定 C++ 标准
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nb">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">CMAKE_CXX_STANDARD&lt;/span> &lt;span class="s">17&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># 添加源文件并构建成可执行文件
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nb">add_executable&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">my_app&lt;/span> &lt;span class="s">main.cpp&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;code>project(...)&lt;/code>：定义项目名称&lt;/li>
+&lt;li>&lt;code>set(...)&lt;/code>：设置变量，比如 C++ 标准&lt;/li>
+&lt;li>&lt;code>add_executable(...)&lt;/code>：指定编译可执行文件的目标&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>🔁 &lt;strong>常见命令一览&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>操作&lt;/th>
+&lt;th>命令示例&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>配置&lt;/td>
+&lt;td>&lt;code>cmake -S . -B build&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>构建&lt;/td>
+&lt;td>&lt;code>cmake --build build&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>清除构建目录&lt;/td>
+&lt;td>&lt;code>rm -rf build&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>设置编译器&lt;/td>
+&lt;td>&lt;code>CC=gcc CXX=g++ cmake -S . -B build&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;p>💡 &lt;strong>小技巧&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>始终将构建目录和源代码目录分离（Out-of-Source Build），便于管理。&lt;/li>
+&lt;li>可以加上 &lt;code>-DCMAKE_BUILD_TYPE=Release&lt;/code> 或 &lt;code>Debug&lt;/code> 来控制编译类型。&lt;/li>
+&lt;li>使用 &lt;code>target_include_directories&lt;/code> 和 &lt;code>target_link_libraries&lt;/code> 来管理依赖更清晰。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="应用">应用
+&lt;/h3>&lt;p>使用 CMake 来构建上述小项目：生成动态库 &lt;code>libmymath.so&lt;/code>，并编译主程序 &lt;code>main.c&lt;/code> 来调用它。&lt;/p>
+&lt;hr>
+&lt;h4 id="项目结构">项目结构
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">my_project/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── CMakeLists.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── mymath.c
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── mymath.h
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">└── main.c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h4 id="cmakeliststxt-内容">CMakeLists.txt 内容
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmake" data-lang="cmake">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cmake_minimum_required&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">VERSION&lt;/span> &lt;span class="s">3.10&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nb">project&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">MyDynamicLibExample&lt;/span> &lt;span class="s">C&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># 设置编译为 C99
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nb">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">CMAKE_C_STANDARD&lt;/span> &lt;span class="s">99&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># 设置输出目录
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nb">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">CMAKE_LIBRARY_OUTPUT_DIRECTORY&lt;/span> &lt;span class="o">${&lt;/span>&lt;span class="nv">CMAKE_BINARY_DIR&lt;/span>&lt;span class="o">}&lt;/span>&lt;span class="s">/lib&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nb">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">CMAKE_RUNTIME_OUTPUT_DIRECTORY&lt;/span> &lt;span class="o">${&lt;/span>&lt;span class="nv">CMAKE_BINARY_DIR&lt;/span>&lt;span class="o">}&lt;/span>&lt;span class="s">/bin&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># 创建动态库
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nb">add_library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">mymath&lt;/span> &lt;span class="s">SHARED&lt;/span> &lt;span class="s">mymath.c&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># 创建可执行文件
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nb">add_executable&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">main_exec&lt;/span> &lt;span class="s">main.c&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># 链接动态库到可执行程序
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nb">target_link_libraries&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">main_exec&lt;/span> &lt;span class="s">PRIVATE&lt;/span> &lt;span class="s">mymath&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c"># 设置头文件路径（可选）
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&lt;/span>&lt;span class="nb">target_include_directories&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">main_exec&lt;/span> &lt;span class="s">PRIVATE&lt;/span> &lt;span class="o">${&lt;/span>&lt;span class="nv">CMAKE_CURRENT_SOURCE_DIR&lt;/span>&lt;span class="o">}&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h4 id="构建步骤在-linuxmacos-上">构建步骤（在 Linux/macOS 上）
+&lt;/h4>&lt;p>打开终端：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir build
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> build
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cmake ..
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cmake --build .
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h4 id="行程序">行程序
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">LD_LIBRARY_PATH&lt;/span>&lt;span class="o">=&lt;/span>./lib ./bin/main_exec
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;p>&lt;strong>输出&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Hello from dynamic library!
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3 + 5 = 8
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h2 id="动态库调用外部函数">动态库调用外部函数
+&lt;/h2>&lt;p>&lt;a class="link" href="https://www.cnblogs.com/sewain/p/14798200.html" target="_blank" rel="noopener"
+>应用程序设计：在动态库中如何调用外部函数？&lt;/a>&lt;/p></description></item><item><title>AI_Model_Transformer</title><link>https://sleepman9.github.io/p/ai_model_transformer/</link><pubDate>Wed, 26 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/ai_model_transformer/</guid><description>&lt;img src="https://sleepman9.github.io/p/ai_model_transformer/cover.png" alt="Featured image of post AI_Model_Transformer" />&lt;p>&lt;strong>如果你开始提问，那说明你开始进步了！&lt;/strong>&lt;/p>
+&lt;pre>&lt;code>前言：一直有个困惑？看完了整个过程，具体是怎么是怎么实现翻译功能的？
+后知后觉的理解：一连串的变换矩阵变换，最终只是为了找到不同词库中的位置！也就是概率分布！！
+&lt;/code>&lt;/pre>
+&lt;h2 id="词的embedding怎么表示的">词的Embedding怎么表示的？
+&lt;/h2>&lt;p>&lt;strong>简洁回答：使用训练模型得出一串向量！&lt;/strong>&lt;/p>
+&lt;p>单词的 Embedding 有很多种方式可以获取，例如可以采用 Word2Vec、Glove 等算法预训练得到，也可以在 Transformer 中训练得到。举个例子&lt;/p>
+&lt;p>假设我们有一个句子：&lt;/p>
+&lt;p>&lt;strong>&amp;ldquo;I love machine learning.&amp;rdquo;&lt;/strong>&lt;/p>
+&lt;p>我们希望将其中的单词转换为向量表示（Embedding）。下面分别介绍三种方式：&lt;/p>
+&lt;h3 id="1-使用-word2vec-获取单词-embedding">&lt;strong>1. 使用 Word2Vec 获取单词 Embedding&lt;/strong>
+&lt;/h3>&lt;p>Word2Vec 通过上下文关系学习单词的语义，通常有 &lt;strong>CBOW（Continuous Bag of Words）&lt;/strong> 和 &lt;strong>Skip-gram&lt;/strong> 两种方式。假设我们使用了 Word2Vec 训练的预训练模型：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Word2Vec(&amp;quot;I&amp;quot;) → [0.12, -0.45, 0.88, ...]&lt;/code>&lt;/li>
+&lt;li>&lt;code>Word2Vec(&amp;quot;love&amp;quot;) → [-0.56, 0.77, -0.34, ...]&lt;/code>&lt;/li>
+&lt;li>&lt;code>Word2Vec(&amp;quot;machine&amp;quot;) → [0.67, -0.12, 0.45, ...]&lt;/code>&lt;/li>
+&lt;li>&lt;code>Word2Vec(&amp;quot;learning&amp;quot;) → [-0.23, 0.56, -0.78, ...]&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>这些向量是从大量文本中学习到的，可以用于 NLP 任务，比如情感分析、文本分类等。&lt;/p>
+&lt;h3 id="2-使用-glove-获取单词-embedding">&lt;strong>2. 使用 GloVe 获取单词 Embedding&lt;/strong>
+&lt;/h3>&lt;p>GloVe（Global Vectors for Word Representation）基于词共现矩阵构建词向量，它关注整个文本语料中词与词的共现关系。例如：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>GloVe(&amp;quot;I&amp;quot;) → [0.08, -0.34, 0.91, ...]&lt;/code>&lt;/li>
+&lt;li>&lt;code>GloVe(&amp;quot;love&amp;quot;) → [-0.63, 0.80, -0.25, ...]&lt;/code>&lt;/li>
+&lt;li>&lt;code>GloVe(&amp;quot;machine&amp;quot;) → [0.72, -0.10, 0.50, ...]&lt;/code>&lt;/li>
+&lt;li>&lt;code>GloVe(&amp;quot;learning&amp;quot;) → [-0.18, 0.50, -0.65, ...]&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>GloVe 适用于静态的词向量训练，一旦训练完成，所有单词的表示不会随上下文变化。&lt;/p>
+&lt;h3 id="3-使用-transformer-训练得到单词-embedding">&lt;strong>3. 使用 Transformer 训练得到单词 Embedding&lt;/strong>
+&lt;/h3>&lt;p>在 Transformer 模型（如 BERT、GPT）中，单词 Embedding 是在 &lt;strong>自注意力机制&lt;/strong> 的作用下动态生成的。例如，在 BERT 预训练模型中，我们可以将句子输入到 BERT 中，得到动态的单词表示：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>BERT(&amp;quot;I&amp;quot;) → [0.10, -0.22, 0.75, ...]&lt;/code>&lt;/li>
+&lt;li>&lt;code>BERT(&amp;quot;love&amp;quot;) → [-0.50, 0.70, -0.30, ...]&lt;/code>&lt;/li>
+&lt;li>&lt;code>BERT(&amp;quot;machine&amp;quot;) → [0.65, -0.15, 0.40, ...]&lt;/code>&lt;/li>
+&lt;li>&lt;code>BERT(&amp;quot;learning&amp;quot;) → [-0.20, 0.55, -0.70, ...]&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>与 Word2Vec 和 GloVe 不同，&lt;strong>BERT 生成的单词向量会根据上下文变化&lt;/strong>，例如“bank”在“river bank”（河岸）和“bank account”（银行账户）中的表示会不同。&lt;/p>
+&lt;p>&lt;strong>总结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>Word2Vec 和 GloVe 生成的词向量是固定的，适用于大部分 NLP 任务。&lt;/li>
+&lt;li>Transformer（如 BERT）生成的词向量是动态的，更适用于需要理解上下文的任务（如问答、文本生成）。
+？&lt;/li>
+&lt;/ul>
+&lt;h2 id="位置embedding怎么表示">位置Embedding怎么表示？
+&lt;/h2>&lt;p>&lt;strong>简介回答：公式计算&lt;/strong>
+&lt;img src="https://sleepman9.github.io/p/ai_model_transformer/image.png"
+width="640"
+height="136"
+srcset="https://sleepman9.github.io/p/ai_model_transformer/image_hu_77f379bbb6b8026b.png 480w, https://sleepman9.github.io/p/ai_model_transformer/image_hu_6c9c64d4025d316d.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="470"
+data-flex-basis="1129px"
+>&lt;/p>
+&lt;p>假设我们有一个句子：&lt;/p>
+&lt;p>&lt;strong>&amp;ldquo;I love NLP models.&amp;rdquo;&lt;/strong>&lt;/p>
+&lt;p>Transformer 需要将这个句子转换为向量表示，其中包含单词的词向量（Word Embedding）和位置向量（Position Embedding）。假设我们使用 4 维的嵌入表示（为了简化示例），即每个单词的词向量和位置向量的维度均为 4。&lt;/p>
+&lt;h3 id="1-计算单词的-embeddingword-embedding">&lt;strong>1. 计算单词的 Embedding（Word Embedding）&lt;/strong>
+&lt;/h3>&lt;p>假设使用预训练的 Word2Vec 或 Transformer 训练得到的单词嵌入：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Embedding(&amp;quot;I&amp;quot;) = [0.1, 0.3, 0.5, 0.7]&lt;/code>&lt;/li>
+&lt;li>&lt;code>Embedding(&amp;quot;love&amp;quot;) = [0.2, 0.4, 0.6, 0.8]&lt;/code>&lt;/li>
+&lt;li>&lt;code>Embedding(&amp;quot;NLP&amp;quot;) = [0.3, 0.5, 0.7, 0.9]&lt;/code>&lt;/li>
+&lt;li>&lt;code>Embedding(&amp;quot;models&amp;quot;) = [0.4, 0.6, 0.8, 1.0]&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-计算位置-embeddingposition-embedding">&lt;strong>2. 计算位置 Embedding（Position Embedding）&lt;/strong>
+&lt;/h3>&lt;p>按照 Transformer 提出的正弦/余弦公式计算位置编码（这里只是示例，实际计算会更复杂）：&lt;/p>
+&lt;p>假设：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>pos = 0&lt;/code>（第一个单词 “I” 的位置），&lt;/li>
+&lt;li>&lt;code>pos = 1&lt;/code>（第二个单词 “love” 的位置），&lt;/li>
+&lt;li>&lt;code>pos = 2&lt;/code>（第三个单词 “NLP” 的位置），&lt;/li>
+&lt;li>&lt;code>pos = 3&lt;/code>（第四个单词 “models” 的位置）。&lt;/li>
+&lt;/ul>
+&lt;p>使用正弦和余弦函数计算的示例值（假设 4 维度 PE）：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>PE(0) = [sin(0), cos(0), sin(0/10000^(2/4)), cos(0/10000^(2/4))] = [0.0, 1.0, 0.0, 1.0]&lt;/code>&lt;/li>
+&lt;li>&lt;code>PE(1) = [sin(1), cos(1), sin(1/10000^(2/4)), cos(1/10000^(2/4))] = [0.84, 0.54, 0.01, 0.99]&lt;/code>&lt;/li>
+&lt;li>&lt;code>PE(2) = [sin(2), cos(2), sin(2/10000^(2/4)), cos(2/10000^(2/4))] = [0.91, -0.42, 0.02, 0.98]&lt;/code>&lt;/li>
+&lt;li>&lt;code>PE(3) = [sin(3), cos(3), sin(3/10000^(2/4)), cos(3/10000^(2/4))] = [0.14, -0.99, 0.03, 0.97]&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-计算最终的-transformer-输入">&lt;strong>3. 计算最终的 Transformer 输入&lt;/strong>
+&lt;/h3>&lt;p>将单词 Embedding 和位置 Embedding 相加，得到 Transformer 的输入向量：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>X(&amp;quot;I&amp;quot;) = [0.1, 0.3, 0.5, 0.7] + [0.0, 1.0, 0.0, 1.0] = [0.1, 1.3, 0.5, 1.7]&lt;/code>&lt;/li>
+&lt;li>&lt;code>X(&amp;quot;love&amp;quot;) = [0.2, 0.4, 0.6, 0.8] + [0.84, 0.54, 0.01, 0.99] = [1.04, 0.94, 0.61, 1.79]&lt;/code>&lt;/li>
+&lt;li>&lt;code>X(&amp;quot;NLP&amp;quot;) = [0.3, 0.5, 0.7, 0.9] + [0.91, -0.42, 0.02, 0.98] = [1.21, 0.08, 0.72, 1.88]&lt;/code>&lt;/li>
+&lt;li>&lt;code>X(&amp;quot;models&amp;quot;) = [0.4, 0.6, 0.8, 1.0] + [0.14, -0.99, 0.03, 0.97] = [0.54, -0.39, 0.83, 1.97]&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-解释">&lt;strong>4. 解释&lt;/strong>
+&lt;/h3>&lt;p>最终输入的向量 &lt;code>X&lt;/code> 结合了单词的语义信息（Word Embedding）和单词在句子中的顺序信息（Position Embedding）。这样 Transformer 在处理时就可以利用这些信息进行有效的注意力计算。&lt;/p>
+&lt;p>&lt;strong>总结&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Word Embedding&lt;/strong> 代表了单词的语义信息。&lt;/li>
+&lt;li>&lt;strong>Position Embedding&lt;/strong> 通过正弦和余弦函数编码位置，使模型能感知单词的顺序。&lt;/li>
+&lt;li>&lt;strong>二者相加&lt;/strong> 形成 Transformer 的输入，使得模型在不使用 RNN 的情况下仍然能捕捉句子结构信息。&lt;/li>
+&lt;/ul>
+&lt;h2 id="encode是怎么工作的">Encode是怎么工作的？
+&lt;/h2>&lt;p>内部&lt;code>Multi-Head Attention&lt;/code>，是由多个 &lt;code>Self-Attention&lt;/code>组成的。一些列的矩阵变换最终得到C矩阵。&lt;/p>
+&lt;h2 id="怎么得到c矩阵">怎么得到C矩阵？
+&lt;/h2>&lt;p>上一个问题实际已经回答。&lt;/p>
+&lt;h2 id="c矩阵的内部信息是什么样的">C矩阵的内部信息是什么样的?
+&lt;/h2>&lt;p>经过特殊编码，且的维度和原始矩阵X一致的输入信息。&lt;/p>
+&lt;h2 id="decode内部是怎么实现的">Decode内部是怎么实现的？
+&lt;/h2>&lt;p>两个&lt;code>Multi-Head Attention&lt;/code>，第一个负责 &lt;code>Masked&lt;/code>&lt;/p>
+&lt;h2 id="masked怎么实现">Masked怎么实现？
+&lt;/h2>&lt;p>Mask矩阵，将数据掩盖。&lt;/p>
+&lt;h2 id="attention-机制是什么">Attention 机制是什么
+&lt;/h2>&lt;p>大概意思就是让Encoder编码出的c向量跟Decoder解码过程中的每一个输出进行加权运算，在解码的每一个过程中调整权重取到不一样的c向量，更通俗的讲就是c 就是包含“欢迎来北京”这句话的意思，翻译到第一个词“welcome”的时候，需要着重去看“欢迎”这个词&lt;/p>
+&lt;p>这里借用一个大佬说过的话：Attention听上去就是一个很屌，不明觉厉的东西，实际实现起来就是，哦原来是这么回事。总结一下吧，Attention机制就是让编码器编码出来的向量根据解码器要解码的东西动态变化的一种机制，貌似来源灵感就是人类视觉在看某一个东西的时候会有选择的针对重要的地方看。&lt;/p>
+&lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/194308943" target="_blank" rel="noopener"
+>Seq2Seq模型介绍&lt;/a>&lt;/p>
+&lt;h2 id="reference">reference
+&lt;/h2>&lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/338817680" target="_blank" rel="noopener"
+>Transformer模型详解（图解最完整版）&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://mp.weixin.qq.com/s/WDq8tUpfiKHNC6y_8pgHoA" target="_blank" rel="noopener"
+>Transformer模型&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/403433120" target="_blank" rel="noopener"
+>Transformer代码详解&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.baihezi.com/post/224153.html" target="_blank" rel="noopener"
+>神经网络算法 – 一文搞懂 Transformer（总体架构 &amp;amp; 三种注意力层）&lt;/a>&lt;/p></description></item><item><title>人生思考</title><link>https://sleepman9.github.io/p/%E4%BA%BA%E7%94%9F%E6%80%9D%E8%80%83/</link><pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E4%BA%BA%E7%94%9F%E6%80%9D%E8%80%83/</guid><description>&lt;blockquote>
+&lt;p>万事万物一切都有&lt;strong>套路&lt;/strong>可循 &lt;br>
+先僵化，后优化，再固化 &amp;ndash;任正非&lt;/p>&lt;/blockquote>
+&lt;ol>
+&lt;li>僵化：站在巨人的肩膀上：处于学习初期阶段的“削足适履”;&lt;/li>
+&lt;li>优化：掌握自我批判武器：在实践中不断吸收、改良、创新，优化自己；&lt;/li>
+&lt;li>固化：创新是有阶段性的、受约束的，如果没有约束，创新就是杂乱无章、无序的创新，需要像夯土一样，一层层夯上去，一步步固化阶段性的优化成果；&lt;/li>
+&lt;/ol>
+&lt;h2 id="面对未知领域怎么应对">面对未知领域怎么应对
+&lt;/h2>&lt;p>快速把这个领域里的基本的、重要的背景知识了解、掌握。&lt;/p>
+&lt;p>不要贪大求全，不要奢望把所有相关的内容都掌握，这是不可能的，尤其是在短时间内。我们的目标是把活做好，把项目完成。&lt;/p>
+&lt;h2 id="面对一件全新的工作怎么切入">面对一件全新的工作，怎么切入
+&lt;/h2>&lt;p>！！！刚开始不要钻的太深！！！！&lt;/p>
+&lt;p>一般的做法是：找套路！（有没有什么套路可循）&lt;/p></description></item><item><title>如何制定软件设计开发计划</title><link>https://sleepman9.github.io/p/%E5%A6%82%E4%BD%95%E5%88%B6%E5%AE%9A%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91%E8%AE%A1%E5%88%92/</link><pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E5%A6%82%E4%BD%95%E5%88%B6%E5%AE%9A%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91%E8%AE%A1%E5%88%92/</guid><description>&lt;h2 id="架构分层分模块">架构分层，分模块
+&lt;/h2>&lt;p>&lt;a class="link" href="https://www.cnblogs.com/sewain/p/14497769.html" target="_blank" rel="noopener"
+>都说软件架构要分层、分模块，具体应该怎么做 一&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.cnblogs.com/sewain/p/14527392.html" target="_blank" rel="noopener"
+>都说软件架构要分层、分模块，具体应该怎么做 二&lt;/a>&lt;/p></description></item><item><title>装机必备</title><link>https://sleepman9.github.io/p/%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/</link><pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/</guid><description>&lt;h2 id="application">Application
+&lt;/h2>&lt;h3 id="vscode">Vscode
+&lt;/h3>&lt;p>伟大的IDE(IDE 是 Integrated Development Environment 的缩写，中文叫做“集成开发环境”)&lt;/p></description></item><item><title>CLAP</title><link>https://sleepman9.github.io/p/clap/</link><pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/clap/</guid><description>&lt;h2 id="clap-模型介绍">CLAP 模型介绍
+&lt;/h2>&lt;p>CLAP（Contrastive Language-Audio Pretraining，对比语言-音频预训练）是一种跨模态深度学习模型，旨在通过对比学习（Contrastive Learning）将音频信号与自然语言描述对齐。其核心思想是让模型理解音频内容与文本描述之间的语义关联，从而实现音频分类、检索、生成等任务·&lt;/p></description></item><item><title>力扣碎碎念</title><link>https://sleepman9.github.io/p/%E5%8A%9B%E6%89%A3%E7%A2%8E%E7%A2%8E%E5%BF%B5/</link><pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E5%8A%9B%E6%89%A3%E7%A2%8E%E7%A2%8E%E5%BF%B5/</guid><description>&lt;p>&lt;a class="link" href="https://blog.algomooc.com/" target="_blank" rel="noopener"
+>吴师兄学算法&lt;/a>&lt;/p>
+&lt;h2 id="为什么要使用引用-">为什么要使用引用 &amp;amp;
+&lt;/h2>&lt;p>&lt;a class="link" href="https://leetcode.cn/problems/two-sum/?envType=study-plan-v2&amp;amp;envId=top-100-liked" target="_blank" rel="noopener"
+>两数之和&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-C++" data-lang="C++">&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Solution&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">vector&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">twoSum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">vector&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="o">&amp;gt;&amp;amp;&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">target&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 实现代码将在这里
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>避免不必要的拷贝&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>如果不使用引用（&lt;code>vector&amp;lt;int&amp;gt; nums&lt;/code>），当传入大型数组时，C++ 会创建整个向量的完整副本&lt;/li>
+&lt;li>使用引用（&lt;code>vector&amp;lt;int&amp;gt;&amp;amp; nums&lt;/code>）可以直接操作原始数据，不产生拷贝开销&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内存效率&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>对于大型输入数组，拷贝会消耗大量内存和时间&lt;/li>
+&lt;li>引用只是原始数据的别名（通常实现为指针），内存占用固定（通常4或8字节）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>性能优化&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>引用传递是O(1)时间复杂度&lt;/li>
+&lt;li>值传递是O(n)时间复杂度（n为数组大小）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>允许修改原数据&lt;/strong>（虽然本题不需要）：&lt;/p>
+&lt;ul>
+&lt;li>如果函数需要修改输入数组，引用是必要的&lt;/li>
+&lt;li>如果不想允许修改，可以用 &lt;code>const vector&amp;lt;int&amp;gt;&amp;amp; nums&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>引用 vs 值传递的对比：&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>特性&lt;/th>
+&lt;th>引用传递 (&lt;code>vector&amp;lt;int&amp;gt;&amp;amp;&lt;/code>)&lt;/th>
+&lt;th>值传递 (&lt;code>vector&amp;lt;int&amp;gt;&lt;/code>)&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>内存使用&lt;/td>
+&lt;td>极小（仅引用）&lt;/td>
+&lt;td>复制整个向量&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>时间复杂度&lt;/td>
+&lt;td>O(1)&lt;/td>
+&lt;td>O(n)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>能否修改原数据&lt;/td>
+&lt;td>可以&lt;/td>
+&lt;td>不能（修改的是副本）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>适用场景&lt;/td>
+&lt;td>大型数据结构&lt;/td>
+&lt;td>小型或需要隔离的数据&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>在算法题目中，特别是输入规模可能很大的情况下，使用引用是更优的选择。&lt;/p>
+&lt;h2 id="十大经典排序算法动图演示">十大经典排序算法（动图演示）
+&lt;/h2>&lt;p>&lt;a class="link" href="https://www.cnblogs.com/onepixel/p/7674659.html" target="_blank" rel="noopener"
+>十大经典排序算法（动图演示）&lt;/a>&lt;/p>
+&lt;h2 id="设计模式">设计模式
+&lt;/h2>&lt;p>&lt;a class="link" href="https://www.yuque.com/nathan-kd4ra/soft_exam/yqqus1x0752qwt9y#70e53119" target="_blank" rel="noopener"
+>设计模式&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/weixin_45712636/article/details/124328504" target="_blank" rel="noopener"
+>C++设计模式（全23种）&lt;/a>&lt;/p></description></item><item><title>网表相关</title><link>https://sleepman9.github.io/p/%E7%BD%91%E8%A1%A8%E7%9B%B8%E5%85%B3/</link><pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E7%BD%91%E8%A1%A8%E7%9B%B8%E5%85%B3/</guid><description>&lt;img src="https://sleepman9.github.io/p/%E7%BD%91%E8%A1%A8%E7%9B%B8%E5%85%B3/cover.png" alt="Featured image of post 网表相关" />&lt;h2 id="hspice-quick-reference-guide">HSPICE Quick Reference Guide
+&lt;/h2>&lt;p>&lt;a class="link" href="https://amarketplaceofideas.com/wp-content/uploads/2014/09/hspice_qr1.pdf" target="_blank" rel="noopener"
+>HSPICE Quick Reference Guide&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://iccircle.com/static/upload/img20240809173315.pdf" target="_blank" rel="noopener"
+>HSPICE® User Guide: Basic Simulation and Analysis&lt;/a>&lt;/p>
+&lt;h2 id="网表求解的本质">网表求解的本质
+&lt;/h2>&lt;p>网表求解的本质在于将电路中各个元件和它们的连接关系转化为数学方程（通常基于基尔霍夫定律和元件的本构关系），然后利用数值计算方法求解这些方程组，从而得到各个节点电压和支路电流等信息。简单来说，就是把电路“翻译”成数学问题，再使用求解器进行数值求解。&lt;/p>
+&lt;h2 id="不同仿真类型的的本质">不同仿真类型的的本质
+&lt;/h2>&lt;p>不同仿真类型的本质都在于：将电路的物理行为转化为数学模型，然后求解相应的数学方程以获得电路在特定条件下的响应。不过，它们侧重关注的方面不同，具体说明如下：&lt;/p>
+&lt;ul>
+&lt;li>直流工作点分析 (.op) 和直流扫描分析 (.DC)&lt;/li>
+&lt;/ul>
+&lt;p>直流工作点分析：求解电路在直流稳态下（没有时间变化因素）的电压、电流等参数。它的本质是求解一组非线性代数方程，确定电路各节点的静态工作状态。&lt;/p>
+&lt;p>直流扫描分析：在直流工作点分析的基础上，通过改变一个或多个直流激励源（如电压或电流），观察器件或电路参数随偏置变化的趋势。其本质依然是求解静态非线性代数方程，但需要遍历一系列激励值。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>瞬态分析 (.TRAN)
+瞬态分析关注电路响应随时间的动态变化。它将电路描述为一组微分方程（可能还包含非线性部分），然后利用数值积分算法（如欧拉法、龙格-库塔法等）求解时间域响应，从而揭示电路在施加激励后随时间变化的动态行为。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>交流小信号分析 (.AC)
+该分析是在电路的直流工作点附近对电路进行线性化，转换到频率域求解。它的本质是将电路的非线性行为在小激励条件下近似为线性模型，通过求解复数域中的方程（使用如拉普拉斯变换或者直接建立导纳矩阵）得到电路的频率响应、相位特性等。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>总之，无论是哪种仿真类型，基本思路都是“建立数学模型 – 数值求解 – 得到物理量”，只是不同的仿真关注于电路静态状态、动态响应或频率特性等不同方面。&lt;/p></description></item><item><title>SCP_传输文件</title><link>https://sleepman9.github.io/p/scp_%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6/</link><pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/scp_%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6/</guid><description>&lt;p>&lt;code>scp&lt;/code>（Secure Copy Protocol）用于在本地与远程服务器之间、或者两台远程服务器之间安全地复制文件。&lt;/p>
+&lt;hr>
+&lt;h2 id="从本地复制到远程服务器">从本地复制到远程服务器
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp /path/to/local/file username@remote_host:/path/to/remote/directory
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>示例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp myfile.txt user@192.168.1.100:/home/user/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这会将 &lt;code>myfile.txt&lt;/code> 复制到远程服务器 &lt;code>192.168.1.100&lt;/code> 的 &lt;code>/home/user/&lt;/code> 目录。&lt;/p>
+&lt;hr>
+&lt;h2 id="从远程服务器复制到本地">从远程服务器复制到本地
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp username@remote_host:/path/to/remote/file /path/to/local/directory
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>示例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp user@192.168.1.100:/home/user/myfile.txt /home/localuser/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这会把远程服务器 &lt;code>/home/user/myfile.txt&lt;/code> 复制到本地 &lt;code>/home/localuser/&lt;/code> 目录。&lt;/p>
+&lt;hr>
+&lt;h2 id="复制整个文件夹加--r-选项">复制整个文件夹（加 &lt;code>-r&lt;/code> 选项）
+&lt;/h2>&lt;h3 id="本地--远程">本地 → 远程
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp -r /path/to/local/directory username@remote_host:/path/to/remote/directory
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>示例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp -r myfolder user@192.168.1.100:/home/user/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>将 &lt;code>myfolder&lt;/code> 目录及其内容复制到远程服务器 &lt;code>/home/user/&lt;/code>。&lt;/p>
+&lt;h3 id="远程--本地">远程 → 本地
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp -r username@remote_host:/path/to/remote/directory /path/to/local/directory
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>示例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp -r user@192.168.1.100:/home/user/myfolder /home/localuser/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>将远程服务器上的 &lt;code>myfolder&lt;/code> 复制到本地 &lt;code>/home/localuser/&lt;/code> 目录。&lt;/p>
+&lt;hr>
+&lt;h2 id="从一台远程服务器复制到另一台远程服务器">从一台远程服务器复制到另一台远程服务器
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp username1@remote_host1:/path/to/file username2@remote_host2:/path/to/destination
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>示例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp user1@192.168.1.101:/home/user1/file.txt user2@192.168.1.102:/home/user2/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这会直接把 &lt;code>192.168.1.101&lt;/code> 上的 &lt;code>file.txt&lt;/code> 复制到 &lt;code>192.168.1.102&lt;/code> 上的 &lt;code>/home/user2/&lt;/code> 目录。&lt;/p>
+&lt;hr>
+&lt;h2 id="指定端口-p-选项大写-p">指定端口（&lt;code>-P&lt;/code> 选项，大写 P）
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp -P &lt;span class="m">2222&lt;/span> myfile.txt user@192.168.1.100:/home/user/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果远程服务器的 SSH 端口不是默认 &lt;code>22&lt;/code>，可以使用 &lt;code>-P&lt;/code> 指定端口，如 &lt;code>2222&lt;/code>。&lt;/p>
+&lt;hr>
+&lt;h2 id="使用--c-启用压缩加速传输">使用 &lt;code>-C&lt;/code> 启用压缩加速传输
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp -C myfile.txt user@192.168.1.100:/home/user/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>对于大文件或慢速网络，可以使用 &lt;code>-C&lt;/code> 进行压缩，提高传输效率。&lt;/p>
+&lt;hr>
+&lt;h2 id="限制带宽-l-选项单位-kbits">限制带宽（&lt;code>-l&lt;/code> 选项，单位 Kbit/s）
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">scp -l &lt;span class="m">1000&lt;/span> myfile.txt user@192.168.1.100:/home/user/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>上面命令限制最大带宽为 &lt;code>1000 Kbit/s&lt;/code>，即 &lt;code>125 KB/s&lt;/code>。&lt;/p>
+&lt;hr>
+&lt;h2 id="总结">总结
+&lt;/h2>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>需求&lt;/th>
+&lt;th>命令示例&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>本地 → 远程&lt;/td>
+&lt;td>&lt;code>scp file.txt user@remote:/home/user/&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>远程 → 本地&lt;/td>
+&lt;td>&lt;code>scp user@remote:/home/user/file.txt ./&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>复制文件夹&lt;/td>
+&lt;td>&lt;code>scp -r folder user@remote:/home/user/&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>远程 → 远程&lt;/td>
+&lt;td>&lt;code>scp user1@host1:/file user2@host2:/dir/&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>指定端口&lt;/td>
+&lt;td>&lt;code>scp -P 2222 file user@remote:/home/user/&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>启用压缩&lt;/td>
+&lt;td>&lt;code>scp -C file user@remote:/home/user/&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>限制带宽&lt;/td>
+&lt;td>&lt;code>scp -l 1000 file user@remote:/home/user/&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>💡 &lt;strong>&lt;code>scp&lt;/code> 适用于小型文件传输，大规模文件推荐 &lt;code>rsync&lt;/code> 进行增量传输！&lt;/strong> 🚀&lt;/p></description></item><item><title>Vscode Debug</title><link>https://sleepman9.github.io/p/vscode-debug/</link><pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/vscode-debug/</guid><description>&lt;p>&lt;strong>.vscode launch.json 调试设置&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;version&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;0.2.0&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 配置文件的版本号
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;configurations&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Python: Run run.py&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 配置的名称，用于在调试配置列表中标识此配置
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;python&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 调试器的类型，这里使用的是 Python 调试器
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;request&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;launch&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 请求类型，表示启动一个新的调试会话
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;program&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;${workspaceFolder}/run.py&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 要调试的 Python 程序的路径（需要是一个可以运行的程序）
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nt">&amp;#34;args&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span> &lt;span class="c1">//所有参数的列表
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;thermal&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 第一个参数，表示运行模式
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;-i&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 输入文件参数
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;${workspaceFolder}/case/3DIC_real_case/test_simulation.json&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 输入文件的路径
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;-o&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 输出文件参数
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;${workspaceFolder}/case/3DIC_real_case/output&amp;#34;&lt;/span> &lt;span class="c1">// 输出文件夹的路径
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;console&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;integratedTerminal&amp;#34;&lt;/span> &lt;span class="c1">// 指定调试时使用的控制台类型，这里使用集成终端
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这段 JSON 配置文件是为 Visual Studio Code (VSCode) 中的调试器或运行器设置的，特别是用于运行 Python 脚本 &lt;code>run.py&lt;/code>。这是 VSCode 的 &lt;strong>launch.json&lt;/strong> 文件配置的一部分，用于设置如何运行 Python 程序以及传递的参数。下面是每个部分的解释：&lt;/p>
+&lt;h3 id="version-020">&lt;strong>version&lt;/strong>: &amp;ldquo;0.2.0&amp;rdquo;
+&lt;/h3>&lt;ul>
+&lt;li>这是 VSCode 配置文件的版本号，表示该配置文件遵循的格式版本。&lt;code>0.2.0&lt;/code> 是比较老的版本，但它仍然被广泛使用。&lt;/li>
+&lt;/ul>
+&lt;h3 id="configurations-">&lt;strong>configurations&lt;/strong>: []
+&lt;/h3>&lt;ul>
+&lt;li>该数组包含一个或多个配置对象，每个配置代表一种不同的调试或运行方式。在这里，只有一个配置对象。&lt;/li>
+&lt;/ul>
+&lt;h3 id="配置对象解释">配置对象解释：
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Python: Run run.py&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;python&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;request&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;launch&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;program&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;${workspaceFolder}/run.py&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;args&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;thermal&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-i&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;${workspaceFolder}/case/3DIC_real_case/test_simulation.json&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-o&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;${workspaceFolder}/case/3DIC_real_case/output&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;console&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;integratedTerminal&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="name-python-run-runpy">&lt;strong>name&lt;/strong>: &lt;code>&amp;quot;Python: Run run.py&amp;quot;&lt;/code>
+&lt;/h4>&lt;ul>
+&lt;li>这是配置的名称，用于标识和显示该配置。这个名称在 VSCode 的调试配置选择器中会出现，方便用户选择执行哪个配置。&lt;/li>
+&lt;/ul>
+&lt;h4 id="type-python">&lt;strong>type&lt;/strong>: &lt;code>&amp;quot;python&amp;quot;&lt;/code>
+&lt;/h4>&lt;ul>
+&lt;li>这表示配置类型为 Python，告诉 VSCode 使用 Python 解释器来执行程序。&lt;/li>
+&lt;/ul>
+&lt;h4 id="request-launch">&lt;strong>request&lt;/strong>: &lt;code>&amp;quot;launch&amp;quot;&lt;/code>
+&lt;/h4>&lt;ul>
+&lt;li>该设置表明这是一个启动配置，而不是附加配置（&lt;code>attach&lt;/code>）。即，当点击 &amp;ldquo;启动&amp;rdquo; 或 &amp;ldquo;调试&amp;rdquo; 按钮时，VSCode 会运行这个配置来启动 Python 脚本。&lt;/li>
+&lt;/ul>
+&lt;h4 id="program-workspacefolderrunpy">&lt;strong>program&lt;/strong>: &lt;code>&amp;quot;${workspaceFolder}/run.py&amp;quot;&lt;/code>
+&lt;/h4>&lt;ul>
+&lt;li>指定要执行的 Python 程序。&lt;code>${workspaceFolder}&lt;/code> 是一个内置变量，代表当前工作区的根文件夹路径。所以这里表示执行 &lt;code>run.py&lt;/code> 脚本，该脚本位于工作区根目录下。&lt;/li>
+&lt;/ul>
+&lt;h4 id="args--thermal--i-workspacefoldercase3dic_real_casetest_simulationjson--o-workspacefoldercase3dic_real_caseoutput-">&lt;strong>args&lt;/strong>: &lt;code>[ &amp;quot;thermal&amp;quot;, &amp;quot;-i&amp;quot;, &amp;quot;${workspaceFolder}/case/3DIC_real_case/test_simulation.json&amp;quot;, &amp;quot;-o&amp;quot;, &amp;quot;${workspaceFolder}/case/3DIC_real_case/output&amp;quot; ]&lt;/code>
+&lt;/h4>&lt;ul>
+&lt;li>
+&lt;p>这是传递给 Python 脚本 &lt;code>run.py&lt;/code> 的命令行参数。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>&amp;quot;thermal&amp;quot;&lt;/code>：传递给脚本的第一个参数，可能是某种运行模式或功能的标志。&lt;/li>
+&lt;li>&lt;code>&amp;quot;-i&amp;quot;&lt;/code> 和 &lt;code>&amp;quot;${workspaceFolder}/case/3DIC_real_case/test_simulation.json&amp;quot;&lt;/code>：&lt;code>-i&lt;/code> 可能是输入文件的标志，后面跟着路径指向一个 JSON 配置文件。&lt;/li>
+&lt;li>&lt;code>&amp;quot;-o&amp;quot;&lt;/code> 和 &lt;code>&amp;quot;${workspaceFolder}/case/3DIC_real_case/output&amp;quot;&lt;/code>：&lt;code>-o&lt;/code> 可能是输出目录或文件的标志，后面跟着路径指向输出目录。&lt;/li>
+&lt;/ul>
+&lt;p>这些参数可以让 &lt;code>run.py&lt;/code> 根据输入的 JSON 配置文件进行仿真，并将结果输出到指定目录。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="console-integratedterminal">&lt;strong>console&lt;/strong>: &lt;code>&amp;quot;integratedTerminal&amp;quot;&lt;/code>
+&lt;/h4>&lt;ul>
+&lt;li>该设置指定程序输出将在 VSCode 内部集成的终端中显示，而不是在外部终端中显示。这样，用户可以直接在 VSCode 的终端面板中查看程序输出。&lt;/li>
+&lt;/ul>
+&lt;h3 id="总结">总结：
+&lt;/h3>&lt;p>这段配置文件的作用是设置一个 Python 调试或运行配置，在运行时：&lt;/p>
+&lt;ul>
+&lt;li>执行 &lt;code>run.py&lt;/code> 脚本。&lt;/li>
+&lt;li>传递三个命令行参数：&lt;code>thermal&lt;/code>（运行模式），&lt;code>-i&lt;/code> 后跟输入文件的路径，&lt;code>-o&lt;/code> 后跟输出目录的路径。&lt;/li>
+&lt;li>输出将显示在 VSCode 的集成终端中。&lt;/li>
+&lt;/ul>
+&lt;p>这是设置调试或运行 Python 脚本的常见方式，尤其是在涉及到多个输入输出参数时。&lt;/p></description></item><item><title>一些芯片设计的冷知识</title><link>https://sleepman9.github.io/p/%E4%B8%80%E4%BA%9B%E8%8A%AF%E7%89%87%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%86%B7%E7%9F%A5%E8%AF%86/</link><pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E4%B8%80%E4%BA%9B%E8%8A%AF%E7%89%87%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%86%B7%E7%9F%A5%E8%AF%86/</guid><description>&lt;img src="https://sleepman9.github.io/p/%E4%B8%80%E4%BA%9B%E8%8A%AF%E7%89%87%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%86%B7%E7%9F%A5%E8%AF%86/cover.png" alt="Featured image of post 一些芯片设计的冷知识" />&lt;h2 id="原理图-芯片物理版图">原理图-&amp;gt;芯片物理版图
+&lt;/h2>&lt;p>根据电路设计图（也称为原理图或HDL代码）生成芯片物理版图&lt;/p>
+&lt;h3 id="逻辑综合">逻辑综合
+&lt;/h3>&lt;p>这是将电路设计图转换为门级网表的过程，门级网表是由基本逻辑门（如与门、或门、非门等）和触发器（如D触发器、JK触发器等）组成的电路结构，它可以反映电路设计图的功能和性能。逻辑综合需要设定约束条件，就是希望综合出来的电路在面积、时序等目标参数上达到的标准；逻辑综合还需要指定基于的库，使用不同的综合库，在时序和面积上会有差异。常用的逻辑综合工具有Synopsys的Design Compiler，Cadence的PKS，Synplicity的Synplify等。&lt;/p>
+&lt;h3 id="布局规划">布局规划
+&lt;/h3>&lt;p>这是在确定芯片的总体尺寸和形状后，将芯片中的各个模块（如IP核、存储器、I/O引脚等）分配到合适的位置的过程，布局规划需要考虑各个模块之间的连接关系、信号延迟、功耗分布、热效应等因素，以优化芯片的性能和可靠性。布局规划后，芯片的大小，Core的面积，Row的形式、电源及地线的Ring和Strip都确定下来了。常用的布局规划工具有Cadence的Encounter/Innovus，Synopsys的ICC等。&lt;/p>
+&lt;h3 id="时钟树综合">时钟树综合
+&lt;/h3>&lt;p>这是在布局规划后，对芯片中的时钟信号进行专门的布线设计的过程，时钟信号在数字芯片中起着全局指挥作用，它需要对称地分配到各个寄存器单元，以保证时钟从同一个时钟源到达各个寄存器时，时钟延迟差异最小。时钟树综合需要考虑时钟频率、抖动、偏移等因素，以提高芯片的时序性能。常用的时钟树综合工具有Cadence Encounter/Innovus, Synopsys ICC, Synopsys PrimeTime SI等。&lt;/p>
+&lt;h3 id="布局布线">布局布线
+&lt;/h3>&lt;p>这是将门级网表转换为具体的物理版图的过程，包括标准单元（如基本逻辑门电路）的放置和各种层之间的走线。布局布线需要遵循特定工艺的设计规则（如最小宽度、最小间距等），以保证版图可以被正确地加工出来。布局布线还需要考虑面积、功耗、时序、噪声、串扰等因素，以优化芯片的质量和效率。常用的布局布线工具有Cadence Encounter/Innovus, Synopsys ICC, Synopsys Astro等。&lt;/p>
+&lt;h3 id="物理验证">物理验证
+&lt;/h3>&lt;p>这是在完成物理版图后，对其进行检查和修正的过程&lt;/p>
+&lt;h4 id="设计规则检查drc">设计规则检查（DRC）
+&lt;/h4>&lt;p>这是检查物理版图是否符合工艺设计规则的过程，如果发现任何违反规则的地方，就需要进行修改。常用的设计规则检查工具有Synopsys的Hercules/ICV，Cadence的Assura/PVS，Mentor的Calibre等。&lt;/p>
+&lt;h4 id="布局与网表比较lvs">布局与网表比较（LVS）
+&lt;/h4>&lt;p>这是检查物理版图是否与门级网表在功能上完全一致的过程，如果发现任何不匹配或缺失的地方，就需要进行调整。常用的布局与网表比较工具有Synopsys的Hercules/ICV，Cadence的Assura/PVS，Mentor的Calibre等。&lt;/p>
+&lt;h4 id="寄生参数提取pex">寄生参数提取（PEX）
+&lt;/h4>&lt;p>这是从物理版图中提取出电阻、电容、电感等寄生参数的过程，这些参数会影响电路的性能和信号完整性，需要进行后仿真和分析。常用的寄生参数提取工具有Synopsys的Star-RC, Cadence的QRC, Mentor的Calibre XRC等。&lt;/p>
+&lt;h4 id="时序验证sta">时序验证（STA）
+&lt;/h4>&lt;p>这是基于寄生参数提取的结果，对电路的时序性能进行验证的过程，主要检查电路是否存在建立时间（setup time）和保持时间（hold time）的违例，如果发现任何时序问题，就需要进行优化。常用的时序验证工具有Synopsys的PrimeTime, Cadence’s Tempus等。&lt;/p>
+&lt;h4 id="信号完整性分析si">信号完整性分析（SI）
+&lt;/h4>&lt;p>这是基于寄生参数提取的结果，对电路的信号质量进行分析的过程，主要检查电路是否存在噪声、串扰、反射等问题，如果发现任何信号完整性问题，就需要进行改善。常用的信号完整性分析工具有Synopsys PrimeTime SI, Cadence Sigrity, Ansys Totem/Redhawk等。&lt;/p>
+&lt;p>物理版图验证完成后，就可以将GDSII文件交给芯片代工厂（称为Foundry），在晶圆硅片上通过多道工艺步骤（如光刻、刻蚀、离子注入、沉积等）实现芯片的制造，再进行封装和测试，就得到了我们实际看见的芯片。&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/Jailman/article/details/132761728" target="_blank" rel="noopener"
+>一些芯片设计的冷知识&lt;/a>&lt;/p>
+&lt;h2 id="芯片键合bonding">芯片键合（bonding）
+&lt;/h2>&lt;p>这个博主的其他文章也值得一看《傻白入门芯片设计系列》&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_46675545/article/details/128050411" target="_blank" rel="noopener"
+>傻白入门芯片设计，芯片键合(Die Bonding)（四）&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_46675545/article/details/128053478" target="_blank" rel="noopener"
+>傻白入门芯片设计，典型的2D/2D+/2.5D/3D封装技术（六）&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_46675545/article/details/128076797" target="_blank" rel="noopener"
+>傻白入门芯片设计，如何降低CPU功耗？（八）&lt;/a>&lt;/p>
+&lt;h2 id="为什么还需要interposer层级">为什么还需要interposer层级
+&lt;/h2>&lt;ol>
+&lt;li>bump的大小是否符合和芯片I/O要求&lt;/li>
+&lt;li>bump影响寄生参数值（根据电阻电感电容的公式推理即可. [Bump 越大，寄生电阻和寄生电感越小，但寄生电容越大。]&lt;/li>
+&lt;li>更加灵活的互联（更短的互联路径）&lt;/li>
+&lt;/ol>
+&lt;h2 id="4d芯片集成">4D芯片集成
+&lt;/h2>&lt;p>&lt;a class="link" href="https://www.eet-china.com/mp/a352641.html" target="_blank" rel="noopener"
+>芯片的先进封装会发展到4D吗？&lt;/a>&lt;/p>
+&lt;h2 id="dram预充电的作用">DRAM预充电的作用
+&lt;/h2>&lt;p>预充电操作是为了“清空现场、重置电压”，以便 DRAM 可以正确执行下一次读写操作&lt;/p>
+&lt;ol>
+&lt;li>DRAM 的位线是差分信号线，感应放大器是通过对微小电压差放大来判断是 0 还是 1 的。如果前一次操作后电压还残留，就会影响下一次数据的正确性。&lt;/li>
+&lt;/ol>
+&lt;p>预充电 = 把位线电压“归一化”到 ½ 电压，为下次判别提供基准。不偏向 0，也不偏向 1&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>状态&lt;/th>
+&lt;th>cell 电容&lt;/th>
+&lt;th>位线电压&lt;/th>
+&lt;th>连接后&lt;/th>
+&lt;th>差值&lt;/th>
+&lt;th>放大结果&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>存1&lt;/td>
+&lt;td>Vdd&lt;/td>
+&lt;td>Vdd/2&lt;/td>
+&lt;td>位线稍↑&lt;/td>
+&lt;td>+ΔV&lt;/td>
+&lt;td>判为 1&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>存0&lt;/td>
+&lt;td>0V&lt;/td>
+&lt;td>Vdd/2&lt;/td>
+&lt;td>位线稍↓&lt;/td>
+&lt;td>-ΔV&lt;/td>
+&lt;td>判为 0&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>也就是说，cell 的电压通过连接到“Vdd/2”的位线上，形成一个微小的正/负波动，这时 Sense Amplifier 就可以把这个波动“放大”成逻辑 1 或 0。&lt;/p>
+&lt;ol start="2">
+&lt;li>感应放大器只对微小差异敏感。若位线未被预充电，数据对比将发生偏移，导致：&lt;/li>
+&lt;/ol>
+&lt;p>数据判别错误（读取出错）&lt;/p>
+&lt;p>写入扰动（错误写入别的单元）&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_46675545/article/details/128210207" target="_blank" rel="noopener"
+>傻白入门芯片设计，史上最最最全DRAM介绍&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/Tranquil_ovo/article/details/129876980" target="_blank" rel="noopener"
+>【DC】逻辑综合基础&lt;/a>&lt;/p>
+&lt;h2 id="lc谐振">LC谐振
+&lt;/h2>&lt;p>电容，电感，反复充放电。
+&lt;a class="link" href="https://zhuanlan.zhihu.com/p/532163425" target="_blank" rel="noopener"
+>还搞不懂 LC振荡电路原理？看这一文就够了，图文结合，立马带你搞定&lt;/a>&lt;/p>
+&lt;h2 id="正片和负片">正片和负片
+&lt;/h2>&lt;p>&lt;a class="link" href="https://blog.csdn.net/weixin_42837669/article/details/110411765" target="_blank" rel="noopener"
+>PCB正片和负片的区别与使用&lt;/a>&lt;/p>
+&lt;h2 id="allegro加密文件密码破解和解除读写导出限制">Allegro加密文件密码破解和解除读写导出限制
+&lt;/h2>&lt;p>&lt;a class="link" href="https://blog.csdn.net/vanfone/article/details/116275609" target="_blank" rel="noopener"
+>Allegro加密文件密码破解和解除读写导出限制&lt;/a>&lt;/p>
+&lt;h2 id="静态时序分析sta报告摘要">静态时序分析（STA）报告摘要
+&lt;/h2>&lt;p>&lt;img src="https://sleepman9.github.io/p/%E4%B8%80%E4%BA%9B%E8%8A%AF%E7%89%87%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%86%B7%E7%9F%A5%E8%AF%86/image.png"
+width="777"
+height="368"
+srcset="https://sleepman9.github.io/p/%E4%B8%80%E4%BA%9B%E8%8A%AF%E7%89%87%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%86%B7%E7%9F%A5%E8%AF%86/image_hu_597ce37bf5508b64.png 480w, https://sleepman9.github.io/p/%E4%B8%80%E4%BA%9B%E8%8A%AF%E7%89%87%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%86%B7%E7%9F%A5%E8%AF%86/image_hu_3060480dc45bbc6.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="211"
+data-flex-basis="506px"
+>&lt;/p>
+&lt;p>这张图展示的是数字后端设计中关键的 &lt;strong>静态时序分析（STA）报告摘要&lt;/strong> 和 &lt;strong>设计规则违规（DRV）检查统计&lt;/strong>，以下是详细解读：&lt;/p>
+&lt;hr>
+&lt;h3 id="1-setup-mode-时序分析表">📍&lt;strong>1. Setup Mode 时序分析表&lt;/strong>
+&lt;/h3>&lt;p>这部分列出了多种 &lt;strong>路径类别（setup mode）&lt;/strong> 的时序结果：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>字段&lt;/th>
+&lt;th>含义&lt;/th>
+&lt;th>备注&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>WNS (ns)&lt;/code>&lt;/td>
+&lt;td>Worst Negative Slack，最差路径的负裕量（最坏延迟）&lt;/td>
+&lt;td>- 值为负数时说明时序违例。&lt;br>- &lt;code>all&lt;/code> 模式下为 &lt;code>-0.002ns&lt;/code>，说明有轻微的时序违例。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>TNS (ns)&lt;/code>&lt;/td>
+&lt;td>Total Negative Slack，总的时序违例之和&lt;/td>
+&lt;td>所有违反路径加总的延迟量。&lt;code>-0.003ns&lt;/code> 是非常轻微的问题。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>Violating Paths&lt;/code>&lt;/td>
+&lt;td>时序违例路径数&lt;/td>
+&lt;td>&lt;code>all&lt;/code> 模式下有 2 条路径违例&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>All Paths&lt;/code>&lt;/td>
+&lt;td>总路径数&lt;/td>
+&lt;td>全设计共 12,273 条路径（时序分析覆盖）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>🔍 各模式说明：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>reg2reg&lt;/code>: 从寄存器到寄存器的路径（主路径）&lt;/li>
+&lt;li>&lt;code>reg2cgate&lt;/code>: 从寄存器到组合逻辑门（用于分析组合部分）&lt;/li>
+&lt;li>&lt;code>default&lt;/code>: 默认路径类别&lt;/li>
+&lt;li>&lt;code>all&lt;/code>: 总体视角&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="2-drvsdesign-rule-violations-设计规则违规统计">📍&lt;strong>2. DRVs：Design Rule Violations 设计规则违规统计&lt;/strong>
+&lt;/h3>&lt;p>这一部分列出的是违反电气规则（例如上限/转换时间等）的信息。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>DRV 类型&lt;/th>
+&lt;th>含义&lt;/th>
+&lt;th>结果解读&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>max_cap&lt;/code>&lt;/td>
+&lt;td>最大负载电容违例&lt;/td>
+&lt;td>共检测到 8 条网络超出上限（8 个实例），但&lt;strong>没有真实违例值&lt;/strong>（Worst Vio = 0），可能已修复。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>max_tran&lt;/code>&lt;/td>
+&lt;td>最大信号转换时间违例&lt;/td>
+&lt;td>检测到 6 条网络；Worst Vio 为 0.000，说明也已修复。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>max_fanout&lt;/code>&lt;/td>
+&lt;td>最大扇出&lt;/td>
+&lt;td>0&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>max_length&lt;/code>&lt;/td>
+&lt;td>最大线长&lt;/td>
+&lt;td>0&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>📝 注：Real vs Total 表示是否是“实际有效违规”&lt;/p>
+&lt;ul>
+&lt;li>Real：当前设计中真实存在的；&lt;/li>
+&lt;li>Total：工具设置阈值检测到的超限数（可能已修复或忽略）。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="3-density--routing-overflow">📍&lt;strong>3. Density &amp;amp; Routing Overflow&lt;/strong>
+&lt;/h3>&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Density&lt;/strong>: &lt;code>46.432%&lt;/code>
+→ 标准单元填充密度，不高，布线空间充足。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Routing Overflow&lt;/strong>: &lt;code>0.00% H and 0.00% V&lt;/code>
+→ 布线拥塞情况非常理想，无水平或垂直溢出，说明布线非常顺畅。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="-总结">✅ 总结
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>分类&lt;/th>
+&lt;th>结论&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>时序（STA）&lt;/td>
+&lt;td>有轻微负 slack（-0.003ns），可继续优化，未严重超时&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>设计规则（DRV）&lt;/td>
+&lt;td>所有电气规则违例已修复，0 违规&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>布局密度&lt;/td>
+&lt;td>46%，空间富余&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>布线拥塞&lt;/td>
+&lt;td>0%，极佳&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;p>如你需要，我可以提供一些优化建议来消除 WNS/TNS。是否需要我帮你写个时序优化建议脚本或时序debug checklist？&lt;/p>
+&lt;h2 id="spef文件">SPEF文件
+&lt;/h2>&lt;p>SPEF（Standard Parasitic Exchange Format）文件是一种 标准电路寄生参数交换文件，用于描述芯片设计中 电路的寄生参数信息，如：&lt;/p>
+&lt;p>寄生电容（capacitance）&lt;/p>
+&lt;p>寄生电阻（resistance）&lt;/p>
+&lt;p>电感（如有）&lt;/p>
+&lt;p>这些寄生参数主要来自于布线和互连，会影响信号延迟和电路时序，是时序分析（STA）和信号完整性分析（SI）不可或缺的数据源。&lt;/p>
+&lt;h2 id="cs中的前后端和ic中的前后端区别">CS中的前后端和IC中的前后端区别
+&lt;/h2>&lt;p>这是个非常好的问题，很多初学者都会混淆“前端/后端”在 &lt;strong>计算机科学（CS）&lt;/strong> 和 &lt;strong>数字IC设计&lt;/strong> 这两个领域中的含义。以下是详细对比说明：&lt;/p>
+&lt;hr>
+&lt;h3 id="-一计算机科学cs中的前端与后端">🧠 一、&lt;strong>计算机科学（CS）中的前端与后端&lt;/strong>
+&lt;/h3>&lt;p>这是你在 Web 开发、软件工程等方向常听到的：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>维度&lt;/th>
+&lt;th>前端（Frontend）&lt;/th>
+&lt;th>后端（Backend）&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>定义&lt;/td>
+&lt;td>用户直接交互的部分&lt;/td>
+&lt;td>处理逻辑、数据库、服务器的部分&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>内容&lt;/td>
+&lt;td>HTML、CSS、JavaScript、React、Vue 等&lt;/td>
+&lt;td>Java、Python、Node.js、数据库、API、服务器逻辑&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>示例&lt;/td>
+&lt;td>页面按钮、表单、界面动画&lt;/td>
+&lt;td>用户登录验证、数据存取、接口开发&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>技能栈&lt;/td>
+&lt;td>Web UI、响应式设计、DOM 操作&lt;/td>
+&lt;td>API 设计、数据库设计、系统架构、权限控制&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>✅ &lt;strong>本质：前端关注“用户体验”，后端关注“数据与逻辑处理”。&lt;/strong>&lt;/p>
+&lt;hr>
+&lt;h3 id="-二数字ic设计中的前端与后端">🔧 二、&lt;strong>数字IC设计中的前端与后端&lt;/strong>
+&lt;/h3>&lt;p>这是在芯片设计（如 SoC、CPU）中使用的：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>维度&lt;/th>
+&lt;th>前端设计（Frontend Design）&lt;/th>
+&lt;th>后端设计（Backend Design）&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>定义&lt;/td>
+&lt;td>描述电路功能逻辑&lt;/td>
+&lt;td>实现功能的物理版图布局&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>内容&lt;/td>
+&lt;td>RTL 编写（Verilog/VHDL）、仿真、综合、形式验证&lt;/td>
+&lt;td>布图布局（place &amp;amp; route）、时序收敛、DRC/LVS、RC提取&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>工具&lt;/td>
+&lt;td>ModelSim, VCS, DC（Design Compiler）等&lt;/td>
+&lt;td>Innovus, ICC2, Calibre, StarRC 等&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>阶段&lt;/td>
+&lt;td>- RTL Coding&lt;br>- Functional Simulation&lt;br>- Synthesis&lt;/td>
+&lt;td>- Floorplan&lt;br>- Placement&lt;br>- CTS&lt;br>- Routing&lt;br>- DRC/LVS&lt;br>- GDSII 生成&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>✅ &lt;strong>本质：前端构建“逻辑电路”，后端实现“物理电路”。&lt;/strong>&lt;/p>
+&lt;hr>
+&lt;h3 id="-总结对比cs-vs-数字ic">🧩 总结对比：CS vs 数字IC
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>维度&lt;/th>
+&lt;th>CS领域&lt;/th>
+&lt;th>数字IC设计&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>前端&lt;/td>
+&lt;td>用户界面、网页端&lt;/td>
+&lt;td>RTL/功能设计&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>后端&lt;/td>
+&lt;td>数据逻辑、服务器&lt;/td>
+&lt;td>物理实现、布图布线&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>工具语言&lt;/td>
+&lt;td>JS, HTML, Python, Java&lt;/td>
+&lt;td>Verilog, VHDL, Tcl, EDA工具&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr></description></item><item><title>无序映射-有序映射</title><link>https://sleepman9.github.io/p/%E6%97%A0%E5%BA%8F%E6%98%A0%E5%B0%84-%E6%9C%89%E5%BA%8F%E6%98%A0%E5%B0%84/</link><pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E6%97%A0%E5%BA%8F%E6%98%A0%E5%B0%84-%E6%9C%89%E5%BA%8F%E6%98%A0%E5%B0%84/</guid><description>&lt;h2 id="无序映射stdunordered_map">无序映射（std::unordered_map）
+&lt;/h2>&lt;blockquote>
+&lt;p>输出结果是不确定的&lt;br>
+无序映射在插入、查找时平均时间复杂度为 O(1)，但遍历时顺序不确定；&lt;br>
+&lt;a class="link" href="https://www.hello-algo.com/chapter_hashing/hash_map/" target="_blank" rel="noopener"
+>哈希表&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-C++" data-lang="C++">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;iostream&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;unordered_map&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;string&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">unordered_map&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">string&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">int&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">fruitCount&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">fruitCount&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s">&amp;#34;apple&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">fruitCount&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s">&amp;#34;banana&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">fruitCount&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s">&amp;#34;orange&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">cout&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="s">&amp;#34;Unordered Map:&amp;#34;&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">const&lt;/span> &lt;span class="k">auto&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nl">item&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="n">fruitCount&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">cout&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">first&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="s">&amp;#34;: &amp;#34;&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">second&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="有序映射stdmap">有序映射（std::map）
+&lt;/h2>&lt;blockquote>
+&lt;p>输出结果是顺序的&lt;br>
+有序映射会自动对键进行排序，遍历时顺序按键排序，但时间复杂度为 O(log n)。&lt;br>
+&lt;a class="link" href="https://oi-wiki.org/ds/rbtree/" target="_blank" rel="noopener"
+>红黑树&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-C++" data-lang="C++">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;iostream&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;map&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;string&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">string&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">int&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">fruitCount&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">fruitCount&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s">&amp;#34;apple&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">fruitCount&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s">&amp;#34;banana&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">fruitCount&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s">&amp;#34;orange&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">cout&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="s">&amp;#34;Ordered Map:&amp;#34;&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">const&lt;/span> &lt;span class="k">auto&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nl">item&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="n">fruitCount&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">cout&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">first&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="s">&amp;#34;: &amp;#34;&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">second&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="区别优缺点">区别优缺点
+&lt;/h2>&lt;p>无序映射（std::unordered_map）和有序映射（std::map）的主要区别如下：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>底层数据结构&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>无序映射使用哈希表，键的存储顺序是无序的。&lt;/li>
+&lt;li>有序映射使用红黑树（或其他平衡二叉树），键自动按排序规则排序。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>查找和插入效率&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>无序映射在平均情况下查找、插入和删除操作的时间复杂度为 O(1)，但最坏情况下可能退化到 O(n)。&lt;/li>
+&lt;li>有序映射的这些操作时间复杂度为 O(log n)。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>内存使用&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>无序映射由于哈希表的实现可能会占用更多的内存空间，用以维护桶以及处理哈希冲突。&lt;/li>
+&lt;li>有序映射通常内存开销较小，主要存储树节点及指针。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>顺序性要求&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>如果需要按键顺序遍历数据，使用有序映射更方便。&lt;/li>
+&lt;li>如果仅需要快速查找且不关心顺序，使用无序映射更优。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>中旗建材-星空科技-股权转让</title><link>https://sleepman9.github.io/p/%E4%B8%AD%E6%97%97%E5%BB%BA%E6%9D%90-%E6%98%9F%E7%A9%BA%E7%A7%91%E6%8A%80-%E8%82%A1%E6%9D%83%E8%BD%AC%E8%AE%A9/</link><pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E4%B8%AD%E6%97%97%E5%BB%BA%E6%9D%90-%E6%98%9F%E7%A9%BA%E7%A7%91%E6%8A%80-%E8%82%A1%E6%9D%83%E8%BD%AC%E8%AE%A9/</guid><description>&lt;img src="https://sleepman9.github.io/p/%E4%B8%AD%E6%97%97%E5%BB%BA%E6%9D%90-%E6%98%9F%E7%A9%BA%E7%A7%91%E6%8A%80-%E8%82%A1%E6%9D%83%E8%BD%AC%E8%AE%A9/cover.png" alt="Featured image of post 中旗建材-星空科技-股权转让" />&lt;p>&lt;a class="link" href="./%e8%82%a1%e4%bb%bd%e8%bd%ac%e8%ae%a9.pdf" >股份转让.pdf&lt;/a>&lt;/p>
+&lt;blockquote>
+&lt;p>转让方（原股东）：卖出或转让股份的人或公司。&lt;br>
+受让方（新股东）：接收或购买股份的人或公司。&lt;/p>&lt;/blockquote>
+&lt;img src="关系图.jpg" alt="关系图" style="width:70%;" />
+&lt;h2 id="公司ipo关于壳的知识及原理">公司IPO关于“壳”的知识及原理
+&lt;/h2></description></item><item><title>RNN(Recurrent Neural Networks-循环神经网络）</title><link>https://sleepman9.github.io/p/rnnrecurrent-neural-networks-%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link><pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/rnnrecurrent-neural-networks-%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid><description>&lt;img src="https://sleepman9.github.io/p/rnnrecurrent-neural-networks-%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/cover.png" alt="Featured image of post RNN(Recurrent Neural Networks-循环神经网络）" />&lt;p>RNN的目的使用来处理序列数据。在传统的神经网络模型中，是从输入层到隐含层再到输出层，层与层之间是全连接的，每层之间的节点是无连接的。但是这种普通的神经网络对于很多问题却无能无力。例如，你要预测句子的下一个单词是什么，一般需要用到前面的单词，因为一个句子中前后单词并不是独立的。RNN之所以称为循环神经网路，即一个序列当前的输出与前面的输出也有关。具体的表现形式为网络会对前面的信息进行记忆并应用于当前输出的计算中，即隐藏层之间的节点不再无连接而是有连接的，并且隐藏层的输入不仅包括输入层的输出还包括上一时刻隐藏层的输出。
+&lt;img src="https://sleepman9.github.io/p/rnnrecurrent-neural-networks-%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image.png"
+width="1440"
+height="446"
+srcset="https://sleepman9.github.io/p/rnnrecurrent-neural-networks-%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image_hu_479cb6247526a12b.png 480w, https://sleepman9.github.io/p/rnnrecurrent-neural-networks-%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image_hu_30181f855693e293.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="322"
+data-flex-basis="774px"
+>&lt;/p>
+&lt;h2 id="基础-全连接层">基础-全连接层
+&lt;/h2>&lt;h3 id="code">code
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">torch&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">torch.nn&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">nn&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">torch.optim&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">optim&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">torch.nn.functional&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">F&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 定义神经网络模型&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">SimpleNN&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nn&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Module&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">def&lt;/span> &lt;span class="fm">__init__&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">input_size&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">num_classes&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">super&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">SimpleNN&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="fm">__init__&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">fc1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">nn&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Linear&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">input_size&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">64&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 第一个全连接层&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">fc2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">nn&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Linear&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">64&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 第二个全连接层&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">fc3&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">nn&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Linear&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">num_classes&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 输出层，维度为类别数量&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">def&lt;/span> &lt;span class="nf">forward&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">F&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">relu&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">fc1&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="c1"># ReLU激活函数&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">F&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">relu&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">fc2&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">fc3&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 最后一层不需要激活函数，因为我们会在损失函数中应用Softmax&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">x&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 模型实例化&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">input_size&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">128&lt;/span> &lt;span class="c1"># 假设输入数据的特征维度为128&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">num_classes&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">10&lt;/span> &lt;span class="c1"># 假设有10个类别&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">model&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">SimpleNN&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">input_size&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">num_classes&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 打印模型结构&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">model&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 损失函数和优化器&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">criterion&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">nn&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">CrossEntropyLoss&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="c1"># CrossEntropyLoss包含了Softmax&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">optimizer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">optim&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Adam&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">model&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">parameters&lt;/span>&lt;span class="p">(),&lt;/span> &lt;span class="n">lr&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mf">0.001&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 假设有一些数据用于训练&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># inputs: shape (batch_size, input_size)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># labels: shape (batch_size)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">inputs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">torch&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">randn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">input_size&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 32个样本，输入特征维度为128&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">labels&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">torch&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">randint&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">num_classes&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">,))&lt;/span> &lt;span class="c1"># 32个样本的标签，范围在0到9之间&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 训练步骤&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">outputs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">model&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">inputs&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 前向传播&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">loss&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">criterion&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">outputs&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">labels&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 计算损失&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">optimizer&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">zero_grad&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="c1"># 清空梯度&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">loss&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">backward&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="c1"># 反向传播&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">optimizer&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">step&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="c1"># 更新参数&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 打印损失&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">f&lt;/span>&lt;span class="s1">&amp;#39;Loss: &lt;/span>&lt;span class="si">{&lt;/span>&lt;span class="n">loss&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">item&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="rnnlstmslong-short-term-memory长短时记忆模型模型">RNN&amp;ndash;LSTMs(Long Short-Term Memory，长短时记忆模型)模型
+&lt;/h2>&lt;h2 id="reference">Reference
+&lt;/h2>&lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/30844905" target="_blank" rel="noopener"
+>一文搞懂RNN（循环神经网络）基础篇&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://dennybritz.com/posts/wildml/implementing-a-neural-network-from-scratch/" target="_blank" rel="noopener"
+>Implementing A Neural Network From Scratch in python&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/yuyu_297/article/details/139036238#:~:text=%E5%85%A8%E8%BF%9E%E6%8E%A5%E5%B1%82%EF%BC%88fully%20connected,%E9%83%BD%E5%BD%B1%E5%93%8D%E6%AF%8F%E4%B8%AA%E8%BE%93%E5%87%BA%E3%80%82" target="_blank" rel="noopener"
+>卷积神经网络（CNN）自学笔记1：全连接层&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/heyongluoyao8/article/details/48636251" target="_blank" rel="noopener"
+>循环神经网络(RNN, Recurrent Neural Networks)介绍&lt;/a>&lt;/p></description></item><item><title>手机SOC基础</title><link>https://sleepman9.github.io/p/%E6%89%8B%E6%9C%BAsoc%E5%9F%BA%E7%A1%80/</link><pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E6%89%8B%E6%9C%BAsoc%E5%9F%BA%E7%A1%80/</guid><description>&lt;img src="https://sleepman9.github.io/p/%E6%89%8B%E6%9C%BAsoc%E5%9F%BA%E7%A1%80/cover.png" alt="Featured image of post 手机SOC基础" />&lt;h2 id="手机soc包含的组件">手机SOC包含的组件
+&lt;/h2>&lt;h3 id="cpu">CPU：
+&lt;/h3>&lt;p>在SOC里面，CPU的面积其实很小，但是它却很重要。ARM是一家英国的芯片设计公司，但是呢，它卖的不是芯片，而是芯片的授权。只有经过它授权，才能生产ARM架构的处理器。那么为什么主流的SOC都必须用ARM呢？在漫长的历史演变中，手机SOC也使用过其它架构，比如X86（PC端的处理器架构），但是都因为性能和功耗不理想，被淘汰了。&lt;/p>
+&lt;p>ARM授权的同时，也给了一套公版内核方案，领到授权的芯片设计厂商，可以对公版内核进行大修改，也可以照搬。打个比方，ARM是一个生产熟食的厨师，各大芯片厂商（主妇们）可以将食物买回去直接吃，也可以对食物进行二次加工，让它变得更好吃。目前有“二次加工”能力的主要有苹果、高通、三星，海思在麒麟980上也迈出了第一步，其上所用A76内核有些修改。&lt;/p>
+&lt;p>之前我也发布过一篇推文，讲美国将华为列入“实体名单”之后，华为不能使用新的架构，只能在现有ARMv8架构指令集（已经永久授权给了海思）的基础上进行魔改。而这个ARMv8架构，已经用了整整7年，这期间所有的内核都是基于它设计的，等于说先有架构，再有内核，一个架构可以衍生出多种内核。虽然这7年间由于工艺和设计水平的进步，手机CPU性能翻了很多倍，但是毕竟这么久了，也面临着换代，因此这才是华为“最大的危机”。&lt;/p>
+&lt;p>现在的手机CPU普遍采用“大小核”的设计，不同内核组合起来。这里的“大小”是指芯片的大小，芯片面积越大，堆的晶体管越多，性能越强。打个比方，就像拉一车人去打架，你车越大，装的人越多，战斗力就越强，但是如果SOC全部都是大核，电池顶不住啊。以麒麟980为例，它采用2个A76大核，2个A76中核，4个A55小核的设计，根据不同的应用来决定开什么核，还是全部开，不同芯片设计厂商的调度不同，性能发挥也有差异。所以，手机CPU绝对不是核心数越多越好的，芯片厂商的设计至关重要。&lt;/p>
+&lt;h3 id="gpu">GPU
+&lt;/h3>&lt;p>GPU全称是“图形处理器”，如字面含义，它负责处理图形数据，并向显示屏输送图形的任务，而智能手机上的SOC也要处理各种各样复杂的数据，因此也需要一个强大的GPU。ARM自己也有提供GPU方案，就是大名鼎鼎的Mali系列，这是目前较为主流的一种GPU，而高通则是自家的Adreno系列（其实跟AMD有很深的渊源）。&lt;/p>
+&lt;h3 id="npu">NPU
+&lt;/h3>&lt;p>这可以说是最近两年的手机SOC才出现的新的芯片种类，它的全称叫neural-network process units，翻译成中文叫“嵌入式神经网络处理器”。这个名字听起来很高端，简单来说，它主要负责处理涉及神经网络算法和机器学习的海量数据，因为神经网络算法及机器学习需要处理大量信息，而当下的 CPU / GPU 都无法达到如此高效的处理能力，需要一个独立的处理芯片来做这个事，才有NPU的诞生。现在的“人工智能”AI的概念可以说非常火热，而NPU就是让手机变得更智能、更聪明的必要条件。&lt;/p>
+&lt;p>目前，苹果A系列和海思麒麟系列都有独立的NPU，而高通则不然，它叫“AIE”，就是“人工智能引擎”的意思，它通过CPU+GPU+DSP来实现AI运算，也能达到比较强的AI算力。&lt;/p>
+&lt;h3 id="isp">ISP
+&lt;/h3>&lt;p>很多人可能觉得，手机拍照的强弱只取决于传感器CMOS的强弱，殊不知，搭载同一款CMOS的同一品牌不同型号手机拍出来的效果可能略有差异。在这其中，SOC里面的ISP起到了至关重要的作用。&lt;/p>
+&lt;p>ISP，全称Image Signal Processor，中文叫“图像处理器”，不是GPU的“图形处理器”哦！它负责接收感光原件CMOS的原始数据，对这些数据进行“粗加工”，得到最后我们看到的照片。ISP需要与CMOS匹配，为什么去年不少手机都没有用4800W像素的CMOS呢？很简单，去年高通旗舰SOC骁龙845不支持4800W像素，如图：&lt;/p>
+&lt;p>骁龙845最高支持1600W像素&lt;/p>
+&lt;p>所以去年的手机厂商都使用了IMX363或者IMX380这两款1200W像素的CMOS。&lt;/p>
+&lt;h3 id="dsp">DSP
+&lt;/h3>&lt;p>DSP虽然看起来不起眼，但实际对手机体验影响很大。它全称叫Digital Signal Processor，中文名叫“数字信号处理器”，不仅在手机中应用，在雷达、通信、图像处理、医疗电子、工业机器人等高密集计算领域都有广泛应用。在手机上，它主要负责语音处理，包括通话和语音输入，也负责一些图像处理的任务。&lt;/p>
+&lt;h3 id="基带modem">基带(modem)
+&lt;/h3>&lt;p>手机最根本的功能还是通信，而掌管通信的芯片叫基带芯片，也有人称之为“调制解调器modem”，但实际上，手机的基带芯片不止包含modem。这个调制解调器的主要作用就是负责信号传输——所谓调制，就是把需要传输的信号通过一定的规则调制到载波上，让后通过无线收发器发送出去；解调则是相反的过程，类似把基站的语言“翻译成”手机能懂的，从而保证双方的顺畅交流，使我们能够接打电话、连接网络。&lt;/p>
+&lt;p>目前SOC上的基带有两种不同的形式：一种叫集成基带，即厂商有能力将基带集成到SOC中，比如海思和高通都有这个能力；另一种则需要外挂，例如苹果。这也解释了为何XS系列信号不佳，因为使用了Intel的外挂基带，这个基带表现不给力。手机要支持某种网络，需要对应的基带，比如当前火热的5G，高通X55和华为巴龙5000都是基带芯片，但现在的骁龙855和麒麟980都没有集成5G基带，因此你看到的5G手机都是外挂基带的。&lt;/p>
+&lt;h3 id="协处理器">协处理器
+&lt;/h3>&lt;p>这个相对来说比较容易解释，就如同它的名字一样，它负责一些比较轻量级的数据处理任务，比如指南针、气压计等，不需要每次都唤醒CPU处理，从而节省电量。苹果很早就在A7处理器上引入了M7协处理器，其他厂商的SOC也渐渐跟进了。&lt;/p>
+&lt;h3 id="存储与内存控制">存储与内存控制
+&lt;/h3>&lt;h3 id="电源管理">电源管理
+&lt;/h3>&lt;h2 id="reference">Reference
+&lt;/h2>&lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/419093227" target="_blank" rel="noopener"
+>掌中核心——手机SOC基础知识科普&lt;/a>&lt;/p></description></item><item><title>神经网络入门</title><link>https://sleepman9.github.io/p/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%85%A5%E9%97%A8/</link><pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%85%A5%E9%97%A8/</guid><description>&lt;img src="https://sleepman9.github.io/p/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%85%A5%E9%97%A8/cover.png" alt="Featured image of post 神经网络入门" />&lt;p>推荐一篇写的很好的blog&lt;a class="link" href="https://www.ruanyifeng.com/blog/2017/07/neural-network.html" target="_blank" rel="noopener"
+>神经网络入门&lt;/a>&lt;/p></description></item><item><title>AI_Model_Sep2Sep</title><link>https://sleepman9.github.io/p/ai_model_sep2sep/</link><pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/ai_model_sep2sep/</guid><description>&lt;img src="https://sleepman9.github.io/p/ai_model_sep2sep/cover.png" alt="Featured image of post AI_Model_Sep2Sep" />&lt;p>所谓Seq2Seq(Sequence to Sequence)，即序列到序列模型，就是一种能够根据给定的序列，通过特定的生成方法生成另一个序列的方法，同时这两个序列可以不等长。这种结构又叫Encoder-Decoder模型，即编码-解码模型，其是RNN的一个变种，为了解决RNN要求序列等长的问题。
+&lt;img src="https://sleepman9.github.io/p/ai_model_sep2sep/image.png"
+width="814"
+height="244"
+srcset="https://sleepman9.github.io/p/ai_model_sep2sep/image_hu_3bd048a127da8b7b.png 480w, https://sleepman9.github.io/p/ai_model_sep2sep/image_hu_271e770fefa577c7.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="333"
+data-flex-basis="800px"
+>&lt;/p>
+&lt;p>&lt;strong>如果你开始提问，那说明你开始进步了！&lt;/strong>&lt;/p>
+&lt;h2 id="seq2seq训练以及数据处理">Seq2Seq训练以及数据处理
+&lt;/h2>&lt;p>就拿人机对话为例，我们输入一句话，机器输出对应回答的句子，处理方法如下：&lt;/p>
+&lt;p>（1）假设有10000个问答句作为训练样本，我们统计得到1000个互异的字和每个字出现的次数；&lt;/p>
+&lt;p>（2）根据统计得到的这1000个字，按照字数从多到少排序，即0-999结束，得到字典表；&lt;/p>
+&lt;p>（3）基于得到字典表，对问答句进行one-hot编码；&lt;/p>
+&lt;p>（4）由于编码难度较大且0多，我们进行embedding降维，得到特征矩阵；&lt;/p>
+&lt;p>（5）得到特征矩阵后就可以作为输入，然后预测时输出的值是分类个数为1000的分类器，哪个概率最大预测所得就是对应的哪个字。&lt;/p>
+&lt;h2 id="reference">Reference
+&lt;/h2>&lt;p>&lt;a class="link" href="https://blog.csdn.net/zhuge2017302307/article/details/119979892" target="_blank" rel="noopener"
+>学习笔记十四——Seq2Seq模型&lt;/a>&lt;/p></description></item><item><title>Investment</title><link>https://sleepman9.github.io/p/investment/</link><pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/investment/</guid><description>&lt;img src="https://sleepman9.github.io/p/investment/cover.jpg" alt="Featured image of post Investment" />&lt;blockquote>
+&lt;p>Big Market决定了一家公司的上限。&lt;/p>&lt;/blockquote>
+&lt;h2 id="评估一家公司质地的指标">评估一家公司质地的指标
+&lt;/h2>&lt;p>&lt;img src="https://sleepman9.github.io/p/investment/%E6%94%B6%E6%94%AF%E6%8B%86%E8%A7%A3.jpg"
+width="2670"
+height="1200"
+srcset="https://sleepman9.github.io/p/investment/%E6%94%B6%E6%94%AF%E6%8B%86%E8%A7%A3_hu_c6698bd3f0a516bb.jpg 480w, https://sleepman9.github.io/p/investment/%E6%94%B6%E6%94%AF%E6%8B%86%E8%A7%A3_hu_abaf1c272e628335.jpg 1024w"
+loading="lazy"
+alt="收支拆解"
+class="gallery-image"
+data-flex-grow="222"
+data-flex-basis="534px"
+>&lt;/p>
+&lt;h3 id="归母净利润">归母净利润
+&lt;/h3>&lt;p>归母净利润（归属于母公司股东的净利润，Net Profit Attributable to Parent Company）是企业财务报表中的一个关键指标，指的是企业在扣除所有成本、费用、税费后，最终归属于母公司股东的净利润。&lt;/p>
+$$
+\text{归母净利润} = \text{净利润} - \text{少数股东损益}
+$$&lt;p>其中：&lt;/p>
+&lt;p>净利润：企业的总利润扣除所得税后的最终利润。&lt;/p>
+&lt;p>少数股东损益：子公司中属于非母公司股东（少数股东）的部分利润。&lt;/p>
+&lt;pre>&lt;code>净利润:指企业在一定会计期间内，营业收入扣除营业成本、税费、各项费用、投资损益等后的最终利润，反映了企业的最终盈利水平。
+&lt;/code>&lt;/pre>
+&lt;h3 id="负债率">负债率
+&lt;/h3>$$ \text{负债率} = \frac{\text{总负债}}{\text{总资产}} \times 100\% $$&lt;p>负债分有息负债与无息负债。有息负债指银行贷款可转债，发行债券等需要还本还息的借款。无息负债一般是指拖欠上下游的经营负债，要还本不用还息。当然如果公司足够强势，其实可以在资产负债表上形成一笔长期经营负债供公司使用。当然从我的角度出发，一切负债都是不稳定的因素。&lt;/p>
+&lt;p>比如在经营困难的时候，负债是会压倒骆驼的最后一根稻草。我喜欢选择一些低负债率帐面现金多的公司，哪怕公司今年没有一分钱营业收入，把上下游欠款和银行贷款一还，还能靠着资产负债表的现金，产生投资收益利息收入，这样利润表上面不会出现亏损，分红也能持续。这一点很关键，它可以避免股票因为亏损而出现st。哪怕出现最糟糕的情况，清算价值也能拿回70%本金。&lt;/p>
+&lt;p>流动比率也是一个衡量指标（流动资产/流动负债），这个指标可以反映企业的短期偿债能力，一般我喜欢这个指标大于2的企业。&lt;/p>
+&lt;h2 id="可转债的几个措施">可转债的几个措施
+&lt;/h2>&lt;h3 id="强赎">强赎
+&lt;/h3>&lt;p>满足特定条件后，公司将可转债强制从持有人手中提前赎回。（强赎条件苛刻）&lt;/p>
+&lt;p>满足强赎后为什么不发强赎条款 (&lt;a class="link" href="https://mp.weixin.qq.com/s/Pj1VF6vwEBqVhyHmGD7n1" target="_blank" rel="noopener"
+>https://mp.weixin.qq.com/s/Pj1VF6vwEBqVhyHmGD7n1&lt;/a>)&lt;/p>
+&lt;h3 id="回售">回售
+&lt;/h3>&lt;p>股价下跌太厉害，要求公司赎回转债。&lt;/p>
+&lt;h3 id="下修">下修
+&lt;/h3>&lt;p>股价下跌太厉害，修改转股价值，将可转债的价格拉回到100面值左右。&lt;/p></description></item><item><title>Template Format</title><link>https://sleepman9.github.io/p/format/</link><pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/format/</guid><description>&lt;img src="https://sleepman9.github.io/p/format/cover.jpg" alt="Featured image of post Template Format" />&lt;h2 id="颜色块-提示">颜色块-提示
+&lt;/h2>&lt;blockquote>
+&lt;p>Photo by &lt;a class="link" href="https://unsplash.com/@pawel_czerwinski" target="_blank" rel="noopener"
+>Pawel Czerwinski&lt;/a> on &lt;a class="link" href="https://unsplash.com/" target="_blank" rel="noopener"
+>Unsplash&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;h2 id="可视化展示">可视化展示
+&lt;/h2>&lt;!-- https://github.com/kyechan99/capsule-render -->
+&lt;p align="center">
+&lt;img src="https://capsule-render.vercel.app/api?type=waving&amp;height=300&amp;color=timeGradient&amp;text=Raincarnator&amp;desc=Programming%20/%20Design%20/%20ACGN&amp;descAlignY=54&amp;fontAlignY=40&amp;fontSize=80&amp;descAlign=62&amp;animation=fadeIn" />
+&lt;/p>
+&lt;p align="center">
+&lt;p align="center">你好，我是&lt;b>失迹&lt;/b>。&lt;br/>一位 &lt;b>编程 / 设计 / ACGN&lt;/b> 爱好者。&lt;/p>
+&lt;p align="center">Hi, I am &lt;b>Raincarnator&lt;/b>.&lt;br/>A &lt;b>Programming / Design / ACGN&lt;/b> enthusiast.&lt;/p>
+&lt;/p>
+&lt;p align="center">
+&lt;!-- https://github.com/anuraghazra/github-readme-stats -->
+&lt;img align="center" width="400" src="https://github-readme-stats.vercel.app/api?username=Raincarnator&amp;theme=transparent&amp;show_icons=true&amp;hide_border=true&amp;rank_icon=github" />
+&lt;!-- https://github.com/DenverCoder1/github-readme-streak-stats -->
+&lt;img align="center" width="400" src="https://streak-stats.demolab.com?user=Raincarnator&amp;theme=transparent&amp;date_format=%5BY.%5Dn.j&amp;hide_border=true" />
+&lt;br/>
+&lt;!-- https://github.com/Ashutosh00710/github-readme-activity-graph -->
+&lt;img width="800" src="https://github-readme-activity-graph.vercel.app/graph?username=Raincarnator&amp;theme=github-compact&amp;hide_border=true&amp;area=true" />
+&lt;br/>
+&lt;!-- https://github.com/anuraghazra/github-readme-stats -->
+&lt;img align="center" src="https://github-readme-stats.vercel.app/api/wakatime?username=ArauKaede&amp;theme=transparent&amp;hide_border=true&amp;layout=compact&amp;langs_count=22" />
+&lt;!-- https://github.com/anuraghazra/github-readme-stats -->
+&lt;img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Raincarnator&amp;theme=transparent&amp;hide_border=true&amp;layout=donut-vertical&amp;langs_count=6" />
+&lt;br/>
+&lt;!-- https://github.com/tandpfun/skill-icons -->
+&lt;img align="center" src="https://skillicons.dev/icons?i=cpp,kotlin,html,css,js,ts,java,md,latex,windows,vscode,androidstudio,ps,azure,netlify,cloudflare,github,git,npm,materialui&amp;theme=light&amp;perline=10" />
+&lt;/p>
+&lt;!-- https://github.com/badges/shields -->
+&lt;p align="center">
+&lt;a href="https://wakatime.com/@ArauKaede">&lt;img src="https://wakatime.com/badge/user/9b029946-d3d7-4021-993b-1ee294b8297a.svg" >&lt;/a>
+&lt;img src="https://komarev.com/ghpvc/?username=Raincarnator&amp;abbreviated=true"/>
+&lt;img src="https://img.shields.io/github/stars/Raincarnator?style=flat&amp;logoColor=%231677ff&amp;labelColor=rgb(89, 89, 89)&amp;color=rgb(3, 126, 187)"/>
+&lt;img src="https://img.shields.io/github/followers/Raincarnator?style=flat&amp;logoColor=%231677ff&amp;labelColor=rgb(89, 89, 89)&amp;color=rgb(3, 126, 187)"/>
+&lt;/p>
+&lt;!-- https://github.com/kyechan99/capsule-render -->
+&lt;p align="center">
+&lt;img src="https://capsule-render.vercel.app/api?type=waving&amp;height=300&amp;color=timeGradient&amp;text=Flowers%20will%20bloom%20in%20the%20world,%20and%20magnificent%20and%20immortal%20things%20will%20follow.&amp;desc=Reincarnatey%20Network%20Co.,%20Ltd&amp;descAlignY=93&amp;fontAlignY=60&amp;fontSize=20&amp;descAlign=50&amp;animation=fadeIn&amp;descSize=15&amp;section=footer&amp;fontAlign=50" />
+&lt;/p>
+&lt;h2 id="video">video
+&lt;/h2>&lt;p>For more details, check out the &lt;a class="link" href="https://stack.jimmycai.com/writing/shortcodes" target="_blank" rel="noopener"
+>documentation&lt;/a>.&lt;/p>
+&lt;h3 id="bilibili-video">Bilibili video
+&lt;/h3>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1d4411N7zD"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h3 id="tencent-video">Tencent video
+&lt;/h3>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://v.qq.com/txp/iframe/player.html?vid=g0014r3khdw&amp;auto=0"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h3 id="youtube-video">YouTube video
+&lt;/h3>&lt;div class="video-wrapper">
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/0qwALOOvUik"
+allowfullscreen
+title="YouTube Video"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;h3 id="generic-video-file">Generic video file
+&lt;/h3>&lt;div class="video-wrapper">
+&lt;video
+controls
+src="https://www.w3schools.com/tags/movie.mp4"
+>
+&lt;p>
+Your browser doesn't support HTML5 video. Here is a
+&lt;a href="https://www.w3schools.com/tags/movie.mp4">link to the video&lt;/a> instead.
+&lt;/p>
+&lt;/video>
+&lt;/div>
+&lt;h2 id="gist">Gist
+&lt;/h2>&lt;script src="https://gist.github.com/CaiJimmy/e2751a943de10b2a5b3a8a6c2120cb86.js">&lt;/script>
+&lt;h2 id="gitlab">GitLab
+&lt;/h2>&lt;script
+type="application/javascript"
+src="https://gitlab.com/-/snippets/2589724.js"
+>&lt;/script>
+&lt;h2 id="quote">Quote
+&lt;/h2>&lt;blockquote>
+&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>&lt;span class="cite">&lt;span>― &lt;/span>&lt;span>A famous person, &lt;/span>&lt;a href="https://en.wikipedia.org/wiki/Book">&lt;cite>The book they wrote&lt;/cite>&lt;/a>&lt;/span>&lt;/blockquote>
+&lt;hr>
+&lt;h2 id="锚点链接">锚点链接
+&lt;/h2>&lt;h3 id="-标准做法通过标题跳转推荐">✅ 标准做法：通过标题跳转（推荐）
+&lt;/h3>&lt;p>Markdown 中每个标题（&lt;code>#&lt;/code> 开头的那种）会自动生成一个锚点，你可以用它来链接。&lt;/p>
+&lt;h4 id="例子">例子：
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="gh"># 无序列表
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> 项目一
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> 项目二
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> 项目三
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[&lt;span class="nt">跳转到无序列表&lt;/span>](&lt;span class="na">#无序列表&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>✔️点击“跳转到无序列表”会定位到标题“无序列表”。&lt;/p>
+&lt;hr>
+&lt;blockquote>
+&lt;p>⚠️ 如果你非要链接到&lt;strong>无序列表中的某项&lt;/strong>（不是标题），标准 Markdown &lt;strong>不支持自动为列表项生成锚点&lt;/strong>，但有以下几种变通方法：&lt;/p>&lt;/blockquote>
+&lt;hr>
+&lt;h3 id="-方法-1人为加标题辅助跳转">✅ 方法 1：人为加标题辅助跳转
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="gu">### 项目一 {#item1}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>&lt;span class="k">-&lt;/span> 描述内容
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[&lt;span class="nt">跳转到项目一&lt;/span>](&lt;span class="na">#item1&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>✔️注意这里的 &lt;code>{#item1}&lt;/code> 是一些 Markdown 渲染器（比如 GitBook、Typora、Hugo）支持的&lt;strong>手动锚点语法&lt;/strong>。&lt;/p>
+&lt;hr>
+&lt;h3 id="-方法-2加隐藏标题用于跳转">✅ 方法 2：加隐藏标题（用于跳转）
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">span&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;item2&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> 项目二：这里是第二项
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[&lt;span class="nt">跳转到项目二&lt;/span>](&lt;span class="na">#item2&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>✔️这个用 &lt;code>&amp;lt;span&amp;gt;&lt;/code> 标签定义锚点，大多数 Markdown 引擎都支持。&lt;/p>
+&lt;h2 id="分页">分页
+&lt;/h2>&lt;p>Markdown 本身 不支持分页，因为它是一种纯文本标记语言，设计目的是用于网页、文档等平台上的内容结构整理，没有“分页”这个概念。但根据你使用的平台或输出格式，可以用不同的技巧实现类似分页的效果&lt;/p>
+&lt;p>导出PDF&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">style&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;page-break-after: always;&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Tools Trick</title><link>https://sleepman9.github.io/p/tools-trick/</link><pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/tools-trick/</guid><description>&lt;img src="https://sleepman9.github.io/p/tools-trick/cover.jpg" alt="Featured image of post Tools Trick" />&lt;h2 id="1-vscode中github-copilot在ssh远程环境中无法登录问题">1. VSCode中Github Copilot在SSH远程环境中无法登录问题
+&lt;/h2>&lt;h3 id="1-在vs-code中按f1键调出命令行输入settingsjson选择远程环境中的配置文件">1. 在VS Code中，按F1键调出命令行，输入settings.json，选择远程环境中的配置文件：
+&lt;/h3>&lt;p>&lt;img src="https://sleepman9.github.io/p/tools-trick/asserts/copliot.png"
+width="825"
+height="502"
+srcset="https://sleepman9.github.io/p/tools-trick/asserts/copliot_hu_d04c34523884441.png 480w, https://sleepman9.github.io/p/tools-trick/asserts/copliot_hu_f6631b22a2511959.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="164"
+data-flex-basis="394px"
+>&lt;/p>
+&lt;h3 id="2-添加如下配置">2. 添加如下配置：
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;remote.extensionKind&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;GitHub.copilot&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;ui&amp;#34;&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;GitHub.copilot-chat&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;ui&amp;#34;&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>&lt;span class="err">,&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="3-重启vs-code即可">3. 重启VS Code即可。
+&lt;/h3>&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_43948052/article/details/146123406" target="_blank" rel="noopener"
+>原文链接&lt;/a>&lt;/p></description></item></channel></rss>
