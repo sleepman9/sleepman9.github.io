@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IC on UNO's Page</title><link>https://sleepman9.github.io/categories/ic/</link><description>Recent content in IC on UNO's Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 20 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sleepman9.github.io/categories/ic/index.xml" rel="self" type="application/rss+xml"/><item><title>ASIC全流程</title><link>https://sleepman9.github.io/p/asic%E5%85%A8%E6%B5%81%E7%A8%8B/</link><pubDate>Sun, 20 Jul 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/asic%E5%85%A8%E6%B5%81%E7%A8%8B/</guid><description>&lt;img src="https://sleepman9.github.io/p/asic%E5%85%A8%E6%B5%81%E7%A8%8B/cover.png" alt="Featured image of post ASIC全流程" />&lt;h2 id="ic全流程">ic全流程
+&lt;/h2>&lt;ol>
+&lt;li>规格制定。频率，功耗，速度&lt;/li>
+&lt;li>RTL设计。HDL描述逻辑Algorithm，类似于高级设计语言cpp，里面涉及低功耗设计方法&lt;/li>
+&lt;li>功能仿真。逻辑代码是否正确，查看波形&lt;/li>
+&lt;li>逻辑综合。将RTL代码转化为门级网表，里面包含时序约束，功耗约束，PPA优化&lt;/li>
+&lt;li>STA。确保时钟⏰&lt;/li>
+&lt;li>形式验证。比较RTL 代码逻辑功能是否和逻辑综合出来的门级网表功能一致&lt;/li>
+&lt;li>门级仿真。&lt;/li>
+&lt;li>DFT。在设计中加入测试结构，使芯片在生产后可以验证其功能正确性&lt;/li>
+&lt;li>Floorplan&lt;/li>
+&lt;li>place&lt;/li>
+&lt;li>CTS&lt;/li>
+&lt;li>route&lt;/li>
+&lt;li>STA&lt;/li>
+&lt;li>PI&lt;/li>
+&lt;li>SI&lt;/li>
+&lt;li>Low Power&lt;/li>
+&lt;li>Signoff&lt;/li>
+&lt;/ol></description></item><item><title>网表相关</title><link>https://sleepman9.github.io/p/%E7%BD%91%E8%A1%A8%E7%9B%B8%E5%85%B3/</link><pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E7%BD%91%E8%A1%A8%E7%9B%B8%E5%85%B3/</guid><description>&lt;img src="https://sleepman9.github.io/p/%E7%BD%91%E8%A1%A8%E7%9B%B8%E5%85%B3/cover.png" alt="Featured image of post 网表相关" />&lt;h2 id="hspice-quick-reference-guide">HSPICE Quick Reference Guide
+&lt;/h2>&lt;p>&lt;a class="link" href="https://amarketplaceofideas.com/wp-content/uploads/2014/09/hspice_qr1.pdf" target="_blank" rel="noopener"
+>HSPICE Quick Reference Guide&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://iccircle.com/static/upload/img20240809173315.pdf" target="_blank" rel="noopener"
+>HSPICE® User Guide: Basic Simulation and Analysis&lt;/a>&lt;/p>
+&lt;h2 id="网表求解的本质">网表求解的本质
+&lt;/h2>&lt;p>网表求解的本质在于将电路中各个元件和它们的连接关系转化为数学方程（通常基于基尔霍夫定律和元件的本构关系），然后利用数值计算方法求解这些方程组，从而得到各个节点电压和支路电流等信息。简单来说，就是把电路“翻译”成数学问题，再使用求解器进行数值求解。&lt;/p>
+&lt;h2 id="不同仿真类型的的本质">不同仿真类型的的本质
+&lt;/h2>&lt;p>不同仿真类型的本质都在于：将电路的物理行为转化为数学模型，然后求解相应的数学方程以获得电路在特定条件下的响应。不过，它们侧重关注的方面不同，具体说明如下：&lt;/p>
+&lt;ul>
+&lt;li>直流工作点分析 (.op) 和直流扫描分析 (.DC)&lt;/li>
+&lt;/ul>
+&lt;p>直流工作点分析：求解电路在直流稳态下（没有时间变化因素）的电压、电流等参数。它的本质是求解一组非线性代数方程，确定电路各节点的静态工作状态。&lt;/p>
+&lt;p>直流扫描分析：在直流工作点分析的基础上，通过改变一个或多个直流激励源（如电压或电流），观察器件或电路参数随偏置变化的趋势。其本质依然是求解静态非线性代数方程，但需要遍历一系列激励值。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>瞬态分析 (.TRAN)
+瞬态分析关注电路响应随时间的动态变化。它将电路描述为一组微分方程（可能还包含非线性部分），然后利用数值积分算法（如欧拉法、龙格-库塔法等）求解时间域响应，从而揭示电路在施加激励后随时间变化的动态行为。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>交流小信号分析 (.AC)
+该分析是在电路的直流工作点附近对电路进行线性化，转换到频率域求解。它的本质是将电路的非线性行为在小激励条件下近似为线性模型，通过求解复数域中的方程（使用如拉普拉斯变换或者直接建立导纳矩阵）得到电路的频率响应、相位特性等。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>总之，无论是哪种仿真类型，基本思路都是“建立数学模型 – 数值求解 – 得到物理量”，只是不同的仿真关注于电路静态状态、动态响应或频率特性等不同方面。&lt;/p></description></item><item><title>一些芯片设计的冷知识</title><link>https://sleepman9.github.io/p/%E4%B8%80%E4%BA%9B%E8%8A%AF%E7%89%87%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%86%B7%E7%9F%A5%E8%AF%86/</link><pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E4%B8%80%E4%BA%9B%E8%8A%AF%E7%89%87%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%86%B7%E7%9F%A5%E8%AF%86/</guid><description>&lt;img src="https://sleepman9.github.io/p/%E4%B8%80%E4%BA%9B%E8%8A%AF%E7%89%87%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%86%B7%E7%9F%A5%E8%AF%86/cover.png" alt="Featured image of post 一些芯片设计的冷知识" />&lt;h2 id="原理图-芯片物理版图">原理图-&amp;gt;芯片物理版图
+&lt;/h2>&lt;p>根据电路设计图（也称为原理图或HDL代码）生成芯片物理版图&lt;/p>
+&lt;h3 id="逻辑综合">逻辑综合
+&lt;/h3>&lt;p>这是将电路设计图转换为门级网表的过程，门级网表是由基本逻辑门（如与门、或门、非门等）和触发器（如D触发器、JK触发器等）组成的电路结构，它可以反映电路设计图的功能和性能。逻辑综合需要设定约束条件，就是希望综合出来的电路在面积、时序等目标参数上达到的标准；逻辑综合还需要指定基于的库，使用不同的综合库，在时序和面积上会有差异。常用的逻辑综合工具有Synopsys的Design Compiler，Cadence的PKS，Synplicity的Synplify等。&lt;/p>
+&lt;h3 id="布局规划">布局规划
+&lt;/h3>&lt;p>这是在确定芯片的总体尺寸和形状后，将芯片中的各个模块（如IP核、存储器、I/O引脚等）分配到合适的位置的过程，布局规划需要考虑各个模块之间的连接关系、信号延迟、功耗分布、热效应等因素，以优化芯片的性能和可靠性。布局规划后，芯片的大小，Core的面积，Row的形式、电源及地线的Ring和Strip都确定下来了。常用的布局规划工具有Cadence的Encounter/Innovus，Synopsys的ICC等。&lt;/p>
+&lt;h3 id="时钟树综合">时钟树综合
+&lt;/h3>&lt;p>这是在布局规划后，对芯片中的时钟信号进行专门的布线设计的过程，时钟信号在数字芯片中起着全局指挥作用，它需要对称地分配到各个寄存器单元，以保证时钟从同一个时钟源到达各个寄存器时，时钟延迟差异最小。时钟树综合需要考虑时钟频率、抖动、偏移等因素，以提高芯片的时序性能。常用的时钟树综合工具有Cadence Encounter/Innovus, Synopsys ICC, Synopsys PrimeTime SI等。&lt;/p>
+&lt;h3 id="布局布线">布局布线
+&lt;/h3>&lt;p>这是将门级网表转换为具体的物理版图的过程，包括标准单元（如基本逻辑门电路）的放置和各种层之间的走线。布局布线需要遵循特定工艺的设计规则（如最小宽度、最小间距等），以保证版图可以被正确地加工出来。布局布线还需要考虑面积、功耗、时序、噪声、串扰等因素，以优化芯片的质量和效率。常用的布局布线工具有Cadence Encounter/Innovus, Synopsys ICC, Synopsys Astro等。&lt;/p>
+&lt;h3 id="物理验证">物理验证
+&lt;/h3>&lt;p>这是在完成物理版图后，对其进行检查和修正的过程&lt;/p>
+&lt;h4 id="设计规则检查drc">设计规则检查（DRC）
+&lt;/h4>&lt;p>这是检查物理版图是否符合工艺设计规则的过程，如果发现任何违反规则的地方，就需要进行修改。常用的设计规则检查工具有Synopsys的Hercules/ICV，Cadence的Assura/PVS，Mentor的Calibre等。&lt;/p>
+&lt;h4 id="布局与网表比较lvs">布局与网表比较（LVS）
+&lt;/h4>&lt;p>这是检查物理版图是否与门级网表在功能上完全一致的过程，如果发现任何不匹配或缺失的地方，就需要进行调整。常用的布局与网表比较工具有Synopsys的Hercules/ICV，Cadence的Assura/PVS，Mentor的Calibre等。&lt;/p>
+&lt;h4 id="寄生参数提取pex">寄生参数提取（PEX）
+&lt;/h4>&lt;p>这是从物理版图中提取出电阻、电容、电感等寄生参数的过程，这些参数会影响电路的性能和信号完整性，需要进行后仿真和分析。常用的寄生参数提取工具有Synopsys的Star-RC, Cadence的QRC, Mentor的Calibre XRC等。&lt;/p>
+&lt;h4 id="时序验证sta">时序验证（STA）
+&lt;/h4>&lt;p>这是基于寄生参数提取的结果，对电路的时序性能进行验证的过程，主要检查电路是否存在建立时间（setup time）和保持时间（hold time）的违例，如果发现任何时序问题，就需要进行优化。常用的时序验证工具有Synopsys的PrimeTime, Cadence’s Tempus等。&lt;/p>
+&lt;h4 id="信号完整性分析si">信号完整性分析（SI）
+&lt;/h4>&lt;p>这是基于寄生参数提取的结果，对电路的信号质量进行分析的过程，主要检查电路是否存在噪声、串扰、反射等问题，如果发现任何信号完整性问题，就需要进行改善。常用的信号完整性分析工具有Synopsys PrimeTime SI, Cadence Sigrity, Ansys Totem/Redhawk等。&lt;/p>
+&lt;p>物理版图验证完成后，就可以将GDSII文件交给芯片代工厂（称为Foundry），在晶圆硅片上通过多道工艺步骤（如光刻、刻蚀、离子注入、沉积等）实现芯片的制造，再进行封装和测试，就得到了我们实际看见的芯片。&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/Jailman/article/details/132761728" target="_blank" rel="noopener"
+>一些芯片设计的冷知识&lt;/a>&lt;/p>
+&lt;h2 id="芯片键合bonding">芯片键合（bonding）
+&lt;/h2>&lt;p>这个博主的其他文章也值得一看《傻白入门芯片设计系列》&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_46675545/article/details/128050411" target="_blank" rel="noopener"
+>傻白入门芯片设计，芯片键合(Die Bonding)（四）&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_46675545/article/details/128053478" target="_blank" rel="noopener"
+>傻白入门芯片设计，典型的2D/2D+/2.5D/3D封装技术（六）&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_46675545/article/details/128076797" target="_blank" rel="noopener"
+>傻白入门芯片设计，如何降低CPU功耗？（八）&lt;/a>&lt;/p>
+&lt;h2 id="为什么还需要interposer层级">为什么还需要interposer层级
+&lt;/h2>&lt;ol>
+&lt;li>bump的大小是否符合和芯片I/O要求&lt;/li>
+&lt;li>bump影响寄生参数值（根据电阻电感电容的公式推理即可. [Bump 越大，寄生电阻和寄生电感越小，但寄生电容越大。]&lt;/li>
+&lt;li>更加灵活的互联（更短的互联路径）&lt;/li>
+&lt;/ol>
+&lt;h2 id="4d芯片集成">4D芯片集成
+&lt;/h2>&lt;p>&lt;a class="link" href="https://www.eet-china.com/mp/a352641.html" target="_blank" rel="noopener"
+>芯片的先进封装会发展到4D吗？&lt;/a>&lt;/p>
+&lt;h2 id="dram预充电的作用">DRAM预充电的作用
+&lt;/h2>&lt;p>预充电操作是为了“清空现场、重置电压”，以便 DRAM 可以正确执行下一次读写操作&lt;/p>
+&lt;ol>
+&lt;li>DRAM 的位线是差分信号线，感应放大器是通过对微小电压差放大来判断是 0 还是 1 的。如果前一次操作后电压还残留，就会影响下一次数据的正确性。&lt;/li>
+&lt;/ol>
+&lt;p>预充电 = 把位线电压“归一化”到 ½ 电压，为下次判别提供基准。不偏向 0，也不偏向 1&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>状态&lt;/th>
+&lt;th>cell 电容&lt;/th>
+&lt;th>位线电压&lt;/th>
+&lt;th>连接后&lt;/th>
+&lt;th>差值&lt;/th>
+&lt;th>放大结果&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>存1&lt;/td>
+&lt;td>Vdd&lt;/td>
+&lt;td>Vdd/2&lt;/td>
+&lt;td>位线稍↑&lt;/td>
+&lt;td>+ΔV&lt;/td>
+&lt;td>判为 1&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>存0&lt;/td>
+&lt;td>0V&lt;/td>
+&lt;td>Vdd/2&lt;/td>
+&lt;td>位线稍↓&lt;/td>
+&lt;td>-ΔV&lt;/td>
+&lt;td>判为 0&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>也就是说，cell 的电压通过连接到“Vdd/2”的位线上，形成一个微小的正/负波动，这时 Sense Amplifier 就可以把这个波动“放大”成逻辑 1 或 0。&lt;/p>
+&lt;ol start="2">
+&lt;li>感应放大器只对微小差异敏感。若位线未被预充电，数据对比将发生偏移，导致：&lt;/li>
+&lt;/ol>
+&lt;p>数据判别错误（读取出错）&lt;/p>
+&lt;p>写入扰动（错误写入别的单元）&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/qq_46675545/article/details/128210207" target="_blank" rel="noopener"
+>傻白入门芯片设计，史上最最最全DRAM介绍&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/Tranquil_ovo/article/details/129876980" target="_blank" rel="noopener"
+>【DC】逻辑综合基础&lt;/a>&lt;/p>
+&lt;h2 id="lc谐振">LC谐振
+&lt;/h2>&lt;p>电容，电感，反复充放电。
+&lt;a class="link" href="https://zhuanlan.zhihu.com/p/532163425" target="_blank" rel="noopener"
+>还搞不懂 LC振荡电路原理？看这一文就够了，图文结合，立马带你搞定&lt;/a>&lt;/p>
+&lt;h2 id="正片和负片">正片和负片
+&lt;/h2>&lt;p>&lt;a class="link" href="https://blog.csdn.net/weixin_42837669/article/details/110411765" target="_blank" rel="noopener"
+>PCB正片和负片的区别与使用&lt;/a>&lt;/p>
+&lt;h2 id="allegro加密文件密码破解和解除读写导出限制">Allegro加密文件密码破解和解除读写导出限制
+&lt;/h2>&lt;p>&lt;a class="link" href="https://blog.csdn.net/vanfone/article/details/116275609" target="_blank" rel="noopener"
+>Allegro加密文件密码破解和解除读写导出限制&lt;/a>&lt;/p>
+&lt;h2 id="静态时序分析sta报告摘要">静态时序分析（STA）报告摘要
+&lt;/h2>&lt;p>&lt;img src="https://sleepman9.github.io/p/%E4%B8%80%E4%BA%9B%E8%8A%AF%E7%89%87%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%86%B7%E7%9F%A5%E8%AF%86/image.png"
+width="777"
+height="368"
+srcset="https://sleepman9.github.io/p/%E4%B8%80%E4%BA%9B%E8%8A%AF%E7%89%87%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%86%B7%E7%9F%A5%E8%AF%86/image_hu_597ce37bf5508b64.png 480w, https://sleepman9.github.io/p/%E4%B8%80%E4%BA%9B%E8%8A%AF%E7%89%87%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%86%B7%E7%9F%A5%E8%AF%86/image_hu_3060480dc45bbc6.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="211"
+data-flex-basis="506px"
+>&lt;/p>
+&lt;p>这张图展示的是数字后端设计中关键的 &lt;strong>静态时序分析（STA）报告摘要&lt;/strong> 和 &lt;strong>设计规则违规（DRV）检查统计&lt;/strong>，以下是详细解读：&lt;/p>
+&lt;hr>
+&lt;h3 id="1-setup-mode-时序分析表">📍&lt;strong>1. Setup Mode 时序分析表&lt;/strong>
+&lt;/h3>&lt;p>这部分列出了多种 &lt;strong>路径类别（setup mode）&lt;/strong> 的时序结果：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>字段&lt;/th>
+&lt;th>含义&lt;/th>
+&lt;th>备注&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>WNS (ns)&lt;/code>&lt;/td>
+&lt;td>Worst Negative Slack，最差路径的负裕量（最坏延迟）&lt;/td>
+&lt;td>- 值为负数时说明时序违例。&lt;br>- &lt;code>all&lt;/code> 模式下为 &lt;code>-0.002ns&lt;/code>，说明有轻微的时序违例。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>TNS (ns)&lt;/code>&lt;/td>
+&lt;td>Total Negative Slack，总的时序违例之和&lt;/td>
+&lt;td>所有违反路径加总的延迟量。&lt;code>-0.003ns&lt;/code> 是非常轻微的问题。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>Violating Paths&lt;/code>&lt;/td>
+&lt;td>时序违例路径数&lt;/td>
+&lt;td>&lt;code>all&lt;/code> 模式下有 2 条路径违例&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>All Paths&lt;/code>&lt;/td>
+&lt;td>总路径数&lt;/td>
+&lt;td>全设计共 12,273 条路径（时序分析覆盖）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>🔍 各模式说明：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>reg2reg&lt;/code>: 从寄存器到寄存器的路径（主路径）&lt;/li>
+&lt;li>&lt;code>reg2cgate&lt;/code>: 从寄存器到组合逻辑门（用于分析组合部分）&lt;/li>
+&lt;li>&lt;code>default&lt;/code>: 默认路径类别&lt;/li>
+&lt;li>&lt;code>all&lt;/code>: 总体视角&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="2-drvsdesign-rule-violations-设计规则违规统计">📍&lt;strong>2. DRVs：Design Rule Violations 设计规则违规统计&lt;/strong>
+&lt;/h3>&lt;p>这一部分列出的是违反电气规则（例如上限/转换时间等）的信息。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>DRV 类型&lt;/th>
+&lt;th>含义&lt;/th>
+&lt;th>结果解读&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>max_cap&lt;/code>&lt;/td>
+&lt;td>最大负载电容违例&lt;/td>
+&lt;td>共检测到 8 条网络超出上限（8 个实例），但&lt;strong>没有真实违例值&lt;/strong>（Worst Vio = 0），可能已修复。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>max_tran&lt;/code>&lt;/td>
+&lt;td>最大信号转换时间违例&lt;/td>
+&lt;td>检测到 6 条网络；Worst Vio 为 0.000，说明也已修复。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>max_fanout&lt;/code>&lt;/td>
+&lt;td>最大扇出&lt;/td>
+&lt;td>0&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>max_length&lt;/code>&lt;/td>
+&lt;td>最大线长&lt;/td>
+&lt;td>0&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>📝 注：Real vs Total 表示是否是“实际有效违规”&lt;/p>
+&lt;ul>
+&lt;li>Real：当前设计中真实存在的；&lt;/li>
+&lt;li>Total：工具设置阈值检测到的超限数（可能已修复或忽略）。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="3-density--routing-overflow">📍&lt;strong>3. Density &amp;amp; Routing Overflow&lt;/strong>
+&lt;/h3>&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Density&lt;/strong>: &lt;code>46.432%&lt;/code>
+→ 标准单元填充密度，不高，布线空间充足。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Routing Overflow&lt;/strong>: &lt;code>0.00% H and 0.00% V&lt;/code>
+→ 布线拥塞情况非常理想，无水平或垂直溢出，说明布线非常顺畅。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="-总结">✅ 总结
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>分类&lt;/th>
+&lt;th>结论&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>时序（STA）&lt;/td>
+&lt;td>有轻微负 slack（-0.003ns），可继续优化，未严重超时&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>设计规则（DRV）&lt;/td>
+&lt;td>所有电气规则违例已修复，0 违规&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>布局密度&lt;/td>
+&lt;td>46%，空间富余&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>布线拥塞&lt;/td>
+&lt;td>0%，极佳&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr>
+&lt;p>如你需要，我可以提供一些优化建议来消除 WNS/TNS。是否需要我帮你写个时序优化建议脚本或时序debug checklist？&lt;/p>
+&lt;h2 id="spef文件">SPEF文件
+&lt;/h2>&lt;p>SPEF（Standard Parasitic Exchange Format）文件是一种 标准电路寄生参数交换文件，用于描述芯片设计中 电路的寄生参数信息，如：&lt;/p>
+&lt;p>寄生电容（capacitance）&lt;/p>
+&lt;p>寄生电阻（resistance）&lt;/p>
+&lt;p>电感（如有）&lt;/p>
+&lt;p>这些寄生参数主要来自于布线和互连，会影响信号延迟和电路时序，是时序分析（STA）和信号完整性分析（SI）不可或缺的数据源。&lt;/p>
+&lt;h2 id="cs中的前后端和ic中的前后端区别">CS中的前后端和IC中的前后端区别
+&lt;/h2>&lt;p>这是个非常好的问题，很多初学者都会混淆“前端/后端”在 &lt;strong>计算机科学（CS）&lt;/strong> 和 &lt;strong>数字IC设计&lt;/strong> 这两个领域中的含义。以下是详细对比说明：&lt;/p>
+&lt;hr>
+&lt;h3 id="-一计算机科学cs中的前端与后端">🧠 一、&lt;strong>计算机科学（CS）中的前端与后端&lt;/strong>
+&lt;/h3>&lt;p>这是你在 Web 开发、软件工程等方向常听到的：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>维度&lt;/th>
+&lt;th>前端（Frontend）&lt;/th>
+&lt;th>后端（Backend）&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>定义&lt;/td>
+&lt;td>用户直接交互的部分&lt;/td>
+&lt;td>处理逻辑、数据库、服务器的部分&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>内容&lt;/td>
+&lt;td>HTML、CSS、JavaScript、React、Vue 等&lt;/td>
+&lt;td>Java、Python、Node.js、数据库、API、服务器逻辑&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>示例&lt;/td>
+&lt;td>页面按钮、表单、界面动画&lt;/td>
+&lt;td>用户登录验证、数据存取、接口开发&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>技能栈&lt;/td>
+&lt;td>Web UI、响应式设计、DOM 操作&lt;/td>
+&lt;td>API 设计、数据库设计、系统架构、权限控制&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>✅ &lt;strong>本质：前端关注“用户体验”，后端关注“数据与逻辑处理”。&lt;/strong>&lt;/p>
+&lt;hr>
+&lt;h3 id="-二数字ic设计中的前端与后端">🔧 二、&lt;strong>数字IC设计中的前端与后端&lt;/strong>
+&lt;/h3>&lt;p>这是在芯片设计（如 SoC、CPU）中使用的：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>维度&lt;/th>
+&lt;th>前端设计（Frontend Design）&lt;/th>
+&lt;th>后端设计（Backend Design）&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>定义&lt;/td>
+&lt;td>描述电路功能逻辑&lt;/td>
+&lt;td>实现功能的物理版图布局&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>内容&lt;/td>
+&lt;td>RTL 编写（Verilog/VHDL）、仿真、综合、形式验证&lt;/td>
+&lt;td>布图布局（place &amp;amp; route）、时序收敛、DRC/LVS、RC提取&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>工具&lt;/td>
+&lt;td>ModelSim, VCS, DC（Design Compiler）等&lt;/td>
+&lt;td>Innovus, ICC2, Calibre, StarRC 等&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>阶段&lt;/td>
+&lt;td>- RTL Coding&lt;br>- Functional Simulation&lt;br>- Synthesis&lt;/td>
+&lt;td>- Floorplan&lt;br>- Placement&lt;br>- CTS&lt;br>- Routing&lt;br>- DRC/LVS&lt;br>- GDSII 生成&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>✅ &lt;strong>本质：前端构建“逻辑电路”，后端实现“物理电路”。&lt;/strong>&lt;/p>
+&lt;hr>
+&lt;h3 id="-总结对比cs-vs-数字ic">🧩 总结对比：CS vs 数字IC
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>维度&lt;/th>
+&lt;th>CS领域&lt;/th>
+&lt;th>数字IC设计&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>前端&lt;/td>
+&lt;td>用户界面、网页端&lt;/td>
+&lt;td>RTL/功能设计&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>后端&lt;/td>
+&lt;td>数据逻辑、服务器&lt;/td>
+&lt;td>物理实现、布图布线&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>工具语言&lt;/td>
+&lt;td>JS, HTML, Python, Java&lt;/td>
+&lt;td>Verilog, VHDL, Tcl, EDA工具&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;hr></description></item><item><title>手机SOC基础</title><link>https://sleepman9.github.io/p/%E6%89%8B%E6%9C%BAsoc%E5%9F%BA%E7%A1%80/</link><pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E6%89%8B%E6%9C%BAsoc%E5%9F%BA%E7%A1%80/</guid><description>&lt;img src="https://sleepman9.github.io/p/%E6%89%8B%E6%9C%BAsoc%E5%9F%BA%E7%A1%80/cover.png" alt="Featured image of post 手机SOC基础" />&lt;h2 id="手机soc包含的组件">手机SOC包含的组件
+&lt;/h2>&lt;h3 id="cpu">CPU：
+&lt;/h3>&lt;p>在SOC里面，CPU的面积其实很小，但是它却很重要。ARM是一家英国的芯片设计公司，但是呢，它卖的不是芯片，而是芯片的授权。只有经过它授权，才能生产ARM架构的处理器。那么为什么主流的SOC都必须用ARM呢？在漫长的历史演变中，手机SOC也使用过其它架构，比如X86（PC端的处理器架构），但是都因为性能和功耗不理想，被淘汰了。&lt;/p>
+&lt;p>ARM授权的同时，也给了一套公版内核方案，领到授权的芯片设计厂商，可以对公版内核进行大修改，也可以照搬。打个比方，ARM是一个生产熟食的厨师，各大芯片厂商（主妇们）可以将食物买回去直接吃，也可以对食物进行二次加工，让它变得更好吃。目前有“二次加工”能力的主要有苹果、高通、三星，海思在麒麟980上也迈出了第一步，其上所用A76内核有些修改。&lt;/p>
+&lt;p>之前我也发布过一篇推文，讲美国将华为列入“实体名单”之后，华为不能使用新的架构，只能在现有ARMv8架构指令集（已经永久授权给了海思）的基础上进行魔改。而这个ARMv8架构，已经用了整整7年，这期间所有的内核都是基于它设计的，等于说先有架构，再有内核，一个架构可以衍生出多种内核。虽然这7年间由于工艺和设计水平的进步，手机CPU性能翻了很多倍，但是毕竟这么久了，也面临着换代，因此这才是华为“最大的危机”。&lt;/p>
+&lt;p>现在的手机CPU普遍采用“大小核”的设计，不同内核组合起来。这里的“大小”是指芯片的大小，芯片面积越大，堆的晶体管越多，性能越强。打个比方，就像拉一车人去打架，你车越大，装的人越多，战斗力就越强，但是如果SOC全部都是大核，电池顶不住啊。以麒麟980为例，它采用2个A76大核，2个A76中核，4个A55小核的设计，根据不同的应用来决定开什么核，还是全部开，不同芯片设计厂商的调度不同，性能发挥也有差异。所以，手机CPU绝对不是核心数越多越好的，芯片厂商的设计至关重要。&lt;/p>
+&lt;h3 id="gpu">GPU
+&lt;/h3>&lt;p>GPU全称是“图形处理器”，如字面含义，它负责处理图形数据，并向显示屏输送图形的任务，而智能手机上的SOC也要处理各种各样复杂的数据，因此也需要一个强大的GPU。ARM自己也有提供GPU方案，就是大名鼎鼎的Mali系列，这是目前较为主流的一种GPU，而高通则是自家的Adreno系列（其实跟AMD有很深的渊源）。&lt;/p>
+&lt;h3 id="npu">NPU
+&lt;/h3>&lt;p>这可以说是最近两年的手机SOC才出现的新的芯片种类，它的全称叫neural-network process units，翻译成中文叫“嵌入式神经网络处理器”。这个名字听起来很高端，简单来说，它主要负责处理涉及神经网络算法和机器学习的海量数据，因为神经网络算法及机器学习需要处理大量信息，而当下的 CPU / GPU 都无法达到如此高效的处理能力，需要一个独立的处理芯片来做这个事，才有NPU的诞生。现在的“人工智能”AI的概念可以说非常火热，而NPU就是让手机变得更智能、更聪明的必要条件。&lt;/p>
+&lt;p>目前，苹果A系列和海思麒麟系列都有独立的NPU，而高通则不然，它叫“AIE”，就是“人工智能引擎”的意思，它通过CPU+GPU+DSP来实现AI运算，也能达到比较强的AI算力。&lt;/p>
+&lt;h3 id="isp">ISP
+&lt;/h3>&lt;p>很多人可能觉得，手机拍照的强弱只取决于传感器CMOS的强弱，殊不知，搭载同一款CMOS的同一品牌不同型号手机拍出来的效果可能略有差异。在这其中，SOC里面的ISP起到了至关重要的作用。&lt;/p>
+&lt;p>ISP，全称Image Signal Processor，中文叫“图像处理器”，不是GPU的“图形处理器”哦！它负责接收感光原件CMOS的原始数据，对这些数据进行“粗加工”，得到最后我们看到的照片。ISP需要与CMOS匹配，为什么去年不少手机都没有用4800W像素的CMOS呢？很简单，去年高通旗舰SOC骁龙845不支持4800W像素，如图：&lt;/p>
+&lt;p>骁龙845最高支持1600W像素&lt;/p>
+&lt;p>所以去年的手机厂商都使用了IMX363或者IMX380这两款1200W像素的CMOS。&lt;/p>
+&lt;h3 id="dsp">DSP
+&lt;/h3>&lt;p>DSP虽然看起来不起眼，但实际对手机体验影响很大。它全称叫Digital Signal Processor，中文名叫“数字信号处理器”，不仅在手机中应用，在雷达、通信、图像处理、医疗电子、工业机器人等高密集计算领域都有广泛应用。在手机上，它主要负责语音处理，包括通话和语音输入，也负责一些图像处理的任务。&lt;/p>
+&lt;h3 id="基带modem">基带(modem)
+&lt;/h3>&lt;p>手机最根本的功能还是通信，而掌管通信的芯片叫基带芯片，也有人称之为“调制解调器modem”，但实际上，手机的基带芯片不止包含modem。这个调制解调器的主要作用就是负责信号传输——所谓调制，就是把需要传输的信号通过一定的规则调制到载波上，让后通过无线收发器发送出去；解调则是相反的过程，类似把基站的语言“翻译成”手机能懂的，从而保证双方的顺畅交流，使我们能够接打电话、连接网络。&lt;/p>
+&lt;p>目前SOC上的基带有两种不同的形式：一种叫集成基带，即厂商有能力将基带集成到SOC中，比如海思和高通都有这个能力；另一种则需要外挂，例如苹果。这也解释了为何XS系列信号不佳，因为使用了Intel的外挂基带，这个基带表现不给力。手机要支持某种网络，需要对应的基带，比如当前火热的5G，高通X55和华为巴龙5000都是基带芯片，但现在的骁龙855和麒麟980都没有集成5G基带，因此你看到的5G手机都是外挂基带的。&lt;/p>
+&lt;h3 id="协处理器">协处理器
+&lt;/h3>&lt;p>这个相对来说比较容易解释，就如同它的名字一样，它负责一些比较轻量级的数据处理任务，比如指南针、气压计等，不需要每次都唤醒CPU处理，从而节省电量。苹果很早就在A7处理器上引入了M7协处理器，其他厂商的SOC也渐渐跟进了。&lt;/p>
+&lt;h3 id="存储与内存控制">存储与内存控制
+&lt;/h3>&lt;h3 id="电源管理">电源管理
+&lt;/h3>&lt;h2 id="reference">Reference
+&lt;/h2>&lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/419093227" target="_blank" rel="noopener"
+>掌中核心——手机SOC基础知识科普&lt;/a>&lt;/p></description></item></channel></rss>
