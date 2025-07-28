@@ -1,6 +1,6 @@
 ---
 title: ASIC全流程
-description: 从有想法到最终type out到底经历了什么
+description: 从有想法到最终type out到底经历了什么。
 date: 2025-07-20 
 image: cover.png
 categories:
