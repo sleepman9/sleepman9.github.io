@@ -414,3 +414,124 @@ Change wire width：增宽导线可降低单位长度上的电阻和提高信号
 禁用就用set_dont_use  
 禁止修改就用set_dont_touch
 
+### 21. During the synthesis, what type of wire load model are often used?
+做RTL综合时，经常使用的wire load model有哪几种？  
+>难度：2
+
+在综合时，除了用ZWLM(zero wire load model)[]，或者不同K值的wire load model以外，还有一个基于物理位置（距离）的wire load model，在Cadence的RC中叫PLE，Synopsys叫DC Ultra Topographical
+
+背景：  
+在数字电路设计中的 RTL 综合（RTL Synthesis） 过程中，Wire Load Models 用于估计信号传输时的延迟和功耗。这些模型通过将布线对电路的影响考虑进去，帮助综合工具做出合理的时序、面积和功耗优化决策。
+
+
+<details>
+<summary>详细解释</summary>
+
+1. Zero Wire Load Model（ZWLM）  
+
+定义：此模型假设所有的信号线都具有零的电容和延迟，即没有任何布线带来的电容影响。
+
+应用场景：通常用于早期设计阶段或当设计工具的目标是尽可能地减少信号的布线延迟影响时。由于这种模型没有考虑到布线电容，它适合用来做快速原型设计，但会导致计算出的时序不准确。
+
+优缺点：
+
+优点：计算速度快，适用于初步设计。
+
+缺点：不真实，因为电路中的布线总会带来一定的延迟和功耗。
+
+2. Traditional Wire Load Model（基于K值的WLM）
+
+定义：这种模型通过参数 K（通常是电容与信号长度或连接数量的比例）来估算布线电容。综合工具根据设计中的信号连接数量和布局来估算布线的电容和延迟。
+
+应用场景：适用于那些信号连接相对简单且布线关系较为规则的设计。这种模型假设电容是与布线长度或连接数量线性相关的。
+
+优缺点：
+
+优点：计算比较简单，适合一些常见的、规则化的设计。
+
+缺点：它不能精确考虑电路中复杂的布线结构，尤其是在设计中存在较大物理差异或布局时。
+
+3. Topographical Wire Load Model（基于物理位置的WLM）
+
+定义：该模型基于电路中的实际物理布局进行建模，考虑了布线的具体物理距离、层次结构和其他布局细节。在 Cadence 中称之为 PLE（Physical Layout Extraction），而在 Synopsys 中称之为 DC Ultra Topographical。
+
+应用场景：这种模型适用于高精度的设计，尤其是在复杂布局和大规模集成电路中。它能够考虑到每条信号线的具体物理长度、阻抗和电容，提供更为准确的时序分析和功耗估算。
+
+优缺点：
+
+优点：提供非常准确的估算，能够反映复杂布局的电容影响。
+
+缺点：计算开销大，需要更多的资源和时间进行模拟。
+
+总结：
+
+ZWLM：假设没有布线影响，适用于快速估算，适合初步设计阶段。
+
+基于K值的WLM：适合常见的布线情况，计算简单但不精确。
+
+Topographical WLM：基于物理布局，最精确，但计算复杂，适用于精密设计和布局。
+
+</details>
+
+### What types of delay model are used in digital design? (数字IC设计中有多少种类型的delay model)
+
+答案就是你说的“NLDM，CCS，和ECSM”，还有一个现在基本不用了的--LDM
+
+<details>
+1. NLDM (Non-Linear Delay Model)
+定义：非线性延迟模型（NLDM）考虑了信号传播的非线性特性，尤其是在较大负载或较长布线的情况下。它通过对延迟和电容之间的关系进行非线性拟合来计算延迟。
+
+特点：NLDM 通常用于高精度的延迟建模，特别是在复杂设计中，能够精确描述延迟与电容、负载的非线性关系。
+
+应用场景：适用于需要更高精度时序估算的复杂电路，特别是当负载较大或信号传播路径较长时。
+
+2. CCS (Constant Current Source Model)
+定义：恒定电流源模型（CCS）假设每个门电路的驱动能力是常数，且与输入电压变化无关。CCS 延迟模型以恒定的电流源来描述门电路的电流驱动特性，并根据负载电容来计算延迟。
+
+特点：这种模型通过一个简化的电流源模型来估算门电路的延迟，适用于一些简单设计中的时序计算。
+
+应用场景：适用于电流驱动能力较为稳定、较简单的电路。
+
+3. ECSM (Elmore Delay Model)
+定义：Elmore 延迟模型（ECSM）是一种基于 RC 网络的经典延迟模型，通过对电路中的电阻和电容进行加权计算，给出信号传播延迟的估算值。它通过 RC 等效电路分析信号的传输延迟。
+
+特点：ECSM 以 RC 网络的等效模型来计算延迟，比较简单并且计算速度较快，适用于较为规则的电路。
+
+应用场景：适用于大部分常规的数字电路设计，尤其在布线延迟较为均匀时使用广泛。
+
+4. LDM (Linear Delay Model) — 已不常用
+定义：线性延迟模型（LDM）假设延迟与电容之间的关系是线性的，即延迟与电容成正比。LDM 是最早期的延迟模型之一，已逐渐被更精确的模型所取代。
+
+特点：LDM 模型计算简单，但没有考虑非线性效应，适用于非常简单的设计或不需要高精度估算的场合。
+
+应用场景：由于其简化的假设，现在几乎不再使用，特别是在现代复杂的数字设计中。
+
+总结：
+NLDM：精确的非线性延迟模型，适用于复杂电路和高精度要求的设计。
+
+CCS：基于恒定电流源的模型，适用于简单设计和较为稳定的驱动能力。
+
+ECSM：基于 RC 网络的经典延迟模型，计算速度快，适用于大多数标准数字电路。
+
+LDM：已不常用，线性假设使得其在现代设计中精度不够。
+
+</details>
+
+Wire Load Model (WLM) 和 Delay Model 都是数字设计中用于评估时序、延迟和功耗的工具，但它们有不同的关注点和计算方式。它们之间有一定的关系，但也有各自独立的作用。  
+WLM 主要关注的是布线的电容特性，而 Delay Model 则更侧重于逻辑元件的延迟。它们相辅相成，WLM 提供了 Delay Model 需要的输入，而 Delay Model 通过这些输入来计算信号传播的延迟。
+
+### How delays are characterized using WLM (Wire Load Model)?
+使用一般的WLM （不是zero WLM，也不是按照物理位置算的DCT），DC是如何计算delay的？
+>难度：2
+
+
+一条Timing path上的Delay有2部分组成，Cell Delay + NetDelay。  
+在ＤＣ中，Net  Delay应该来说就是有ＷＬＭ中得到的，而Cell Delay就是根据WLM中得到的input Tran跟Cell 的output load通过查表得到Cell delay。
+
+既然问的是如何使用WLM来计算延迟，那一定是net delay了，其实这是一个小坑，看你知道不知道WLM是用来计算什么的延迟。
+
+现在问题变得直接了，就是考你WLM的具体用法--如何计算出net的R和C的？
+
+DC在计算延时的时候，主要根据输出的tansition 和net的RC值来计算。  
+output tansition是由驱动cell的input tansition和load通过查表得到的  
+而net的rc就要根据所选取的wrie load model来计算，计算时和输出的fanout决定
