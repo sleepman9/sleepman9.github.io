@@ -405,3 +405,12 @@ Change wire width：增宽导线可降低单位长度上的电阻和提高信号
 5. 改变信号的 timing window 
 
 如果 aggressor 和 victim 的信号切换时序错开（即非重叠的时间窗口），即使存在耦合电容，也不会形成严重干扰
+
+
+### 20. What would you do in order to not use certain cells from the library?
+如何禁止使用库里面的某些单元？  
+>难度：1
+
+禁用就用set_dont_use  
+禁止修改就用set_dont_touch
+
