@@ -473,7 +473,7 @@ Topographical WLM：基于物理布局，最精确，但计算复杂，适用于
 
 </details>
 
-### What types of delay model are used in digital design? (数字IC设计中有多少种类型的delay model)
+### 22. What types of delay model are used in digital design? (数字IC设计中有多少种类型的delay model)
 
 答案就是你说的“NLDM，CCS，和ECSM”，还有一个现在基本不用了的--LDM
 
@@ -520,7 +520,7 @@ LDM：已不常用，线性假设使得其在现代设计中精度不够。
 Wire Load Model (WLM) 和 Delay Model 都是数字设计中用于评估时序、延迟和功耗的工具，但它们有不同的关注点和计算方式。它们之间有一定的关系，但也有各自独立的作用。  
 WLM 主要关注的是布线的电容特性，而 Delay Model 则更侧重于逻辑元件的延迟。它们相辅相成，WLM 提供了 Delay Model 需要的输入，而 Delay Model 通过这些输入来计算信号传播的延迟。
 
-### How delays are characterized using WLM (Wire Load Model)?
+### 23. How delays are characterized using WLM (Wire Load Model)?
 使用一般的WLM （不是zero WLM，也不是按照物理位置算的DCT），DC是如何计算delay的？
 >难度：2
 
@@ -535,3 +535,37 @@ WLM 主要关注的是布线的电容特性，而 Delay Model 则更侧重于逻
 DC在计算延时的时候，主要根据输出的tansition 和net的RC值来计算。  
 output tansition是由驱动cell的input tansition和load通过查表得到的  
 而net的rc就要根据所选取的wrie load model来计算，计算时和输出的fanout决定
+
+以smic13的smic13_wl10为例
+  wire_load("smic13_wl10") {
+    resistance        : 8.5e-8;
+    capacitance        : 1.5e-4;
+    area        : 0.7;
+    slope        : 66.667;
+    fanout_length        (1,66.667);}
+根据fanout值，由fanout(1,66.667)可以得出互连线长度为66.667，然后根据resistance和capacitance计算出互连线电容为1.5e-4*66.667，互连线电阻为8.5e-8*66.667
+，当然如果扇出值表中没有，就会用到slope，例如扇出为3时，此时估算的互连线长度为1*66.667+（3-1）*slope，再计算出RC值，然后DC由此计算net的延时
+
+
+### 24.There are source clock clka (create_clock), and generated clock clkb by clka.
+In pre-CTS netlist, there is network latency in clka, how this latency propagates to clkb?
+In post-CTS netlist, What you need to do for this network latency?
+
+假设有两个时钟，原始为clka，生成的时钟为clkb，
+在没有时钟树的网表中，clka的network latency会自动传递到clkb上吗？clkb的latency如何描述？  
+在生成时钟树的网表中，如何处理network latency? clkb的latency又如何描述？
+
+>难度：3
+
+A：  
+1）latency会自动传到clkb上  
+2）去掉clock network latency，让工具自己算
+
+### 25.There are source clock clka (create_clock), and generated clock clkb by clka. how do you specify them in CTS spec file? Assume there is real timing path between clka and clkb.
+clkb是clka的生成时钟，在CTS的spec文件中如何定义这两个时钟？假设clka和clkb之间的FF有时序收敛的要求。  
+>难度：3
+
+在CTS的spec文件中定义 clka 是 root，clkb 为 through pin，再加上那些应该有的skew，transition，insertion delay等就好了，
+其它的事CTS会给你做
+
+### 26.
