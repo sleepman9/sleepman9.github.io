@@ -219,3 +219,40 @@ SPEF（Standard Parasitic Exchange Format）文件是一种 标准电路寄生�
 
 ---
 
+
+## 反相器版图
+![alt text](image-1.png)
+
+1. PMOS 的构造回顾
+
+PMOS 是放在 n-well 里的。
+
+它的源极和漏极是 p+ 掺杂区，栅是多晶硅，衬底是 n-well。
+
+要保证管子正常工作，n-well 必须接到高电位（VDD），防止 n-well 与源/漏之间形成寄生二极管导通。
+
+2. 为什么要有 N+ 区
+
+在 n-well 里放一个 N+ 区 并连接 VDD，是为了给 n-well 提供欧姆接触。
+
+> 当金属和半导体直接接触时，会根据 功函数差和半导体掺杂浓度的不同，形成两种接触：
+> 
+> 肖特基接触 (Schottky Contact)：表现为整流特性，电阻较大。
+> 
+> 欧姆接触 (Ohmic Contact)：表现为线性 I–V 特性，电阻小。
+
+> n-well/p-well 本身掺杂浓度比源/漏浅扩散区低很多，即使叫 “高掺杂”，跟源漏的 LDD 或深 N+ 仍然有差距。
+
+如果金属直接接在 well 上，不加一层高掺杂的 N+ (或 P+) 接触 implant，电阻会比较大。
+
+单纯的 n-well 是高掺杂 n 型，但与金属直接接触电阻很大。
+
+通过在 n-well 上打一个 N+ 接触区 (N+ diffusion)，电阻显著降低，形成良好的接触。
+
+这个 N+ 区并不是 PMOS 的源/漏区，它的作用是把 n-well 本身牢固地连到 VDD，称为 well tie 或 well contact。
+
+3. 电气意义
+
+如果不把 n-well 固定到 VDD，n-well 电位可能会“漂浮”，会产生 阈值电压漂移、漏电流增加甚至 latch-up 问题。
+
+N+ 区和金属接触到 VDD，就是为了固定住 n-well 电位。

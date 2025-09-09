@@ -17,6 +17,11 @@ tags:
     (2)集响应：输出信号
     (3)作比较：比较
 
+## 《uvm实战》--张强
+![alt text](image.png)
+
+[UVM验证平台整体结构](https://blog.csdn.net/qq_41034231/article/details/108130501)
+
 
 ## 基础介绍相关link
 
