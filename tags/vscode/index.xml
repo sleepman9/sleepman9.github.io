@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vscode on UNO's Page</title><link>https://sleepman9.github.io/tags/vscode/</link><description>Recent content in Vscode on UNO's Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 03 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sleepman9.github.io/tags/vscode/index.xml" rel="self" type="application/rss+xml"/><item><title>Git Practice</title><link>https://sleepman9.github.io/p/git-practice/</link><pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/git-practice/</guid><description>&lt;img src="https://sleepman9.github.io/p/git-practice/cover.webp" alt="Featured image of post Git Practice" /&gt;&lt;h2 id="学习网站"&gt;学习网站
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://learngitbranching.js.org/?locale=zh_CN" target="_blank" rel="noopener"
+&gt;Learn Git Branching&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://git-scm.com/doc" target="_blank" rel="noopener"
+&gt;Git文档&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="git代码基于实际开发流程"&gt;git代码（基于实际开发流程）
+&lt;/h2&gt;&lt;p&gt;ps:在vscode中可以可视化仓库的变化情况&lt;/p&gt;
+&lt;p&gt;ps:本文件主要使用命令行的形式，在vscode中可视化验证自己的操作是否正确&lt;/p&gt;
+&lt;h2 id="1-clone代码"&gt;1. Clone代码
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;假设已经将代码&lt;code&gt;clone&lt;/code&gt;​到本地了&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="2-拉取远程仓库最新代码"&gt;2. 拉取远程仓库最新代码
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;code&gt;git fetch&lt;/code&gt;​拉取远程所有更新。&lt;/p&gt;
+&lt;p&gt;​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03.png"
+width="431"
+height="401"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03_hu_b2ceea911ac98b96.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03_hu_eb844255352a0b8e.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="107"
+data-flex-basis="257px"
+&gt;​&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以点击粉色节点查看变化内容。（这里不再使用git diff命令，可视化方便直观）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;code&gt;git merge&lt;/code&gt;​合并到当前分支&lt;/p&gt;
+&lt;p&gt;​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65.png"
+width="425"
+height="388"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65_hu_58c9919f94ff609c.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65_hu_bd0840c3a991e83f.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="109"
+data-flex-basis="262px"
+&gt;​&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="3提交代码"&gt;3.提交代码
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;​&lt;code&gt;git add .&lt;/code&gt;​将修改存入暂存区（stage）&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;git commit -m &amp;quot;备注信息&amp;quot;&lt;/code&gt;​提交已经存入到stage的内容&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;git push origin wwh_dev&lt;/code&gt;​将本地的&lt;code&gt;wwh_dev&lt;/code&gt;​分支，推送到&lt;code&gt;origin&lt;/code&gt;​远端&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;背景：在main分支开发完毕后，在没有commit的情况下，新建了分支mph_generator_dev当作是本次开发的备份，同样在没有commit的情况下，又新建了一个分支wwh_dev当作是提交分支。&lt;/p&gt;
+&lt;p&gt;warning：当我执行完&lt;code&gt;git push origin wwh_dev&lt;/code&gt;​ 后，其他分支的内容都回到了修改前&lt;br&gt;
+​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr.png"
+width="378"
+height="197"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr_hu_67b891a07e6d5a87.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr_hu_827500bc74a74ce3.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="460px"
+&gt;​&lt;br&gt;
+​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p.png"
+width="363"
+height="198"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p_hu_1d76fda89d3b8169.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p_hu_3cc845b386b99610.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="183"
+data-flex-basis="440px"
+&gt;​&lt;/p&gt;
+&lt;p&gt;error:猜想造成的原因是，创建其他分支之前没有&lt;code&gt;commit&lt;/code&gt;​ 造成的。此想法还没有验证。（TODO）&lt;/p&gt;
+&lt;p&gt;main分支没有commit的情况下新建了A分支，A分支git commit之后，main分支所有修改都消失了&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id="4向管理者提交pull-requests"&gt;4.向管理者提交pull requests
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在GUI页面中进行的。&lt;/p&gt;
+&lt;p&gt;​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm.png"
+width="642"
+height="846"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm_hu_8da8d81258755ae6.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm_hu_56f223bb94384da9.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="182px"
+&gt;​&lt;/p&gt;
+&lt;p&gt;​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41.png"
+width="2072"
+height="390"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41_hu_8b1f94b446f00a0f.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41_hu_f6730684ae34fb9a.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="531"
+data-flex-basis="1275px"
+&gt;​&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;源分支：开发完成的分支&lt;/p&gt;
+&lt;p&gt;目标分支：项目分支&lt;/p&gt;
+&lt;ol start="2"&gt;
+&lt;li&gt;
+&lt;p&gt;解决冲突&lt;/p&gt;
+&lt;p&gt;在GUI界面上解决，并且在GUI界面，&lt;code&gt;git add .&lt;/code&gt;​和&lt;code&gt;git commit -m &amp;quot;备注信息&amp;quot;&lt;/code&gt;​&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;等待管理员接受PR,合并代码后，以此开发任务就完成了。&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id="41查看是否提交成功"&gt;4.1查看是否提交成功
+&lt;/h3&gt;&lt;p&gt;背景：在wwh_dev分支上开发，提交代码后，merge之后，想在其他分支看我提交的内容，同时保证一个分支时刻保持最新。问题来了。在Thermal5.0（想要保持最新的分支）看不到我提交的内容。&lt;/p&gt;
+&lt;p&gt;原因在于没有进行分支追踪：&lt;br&gt;
+执行 &lt;code&gt;git pull &amp;lt;远程&amp;gt; &amp;lt;分支&amp;gt;&lt;/code&gt;​ 例如：git pull origin Thermal5.0&lt;br&gt;
+执行之后，即可得到最新提交代码&lt;/p&gt;
+&lt;h3 id="42-添加分支跟踪"&gt;4.2 添加分支跟踪
+&lt;/h3&gt;&lt;p&gt;手动：&lt;/p&gt;
+&lt;p&gt;​&lt;code&gt;git branch --set-upstream-to=&amp;lt;remote_name&amp;gt;/&amp;lt;remote_branch&amp;gt; &amp;lt;branch_name&amp;gt;&lt;/code&gt;​&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;新建分支的时候建立追踪关系：&lt;/p&gt;
+&lt;p&gt;​&lt;code&gt;git checkout -b my_branch origin/develop&lt;/code&gt;​&lt;/p&gt;
+&lt;p&gt;​&lt;code&gt;git switch -c my_branch origin/develop&lt;/code&gt;​&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id="43-查看跟踪分支"&gt;4.3 查看跟踪分支
+&lt;/h3&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;git branch -vv&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id="5-再开启一个新开发任务"&gt;5. 再开启一个新开发任务
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;分支分配&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;​&lt;code&gt;main&lt;/code&gt;​分支，保持和origin远端的同步，不要在这个上面开发&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;dev&lt;/code&gt;​分支，每次最新任务的开发分支&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;dev_xx_backup&lt;/code&gt;​分支，开发完一个任务后的备份，拷贝来自&lt;code&gt;dev&lt;/code&gt;​分支，包含任务测试代码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分支管理&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;每次&lt;code&gt;push&lt;/code&gt;​提交后，等待管理员检查无误后，将&lt;code&gt;dev&lt;/code&gt;​分支删除&lt;/li&gt;
+&lt;li&gt;保证&lt;code&gt;main&lt;/code&gt;​分支最新，从&lt;code&gt;main&lt;/code&gt;​分支中新建一个分支当成当前任务的分支&lt;/li&gt;
+&lt;li&gt;此时&lt;code&gt;branch&lt;/code&gt;​结构中只包含，一个&lt;code&gt;main&lt;/code&gt;​分支，一个&lt;code&gt;dev&lt;/code&gt;​分支，和&lt;code&gt;每次任务的备份&lt;/code&gt;​分支&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id="6source-control-graph"&gt;6.SOURCE CONTROL GRAPH
+&lt;/h2&gt;&lt;p&gt;ps：图片都来自&lt;code&gt;vscode&lt;/code&gt;​&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;来自于&lt;code&gt;git fetch&lt;/code&gt;​之后&lt;/p&gt;
+&lt;p&gt;​&lt;img src="https://sleepman9.github.io/assets/%e5%b1%8f%e5%b9%95%e6%88%aa%e5%9b%be%202024-11-12%20143950-20241112152941-6iufqqs.png"
+loading="lazy"
+alt="屏幕截图 2024-11-12 143950"
+&gt;​&lt;/p&gt;
+&lt;p&gt;解释：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;每一个实心圆代表每一次提交节点&lt;/li&gt;
+&lt;li&gt;不同颜色的线，表示不同开发人员的开发路线&lt;/li&gt;
+&lt;li&gt;&lt;span data-type="text" style="background-color: var(--b3-card-info-background); color: var(--b3-card-info-color);"&gt;蓝色空心圆&lt;/span&gt;表示当前所在的节点&lt;/li&gt;
+&lt;li&gt;圆环表示合并操作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;来自&lt;code&gt;git merge&lt;/code&gt;​之后&lt;/p&gt;
+&lt;p&gt;​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33.png"
+width="458"
+height="286"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33_hu_a74d3a04e2b71395.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33_hu_2690fe9e1b9906c4.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="384px"
+&gt;​&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;框中标注的部分，当时是在GUI界面上修改分支冲突的，所以会从蓝色线程中分出一个分支到橙色线程的合并&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="删除远程分支"&gt;删除远程分支
+&lt;/h2&gt;&lt;p&gt;‍要删除 Git 仓库中的&lt;strong&gt;远程分支&lt;/strong&gt;，你可以使用以下命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git push &amp;lt;remote_name&amp;gt; --delete &amp;lt;branch_name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git push origin --delete feature/login
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这条命令会将远程名为 &lt;code&gt;origin&lt;/code&gt; 的仓库中的 &lt;code&gt;feature/login&lt;/code&gt; 分支删除。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;常见说明&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;remote_name&amp;gt;&lt;/code&gt; 通常是 &lt;code&gt;origin&lt;/code&gt;，可以通过 &lt;code&gt;git remote -v&lt;/code&gt; 查看。&lt;/li&gt;
+&lt;li&gt;删除远程分支不会影响本地的分支，如果你也想删除本地的，可以用：
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git branch -d &amp;lt;branch_name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;</description></item><item><title>Vscode Debug</title><link>https://sleepman9.github.io/p/vscode-debug/</link><pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/vscode-debug/</guid><description>&lt;p&gt;&lt;strong&gt;.vscode launch.json 调试设置&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;version&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;0.2.0&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 配置文件的版本号
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;#34;configurations&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Python: Run run.py&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 配置的名称，用于在调试配置列表中标识此配置
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;python&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 调试器的类型，这里使用的是 Python 调试器
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;#34;request&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;launch&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 请求类型，表示启动一个新的调试会话
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;#34;program&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;${workspaceFolder}/run.py&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 要调试的 Python 程序的路径（需要是一个可以运行的程序）
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;#34;args&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="c1"&gt;//所有参数的列表
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;thermal&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 第一个参数，表示运行模式
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;-i&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 输入文件参数
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;${workspaceFolder}/case/3DIC_real_case/test_simulation.json&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 输入文件的路径
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;-o&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 输出文件参数
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;${workspaceFolder}/case/3DIC_real_case/output&amp;#34;&lt;/span&gt; &lt;span class="c1"&gt;// 输出文件夹的路径
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;console&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;integratedTerminal&amp;#34;&lt;/span&gt; &lt;span class="c1"&gt;// 指定调试时使用的控制台类型，这里使用集成终端
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这段 JSON 配置文件是为 Visual Studio Code (VSCode) 中的调试器或运行器设置的，特别是用于运行 Python 脚本 &lt;code&gt;run.py&lt;/code&gt;。这是 VSCode 的 &lt;strong&gt;launch.json&lt;/strong&gt; 文件配置的一部分，用于设置如何运行 Python 程序以及传递的参数。下面是每个部分的解释：&lt;/p&gt;
+&lt;h3 id="version-020"&gt;&lt;strong&gt;version&lt;/strong&gt;: &amp;ldquo;0.2.0&amp;rdquo;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;这是 VSCode 配置文件的版本号，表示该配置文件遵循的格式版本。&lt;code&gt;0.2.0&lt;/code&gt; 是比较老的版本，但它仍然被广泛使用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="configurations-"&gt;&lt;strong&gt;configurations&lt;/strong&gt;: []
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;该数组包含一个或多个配置对象，每个配置代表一种不同的调试或运行方式。在这里，只有一个配置对象。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="配置对象解释"&gt;配置对象解释：
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Python: Run run.py&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;python&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;request&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;launch&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;program&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;${workspaceFolder}/run.py&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;args&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;thermal&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;-i&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;${workspaceFolder}/case/3DIC_real_case/test_simulation.json&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;-o&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;${workspaceFolder}/case/3DIC_real_case/output&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;console&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;integratedTerminal&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id="name-python-run-runpy"&gt;&lt;strong&gt;name&lt;/strong&gt;: &lt;code&gt;&amp;quot;Python: Run run.py&amp;quot;&lt;/code&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;这是配置的名称，用于标识和显示该配置。这个名称在 VSCode 的调试配置选择器中会出现，方便用户选择执行哪个配置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="type-python"&gt;&lt;strong&gt;type&lt;/strong&gt;: &lt;code&gt;&amp;quot;python&amp;quot;&lt;/code&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;这表示配置类型为 Python，告诉 VSCode 使用 Python 解释器来执行程序。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="request-launch"&gt;&lt;strong&gt;request&lt;/strong&gt;: &lt;code&gt;&amp;quot;launch&amp;quot;&lt;/code&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;该设置表明这是一个启动配置，而不是附加配置（&lt;code&gt;attach&lt;/code&gt;）。即，当点击 &amp;ldquo;启动&amp;rdquo; 或 &amp;ldquo;调试&amp;rdquo; 按钮时，VSCode 会运行这个配置来启动 Python 脚本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="program-workspacefolderrunpy"&gt;&lt;strong&gt;program&lt;/strong&gt;: &lt;code&gt;&amp;quot;${workspaceFolder}/run.py&amp;quot;&lt;/code&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;指定要执行的 Python 程序。&lt;code&gt;${workspaceFolder}&lt;/code&gt; 是一个内置变量，代表当前工作区的根文件夹路径。所以这里表示执行 &lt;code&gt;run.py&lt;/code&gt; 脚本，该脚本位于工作区根目录下。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="args--thermal--i-workspacefoldercase3dic_real_casetest_simulationjson--o-workspacefoldercase3dic_real_caseoutput-"&gt;&lt;strong&gt;args&lt;/strong&gt;: &lt;code&gt;[ &amp;quot;thermal&amp;quot;, &amp;quot;-i&amp;quot;, &amp;quot;${workspaceFolder}/case/3DIC_real_case/test_simulation.json&amp;quot;, &amp;quot;-o&amp;quot;, &amp;quot;${workspaceFolder}/case/3DIC_real_case/output&amp;quot; ]&lt;/code&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;这是传递给 Python 脚本 &lt;code&gt;run.py&lt;/code&gt; 的命令行参数。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;thermal&amp;quot;&lt;/code&gt;：传递给脚本的第一个参数，可能是某种运行模式或功能的标志。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;-i&amp;quot;&lt;/code&gt; 和 &lt;code&gt;&amp;quot;${workspaceFolder}/case/3DIC_real_case/test_simulation.json&amp;quot;&lt;/code&gt;：&lt;code&gt;-i&lt;/code&gt; 可能是输入文件的标志，后面跟着路径指向一个 JSON 配置文件。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;-o&amp;quot;&lt;/code&gt; 和 &lt;code&gt;&amp;quot;${workspaceFolder}/case/3DIC_real_case/output&amp;quot;&lt;/code&gt;：&lt;code&gt;-o&lt;/code&gt; 可能是输出目录或文件的标志，后面跟着路径指向输出目录。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些参数可以让 &lt;code&gt;run.py&lt;/code&gt; 根据输入的 JSON 配置文件进行仿真，并将结果输出到指定目录。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="console-integratedterminal"&gt;&lt;strong&gt;console&lt;/strong&gt;: &lt;code&gt;&amp;quot;integratedTerminal&amp;quot;&lt;/code&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;该设置指定程序输出将在 VSCode 内部集成的终端中显示，而不是在外部终端中显示。这样，用户可以直接在 VSCode 的终端面板中查看程序输出。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="总结"&gt;总结：
+&lt;/h3&gt;&lt;p&gt;这段配置文件的作用是设置一个 Python 调试或运行配置，在运行时：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;执行 &lt;code&gt;run.py&lt;/code&gt; 脚本。&lt;/li&gt;
+&lt;li&gt;传递三个命令行参数：&lt;code&gt;thermal&lt;/code&gt;（运行模式），&lt;code&gt;-i&lt;/code&gt; 后跟输入文件的路径，&lt;code&gt;-o&lt;/code&gt; 后跟输出目录的路径。&lt;/li&gt;
+&lt;li&gt;输出将显示在 VSCode 的集成终端中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这是设置调试或运行 Python 脚本的常见方式，尤其是在涉及到多个输入输出参数时。&lt;/p&gt;</description></item><item><title>Tools Trick</title><link>https://sleepman9.github.io/p/tools-trick/</link><pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/tools-trick/</guid><description>&lt;img src="https://sleepman9.github.io/p/tools-trick/cover.jpg" alt="Featured image of post Tools Trick" /&gt;&lt;h2 id="1-vscode中github-copilot在ssh远程环境中无法登录问题"&gt;1. VSCode中Github Copilot在SSH远程环境中无法登录问题
+&lt;/h2&gt;&lt;h3 id="1-在vs-code中按f1键调出命令行输入settingsjson选择远程环境中的配置文件"&gt;1. 在VS Code中，按F1键调出命令行，输入settings.json，选择远程环境中的配置文件：
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://sleepman9.github.io/p/tools-trick/asserts/copliot.png"
+width="825"
+height="502"
+srcset="https://sleepman9.github.io/p/tools-trick/asserts/copliot_hu_d04c34523884441.png 480w, https://sleepman9.github.io/p/tools-trick/asserts/copliot_hu_f6631b22a2511959.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="164"
+data-flex-basis="394px"
+&gt;&lt;/p&gt;
+&lt;h3 id="2-添加如下配置"&gt;2. 添加如下配置：
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;remote.extensionKind&amp;#34;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;GitHub.copilot&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;ui&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;GitHub.copilot-chat&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;ui&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="3-重启vs-code即可"&gt;3. 重启VS Code即可。
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://blog.csdn.net/qq_43948052/article/details/146123406" target="_blank" rel="noopener"
+&gt;原文链接&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

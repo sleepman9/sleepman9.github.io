@@ -1,0 +1,184 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="Hello build!"><title>软件开发——编译</title><link rel=canonical href=https://sleepman9.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%BC%96%E8%AF%91/><link rel=stylesheet href=/scss/style.min.0782c8da9035a15ea8fda02252cacbb1d7419261ba2832d359eeac2d7926f82a.css><meta property='og:title' content="软件开发——编译"><meta property='og:description' content="Hello build!"><meta property='og:url' content='https://sleepman9.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%BC%96%E8%AF%91/'><meta property='og:site_name' content="UNO's Page"><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='软件开发'><meta property='article:published_time' content='2025-04-18T00:00:00+00:00'><meta property='article:modified_time' content='2025-04-18T00:00:00+00:00'><meta name=twitter:title content="软件开发——编译"><meta name=twitter:description content="Hello build!"><link rel="shortcut icon" href=/favicon.JPG></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hu_4b6771fa97f8ec33.JPG width=300 height=300 class=site-logo loading=lazy alt=Avatar>
+</a><span class=emoji>🍥</span></figure><div class=site-meta><h1 class=site-name><a href=/>UNO's Page</a></h1><h2 class=site-description>Everyone starts from zero!</h2></div></header><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>Search</span></a></li><li><a href=/links/><svg class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>Links</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>Dark Mode</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">Table of contents</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#qa>QA</a></li><li><a href=#动态库>动态库</a><ol><li><a href=#基本概念>基本概念</a></li><li><a href=#怎么生成动态库链接使用动态库>怎么生成动态库，链接使用动态库</a><ol><li><a href=#创建源代码文件>创建源代码文件</a></li><li><a href=#-2-编译生成动态库>🛠️ 2. 编译生成动态库</a></li><li><a href=#-3-写主程序调用它mainc>🧪 3. 写主程序调用它：<code>main.c</code></a></li><li><a href=#-4-编译主程序时链接动态库>🏗️ 4. 编译主程序时链接动态库</a></li><li><a href=#-5-运行程序linux>🏃 5. 运行程序（Linux）</a></li></ol></li></ol></li><li><a href=#cmake>CMake</a><ol><li><a href=#基本概念-1>基本概念</a><ol><li><a href=#-cmake-的基本构建流程>📁 CMake 的基本构建流程</a></li><li><a href=#-cmakeliststxt-基础结构>📜 CMakeLists.txt 基础结构</a></li></ol></li><li><a href=#应用>应用</a><ol><li><a href=#项目结构>项目结构</a></li><li><a href=#cmakeliststxt-内容>CMakeLists.txt 内容</a></li><li><a href=#构建步骤在-linuxmacos-上>构建步骤（在 Linux/macOS 上）</a></li><li><a href=#行程序>行程序</a></li></ol></li></ol></li><li><a href=#动态库调用外部函数>动态库调用外部函数</a></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/software/>Software</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%BC%96%E8%AF%91/>软件开发——编译</a></h2><h3 class=article-subtitle>Hello build!</h3></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Apr 18, 2025</time></div><div><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>3 minute read</time></div></footer></div></header><section class=article-content><blockquote><p>伟大的UNO一般会问几个为什么！</p></blockquote><h2 id=qa>QA</h2><ol><li><p>Q：为什么要编译成动态库</p><p>A:为了<strong>节省资源、方便更新、支持模块化和跨语言调用</strong>，还能实现插件式架构。</p></li><li><p>Q: CMake的构建和编译</p></li><li><p>Q：怎么通过error信息定位解决</p></li></ol><h2 id=动态库>动态库</h2><h3 id=基本概念>基本概念</h3><p>动态库就是 <code>.so</code>（Linux）、<code>.dll</code>（Windows）、<code>.dylib</code>（macOS） 这样的文件，在程序运行时被“动态加载”。</p><p>它跟 <strong>静态库</strong>（<code>.a</code> 或 <code>.lib</code>）的区别在于：</p><ul><li>静态库是<strong>编译时就嵌入程序里</strong>的，生成的可执行文件比较大。</li><li>动态库是<strong>运行时才加载</strong>的，可执行文件会“引用”这个库，而不是包含它本体。</li></ul><hr><p>✅ 为什么编译成动态库？有哪些优点？
+<strong>节省内存和磁盘空间</strong>
+多个程序都能使用同一个动态库，比如系统的 libc.so、OpenCV、Qt 这些常用库，不用每个程序都各自编译一份，节省资源。</p><hr><p><strong>支持模块化设计</strong>
+程序可以把功能拆成多个模块，比如：</p><ul><li>一个主程序（main app）</li><li>一些插件/功能模块（编译成动态库）</li></ul><p>这样设计更灵活、更易维护。</p><hr><p><strong>支持“热更新”或“热插拔”</strong>
+当你想更新某个模块的功能，只需要替换掉对应的动态库，而不用重新编译整个程序。</p><p><strong>插件机制</strong></p><ul><li>Python 的 <code>.pyd</code> 文件</li><li>MATLAB 的 MEX 动态库</li><li>浏览器的扩展插件</li></ul><p>这些都是通过动态库的形式扩展主程序的功能。</p><hr><p><strong>跨语言调用</strong>
+很多时候，我们用 C/C++ 写一个高性能的核心模块，然后 Python、Java 等其他语言用 FFI（Foreign Function Interface） 调用这些库。</p><p>例如：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># Python 通过 ctypes 加载 .so 或 .dll</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>ctypes</span> <span class=kn>import</span> <span class=n>cdll</span>
+</span></span><span class=line><span class=cl><span class=n>lib</span> <span class=o>=</span> <span class=n>cdll</span><span class=o>.</span><span class=n>LoadLibrary</span><span class=p>(</span><span class=s1>&#39;./libexample.so&#39;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><hr><h3 id=怎么生成动态库链接使用动态库>怎么生成动态库，链接使用动态库</h3><ol><li>源代码</li><li>编译生成动态库</li><li>写主程序</li><li>编译主程序时链接动态库</li><li>运行主程序</li></ol><p>太好了，我们就用最常见的 <strong>C/C++</strong> 来举个例子，展示一下 <strong>怎么编译生成动态库</strong>（以 Linux 下为例，也会顺便说下 Windows 和 macOS 的差异）。</p><hr><h4 id=创建源代码文件>创建源代码文件</h4><p>👉 动态库源文件：<code>mymath.c</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=c1>// mymath.c
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=cp>#include</span> <span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>say_hello</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;Hello from dynamic library!</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>add</span><span class=p>(</span><span class=kt>int</span> <span class=n>a</span><span class=p>,</span> <span class=kt>int</span> <span class=n>b</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>a</span> <span class=o>+</span> <span class=n>b</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>👉 头文件：<code>mymath.h</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=c1>// mymath.h
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=cp>#ifndef MYMATH_H
+</span></span></span><span class=line><span class=cl><span class=cp>#define MYMATH_H
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>say_hello</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>add</span><span class=p>(</span><span class=kt>int</span> <span class=n>a</span><span class=p>,</span> <span class=kt>int</span> <span class=n>b</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=cp>#endif
+</span></span></span></code></pre></td></tr></table></div></div><hr><h4 id=-2-编译生成动态库>🛠️ 2. 编译生成动态库</h4><p><strong>Linux / macOS：</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>gcc -fPIC -shared -o libmymath.so mymath.c
+</span></span></code></pre></td></tr></table></div></div><p>解释：</p><ul><li><code>-fPIC</code>：生成位置无关代码（Position Independent Code），动态库需要这个</li><li><code>-shared</code>：告诉编译器要生成共享库</li><li><code>-o libmymath.so</code>：输出文件名，<code>lib</code> 开头是习惯命名方式</li></ul><p><strong>Windows（使用 MinGW）：</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>gcc -shared -o mymath.dll mymath.c
+</span></span></code></pre></td></tr></table></div></div><hr><h4 id=-3-写主程序调用它mainc>🧪 3. 写主程序调用它：<code>main.c</code></h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=c1>// main.c
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=cp>#include</span> <span class=cpf>&#34;mymath.h&#34;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nf>say_hello</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>result</span> <span class=o>=</span> <span class=nf>add</span><span class=p>(</span><span class=mi>3</span><span class=p>,</span> <span class=mi>5</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nf>printf</span><span class=p>(</span><span class=s>&#34;3 + 5 = %d</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>result</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><h4 id=-4-编译主程序时链接动态库>🏗️ 4. 编译主程序时链接动态库</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>gcc -o main main.c -L. -lmymath
+</span></span></code></pre></td></tr></table></div></div><p>解释：</p><ul><li><code>-L.</code> 表示在当前目录找库</li><li><code>-lmymath</code> 表示链接名为 <code>libmymath.so</code> 的库（<code>lib</code> 开头省略，<code>.so</code> 后缀省略）</li></ul><hr><h4 id=-5-运行程序linux>🏃 5. 运行程序（Linux）</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nv>LD_LIBRARY_PATH</span><span class=o>=</span>. ./main
+</span></span></code></pre></td></tr></table></div></div><blockquote><p><code>LD_LIBRARY_PATH=.</code> 是告诉系统动态库就放在当前目录</p></blockquote><hr><p>🎉 <strong>输出结果</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>Hello from dynamic library!
+</span></span><span class=line><span class=cl>3 + 5 = 8
+</span></span></code></pre></td></tr></table></div></div><hr><p>✅ <strong>小结一波</strong></p><div class=table-wrapper><table><thead><tr><th>步骤</th><th>命令或操作</th></tr></thead><tbody><tr><td>写库代码</td><td><code>mymath.c</code>、<code>mymath.h</code></td></tr><tr><td>编译库</td><td><code>gcc -fPIC -shared -o libmymath.so mymath.c</code></td></tr><tr><td>写主程序</td><td><code>main.c</code></td></tr><tr><td>编译主程序</td><td><code>gcc -o main main.c -L. -lmymath</code></td></tr><tr><td>运行程序</td><td><code>LD_LIBRARY_PATH=. ./main</code></td></tr></tbody></table></div><hr><h2 id=cmake>CMake</h2><p>CMake 是一个 跨平台的自动化构建系统工具，它使用一种称为 CMakeLists.txt 的配置文件来描述如何生成项目的构建文件（例如 Makefile 或 Visual Studio 工程）。</p><p>构建文件中有编译命令GCC,G++等；编译程序；</p><h3 id=基本概念-1>基本概念</h3><h4 id=-cmake-的基本构建流程>📁 CMake 的基本构建流程</h4><p>CMake 的构建过程分为两个阶段：</p><ol><li><strong>配置（Configure）阶段</strong>
+这一阶段的目标是生成平台相关的构建文件。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>cmake -S . -B build
+</span></span></code></pre></td></tr></table></div></div><ul><li><code>-S .</code> 指定源码路径</li><li><code>-B build</code> 指定生成的构建文件放在哪个目录（可以叫 <code>build</code>）</li></ul><p>此时，CMake 会读取 <code>CMakeLists.txt</code>，根据系统环境、编译器等生成合适的构建系统（比如 Makefile）。</p><hr><ol start=2><li><strong>构建（Build）阶段</strong>
+使用上一步生成的构建文件，开始真正的<strong>编译</strong>操作。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>cmake --build build
+</span></span></code></pre></td></tr></table></div></div><p>这一步等价于执行 <code>make</code>（如果你使用的是 Unix/Linux 上的默认生成器），将源代码编译成可执行文件或者库。</p><hr><h4 id=-cmakeliststxt-基础结构>📜 CMakeLists.txt 基础结构</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cmake data-lang=cmake><span class=line><span class=cl><span class=nb>cmake_minimum_required</span><span class=p>(</span><span class=s>VERSION</span> <span class=s>3.10</span><span class=p>)</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nb>project</span><span class=p>(</span><span class=s>MyProject</span><span class=p>)</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c># 指定 C++ 标准
+</span></span></span><span class=line><span class=cl><span class=c></span><span class=nb>set</span><span class=p>(</span><span class=s>CMAKE_CXX_STANDARD</span> <span class=s>17</span><span class=p>)</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c># 添加源文件并构建成可执行文件
+</span></span></span><span class=line><span class=cl><span class=c></span><span class=nb>add_executable</span><span class=p>(</span><span class=s>my_app</span> <span class=s>main.cpp</span><span class=p>)</span><span class=err>
+</span></span></span></code></pre></td></tr></table></div></div><ul><li><code>project(...)</code>：定义项目名称</li><li><code>set(...)</code>：设置变量，比如 C++ 标准</li><li><code>add_executable(...)</code>：指定编译可执行文件的目标</li></ul><hr><p>🔁 <strong>常见命令一览</strong></p><div class=table-wrapper><table><thead><tr><th>操作</th><th>命令示例</th></tr></thead><tbody><tr><td>配置</td><td><code>cmake -S . -B build</code></td></tr><tr><td>构建</td><td><code>cmake --build build</code></td></tr><tr><td>清除构建目录</td><td><code>rm -rf build</code></td></tr><tr><td>设置编译器</td><td><code>CC=gcc CXX=g++ cmake -S . -B build</code></td></tr></tbody></table></div><hr><p>💡 <strong>小技巧</strong></p><ul><li>始终将构建目录和源代码目录分离（Out-of-Source Build），便于管理。</li><li>可以加上 <code>-DCMAKE_BUILD_TYPE=Release</code> 或 <code>Debug</code> 来控制编译类型。</li><li>使用 <code>target_include_directories</code> 和 <code>target_link_libraries</code> 来管理依赖更清晰。</li></ul><hr><h3 id=应用>应用</h3><p>使用 CMake 来构建上述小项目：生成动态库 <code>libmymath.so</code>，并编译主程序 <code>main.c</code> 来调用它。</p><hr><h4 id=项目结构>项目结构</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>my_project/
+</span></span><span class=line><span class=cl>├── CMakeLists.txt
+</span></span><span class=line><span class=cl>├── mymath.c
+</span></span><span class=line><span class=cl>├── mymath.h
+</span></span><span class=line><span class=cl>└── main.c
+</span></span></code></pre></td></tr></table></div></div><hr><h4 id=cmakeliststxt-内容>CMakeLists.txt 内容</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cmake data-lang=cmake><span class=line><span class=cl><span class=nb>cmake_minimum_required</span><span class=p>(</span><span class=s>VERSION</span> <span class=s>3.10</span><span class=p>)</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nb>project</span><span class=p>(</span><span class=s>MyDynamicLibExample</span> <span class=s>C</span><span class=p>)</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c># 设置编译为 C99
+</span></span></span><span class=line><span class=cl><span class=c></span><span class=nb>set</span><span class=p>(</span><span class=s>CMAKE_C_STANDARD</span> <span class=s>99</span><span class=p>)</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c># 设置输出目录
+</span></span></span><span class=line><span class=cl><span class=c></span><span class=nb>set</span><span class=p>(</span><span class=s>CMAKE_LIBRARY_OUTPUT_DIRECTORY</span> <span class=o>${</span><span class=nv>CMAKE_BINARY_DIR</span><span class=o>}</span><span class=s>/lib</span><span class=p>)</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=nb>set</span><span class=p>(</span><span class=s>CMAKE_RUNTIME_OUTPUT_DIRECTORY</span> <span class=o>${</span><span class=nv>CMAKE_BINARY_DIR</span><span class=o>}</span><span class=s>/bin</span><span class=p>)</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c># 创建动态库
+</span></span></span><span class=line><span class=cl><span class=c></span><span class=nb>add_library</span><span class=p>(</span><span class=s>mymath</span> <span class=s>SHARED</span> <span class=s>mymath.c</span><span class=p>)</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c># 创建可执行文件
+</span></span></span><span class=line><span class=cl><span class=c></span><span class=nb>add_executable</span><span class=p>(</span><span class=s>main_exec</span> <span class=s>main.c</span><span class=p>)</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c># 链接动态库到可执行程序
+</span></span></span><span class=line><span class=cl><span class=c></span><span class=nb>target_link_libraries</span><span class=p>(</span><span class=s>main_exec</span> <span class=s>PRIVATE</span> <span class=s>mymath</span><span class=p>)</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err></span><span class=c># 设置头文件路径（可选）
+</span></span></span><span class=line><span class=cl><span class=c></span><span class=nb>target_include_directories</span><span class=p>(</span><span class=s>main_exec</span> <span class=s>PRIVATE</span> <span class=o>${</span><span class=nv>CMAKE_CURRENT_SOURCE_DIR</span><span class=o>}</span><span class=p>)</span><span class=err>
+</span></span></span></code></pre></td></tr></table></div></div><hr><h4 id=构建步骤在-linuxmacos-上>构建步骤（在 Linux/macOS 上）</h4><p>打开终端：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>mkdir build
+</span></span><span class=line><span class=cl><span class=nb>cd</span> build
+</span></span><span class=line><span class=cl>cmake ..
+</span></span><span class=line><span class=cl>cmake --build .
+</span></span></code></pre></td></tr></table></div></div><hr><h4 id=行程序>行程序</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nv>LD_LIBRARY_PATH</span><span class=o>=</span>./lib ./bin/main_exec
+</span></span></code></pre></td></tr></table></div></div><hr><p><strong>输出</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Hello from dynamic library!
+</span></span><span class=line><span class=cl>3 + 5 = 8
+</span></span></code></pre></td></tr></table></div></div><hr><h2 id=动态库调用外部函数>动态库调用外部函数</h2><p><a class=link href=https://www.cnblogs.com/sewain/p/14798200.html target=_blank rel=noopener>应用程序设计：在动态库中如何调用外部函数？</a></p></section><footer class=article-footer><section class=article-tags><a href=/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/>软件开发</a></section><section class=article-copyright><svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span></section></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css integrity=sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js integrity=sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js integrity=sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05 crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector(".main-article");renderMathInElement(e,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}],ignoredClasses:["gist"]})})</script></article><aside class=related-content--wrapper><h2 class=section-title>Related content</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/p/%E5%A6%82%E4%BD%95%E5%88%B6%E5%AE%9A%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91%E8%AE%A1%E5%88%92/><div class=article-details><h2 class=article-title>如何制定软件设计开发计划</h2></div></a></article><article><a href=/p/%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/><div class=article-details><h2 class=article-title>装机必备</h2></div></a></article></div></div></aside><div class=disqus-container></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{typeof DISQUS=="object"&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
+2020 -
+2025 UNO's Page</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.30.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
