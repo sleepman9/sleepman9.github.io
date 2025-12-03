@@ -17,6 +17,9 @@ weight: 2
 
 ### 手动方式：
 1. 安装：`hugo`, `go`.
+    https://github.com/gohugoio/hugo/releases  hugo下载
+
+
 2. clone 主题：`git submodule add theme`.
 3. hugo server 本地调试。
 4. 设置GitHub Pages主页信息
@@ -50,3 +53,5 @@ weight: 2
  [stack 魔改美化_2](https://thirdshire.com/hugo-stack-renovation/)
 
  [建站技术 | 使用 Hugo + Stack 简单搭建一个博客](https://blog.reincarnatey.net/2023/build-hugo-blog-with-stack-mod/)
+
+ [在Windows11上安装Hugo，搭建静态网站并部署到GitHub Page](https://zhuanlan.zhihu.com/p/673890323)
