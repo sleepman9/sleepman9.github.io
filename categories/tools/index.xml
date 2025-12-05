@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tools on UNO's Page</title><link>https://sleepman9.github.io/categories/tools/</link><description>Recent content in Tools on UNO's Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 24 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sleepman9.github.io/categories/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>Git Practice</title><link>https://sleepman9.github.io/p/git-practice/</link><pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/git-practice/</guid><description>&lt;img src="https://sleepman9.github.io/p/git-practice/cover.webp" alt="Featured image of post Git Practice" /&gt;&lt;h2 id="学习网站"&gt;学习网站
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://learngitbranching.js.org/?locale=zh_CN" target="_blank" rel="noopener"
+&gt;Learn Git Branching&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://git-scm.com/doc" target="_blank" rel="noopener"
+&gt;Git文档&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="git代码基于实际开发流程"&gt;git代码（基于实际开发流程）
+&lt;/h2&gt;&lt;p&gt;ps:在vscode中可以可视化仓库的变化情况&lt;/p&gt;
+&lt;p&gt;ps:本文件主要使用命令行的形式，在vscode中可视化验证自己的操作是否正确&lt;/p&gt;
+&lt;h2 id="1-clone代码"&gt;1. Clone代码
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;假设已经将代码&lt;code&gt;clone&lt;/code&gt;​到本地了&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="2-拉取远程仓库最新代码"&gt;2. 拉取远程仓库最新代码
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;code&gt;git fetch&lt;/code&gt;​拉取远程所有更新。&lt;/p&gt;
+&lt;p&gt;​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03.png"
+width="431"
+height="401"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03_hu_b2ceea911ac98b96.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03_hu_eb844255352a0b8e.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="107"
+data-flex-basis="257px"
+&gt;​&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以点击粉色节点查看变化内容。（这里不再使用git diff命令，可视化方便直观）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;code&gt;git merge&lt;/code&gt;​合并到当前分支&lt;/p&gt;
+&lt;p&gt;​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65.png"
+width="425"
+height="388"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65_hu_58c9919f94ff609c.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65_hu_bd0840c3a991e83f.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="109"
+data-flex-basis="262px"
+&gt;​&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="3提交代码"&gt;3.提交代码
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;​&lt;code&gt;git add .&lt;/code&gt;​将修改存入暂存区（stage）&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;git commit -m &amp;quot;备注信息&amp;quot;&lt;/code&gt;​提交已经存入到stage的内容&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;git push origin wwh_dev&lt;/code&gt;​将本地的&lt;code&gt;wwh_dev&lt;/code&gt;​分支，推送到&lt;code&gt;origin&lt;/code&gt;​远端&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;背景：在main分支开发完毕后，在没有commit的情况下，新建了分支mph_generator_dev当作是本次开发的备份，同样在没有commit的情况下，又新建了一个分支wwh_dev当作是提交分支。&lt;/p&gt;
+&lt;p&gt;warning：当我执行完&lt;code&gt;git push origin wwh_dev&lt;/code&gt;​ 后，其他分支的内容都回到了修改前&lt;br&gt;
+​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr.png"
+width="378"
+height="197"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr_hu_67b891a07e6d5a87.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr_hu_827500bc74a74ce3.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="460px"
+&gt;​&lt;br&gt;
+​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p.png"
+width="363"
+height="198"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p_hu_1d76fda89d3b8169.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p_hu_3cc845b386b99610.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="183"
+data-flex-basis="440px"
+&gt;​&lt;/p&gt;
+&lt;p&gt;error:猜想造成的原因是，创建其他分支之前没有&lt;code&gt;commit&lt;/code&gt;​ 造成的。此想法还没有验证。（TODO）&lt;/p&gt;
+&lt;p&gt;main分支没有commit的情况下新建了A分支，A分支git commit之后，main分支所有修改都消失了&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id="4向管理者提交pull-requests"&gt;4.向管理者提交pull requests
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在GUI页面中进行的。&lt;/p&gt;
+&lt;p&gt;​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm.png"
+width="642"
+height="846"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm_hu_8da8d81258755ae6.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm_hu_56f223bb94384da9.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="182px"
+&gt;​&lt;/p&gt;
+&lt;p&gt;​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41.png"
+width="2072"
+height="390"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41_hu_8b1f94b446f00a0f.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41_hu_f6730684ae34fb9a.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="531"
+data-flex-basis="1275px"
+&gt;​&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;源分支：开发完成的分支&lt;/p&gt;
+&lt;p&gt;目标分支：项目分支&lt;/p&gt;
+&lt;ol start="2"&gt;
+&lt;li&gt;
+&lt;p&gt;解决冲突&lt;/p&gt;
+&lt;p&gt;在GUI界面上解决，并且在GUI界面，&lt;code&gt;git add .&lt;/code&gt;​和&lt;code&gt;git commit -m &amp;quot;备注信息&amp;quot;&lt;/code&gt;​&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;等待管理员接受PR,合并代码后，以此开发任务就完成了。&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id="41查看是否提交成功"&gt;4.1查看是否提交成功
+&lt;/h3&gt;&lt;p&gt;背景：在wwh_dev分支上开发，提交代码后，merge之后，想在其他分支看我提交的内容，同时保证一个分支时刻保持最新。问题来了。在Thermal5.0（想要保持最新的分支）看不到我提交的内容。&lt;/p&gt;
+&lt;p&gt;原因在于没有进行分支追踪：&lt;br&gt;
+执行 &lt;code&gt;git pull &amp;lt;远程&amp;gt; &amp;lt;分支&amp;gt;&lt;/code&gt;​ 例如：git pull origin Thermal5.0&lt;br&gt;
+执行之后，即可得到最新提交代码&lt;/p&gt;
+&lt;h3 id="42-添加分支跟踪"&gt;4.2 添加分支跟踪
+&lt;/h3&gt;&lt;p&gt;手动：&lt;/p&gt;
+&lt;p&gt;​&lt;code&gt;git branch --set-upstream-to=&amp;lt;remote_name&amp;gt;/&amp;lt;remote_branch&amp;gt; &amp;lt;branch_name&amp;gt;&lt;/code&gt;​&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;新建分支的时候建立追踪关系：&lt;/p&gt;
+&lt;p&gt;​&lt;code&gt;git checkout -b my_branch origin/develop&lt;/code&gt;​&lt;/p&gt;
+&lt;p&gt;​&lt;code&gt;git switch -c my_branch origin/develop&lt;/code&gt;​&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id="43-查看跟踪分支"&gt;4.3 查看跟踪分支
+&lt;/h3&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;git branch -vv&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id="5-再开启一个新开发任务"&gt;5. 再开启一个新开发任务
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;分支分配&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;​&lt;code&gt;main&lt;/code&gt;​分支，保持和origin远端的同步，不要在这个上面开发&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;dev&lt;/code&gt;​分支，每次最新任务的开发分支&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;dev_xx_backup&lt;/code&gt;​分支，开发完一个任务后的备份，拷贝来自&lt;code&gt;dev&lt;/code&gt;​分支，包含任务测试代码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分支管理&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;每次&lt;code&gt;push&lt;/code&gt;​提交后，等待管理员检查无误后，将&lt;code&gt;dev&lt;/code&gt;​分支删除&lt;/li&gt;
+&lt;li&gt;保证&lt;code&gt;main&lt;/code&gt;​分支最新，从&lt;code&gt;main&lt;/code&gt;​分支中新建一个分支当成当前任务的分支&lt;/li&gt;
+&lt;li&gt;此时&lt;code&gt;branch&lt;/code&gt;​结构中只包含，一个&lt;code&gt;main&lt;/code&gt;​分支，一个&lt;code&gt;dev&lt;/code&gt;​分支，和&lt;code&gt;每次任务的备份&lt;/code&gt;​分支&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id="6source-control-graph"&gt;6.SOURCE CONTROL GRAPH
+&lt;/h2&gt;&lt;p&gt;ps：图片都来自&lt;code&gt;vscode&lt;/code&gt;​&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;来自于&lt;code&gt;git fetch&lt;/code&gt;​之后&lt;/p&gt;
+&lt;p&gt;​&lt;img src="https://sleepman9.github.io/assets/%e5%b1%8f%e5%b9%95%e6%88%aa%e5%9b%be%202024-11-12%20143950-20241112152941-6iufqqs.png"
+loading="lazy"
+alt="屏幕截图 2024-11-12 143950"
+&gt;​&lt;/p&gt;
+&lt;p&gt;解释：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;每一个实心圆代表每一次提交节点&lt;/li&gt;
+&lt;li&gt;不同颜色的线，表示不同开发人员的开发路线&lt;/li&gt;
+&lt;li&gt;&lt;span data-type="text" style="background-color: var(--b3-card-info-background); color: var(--b3-card-info-color);"&gt;蓝色空心圆&lt;/span&gt;表示当前所在的节点&lt;/li&gt;
+&lt;li&gt;圆环表示合并操作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;来自&lt;code&gt;git merge&lt;/code&gt;​之后&lt;/p&gt;
+&lt;p&gt;​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33.png"
+width="458"
+height="286"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33_hu_a74d3a04e2b71395.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33_hu_2690fe9e1b9906c4.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="384px"
+&gt;​&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;框中标注的部分，当时是在GUI界面上修改分支冲突的，所以会从蓝色线程中分出一个分支到橙色线程的合并&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="删除远程分支"&gt;删除远程分支
+&lt;/h2&gt;&lt;p&gt;‍要删除 Git 仓库中的&lt;strong&gt;远程分支&lt;/strong&gt;，你可以使用以下命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git push &amp;lt;remote_name&amp;gt; --delete &amp;lt;branch_name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git push origin --delete feature/login
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这条命令会将远程名为 &lt;code&gt;origin&lt;/code&gt; 的仓库中的 &lt;code&gt;feature/login&lt;/code&gt; 分支删除。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;常见说明&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;remote_name&amp;gt;&lt;/code&gt; 通常是 &lt;code&gt;origin&lt;/code&gt;，可以通过 &lt;code&gt;git remote -v&lt;/code&gt; 查看。&lt;/li&gt;
+&lt;li&gt;删除远程分支不会影响本地的分支，如果你也想删除本地的，可以用：
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git branch -d &amp;lt;branch_name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;</description></item><item><title>Hugo Github Pages 搭建个人博客</title><link>https://sleepman9.github.io/p/hugo-github-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link><pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/hugo-github-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid><description>&lt;img src="https://sleepman9.github.io/p/hugo-github-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/cover.png" alt="Featured image of post Hugo Github Pages 搭建个人博客" /&gt;&lt;h2 id="手动搭建博客经历"&gt;手动搭建博客经历
+&lt;/h2&gt;&lt;h3 id="手动方式"&gt;手动方式：
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;安装：&lt;code&gt;hugo&lt;/code&gt;, &lt;code&gt;go&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener"
+&gt;https://github.com/gohugoio/hugo/releases&lt;/a&gt; hugo下载&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://git-scm.com/install/windows" target="_blank" rel="noopener"
+&gt;https://git-scm.com/install/windows&lt;/a&gt; Git下载&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;clone 主题：&lt;code&gt;git submodule add theme&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;hugo server 本地调试。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置GitHub Pages主页信息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用GitHub Actions 自动构建/部署（CI/CD）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;本地提交到GitHub仓库&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;上述过程可以参考&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://blog.taoluyuan.com/blog/github-workflows" target="_blank" rel="noopener"
+&gt;通过 Github workflows CI/CD 自动化部署 Github Pages hugo 免费博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://jianzhnie.github.io/post/hugo_site/" target="_blank" rel="noopener"
+&gt;Hugo + Github Pages 搭建个人博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/673890323" target="_blank" rel="noopener"
+&gt;在Windows11上安装Hugo，搭建静态网站并部署到GitHub Page&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="template方式"&gt;template方式
+&lt;/h3&gt;&lt;p&gt;直到后来遇到了&lt;strong&gt;自动挡&lt;/strong&gt;，直接使用 theme template套模板即可（修改个人信息，写post）&lt;/p&gt;
+&lt;h3 id="个人感悟"&gt;个人感悟
+&lt;/h3&gt;&lt;p&gt;最近在接触软件开发的内容，其中对于CI/CD部分一直存在一些疑惑，直到自己搭建博客，对这一块的工作流有了进一步的理解。&lt;/p&gt;
+&lt;h2 id="hugo-stack-theme-魔改"&gt;hugo stack theme 魔改
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;多看优秀的主题，才知道怎么魔改；链接及其评论作者都是与此相关的主题；&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class="link" href="https://linsnow.cn/posts/bloglab/hugo-stack/modify-hugo/" target="_blank" rel="noopener"
+&gt;bloger1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://www.xalaok.top/post/stack-modify/" target="_blank" rel="noopener"
+&gt;stack 魔改美化&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://thirdshire.com/hugo-stack-renovation/" target="_blank" rel="noopener"
+&gt;stack 魔改美化_2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://blog.reincarnatey.net/2023/build-hugo-blog-with-stack-mod/" target="_blank" rel="noopener"
+&gt;建站技术 | 使用 Hugo + Stack 简单搭建一个博客&lt;/a&gt;&lt;/p&gt;</description></item><item><title>软件开发——编译</title><link>https://sleepman9.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%BC%96%E8%AF%91/</link><pubDate>Fri, 18 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%BC%96%E8%AF%91/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;伟大的UNO一般会问几个为什么！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="qa"&gt;QA
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Q：为什么要编译成动态库&lt;/p&gt;
+&lt;p&gt;A:为了&lt;strong&gt;节省资源、方便更新、支持模块化和跨语言调用&lt;/strong&gt;，还能实现插件式架构。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Q: CMake的构建和编译&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Q：怎么通过error信息定位解决&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="动态库"&gt;动态库
+&lt;/h2&gt;&lt;h3 id="基本概念"&gt;基本概念
+&lt;/h3&gt;&lt;p&gt;动态库就是 &lt;code&gt;.so&lt;/code&gt;（Linux）、&lt;code&gt;.dll&lt;/code&gt;（Windows）、&lt;code&gt;.dylib&lt;/code&gt;（macOS） 这样的文件，在程序运行时被“动态加载”。&lt;/p&gt;
+&lt;p&gt;它跟 &lt;strong&gt;静态库&lt;/strong&gt;（&lt;code&gt;.a&lt;/code&gt; 或 &lt;code&gt;.lib&lt;/code&gt;）的区别在于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;静态库是&lt;strong&gt;编译时就嵌入程序里&lt;/strong&gt;的，生成的可执行文件比较大。&lt;/li&gt;
+&lt;li&gt;动态库是&lt;strong&gt;运行时才加载&lt;/strong&gt;的，可执行文件会“引用”这个库，而不是包含它本体。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;✅ 为什么编译成动态库？有哪些优点？
+&lt;strong&gt;节省内存和磁盘空间&lt;/strong&gt;
+多个程序都能使用同一个动态库，比如系统的 libc.so、OpenCV、Qt 这些常用库，不用每个程序都各自编译一份，节省资源。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;支持模块化设计&lt;/strong&gt;
+程序可以把功能拆成多个模块，比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个主程序（main app）&lt;/li&gt;
+&lt;li&gt;一些插件/功能模块（编译成动态库）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这样设计更灵活、更易维护。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;支持“热更新”或“热插拔”&lt;/strong&gt;
+当你想更新某个模块的功能，只需要替换掉对应的动态库，而不用重新编译整个程序。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;插件机制&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python 的 &lt;code&gt;.pyd&lt;/code&gt; 文件&lt;/li&gt;
+&lt;li&gt;MATLAB 的 MEX 动态库&lt;/li&gt;
+&lt;li&gt;浏览器的扩展插件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些都是通过动态库的形式扩展主程序的功能。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;跨语言调用&lt;/strong&gt;
+很多时候，我们用 C/C++ 写一个高性能的核心模块，然后 Python、Java 等其他语言用 FFI（Foreign Function Interface） 调用这些库。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Python 通过 ctypes 加载 .so 或 .dll&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;ctypes&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;cdll&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;lib&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cdll&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;LoadLibrary&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;./libexample.so&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id="怎么生成动态库链接使用动态库"&gt;怎么生成动态库，链接使用动态库
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;源代码&lt;/li&gt;
+&lt;li&gt;编译生成动态库&lt;/li&gt;
+&lt;li&gt;写主程序&lt;/li&gt;
+&lt;li&gt;编译主程序时链接动态库&lt;/li&gt;
+&lt;li&gt;运行主程序&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;太好了，我们就用最常见的 &lt;strong&gt;C/C++&lt;/strong&gt; 来举个例子，展示一下 &lt;strong&gt;怎么编译生成动态库&lt;/strong&gt;（以 Linux 下为例，也会顺便说下 Windows 和 macOS 的差异）。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id="创建源代码文件"&gt;创建源代码文件
+&lt;/h4&gt;&lt;p&gt;👉 动态库源文件：&lt;code&gt;mymath.c&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// mymath.c
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;say_hello&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nf"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Hello from dynamic library!&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;👉 头文件：&lt;code&gt;mymath.h&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// mymath.h
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;&lt;span class="cp"&gt;#ifndef MYMATH_H
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#define MYMATH_H
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;say_hello&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#endif
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id="-2-编译生成动态库"&gt;🛠️ 2. 编译生成动态库
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Linux / macOS：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gcc -fPIC -shared -o libmymath.so mymath.c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;解释：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-fPIC&lt;/code&gt;：生成位置无关代码（Position Independent Code），动态库需要这个&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-shared&lt;/code&gt;：告诉编译器要生成共享库&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-o libmymath.so&lt;/code&gt;：输出文件名，&lt;code&gt;lib&lt;/code&gt; 开头是习惯命名方式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Windows（使用 MinGW）：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gcc -shared -o mymath.dll mymath.c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id="-3-写主程序调用它mainc"&gt;🧪 3. 写主程序调用它：&lt;code&gt;main.c&lt;/code&gt;
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// main.c
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;#34;mymath.h&amp;#34;&lt;/span&gt;&lt;span class="cp"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nf"&gt;say_hello&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nf"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nf"&gt;printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;3 + 5 = %d&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id="-4-编译主程序时链接动态库"&gt;🏗️ 4. 编译主程序时链接动态库
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;gcc -o main main.c -L. -lmymath
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;解释：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-L.&lt;/code&gt; 表示在当前目录找库&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-lmymath&lt;/code&gt; 表示链接名为 &lt;code&gt;libmymath.so&lt;/code&gt; 的库（&lt;code&gt;lib&lt;/code&gt; 开头省略，&lt;code&gt;.so&lt;/code&gt; 后缀省略）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h4 id="-5-运行程序linux"&gt;🏃 5. 运行程序（Linux）
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;LD_LIBRARY_PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;. ./main
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;LD_LIBRARY_PATH=.&lt;/code&gt; 是告诉系统动态库就放在当前目录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;🎉 &lt;strong&gt;输出结果&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Hello from dynamic library!
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3 + 5 = 8
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;✅ &lt;strong&gt;小结一波&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;步骤&lt;/th&gt;
+&lt;th&gt;命令或操作&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;写库代码&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;mymath.c&lt;/code&gt;、&lt;code&gt;mymath.h&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;编译库&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;gcc -fPIC -shared -o libmymath.so mymath.c&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;写主程序&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;main.c&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;编译主程序&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;gcc -o main main.c -L. -lmymath&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;运行程序&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;LD_LIBRARY_PATH=. ./main&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="cmake"&gt;CMake
+&lt;/h2&gt;&lt;p&gt;CMake 是一个 跨平台的自动化构建系统工具，它使用一种称为 CMakeLists.txt 的配置文件来描述如何生成项目的构建文件（例如 Makefile 或 Visual Studio 工程）。&lt;/p&gt;
+&lt;p&gt;构建文件中有编译命令GCC,G++等；编译程序；&lt;/p&gt;
+&lt;h3 id="基本概念-1"&gt;基本概念
+&lt;/h3&gt;&lt;h4 id="-cmake-的基本构建流程"&gt;📁 CMake 的基本构建流程
+&lt;/h4&gt;&lt;p&gt;CMake 的构建过程分为两个阶段：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;配置（Configure）阶段&lt;/strong&gt;
+这一阶段的目标是生成平台相关的构建文件。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cmake -S . -B build
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-S .&lt;/code&gt; 指定源码路径&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-B build&lt;/code&gt; 指定生成的构建文件放在哪个目录（可以叫 &lt;code&gt;build&lt;/code&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;此时，CMake 会读取 &lt;code&gt;CMakeLists.txt&lt;/code&gt;，根据系统环境、编译器等生成合适的构建系统（比如 Makefile）。&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol start="2"&gt;
+&lt;li&gt;&lt;strong&gt;构建（Build）阶段&lt;/strong&gt;
+使用上一步生成的构建文件，开始真正的&lt;strong&gt;编译&lt;/strong&gt;操作。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cmake --build build
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这一步等价于执行 &lt;code&gt;make&lt;/code&gt;（如果你使用的是 Unix/Linux 上的默认生成器），将源代码编译成可执行文件或者库。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id="-cmakeliststxt-基础结构"&gt;📜 CMakeLists.txt 基础结构
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cmake" data-lang="cmake"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cmake_minimum_required&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;VERSION&lt;/span&gt; &lt;span class="s"&gt;3.10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="nb"&gt;project&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;MyProject&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="c"&gt;# 指定 C++ 标准
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;CMAKE_CXX_STANDARD&lt;/span&gt; &lt;span class="s"&gt;17&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="c"&gt;# 添加源文件并构建成可执行文件
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&lt;/span&gt;&lt;span class="nb"&gt;add_executable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;my_app&lt;/span&gt; &lt;span class="s"&gt;main.cpp&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;project(...)&lt;/code&gt;：定义项目名称&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;set(...)&lt;/code&gt;：设置变量，比如 C++ 标准&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;add_executable(...)&lt;/code&gt;：指定编译可执行文件的目标&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;🔁 &lt;strong&gt;常见命令一览&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;操作&lt;/th&gt;
+&lt;th&gt;命令示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;配置&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;cmake -S . -B build&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;构建&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;cmake --build build&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;清除构建目录&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;rm -rf build&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;设置编译器&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;CC=gcc CXX=g++ cmake -S . -B build&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;p&gt;💡 &lt;strong&gt;小技巧&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;始终将构建目录和源代码目录分离（Out-of-Source Build），便于管理。&lt;/li&gt;
+&lt;li&gt;可以加上 &lt;code&gt;-DCMAKE_BUILD_TYPE=Release&lt;/code&gt; 或 &lt;code&gt;Debug&lt;/code&gt; 来控制编译类型。&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;target_include_directories&lt;/code&gt; 和 &lt;code&gt;target_link_libraries&lt;/code&gt; 来管理依赖更清晰。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="应用"&gt;应用
+&lt;/h3&gt;&lt;p&gt;使用 CMake 来构建上述小项目：生成动态库 &lt;code&gt;libmymath.so&lt;/code&gt;，并编译主程序 &lt;code&gt;main.c&lt;/code&gt; 来调用它。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id="项目结构"&gt;项目结构
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;my_project/
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── CMakeLists.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── mymath.c
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;├── mymath.h
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;└── main.c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id="cmakeliststxt-内容"&gt;CMakeLists.txt 内容
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cmake" data-lang="cmake"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cmake_minimum_required&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;VERSION&lt;/span&gt; &lt;span class="s"&gt;3.10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="nb"&gt;project&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;MyDynamicLibExample&lt;/span&gt; &lt;span class="s"&gt;C&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="c"&gt;# 设置编译为 C99
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;CMAKE_C_STANDARD&lt;/span&gt; &lt;span class="s"&gt;99&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="c"&gt;# 设置输出目录
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;CMAKE_LIBRARY_OUTPUT_DIRECTORY&lt;/span&gt; &lt;span class="o"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;CMAKE_BINARY_DIR&lt;/span&gt;&lt;span class="o"&gt;}&lt;/span&gt;&lt;span class="s"&gt;/lib&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;CMAKE_RUNTIME_OUTPUT_DIRECTORY&lt;/span&gt; &lt;span class="o"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;CMAKE_BINARY_DIR&lt;/span&gt;&lt;span class="o"&gt;}&lt;/span&gt;&lt;span class="s"&gt;/bin&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="c"&gt;# 创建动态库
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&lt;/span&gt;&lt;span class="nb"&gt;add_library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;mymath&lt;/span&gt; &lt;span class="s"&gt;SHARED&lt;/span&gt; &lt;span class="s"&gt;mymath.c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="c"&gt;# 创建可执行文件
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&lt;/span&gt;&lt;span class="nb"&gt;add_executable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;main_exec&lt;/span&gt; &lt;span class="s"&gt;main.c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="c"&gt;# 链接动态库到可执行程序
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&lt;/span&gt;&lt;span class="nb"&gt;target_link_libraries&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;main_exec&lt;/span&gt; &lt;span class="s"&gt;PRIVATE&lt;/span&gt; &lt;span class="s"&gt;mymath&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="err"&gt;&lt;/span&gt;&lt;span class="c"&gt;# 设置头文件路径（可选）
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&lt;/span&gt;&lt;span class="nb"&gt;target_include_directories&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;main_exec&lt;/span&gt; &lt;span class="s"&gt;PRIVATE&lt;/span&gt; &lt;span class="o"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;CMAKE_CURRENT_SOURCE_DIR&lt;/span&gt;&lt;span class="o"&gt;}&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id="构建步骤在-linuxmacos-上"&gt;构建步骤（在 Linux/macOS 上）
+&lt;/h4&gt;&lt;p&gt;打开终端：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;mkdir build
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; build
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cmake ..
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cmake --build .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id="行程序"&gt;行程序
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;LD_LIBRARY_PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;./lib ./bin/main_exec
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;输出&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Hello from dynamic library!
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3 + 5 = 8
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="动态库调用外部函数"&gt;动态库调用外部函数
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://www.cnblogs.com/sewain/p/14798200.html" target="_blank" rel="noopener"
+&gt;应用程序设计：在动态库中如何调用外部函数？&lt;/a&gt;&lt;/p&gt;</description></item><item><title>如何制定软件设计开发计划</title><link>https://sleepman9.github.io/p/%E5%A6%82%E4%BD%95%E5%88%B6%E5%AE%9A%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91%E8%AE%A1%E5%88%92/</link><pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E5%A6%82%E4%BD%95%E5%88%B6%E5%AE%9A%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91%E8%AE%A1%E5%88%92/</guid><description>&lt;h2 id="架构分层分模块"&gt;架构分层，分模块
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://www.cnblogs.com/sewain/p/14497769.html" target="_blank" rel="noopener"
+&gt;都说软件架构要分层、分模块，具体应该怎么做 一&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://www.cnblogs.com/sewain/p/14527392.html" target="_blank" rel="noopener"
+&gt;都说软件架构要分层、分模块，具体应该怎么做 二&lt;/a&gt;&lt;/p&gt;</description></item><item><title>SCP_传输文件</title><link>https://sleepman9.github.io/p/scp_%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6/</link><pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/scp_%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6/</guid><description>&lt;p&gt;&lt;code&gt;scp&lt;/code&gt;（Secure Copy Protocol）用于在本地与远程服务器之间、或者两台远程服务器之间安全地复制文件。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="从本地复制到远程服务器"&gt;从本地复制到远程服务器
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;scp /path/to/local/file username@remote_host:/path/to/remote/directory
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;示例：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;scp myfile.txt user@192.168.1.100:/home/user/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这会将 &lt;code&gt;myfile.txt&lt;/code&gt; 复制到远程服务器 &lt;code&gt;192.168.1.100&lt;/code&gt; 的 &lt;code&gt;/home/user/&lt;/code&gt; 目录。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="从远程服务器复制到本地"&gt;从远程服务器复制到本地
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;scp username@remote_host:/path/to/remote/file /path/to/local/directory
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;示例：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;scp user@192.168.1.100:/home/user/myfile.txt /home/localuser/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这会把远程服务器 &lt;code&gt;/home/user/myfile.txt&lt;/code&gt; 复制到本地 &lt;code&gt;/home/localuser/&lt;/code&gt; 目录。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="复制整个文件夹加--r-选项"&gt;复制整个文件夹（加 &lt;code&gt;-r&lt;/code&gt; 选项）
+&lt;/h2&gt;&lt;h3 id="本地--远程"&gt;本地 → 远程
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;scp -r /path/to/local/directory username@remote_host:/path/to/remote/directory
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;示例：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;scp -r myfolder user@192.168.1.100:/home/user/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;将 &lt;code&gt;myfolder&lt;/code&gt; 目录及其内容复制到远程服务器 &lt;code&gt;/home/user/&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id="远程--本地"&gt;远程 → 本地
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;scp -r username@remote_host:/path/to/remote/directory /path/to/local/directory
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;示例：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;scp -r user@192.168.1.100:/home/user/myfolder /home/localuser/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;将远程服务器上的 &lt;code&gt;myfolder&lt;/code&gt; 复制到本地 &lt;code&gt;/home/localuser/&lt;/code&gt; 目录。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="从一台远程服务器复制到另一台远程服务器"&gt;从一台远程服务器复制到另一台远程服务器
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;scp username1@remote_host1:/path/to/file username2@remote_host2:/path/to/destination
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;示例：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;scp user1@192.168.1.101:/home/user1/file.txt user2@192.168.1.102:/home/user2/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这会直接把 &lt;code&gt;192.168.1.101&lt;/code&gt; 上的 &lt;code&gt;file.txt&lt;/code&gt; 复制到 &lt;code&gt;192.168.1.102&lt;/code&gt; 上的 &lt;code&gt;/home/user2/&lt;/code&gt; 目录。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="指定端口-p-选项大写-p"&gt;指定端口（&lt;code&gt;-P&lt;/code&gt; 选项，大写 P）
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;scp -P &lt;span class="m"&gt;2222&lt;/span&gt; myfile.txt user@192.168.1.100:/home/user/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果远程服务器的 SSH 端口不是默认 &lt;code&gt;22&lt;/code&gt;，可以使用 &lt;code&gt;-P&lt;/code&gt; 指定端口，如 &lt;code&gt;2222&lt;/code&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="使用--c-启用压缩加速传输"&gt;使用 &lt;code&gt;-C&lt;/code&gt; 启用压缩加速传输
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;scp -C myfile.txt user@192.168.1.100:/home/user/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;对于大文件或慢速网络，可以使用 &lt;code&gt;-C&lt;/code&gt; 进行压缩，提高传输效率。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="限制带宽-l-选项单位-kbits"&gt;限制带宽（&lt;code&gt;-l&lt;/code&gt; 选项，单位 Kbit/s）
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;scp -l &lt;span class="m"&gt;1000&lt;/span&gt; myfile.txt user@192.168.1.100:/home/user/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;上面命令限制最大带宽为 &lt;code&gt;1000 Kbit/s&lt;/code&gt;，即 &lt;code&gt;125 KB/s&lt;/code&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="总结"&gt;总结
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;需求&lt;/th&gt;
+&lt;th&gt;命令示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;本地 → 远程&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;scp file.txt user@remote:/home/user/&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;远程 → 本地&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;scp user@remote:/home/user/file.txt ./&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;复制文件夹&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;scp -r folder user@remote:/home/user/&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;远程 → 远程&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;scp user1@host1:/file user2@host2:/dir/&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;指定端口&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;scp -P 2222 file user@remote:/home/user/&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;启用压缩&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;scp -C file user@remote:/home/user/&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;限制带宽&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;scp -l 1000 file user@remote:/home/user/&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;💡 &lt;strong&gt;&lt;code&gt;scp&lt;/code&gt; 适用于小型文件传输，大规模文件推荐 &lt;code&gt;rsync&lt;/code&gt; 进行增量传输！&lt;/strong&gt; 🚀&lt;/p&gt;</description></item><item><title>Vscode Debug</title><link>https://sleepman9.github.io/p/vscode-debug/</link><pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/vscode-debug/</guid><description>&lt;p&gt;&lt;strong&gt;.vscode launch.json 调试设置&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;version&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;0.2.0&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 配置文件的版本号
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;#34;configurations&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Python: Run run.py&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 配置的名称，用于在调试配置列表中标识此配置
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;python&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 调试器的类型，这里使用的是 Python 调试器
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;#34;request&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;launch&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 请求类型，表示启动一个新的调试会话
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;#34;program&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;${workspaceFolder}/run.py&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 要调试的 Python 程序的路径（需要是一个可以运行的程序）
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;#34;args&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="c1"&gt;//所有参数的列表
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;thermal&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 第一个参数，表示运行模式
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;-i&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 输入文件参数
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;${workspaceFolder}/case/3DIC_real_case/test_simulation.json&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 输入文件的路径
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;-o&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 输出文件参数
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;${workspaceFolder}/case/3DIC_real_case/output&amp;#34;&lt;/span&gt; &lt;span class="c1"&gt;// 输出文件夹的路径
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;console&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;integratedTerminal&amp;#34;&lt;/span&gt; &lt;span class="c1"&gt;// 指定调试时使用的控制台类型，这里使用集成终端
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这段 JSON 配置文件是为 Visual Studio Code (VSCode) 中的调试器或运行器设置的，特别是用于运行 Python 脚本 &lt;code&gt;run.py&lt;/code&gt;。这是 VSCode 的 &lt;strong&gt;launch.json&lt;/strong&gt; 文件配置的一部分，用于设置如何运行 Python 程序以及传递的参数。下面是每个部分的解释：&lt;/p&gt;
+&lt;h3 id="version-020"&gt;&lt;strong&gt;version&lt;/strong&gt;: &amp;ldquo;0.2.0&amp;rdquo;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;这是 VSCode 配置文件的版本号，表示该配置文件遵循的格式版本。&lt;code&gt;0.2.0&lt;/code&gt; 是比较老的版本，但它仍然被广泛使用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="configurations-"&gt;&lt;strong&gt;configurations&lt;/strong&gt;: []
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;该数组包含一个或多个配置对象，每个配置代表一种不同的调试或运行方式。在这里，只有一个配置对象。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="配置对象解释"&gt;配置对象解释：
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Python: Run run.py&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;python&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;request&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;launch&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;program&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;${workspaceFolder}/run.py&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;args&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;thermal&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;-i&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;${workspaceFolder}/case/3DIC_real_case/test_simulation.json&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;-o&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;${workspaceFolder}/case/3DIC_real_case/output&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;console&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;integratedTerminal&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id="name-python-run-runpy"&gt;&lt;strong&gt;name&lt;/strong&gt;: &lt;code&gt;&amp;quot;Python: Run run.py&amp;quot;&lt;/code&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;这是配置的名称，用于标识和显示该配置。这个名称在 VSCode 的调试配置选择器中会出现，方便用户选择执行哪个配置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="type-python"&gt;&lt;strong&gt;type&lt;/strong&gt;: &lt;code&gt;&amp;quot;python&amp;quot;&lt;/code&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;这表示配置类型为 Python，告诉 VSCode 使用 Python 解释器来执行程序。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="request-launch"&gt;&lt;strong&gt;request&lt;/strong&gt;: &lt;code&gt;&amp;quot;launch&amp;quot;&lt;/code&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;该设置表明这是一个启动配置，而不是附加配置（&lt;code&gt;attach&lt;/code&gt;）。即，当点击 &amp;ldquo;启动&amp;rdquo; 或 &amp;ldquo;调试&amp;rdquo; 按钮时，VSCode 会运行这个配置来启动 Python 脚本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="program-workspacefolderrunpy"&gt;&lt;strong&gt;program&lt;/strong&gt;: &lt;code&gt;&amp;quot;${workspaceFolder}/run.py&amp;quot;&lt;/code&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;指定要执行的 Python 程序。&lt;code&gt;${workspaceFolder}&lt;/code&gt; 是一个内置变量，代表当前工作区的根文件夹路径。所以这里表示执行 &lt;code&gt;run.py&lt;/code&gt; 脚本，该脚本位于工作区根目录下。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="args--thermal--i-workspacefoldercase3dic_real_casetest_simulationjson--o-workspacefoldercase3dic_real_caseoutput-"&gt;&lt;strong&gt;args&lt;/strong&gt;: &lt;code&gt;[ &amp;quot;thermal&amp;quot;, &amp;quot;-i&amp;quot;, &amp;quot;${workspaceFolder}/case/3DIC_real_case/test_simulation.json&amp;quot;, &amp;quot;-o&amp;quot;, &amp;quot;${workspaceFolder}/case/3DIC_real_case/output&amp;quot; ]&lt;/code&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;这是传递给 Python 脚本 &lt;code&gt;run.py&lt;/code&gt; 的命令行参数。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;thermal&amp;quot;&lt;/code&gt;：传递给脚本的第一个参数，可能是某种运行模式或功能的标志。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;-i&amp;quot;&lt;/code&gt; 和 &lt;code&gt;&amp;quot;${workspaceFolder}/case/3DIC_real_case/test_simulation.json&amp;quot;&lt;/code&gt;：&lt;code&gt;-i&lt;/code&gt; 可能是输入文件的标志，后面跟着路径指向一个 JSON 配置文件。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;-o&amp;quot;&lt;/code&gt; 和 &lt;code&gt;&amp;quot;${workspaceFolder}/case/3DIC_real_case/output&amp;quot;&lt;/code&gt;：&lt;code&gt;-o&lt;/code&gt; 可能是输出目录或文件的标志，后面跟着路径指向输出目录。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些参数可以让 &lt;code&gt;run.py&lt;/code&gt; 根据输入的 JSON 配置文件进行仿真，并将结果输出到指定目录。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="console-integratedterminal"&gt;&lt;strong&gt;console&lt;/strong&gt;: &lt;code&gt;&amp;quot;integratedTerminal&amp;quot;&lt;/code&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;该设置指定程序输出将在 VSCode 内部集成的终端中显示，而不是在外部终端中显示。这样，用户可以直接在 VSCode 的终端面板中查看程序输出。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="总结"&gt;总结：
+&lt;/h3&gt;&lt;p&gt;这段配置文件的作用是设置一个 Python 调试或运行配置，在运行时：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;执行 &lt;code&gt;run.py&lt;/code&gt; 脚本。&lt;/li&gt;
+&lt;li&gt;传递三个命令行参数：&lt;code&gt;thermal&lt;/code&gt;（运行模式），&lt;code&gt;-i&lt;/code&gt; 后跟输入文件的路径，&lt;code&gt;-o&lt;/code&gt; 后跟输出目录的路径。&lt;/li&gt;
+&lt;li&gt;输出将显示在 VSCode 的集成终端中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这是设置调试或运行 Python 脚本的常见方式，尤其是在涉及到多个输入输出参数时。&lt;/p&gt;</description></item><item><title>Tools Trick</title><link>https://sleepman9.github.io/p/tools-trick/</link><pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/tools-trick/</guid><description>&lt;img src="https://sleepman9.github.io/p/tools-trick/cover.jpg" alt="Featured image of post Tools Trick" /&gt;&lt;h2 id="1-vscode中github-copilot在ssh远程环境中无法登录问题"&gt;1. VSCode中Github Copilot在SSH远程环境中无法登录问题
+&lt;/h2&gt;&lt;h3 id="1-在vs-code中按f1键调出命令行输入settingsjson选择远程环境中的配置文件"&gt;1. 在VS Code中，按F1键调出命令行，输入settings.json，选择远程环境中的配置文件：
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://sleepman9.github.io/p/tools-trick/asserts/copliot.png"
+width="825"
+height="502"
+srcset="https://sleepman9.github.io/p/tools-trick/asserts/copliot_hu_d04c34523884441.png 480w, https://sleepman9.github.io/p/tools-trick/asserts/copliot_hu_f6631b22a2511959.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="164"
+data-flex-basis="394px"
+&gt;&lt;/p&gt;
+&lt;h3 id="2-添加如下配置"&gt;2. 添加如下配置：
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;remote.extensionKind&amp;#34;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;GitHub.copilot&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;ui&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;GitHub.copilot-chat&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;ui&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="3-重启vs-code即可"&gt;3. 重启VS Code即可。
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="https://blog.csdn.net/qq_43948052/article/details/146123406" target="_blank" rel="noopener"
+&gt;原文链接&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
