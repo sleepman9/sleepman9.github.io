@@ -17,7 +17,11 @@ weight: 2
 
 ### 手动方式：
 1. 安装：`hugo`, `go`.
+
     https://github.com/gohugoio/hugo/releases  hugo下载
+
+    https://git-scm.com/install/windows  Git下载
+    
 
 
 2. clone 主题：`git submodule add theme`.
@@ -27,9 +31,12 @@ weight: 2
 6. 本地提交到GitHub仓库
 
 上述过程可以参考
+
 [通过 Github workflows CI/CD 自动化部署 Github Pages hugo 免费博客](https://blog.taoluyuan.com/blog/github-workflows) 
 
 [Hugo + Github Pages 搭建个人博客](https://jianzhnie.github.io/post/hugo_site/)
+
+ [在Windows11上安装Hugo，搭建静态网站并部署到GitHub Page](https://zhuanlan.zhihu.com/p/673890323)
 
 ### template方式
 
@@ -37,9 +44,6 @@ weight: 2
 
 ### 个人感悟
 最近在接触软件开发的内容，其中对于CI/CD部分一直存在一些疑惑，直到自己搭建博客，对这一块的工作流有了进一步的理解。
-
-
-
 
 
 
@@ -54,4 +58,3 @@ weight: 2
 
  [建站技术 | 使用 Hugo + Stack 简单搭建一个博客](https://blog.reincarnatey.net/2023/build-hugo-blog-with-stack-mod/)
 
- [在Windows11上安装Hugo，搭建静态网站并部署到GitHub Page](https://zhuanlan.zhihu.com/p/673890323)

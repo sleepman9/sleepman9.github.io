@@ -1,7 +1,7 @@
 ---
 title: AI_Model_Transformer
 description: NLP领域Transformer模型学习
-date: 2025-03-26 00:00:00+0000
+date: 2025-03-26
 image: cover.png
 categories:
     - AI

@@ -4,7 +4,7 @@ description: Hello build!
 date: 2025-04-18 
 image: 
 categories:
-    - Software
+    - Tools
 tags:
     - 软件开发
 weight: 4

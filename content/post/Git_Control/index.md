@@ -1,7 +1,7 @@
 ---
 title: Git Practice
 description: 实际开发过程中的git使用
-date: 2025-03-24 00:00:00+0000
+date: 2025-03-24
 image: cover.webp
 categories:
     - Tools

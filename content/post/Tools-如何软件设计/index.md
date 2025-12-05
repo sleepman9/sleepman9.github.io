@@ -4,8 +4,7 @@ description: 常常遇到一个瓶颈，感觉核心算法开发完之后，就�
 date: 2025-04-24
 image: 
 categories:
-    - Base
-    - Software
+    - Tools
 tags:
 ---
 
