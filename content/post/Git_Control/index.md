@@ -94,6 +94,14 @@ main分支没有commit的情况下新建了A分支，A分支git commit之后，m
 执行之后，即可得到最新提交代码
 
 ### 4.2 添加分支跟踪
+Git 分支追踪（Branch Tracking），通常被称为设置 “上游分支”（Upstream Branch）。简单来说，就是建立本地分支与远程分支之间的对应关系。
+
+*   **没有追踪时**：你需要打全命令，明确告诉 Git 你想拉取或推送到哪里。
+    *   `git pull origin master`
+    *   `git push origin master`
+*   **有追踪时**：Git 已经知道当前分支对应哪个远程分支，只需要输入：
+    *   `git pull`
+    *   `git push`
 
 手动：
 
