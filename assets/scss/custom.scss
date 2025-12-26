@@ -421,6 +421,57 @@
   }
 }
 
+//-------------------------------------------
+// TOC 折叠功能样式
+.widget--toc {
+    #TableOfContents {
+        ul, ol {
+            li {
+                position: relative;
+                
+                // 默认隐藏子级菜单
+                ul, ol {
+                    display: none;
+                }
+                
+                // 展开状态显示子级
+                &.expanded {
+                    > ul, > ol {
+                        display: block;
+                    }
+                }
+            }
+        }
+        
+        // 折叠按钮样式
+        .toc-expander {
+            position: absolute;
+            left: 0;
+            top: 0.8em;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            color: var(--card-text-color-tertiary);
+            font-size: 10px;
+
+            &:hover {
+                color: var(--primary-color);
+            }
+        }
+
+        // 一级标题左侧留出空间，保持文字左对齐
+        > ul > li,
+        > ol > li {
+            padding-left: 18px;
+        }
+    }
+}
+
+
 
   
 
