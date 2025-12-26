@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on UNO's Page</title><link>https://sleepman9.github.io/tags/hugo/</link><description>Recent content in Hugo on UNO's Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sleepman9.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo Github Pages 搭建个人博客</title><link>https://sleepman9.github.io/p/hugo-github-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link><pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/hugo-github-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid><description>&lt;img src="https://sleepman9.github.io/p/hugo-github-pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/cover.png" alt="Featured image of post Hugo Github Pages 搭建个人博客" /&gt;&lt;h2 id="手动搭建博客经历"&gt;手动搭建博客经历
+&lt;/h2&gt;&lt;h3 id="手动方式"&gt;手动方式：
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;安装：&lt;code&gt;hugo&lt;/code&gt;, &lt;code&gt;go&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener"
+&gt;https://github.com/gohugoio/hugo/releases&lt;/a&gt; hugo下载&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://git-scm.com/install/windows" target="_blank" rel="noopener"
+&gt;https://git-scm.com/install/windows&lt;/a&gt; Git下载&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;clone 主题：&lt;code&gt;git submodule add theme&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;hugo server 本地调试。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置GitHub Pages主页信息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用GitHub Actions 自动构建/部署（CI/CD）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;本地提交到GitHub仓库&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;上述过程可以参考&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://blog.taoluyuan.com/blog/github-workflows" target="_blank" rel="noopener"
+&gt;通过 Github workflows CI/CD 自动化部署 Github Pages hugo 免费博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://jianzhnie.github.io/post/hugo_site/" target="_blank" rel="noopener"
+&gt;Hugo + Github Pages 搭建个人博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/673890323" target="_blank" rel="noopener"
+&gt;在Windows11上安装Hugo，搭建静态网站并部署到GitHub Page&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="template方式"&gt;template方式
+&lt;/h3&gt;&lt;p&gt;直到后来遇到了&lt;strong&gt;自动挡&lt;/strong&gt;，直接使用 theme template套模板即可（修改个人信息，写post）&lt;/p&gt;
+&lt;h3 id="迁移新电脑本地调试"&gt;迁移新电脑本地调试
+&lt;/h3&gt;&lt;p&gt;背景：在一台全新的电脑上，开始原有本地调试功能&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;安装hugo-Extended，千万不要安装普通版本。区别在于Extended版本支持支持 SCSS/SASS等&lt;/li&gt;
+&lt;li&gt;安装go 文件中需要使用go拉取相关模块。例如：文件&lt;code&gt;go.mod&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;运行文件 &lt;code&gt;loacl_run.bat&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;ps：如果出现无法访问github情况需要“魔法”&lt;/p&gt;
+&lt;h3 id="个人感悟"&gt;个人感悟
+&lt;/h3&gt;&lt;p&gt;最近在接触软件开发的内容，其中对于CI/CD部分一直存在一些疑惑，直到自己搭建博客，对这一块的工作流有了进一步的理解。&lt;/p&gt;
+&lt;h2 id="hugo-stack-theme-魔改"&gt;hugo stack theme 魔改
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;多看优秀的主题，才知道怎么魔改；链接及其评论作者都是与此相关的主题；&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class="link" href="https://linsnow.cn/posts/bloglab/hugo-stack/modify-hugo/" target="_blank" rel="noopener"
+&gt;bloger1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://www.xalaok.top/post/stack-modify/" target="_blank" rel="noopener"
+&gt;stack 魔改美化&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://thirdshire.com/hugo-stack-renovation/" target="_blank" rel="noopener"
+&gt;stack 魔改美化_2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://blog.reincarnatey.net/2023/build-hugo-blog-with-stack-mod/" target="_blank" rel="noopener"
+&gt;建站技术 | 使用 Hugo + Stack 简单搭建一个博客&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
