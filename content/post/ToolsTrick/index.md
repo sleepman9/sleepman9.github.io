@@ -1,5 +1,5 @@
 ---
-title: vscode
+title: vscode相关技巧
 description: debug，插件，远程等
 date: 2025-03-24 
 image: cover.jpg
@@ -86,6 +86,54 @@ tags:
   ]
 }
 ```
+### conda环境中debug
+> 背景：当前conda环境为`A`,按`F5` 开启`debug`，会在`base`环境中`debug`，导致库文件缺失。
+
+**solution:** 指定`python`和`env`
+
+```
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug (pcbnewPaddle)",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "python": "/opt/conda/envs/pcbnewPaddle/bin/python",  //指定环境的python
+      "env": {
+        "CONDA_DEFAULT_ENV": "pcbnewPaddle",
+        "CONDA_PREFIX": "/opt/conda/envs/pcbnewPaddle"
+      }
+    }
+  ]
+}
+```
+
+或者默认不设置
+
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "debugpy",
+            "request": "launch",
+            "name": "debug Current Python File",
+            "program": "${file}",
+            "console": "integratedTerminal"
+            
+        }
+    ]
+}
+```
+
+
+
+
+
 
 ### 总结
 无论是python还是c++还是别的语言，本质都是一样的。他们的大前提都是需要是一个**可执行的文件**（python脚本直接相当于一个可执行，而CPP需要先编译成可执行文件）
