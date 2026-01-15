@@ -143,3 +143,52 @@ tags:
 [我只教一次！vscode remote-ssh 连接失败的基本原理和优雅的解决方案](https://zhuanlan.zhihu.com/p/671718415)
 
 按照链接中的内容，在远程服务器上，将本机commit ID相关内容删除。（使用的mobaxterm连接远程服务器）
+
+## 网络中断对正在执行程序的影响
+> 这里只讨论ssh远程连接服务器的情况
+
+影响因素通常与这个进程挂载在前端还是后端（远程服务器）。为了避免此类因素造成的时间浪费，一律使用`nohup / tmux / screen`方案。
+
+### tmux
+首选`tmux`
+**例如：**
+```
+tmux new -s train   
+python train.py
+# 断网也不怕
+
+#解释
+new: new-session 的缩写，表示创建一个新会话。
+-s train: s 是 session name 的缩写。
+-s: 指定会话名称的参数标志。
+train: 你给这个会话起的名字（这里起名为 "train"，方便后续区分是跑训练任务的）。
+
+
+断线后重连：
+tmux attach -t train
+
+
+attach: attach-session 的缩写，表示连接到某个已存在的会话。
+-t train: t 是 target session 的缩写。
+-t: 指定目标会话的参数标志。
+train: 你刚才创建时起的名字。
+```
+
+### 使用 nohup (系统自带，无需安装)
+```
+nohup python train.py > my_log.log 2>&1 &
+
+命令解释：
+nohup: 让程序忽略挂起信号（SIGHUP），即关闭终端时不终止程序。
+python train.py: 你要运行的命令。
+> my_log.log: 将标准输出保存到 my_log.log 文件中（因为程序在后台跑，你看不到屏幕输出）。
+2>&1: 将错误输出（stderr）也重定向到标准输出（stdout），即都写进 log 文件。
+&: 让命令在后台运行。
+
+查看/杀死进程：
+
+查看: ps -ef | grep train.py
+停止: kill <PID> (PID 是查看命令显示出来的进程号)
+
+```
+
