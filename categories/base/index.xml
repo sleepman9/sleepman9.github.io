@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Base on UNO's Page</title><link>https://sleepman9.github.io/categories/base/</link><description>Recent content in Base on UNO's Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 24 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sleepman9.github.io/categories/base/index.xml" rel="self" type="application/rss+xml"/><item><title>人生思考</title><link>https://sleepman9.github.io/p/%E4%BA%BA%E7%94%9F%E6%80%9D%E8%80%83/</link><pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E4%BA%BA%E7%94%9F%E6%80%9D%E8%80%83/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;万事万物一切都有&lt;strong&gt;套路&lt;/strong&gt;可循 &lt;br&gt;
+先僵化，后优化，再固化 &amp;ndash;任正非&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;僵化：站在巨人的肩膀上：处于学习初期阶段的“削足适履”;&lt;/li&gt;
+&lt;li&gt;优化：掌握自我批判武器：在实践中不断吸收、改良、创新，优化自己；&lt;/li&gt;
+&lt;li&gt;固化：创新是有阶段性的、受约束的，如果没有约束，创新就是杂乱无章、无序的创新，需要像夯土一样，一层层夯上去，一步步固化阶段性的优化成果；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="面对未知领域怎么应对"&gt;面对未知领域怎么应对
+&lt;/h2&gt;&lt;p&gt;快速把这个领域里的基本的、重要的背景知识了解、掌握。&lt;/p&gt;
+&lt;p&gt;不要贪大求全，不要奢望把所有相关的内容都掌握，这是不可能的，尤其是在短时间内。我们的目标是把活做好，把项目完成。&lt;/p&gt;
+&lt;h2 id="面对一件全新的工作怎么切入"&gt;面对一件全新的工作，怎么切入
+&lt;/h2&gt;&lt;p&gt;！！！刚开始不要钻的太深！！！！&lt;/p&gt;
+&lt;p&gt;一般的做法是：找套路！（有没有什么套路可循）&lt;/p&gt;</description></item><item><title>手机SOC基础</title><link>https://sleepman9.github.io/p/%E6%89%8B%E6%9C%BAsoc%E5%9F%BA%E7%A1%80/</link><pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E6%89%8B%E6%9C%BAsoc%E5%9F%BA%E7%A1%80/</guid><description>&lt;img src="https://sleepman9.github.io/p/%E6%89%8B%E6%9C%BAsoc%E5%9F%BA%E7%A1%80/cover.png" alt="Featured image of post 手机SOC基础" /&gt;&lt;h2 id="手机soc包含的组件"&gt;手机SOC包含的组件
+&lt;/h2&gt;&lt;h3 id="cpu"&gt;CPU：
+&lt;/h3&gt;&lt;p&gt;在SOC里面，CPU的面积其实很小，但是它却很重要。ARM是一家英国的芯片设计公司，但是呢，它卖的不是芯片，而是芯片的授权。只有经过它授权，才能生产ARM架构的处理器。那么为什么主流的SOC都必须用ARM呢？在漫长的历史演变中，手机SOC也使用过其它架构，比如X86（PC端的处理器架构），但是都因为性能和功耗不理想，被淘汰了。&lt;/p&gt;
+&lt;p&gt;ARM授权的同时，也给了一套公版内核方案，领到授权的芯片设计厂商，可以对公版内核进行大修改，也可以照搬。打个比方，ARM是一个生产熟食的厨师，各大芯片厂商（主妇们）可以将食物买回去直接吃，也可以对食物进行二次加工，让它变得更好吃。目前有“二次加工”能力的主要有苹果、高通、三星，海思在麒麟980上也迈出了第一步，其上所用A76内核有些修改。&lt;/p&gt;
+&lt;p&gt;之前我也发布过一篇推文，讲美国将华为列入“实体名单”之后，华为不能使用新的架构，只能在现有ARMv8架构指令集（已经永久授权给了海思）的基础上进行魔改。而这个ARMv8架构，已经用了整整7年，这期间所有的内核都是基于它设计的，等于说先有架构，再有内核，一个架构可以衍生出多种内核。虽然这7年间由于工艺和设计水平的进步，手机CPU性能翻了很多倍，但是毕竟这么久了，也面临着换代，因此这才是华为“最大的危机”。&lt;/p&gt;
+&lt;p&gt;现在的手机CPU普遍采用“大小核”的设计，不同内核组合起来。这里的“大小”是指芯片的大小，芯片面积越大，堆的晶体管越多，性能越强。打个比方，就像拉一车人去打架，你车越大，装的人越多，战斗力就越强，但是如果SOC全部都是大核，电池顶不住啊。以麒麟980为例，它采用2个A76大核，2个A76中核，4个A55小核的设计，根据不同的应用来决定开什么核，还是全部开，不同芯片设计厂商的调度不同，性能发挥也有差异。所以，手机CPU绝对不是核心数越多越好的，芯片厂商的设计至关重要。&lt;/p&gt;
+&lt;h3 id="gpu"&gt;GPU
+&lt;/h3&gt;&lt;p&gt;GPU全称是“图形处理器”，如字面含义，它负责处理图形数据，并向显示屏输送图形的任务，而智能手机上的SOC也要处理各种各样复杂的数据，因此也需要一个强大的GPU。ARM自己也有提供GPU方案，就是大名鼎鼎的Mali系列，这是目前较为主流的一种GPU，而高通则是自家的Adreno系列（其实跟AMD有很深的渊源）。&lt;/p&gt;
+&lt;h3 id="npu"&gt;NPU
+&lt;/h3&gt;&lt;p&gt;这可以说是最近两年的手机SOC才出现的新的芯片种类，它的全称叫neural-network process units，翻译成中文叫“嵌入式神经网络处理器”。这个名字听起来很高端，简单来说，它主要负责处理涉及神经网络算法和机器学习的海量数据，因为神经网络算法及机器学习需要处理大量信息，而当下的 CPU / GPU 都无法达到如此高效的处理能力，需要一个独立的处理芯片来做这个事，才有NPU的诞生。现在的“人工智能”AI的概念可以说非常火热，而NPU就是让手机变得更智能、更聪明的必要条件。&lt;/p&gt;
+&lt;p&gt;目前，苹果A系列和海思麒麟系列都有独立的NPU，而高通则不然，它叫“AIE”，就是“人工智能引擎”的意思，它通过CPU+GPU+DSP来实现AI运算，也能达到比较强的AI算力。&lt;/p&gt;
+&lt;h3 id="isp"&gt;ISP
+&lt;/h3&gt;&lt;p&gt;很多人可能觉得，手机拍照的强弱只取决于传感器CMOS的强弱，殊不知，搭载同一款CMOS的同一品牌不同型号手机拍出来的效果可能略有差异。在这其中，SOC里面的ISP起到了至关重要的作用。&lt;/p&gt;
+&lt;p&gt;ISP，全称Image Signal Processor，中文叫“图像处理器”，不是GPU的“图形处理器”哦！它负责接收感光原件CMOS的原始数据，对这些数据进行“粗加工”，得到最后我们看到的照片。ISP需要与CMOS匹配，为什么去年不少手机都没有用4800W像素的CMOS呢？很简单，去年高通旗舰SOC骁龙845不支持4800W像素，如图：&lt;/p&gt;
+&lt;p&gt;骁龙845最高支持1600W像素&lt;/p&gt;
+&lt;p&gt;所以去年的手机厂商都使用了IMX363或者IMX380这两款1200W像素的CMOS。&lt;/p&gt;
+&lt;h3 id="dsp"&gt;DSP
+&lt;/h3&gt;&lt;p&gt;DSP虽然看起来不起眼，但实际对手机体验影响很大。它全称叫Digital Signal Processor，中文名叫“数字信号处理器”，不仅在手机中应用，在雷达、通信、图像处理、医疗电子、工业机器人等高密集计算领域都有广泛应用。在手机上，它主要负责语音处理，包括通话和语音输入，也负责一些图像处理的任务。&lt;/p&gt;
+&lt;h3 id="基带modem"&gt;基带(modem)
+&lt;/h3&gt;&lt;p&gt;手机最根本的功能还是通信，而掌管通信的芯片叫基带芯片，也有人称之为“调制解调器modem”，但实际上，手机的基带芯片不止包含modem。这个调制解调器的主要作用就是负责信号传输——所谓调制，就是把需要传输的信号通过一定的规则调制到载波上，让后通过无线收发器发送出去；解调则是相反的过程，类似把基站的语言“翻译成”手机能懂的，从而保证双方的顺畅交流，使我们能够接打电话、连接网络。&lt;/p&gt;
+&lt;p&gt;目前SOC上的基带有两种不同的形式：一种叫集成基带，即厂商有能力将基带集成到SOC中，比如海思和高通都有这个能力；另一种则需要外挂，例如苹果。这也解释了为何XS系列信号不佳，因为使用了Intel的外挂基带，这个基带表现不给力。手机要支持某种网络，需要对应的基带，比如当前火热的5G，高通X55和华为巴龙5000都是基带芯片，但现在的骁龙855和麒麟980都没有集成5G基带，因此你看到的5G手机都是外挂基带的。&lt;/p&gt;
+&lt;h3 id="协处理器"&gt;协处理器
+&lt;/h3&gt;&lt;p&gt;这个相对来说比较容易解释，就如同它的名字一样，它负责一些比较轻量级的数据处理任务，比如指南针、气压计等，不需要每次都唤醒CPU处理，从而节省电量。苹果很早就在A7处理器上引入了M7协处理器，其他厂商的SOC也渐渐跟进了。&lt;/p&gt;
+&lt;h3 id="存储与内存控制"&gt;存储与内存控制
+&lt;/h3&gt;&lt;h3 id="电源管理"&gt;电源管理
+&lt;/h3&gt;&lt;h2 id="reference"&gt;Reference
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/419093227" target="_blank" rel="noopener"
+&gt;掌中核心——手机SOC基础知识科普&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Template Format</title><link>https://sleepman9.github.io/p/format/</link><pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/format/</guid><description>&lt;img src="https://sleepman9.github.io/p/format/cover.jpg" alt="Featured image of post Template Format" /&gt;&lt;h2 id="颜色块-提示"&gt;颜色块-提示
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Photo by &lt;a class="link" href="https://unsplash.com/@pawel_czerwinski" target="_blank" rel="noopener"
+&gt;Pawel Czerwinski&lt;/a&gt; on &lt;a class="link" href="https://unsplash.com/" target="_blank" rel="noopener"
+&gt;Unsplash&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="可视化展示"&gt;可视化展示
+&lt;/h2&gt;&lt;!-- https://github.com/kyechan99/capsule-render --&gt;
+&lt;p align="center"&gt;
+&lt;img src="https://capsule-render.vercel.app/api?type=waving&amp;height=300&amp;color=timeGradient&amp;text=Raincarnator&amp;desc=Programming%20/%20Design%20/%20ACGN&amp;descAlignY=54&amp;fontAlignY=40&amp;fontSize=80&amp;descAlign=62&amp;animation=fadeIn" /&gt;
+&lt;/p&gt;
+&lt;p align="center"&gt;
+&lt;p align="center"&gt;你好，我是&lt;b&gt;失迹&lt;/b&gt;。&lt;br/&gt;一位 &lt;b&gt;编程 / 设计 / ACGN&lt;/b&gt; 爱好者。&lt;/p&gt;
+&lt;p align="center"&gt;Hi, I am &lt;b&gt;Raincarnator&lt;/b&gt;.&lt;br/&gt;A &lt;b&gt;Programming / Design / ACGN&lt;/b&gt; enthusiast.&lt;/p&gt;
+&lt;/p&gt;
+&lt;p align="center"&gt;
+&lt;!-- https://github.com/anuraghazra/github-readme-stats --&gt;
+&lt;img align="center" width="400" src="https://github-readme-stats.vercel.app/api?username=Raincarnator&amp;theme=transparent&amp;show_icons=true&amp;hide_border=true&amp;rank_icon=github" /&gt;
+&lt;!-- https://github.com/DenverCoder1/github-readme-streak-stats --&gt;
+&lt;img align="center" width="400" src="https://streak-stats.demolab.com?user=Raincarnator&amp;theme=transparent&amp;date_format=%5BY.%5Dn.j&amp;hide_border=true" /&gt;
+&lt;br/&gt;
+&lt;!-- https://github.com/Ashutosh00710/github-readme-activity-graph --&gt;
+&lt;img width="800" src="https://github-readme-activity-graph.vercel.app/graph?username=Raincarnator&amp;theme=github-compact&amp;hide_border=true&amp;area=true" /&gt;
+&lt;br/&gt;
+&lt;!-- https://github.com/anuraghazra/github-readme-stats --&gt;
+&lt;img align="center" src="https://github-readme-stats.vercel.app/api/wakatime?username=ArauKaede&amp;theme=transparent&amp;hide_border=true&amp;layout=compact&amp;langs_count=22" /&gt;
+&lt;!-- https://github.com/anuraghazra/github-readme-stats --&gt;
+&lt;img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Raincarnator&amp;theme=transparent&amp;hide_border=true&amp;layout=donut-vertical&amp;langs_count=6" /&gt;
+&lt;br/&gt;
+&lt;!-- https://github.com/tandpfun/skill-icons --&gt;
+&lt;img align="center" src="https://skillicons.dev/icons?i=cpp,kotlin,html,css,js,ts,java,md,latex,windows,vscode,androidstudio,ps,azure,netlify,cloudflare,github,git,npm,materialui&amp;theme=light&amp;perline=10" /&gt;
+&lt;/p&gt;
+&lt;!-- https://github.com/badges/shields --&gt;
+&lt;p align="center"&gt;
+&lt;a href="https://wakatime.com/@ArauKaede"&gt;&lt;img src="https://wakatime.com/badge/user/9b029946-d3d7-4021-993b-1ee294b8297a.svg" &gt;&lt;/a&gt;
+&lt;img src="https://komarev.com/ghpvc/?username=Raincarnator&amp;abbreviated=true"/&gt;
+&lt;img src="https://img.shields.io/github/stars/Raincarnator?style=flat&amp;logoColor=%231677ff&amp;labelColor=rgb(89, 89, 89)&amp;color=rgb(3, 126, 187)"/&gt;
+&lt;img src="https://img.shields.io/github/followers/Raincarnator?style=flat&amp;logoColor=%231677ff&amp;labelColor=rgb(89, 89, 89)&amp;color=rgb(3, 126, 187)"/&gt;
+&lt;/p&gt;
+&lt;!-- https://github.com/kyechan99/capsule-render --&gt;
+&lt;p align="center"&gt;
+&lt;img src="https://capsule-render.vercel.app/api?type=waving&amp;height=300&amp;color=timeGradient&amp;text=Flowers%20will%20bloom%20in%20the%20world,%20and%20magnificent%20and%20immortal%20things%20will%20follow.&amp;desc=Reincarnatey%20Network%20Co.,%20Ltd&amp;descAlignY=93&amp;fontAlignY=60&amp;fontSize=20&amp;descAlign=50&amp;animation=fadeIn&amp;descSize=15&amp;section=footer&amp;fontAlign=50" /&gt;
+&lt;/p&gt;
+&lt;h2 id="video"&gt;video
+&lt;/h2&gt;&lt;p&gt;For more details, check out the &lt;a class="link" href="https://stack.jimmycai.com/writing/shortcodes" target="_blank" rel="noopener"
+&gt;documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="bilibili-video"&gt;Bilibili video
+&lt;/h3&gt;
+&lt;div class="video-wrapper"&gt;
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1d4411N7zD"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h3 id="tencent-video"&gt;Tencent video
+&lt;/h3&gt;
+&lt;div class="video-wrapper"&gt;
+&lt;iframe src="https://v.qq.com/txp/iframe/player.html?vid=g0014r3khdw&amp;auto=0"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h3 id="youtube-video"&gt;YouTube video
+&lt;/h3&gt;&lt;div class="video-wrapper"&gt;
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/0qwALOOvUik"
+allowfullscreen
+title="YouTube Video"
+&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h3 id="generic-video-file"&gt;Generic video file
+&lt;/h3&gt;&lt;div class="video-wrapper"&gt;
+&lt;video
+controls
+src="https://www.w3schools.com/tags/movie.mp4"
+&gt;
+&lt;p&gt;
+Your browser doesn't support HTML5 video. Here is a
+&lt;a href="https://www.w3schools.com/tags/movie.mp4"&gt;link to the video&lt;/a&gt; instead.
+&lt;/p&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;h2 id="gist"&gt;Gist
+&lt;/h2&gt;&lt;script src="https://gist.github.com/CaiJimmy/e2751a943de10b2a5b3a8a6c2120cb86.js"&gt;&lt;/script&gt;
+&lt;h2 id="gitlab"&gt;GitLab
+&lt;/h2&gt;&lt;script
+type="application/javascript"
+src="https://gitlab.com/-/snippets/2589724.js"
+&gt;&lt;/script&gt;
+&lt;h2 id="quote"&gt;Quote
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;span class="cite"&gt;&lt;span&gt;― &lt;/span&gt;&lt;span&gt;A famous person, &lt;/span&gt;&lt;a href="https://en.wikipedia.org/wiki/Book"&gt;&lt;cite&gt;The book they wrote&lt;/cite&gt;&lt;/a&gt;&lt;/span&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="锚点链接"&gt;锚点链接
+&lt;/h2&gt;&lt;h3 id="-标准做法通过标题跳转推荐"&gt;✅ 标准做法：通过标题跳转（推荐）
+&lt;/h3&gt;&lt;p&gt;Markdown 中每个标题（&lt;code&gt;#&lt;/code&gt; 开头的那种）会自动生成一个锚点，你可以用它来链接。&lt;/p&gt;
+&lt;h4 id="例子"&gt;例子：
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gh"&gt;# 无序列表
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; 项目一
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; 项目二
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; 项目三
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;[&lt;span class="nt"&gt;跳转到无序列表&lt;/span&gt;](&lt;span class="na"&gt;#无序列表&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;✔️点击“跳转到无序列表”会定位到标题“无序列表”。&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️ 如果你非要链接到&lt;strong&gt;无序列表中的某项&lt;/strong&gt;（不是标题），标准 Markdown &lt;strong&gt;不支持自动为列表项生成锚点&lt;/strong&gt;，但有以下几种变通方法：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id="-方法-1人为加标题辅助跳转"&gt;✅ 方法 1：人为加标题辅助跳转
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gu"&gt;### 项目一 {#item1}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; 描述内容
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;[&lt;span class="nt"&gt;跳转到项目一&lt;/span&gt;](&lt;span class="na"&gt;#item1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;✔️注意这里的 &lt;code&gt;{#item1}&lt;/code&gt; 是一些 Markdown 渲染器（比如 GitBook、Typora、Hugo）支持的&lt;strong&gt;手动锚点语法&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="-方法-2加隐藏标题用于跳转"&gt;✅ 方法 2：加隐藏标题（用于跳转）
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;span id=&amp;#34;item2&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; 项目二：这里是第二项
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;[&lt;span class="nt"&gt;跳转到项目二&lt;/span&gt;](&lt;span class="na"&gt;#item2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;✔️这个用 &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt; 标签定义锚点，大多数 Markdown 引擎都支持。&lt;/p&gt;
+&lt;h2 id="分页"&gt;分页
+&lt;/h2&gt;&lt;p&gt;Markdown 本身 不支持分页，因为它是一种纯文本标记语言，设计目的是用于网页、文档等平台上的内容结构整理，没有“分页”这个概念。但根据你使用的平台或输出格式，可以用不同的技巧实现类似分页的效果&lt;/p&gt;
+&lt;p&gt;导出PDF&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;div style=&amp;#34;page-break-after: always;&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>

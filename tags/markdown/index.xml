@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Markdown on UNO's Page</title><link>https://sleepman9.github.io/tags/markdown/</link><description>Recent content in Markdown on UNO's Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 27 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sleepman9.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml"/><item><title>Template Format</title><link>https://sleepman9.github.io/p/format/</link><pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/format/</guid><description>&lt;img src="https://sleepman9.github.io/p/format/cover.jpg" alt="Featured image of post Template Format" /&gt;&lt;h2 id="颜色块-提示"&gt;颜色块-提示
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Photo by &lt;a class="link" href="https://unsplash.com/@pawel_czerwinski" target="_blank" rel="noopener"
+&gt;Pawel Czerwinski&lt;/a&gt; on &lt;a class="link" href="https://unsplash.com/" target="_blank" rel="noopener"
+&gt;Unsplash&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="可视化展示"&gt;可视化展示
+&lt;/h2&gt;&lt;!-- https://github.com/kyechan99/capsule-render --&gt;
+&lt;p align="center"&gt;
+&lt;img src="https://capsule-render.vercel.app/api?type=waving&amp;height=300&amp;color=timeGradient&amp;text=Raincarnator&amp;desc=Programming%20/%20Design%20/%20ACGN&amp;descAlignY=54&amp;fontAlignY=40&amp;fontSize=80&amp;descAlign=62&amp;animation=fadeIn" /&gt;
+&lt;/p&gt;
+&lt;p align="center"&gt;
+&lt;p align="center"&gt;你好，我是&lt;b&gt;失迹&lt;/b&gt;。&lt;br/&gt;一位 &lt;b&gt;编程 / 设计 / ACGN&lt;/b&gt; 爱好者。&lt;/p&gt;
+&lt;p align="center"&gt;Hi, I am &lt;b&gt;Raincarnator&lt;/b&gt;.&lt;br/&gt;A &lt;b&gt;Programming / Design / ACGN&lt;/b&gt; enthusiast.&lt;/p&gt;
+&lt;/p&gt;
+&lt;p align="center"&gt;
+&lt;!-- https://github.com/anuraghazra/github-readme-stats --&gt;
+&lt;img align="center" width="400" src="https://github-readme-stats.vercel.app/api?username=Raincarnator&amp;theme=transparent&amp;show_icons=true&amp;hide_border=true&amp;rank_icon=github" /&gt;
+&lt;!-- https://github.com/DenverCoder1/github-readme-streak-stats --&gt;
+&lt;img align="center" width="400" src="https://streak-stats.demolab.com?user=Raincarnator&amp;theme=transparent&amp;date_format=%5BY.%5Dn.j&amp;hide_border=true" /&gt;
+&lt;br/&gt;
+&lt;!-- https://github.com/Ashutosh00710/github-readme-activity-graph --&gt;
+&lt;img width="800" src="https://github-readme-activity-graph.vercel.app/graph?username=Raincarnator&amp;theme=github-compact&amp;hide_border=true&amp;area=true" /&gt;
+&lt;br/&gt;
+&lt;!-- https://github.com/anuraghazra/github-readme-stats --&gt;
+&lt;img align="center" src="https://github-readme-stats.vercel.app/api/wakatime?username=ArauKaede&amp;theme=transparent&amp;hide_border=true&amp;layout=compact&amp;langs_count=22" /&gt;
+&lt;!-- https://github.com/anuraghazra/github-readme-stats --&gt;
+&lt;img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Raincarnator&amp;theme=transparent&amp;hide_border=true&amp;layout=donut-vertical&amp;langs_count=6" /&gt;
+&lt;br/&gt;
+&lt;!-- https://github.com/tandpfun/skill-icons --&gt;
+&lt;img align="center" src="https://skillicons.dev/icons?i=cpp,kotlin,html,css,js,ts,java,md,latex,windows,vscode,androidstudio,ps,azure,netlify,cloudflare,github,git,npm,materialui&amp;theme=light&amp;perline=10" /&gt;
+&lt;/p&gt;
+&lt;!-- https://github.com/badges/shields --&gt;
+&lt;p align="center"&gt;
+&lt;a href="https://wakatime.com/@ArauKaede"&gt;&lt;img src="https://wakatime.com/badge/user/9b029946-d3d7-4021-993b-1ee294b8297a.svg" &gt;&lt;/a&gt;
+&lt;img src="https://komarev.com/ghpvc/?username=Raincarnator&amp;abbreviated=true"/&gt;
+&lt;img src="https://img.shields.io/github/stars/Raincarnator?style=flat&amp;logoColor=%231677ff&amp;labelColor=rgb(89, 89, 89)&amp;color=rgb(3, 126, 187)"/&gt;
+&lt;img src="https://img.shields.io/github/followers/Raincarnator?style=flat&amp;logoColor=%231677ff&amp;labelColor=rgb(89, 89, 89)&amp;color=rgb(3, 126, 187)"/&gt;
+&lt;/p&gt;
+&lt;!-- https://github.com/kyechan99/capsule-render --&gt;
+&lt;p align="center"&gt;
+&lt;img src="https://capsule-render.vercel.app/api?type=waving&amp;height=300&amp;color=timeGradient&amp;text=Flowers%20will%20bloom%20in%20the%20world,%20and%20magnificent%20and%20immortal%20things%20will%20follow.&amp;desc=Reincarnatey%20Network%20Co.,%20Ltd&amp;descAlignY=93&amp;fontAlignY=60&amp;fontSize=20&amp;descAlign=50&amp;animation=fadeIn&amp;descSize=15&amp;section=footer&amp;fontAlign=50" /&gt;
+&lt;/p&gt;
+&lt;h2 id="video"&gt;video
+&lt;/h2&gt;&lt;p&gt;For more details, check out the &lt;a class="link" href="https://stack.jimmycai.com/writing/shortcodes" target="_blank" rel="noopener"
+&gt;documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="bilibili-video"&gt;Bilibili video
+&lt;/h3&gt;
+&lt;div class="video-wrapper"&gt;
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1d4411N7zD"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h3 id="tencent-video"&gt;Tencent video
+&lt;/h3&gt;
+&lt;div class="video-wrapper"&gt;
+&lt;iframe src="https://v.qq.com/txp/iframe/player.html?vid=g0014r3khdw&amp;auto=0"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h3 id="youtube-video"&gt;YouTube video
+&lt;/h3&gt;&lt;div class="video-wrapper"&gt;
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/0qwALOOvUik"
+allowfullscreen
+title="YouTube Video"
+&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h3 id="generic-video-file"&gt;Generic video file
+&lt;/h3&gt;&lt;div class="video-wrapper"&gt;
+&lt;video
+controls
+src="https://www.w3schools.com/tags/movie.mp4"
+&gt;
+&lt;p&gt;
+Your browser doesn't support HTML5 video. Here is a
+&lt;a href="https://www.w3schools.com/tags/movie.mp4"&gt;link to the video&lt;/a&gt; instead.
+&lt;/p&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;h2 id="gist"&gt;Gist
+&lt;/h2&gt;&lt;script src="https://gist.github.com/CaiJimmy/e2751a943de10b2a5b3a8a6c2120cb86.js"&gt;&lt;/script&gt;
+&lt;h2 id="gitlab"&gt;GitLab
+&lt;/h2&gt;&lt;script
+type="application/javascript"
+src="https://gitlab.com/-/snippets/2589724.js"
+&gt;&lt;/script&gt;
+&lt;h2 id="quote"&gt;Quote
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;span class="cite"&gt;&lt;span&gt;― &lt;/span&gt;&lt;span&gt;A famous person, &lt;/span&gt;&lt;a href="https://en.wikipedia.org/wiki/Book"&gt;&lt;cite&gt;The book they wrote&lt;/cite&gt;&lt;/a&gt;&lt;/span&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="锚点链接"&gt;锚点链接
+&lt;/h2&gt;&lt;h3 id="-标准做法通过标题跳转推荐"&gt;✅ 标准做法：通过标题跳转（推荐）
+&lt;/h3&gt;&lt;p&gt;Markdown 中每个标题（&lt;code&gt;#&lt;/code&gt; 开头的那种）会自动生成一个锚点，你可以用它来链接。&lt;/p&gt;
+&lt;h4 id="例子"&gt;例子：
+&lt;/h4&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gh"&gt;# 无序列表
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; 项目一
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; 项目二
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; 项目三
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;[&lt;span class="nt"&gt;跳转到无序列表&lt;/span&gt;](&lt;span class="na"&gt;#无序列表&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;✔️点击“跳转到无序列表”会定位到标题“无序列表”。&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️ 如果你非要链接到&lt;strong&gt;无序列表中的某项&lt;/strong&gt;（不是标题），标准 Markdown &lt;strong&gt;不支持自动为列表项生成锚点&lt;/strong&gt;，但有以下几种变通方法：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id="-方法-1人为加标题辅助跳转"&gt;✅ 方法 1：人为加标题辅助跳转
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="gu"&gt;### 项目一 {#item1}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; 描述内容
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;[&lt;span class="nt"&gt;跳转到项目一&lt;/span&gt;](&lt;span class="na"&gt;#item1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;✔️注意这里的 &lt;code&gt;{#item1}&lt;/code&gt; 是一些 Markdown 渲染器（比如 GitBook、Typora、Hugo）支持的&lt;strong&gt;手动锚点语法&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="-方法-2加隐藏标题用于跳转"&gt;✅ 方法 2：加隐藏标题（用于跳转）
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;span id=&amp;#34;item2&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; 项目二：这里是第二项
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;[&lt;span class="nt"&gt;跳转到项目二&lt;/span&gt;](&lt;span class="na"&gt;#item2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;✔️这个用 &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt; 标签定义锚点，大多数 Markdown 引擎都支持。&lt;/p&gt;
+&lt;h2 id="分页"&gt;分页
+&lt;/h2&gt;&lt;p&gt;Markdown 本身 不支持分页，因为它是一种纯文本标记语言，设计目的是用于网页、文档等平台上的内容结构整理，没有“分页”这个概念。但根据你使用的平台或输出格式，可以用不同的技巧实现类似分页的效果&lt;/p&gt;
+&lt;p&gt;导出PDF&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;div style=&amp;#34;page-break-after: always;&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>

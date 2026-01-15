@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DFT on UNO's Page</title><link>https://sleepman9.github.io/tags/dft/</link><description>Recent content in DFT on UNO's Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 09 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sleepman9.github.io/tags/dft/index.xml" rel="self" type="application/rss+xml"/><item><title>扫描链测试（scan chain）</title><link>https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/</link><pubDate>Tue, 09 Sep 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/</guid><description>&lt;img src="https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/cover.png" alt="Featured image of post 扫描链测试（scan chain）" /&gt;&lt;h2 id="扫描链测试scan-chain"&gt;扫描链测试（scan chain）
+&lt;/h2&gt;&lt;p&gt;在芯片功能设计完成后，整个网表是由一堆普通的寄存器和组合逻辑构成的。扫描链的插入就是指将普通寄存器替换成为扫描寄存器（scan flip-flop）的过程。&lt;/p&gt;
+&lt;p&gt;SE scan enable为其切换信号。正常工作模式时，SE为0，这时scan FF的功能与原有的D-FF完全一致，data path 为D到Q。芯片的功能得以保持不变。当SE被切换为1时，这时候scan FF执行其scan属性，data path为SI到Q。SI即为测试时的数据流向入口。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image.png"
+width="500"
+height="224"
+srcset="https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image_hu_2d861a087d48930.png 480w, https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image_hu_78a9af1e9c77d282.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="223"
+data-flex-basis="535px"
+&gt;&lt;/p&gt;
+&lt;p&gt;Function         SE=0       datapath：D-&amp;gt;Q       scan FF act as DFF&lt;/p&gt;
+&lt;p&gt;Scan               SE=1       datapath: SI-&amp;gt;Q       Scan FF act as Scan&lt;/p&gt;
+&lt;p&gt;将片上的扫描寄存器Q-SI连接起来，就成为了扫描链。通过shift的方式可以由scan chain将数据串行输入的每个寄存器的SI端，达到控制每个寄存器的目的。在capture模式下，将芯片组合逻辑的反馈传回寄存器，达到对芯片内部观测的作用。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image-1.png"
+width="447"
+height="314"
+srcset="https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image-1_hu_8cf344a3900a5f6b.png 480w, https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image-1_hu_4cd1f7be5e6a14d2.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="142"
+data-flex-basis="341px"
+&gt;&lt;/p&gt;
+&lt;h3 id="step-1"&gt;Step 1
+&lt;/h3&gt;&lt;p&gt;DFT 第一步是做 scan chain，首先将电路中的普通 DFF 换成 scan DFF：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image-2.png"
+width="714"
+height="249"
+srcset="https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image-2_hu_e9e7b6bbbeb4a337.png 480w, https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image-2_hu_79a462ca011a5e24.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="286"
+data-flex-basis="688px"
+&gt;&lt;/p&gt;
+&lt;p&gt;scan DFF 是在原DFF 的输入端增加了一个 MUX，于是多了几个 pin ：scan_in，scan_enable，scan_out&lt;/p&gt;
+&lt;p&gt;换完之后将所有的 scan DFF 首尾依次串接起来，就构成了一条 scan chain ：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image-3.png"
+width="697"
+height="216"
+srcset="https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image-3_hu_d4d0e1cd4fa99070.png 480w, https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image-3_hu_db016260c9631c06.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="322"
+data-flex-basis="774px"
+&gt;&lt;/p&gt;
+&lt;p&gt;当 SE 信号（即 scan enable ）有效时，电路进入scan 状态，此时数据通路如下图蓝色粗线所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image-4.png"
+width="679"
+height="225"
+srcset="https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image-4_hu_2cc410b2c26c3582.png 480w, https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image-4_hu_9e9606bec4896dc1.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="301"
+data-flex-basis="724px"
+&gt;&lt;/p&gt;
+&lt;p&gt;当 SE 信号无效时，电路工作在 normal 状态，数据通路如下图红色粗线所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image-5.png"
+width="704"
+height="241"
+srcset="https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image-5_hu_1d12226ba8948038.png 480w, https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image-5_hu_1dace06cf664242.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="292"
+data-flex-basis="701px"
+&gt;&lt;/p&gt;
+&lt;p&gt;那么，这样一条 scan chain 是如何检测到电路中的缺陷呢？&lt;/p&gt;
+&lt;p&gt;简单来讲，scan chain 工作时分为三个步骤： load ····&amp;gt;  capture ····&amp;gt; unload&lt;/p&gt;
+&lt;p&gt;load 是将input pattern 打入 scan chain&lt;/p&gt;
+&lt;p&gt;capture 是将每一级组合逻辑的结果打入下一级register&lt;/p&gt;
+&lt;p&gt;unload 是将scan chain 中的数据串行输出，得到 output pattern&lt;/p&gt;
+&lt;p&gt;下图是一个简单的 scan chain 工作原理示意图：&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image-6.png"
+width="1500"
+height="1019"
+srcset="https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image-6_hu_e74eda8a2a0dded0.png 480w, https://sleepman9.github.io/p/%E6%89%AB%E6%8F%8F%E9%93%BE%E6%B5%8B%E8%AF%95scan-chain/image-6_hu_c75b13893f537171.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="147"
+data-flex-basis="353px"
+&gt;&lt;/p&gt;
+&lt;p&gt;结合上图，可知scan mode 的工作步骤如下：&lt;/p&gt;
+&lt;p&gt;1. 将普通的 register 替换为 scan register&lt;/p&gt;
+&lt;p&gt;2. 将 scan register 首尾依次串接起来&lt;/p&gt;
+&lt;p&gt;3. 在 SE 有效拉高时，将 input pattern 串行打入scan register&lt;/p&gt;
+&lt;p&gt;4. 然后 SE 拉低，等 Reg/Q 的值经过组合逻辑运算后到达下一级 reg 的D 端&lt;/p&gt;
+&lt;p&gt;5. 再产生一个 capture pulse 将 D 端的值打入寄存器&lt;/p&gt;
+&lt;p&gt;6. 最后 SE 拉高，将 reg 中的值依次串行输出，得到 output pattern&lt;/p&gt;
+&lt;p&gt;7. 如果 output  pattern 和预期的输出结果相同，说明电路工作正常&lt;/p&gt;
+&lt;h2 id="link"&gt;Link
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://vlsitutorials.com/dft-scan-and-atpg/" target="_blank" rel="noopener"
+&gt;VLSI Tutorials&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://www.jianshu.com/p/b2ae98596801" target="_blank" rel="noopener"
+&gt;&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
