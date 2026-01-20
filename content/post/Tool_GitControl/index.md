@@ -23,6 +23,40 @@ ps:在vscode中可以可视化仓库的变化情况
 
 ps:本文件主要使用命令行的形式，在vscode中可视化验证自己的操作是否正确
 
+## ssh key&权限 检查
+```bash
+ssh -vT git@gitlab.xxx.tech
+
+# 把 ssh -vT 输出里关于 Offering public key、Authentications that can continue、No such identity 等几行贴出来，就能精确定位是“没key / 用错key / key无权限 / agent没加载 / 服务端拒绝”
+#也可以将输出的内容给GPT判断
+
+```
+![image](/assets/image.png)
+
+**解决方案：**
+```bash
+#在远端机器生成 key，并加到 GitLab
+
+mkdir -p ~/.ssh && chmod 700 ~/.ssh   #创建目录，设置权限
+
+ssh-keygen -t ed25519 -C "whwang02@gitlab.btd.tech" -f ~/.ssh/id_ed25519    
+#ssh-keygen：生成 SSH 密钥对（私钥 + 公钥）。
+#-t ed25519：指定密钥算法为 Ed25519（推荐，安全且速度快）。
+#-C "whwang02@gitlab.btd.tech"：给公钥加一段注释（comment），#方便你在 GitLab 上识别这把 key 属于谁/哪台机器。
+#-f ~/.ssh/id_ed25519：指定输出文件名：
+#私钥：~/.ssh/id_ed25519
+#公钥：~/.ssh/id_ed25519.pub 执行时通常会提示你输入 passphrase（可选）。设置了更安全，但每次使用可能需要解锁（可配 ssh-agent）。
+
+chmod 600 ~/.ssh/id_ed25519
+chmod 644 ~/.ssh/id_ed25519.pub
+cat ~/.ssh/id_ed25519.pub
+
+#验证
+ssh -T git@gitlab.xxx.tech   #Welcome to GitLab, @whwang02!
+
+```
+
+
 ## 1. Clone代码
 
 1. 假设已经将代码`clone`​到本地了
