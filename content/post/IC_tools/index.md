@@ -11,10 +11,11 @@ tags:
 ---
 
 ## wavedrom 波形绘制
-[波形绘制](https://wavedrom.com/editor.html)
+[wavedrom波形绘制](https://wavedrom.com/editor.html)
 
 [数字电路波形图绘制工具WaveDrom简介](https://blog.csdn.net/weixin_45264425/article/details/141072667)
 
+[wavedrom tutorial](https://wavedrom.com/tutorial.html)
 
 ## 电路流程图
 [drawio](https://www.drawio.com/)
