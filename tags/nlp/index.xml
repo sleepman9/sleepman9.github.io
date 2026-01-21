@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NLP on UNO's Page</title><link>https://sleepman9.github.io/tags/nlp/</link><description>Recent content in NLP on UNO's Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 31 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sleepman9.github.io/tags/nlp/index.xml" rel="self" type="application/rss+xml"/><item><title>AI_Model_Transformer</title><link>https://sleepman9.github.io/p/ai_model_transformer/</link><pubDate>Wed, 26 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/ai_model_transformer/</guid><description>&lt;img src="https://sleepman9.github.io/p/ai_model_transformer/cover.png" alt="Featured image of post AI_Model_Transformer" /&gt;&lt;p&gt;&lt;strong&gt;如果你开始提问，那说明你开始进步了！&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;前言：一直有个困惑？看完了整个过程，具体是怎么是怎么实现翻译功能的？
+后知后觉的理解：一连串的变换矩阵变换，最终只是为了找到不同词库中的位置！也就是概率分布！！
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="词的embedding怎么表示的"&gt;词的Embedding怎么表示的？
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;简洁回答：使用训练模型得出一串向量！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;单词的 Embedding 有很多种方式可以获取，例如可以采用 Word2Vec、Glove 等算法预训练得到，也可以在 Transformer 中训练得到。举个例子&lt;/p&gt;
+&lt;p&gt;假设我们有一个句子：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;ldquo;I love machine learning.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们希望将其中的单词转换为向量表示（Embedding）。下面分别介绍三种方式：&lt;/p&gt;
+&lt;h3 id="1-使用-word2vec-获取单词-embedding"&gt;&lt;strong&gt;1. 使用 Word2Vec 获取单词 Embedding&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;Word2Vec 通过上下文关系学习单词的语义，通常有 &lt;strong&gt;CBOW（Continuous Bag of Words）&lt;/strong&gt; 和 &lt;strong&gt;Skip-gram&lt;/strong&gt; 两种方式。假设我们使用了 Word2Vec 训练的预训练模型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Word2Vec(&amp;quot;I&amp;quot;) → [0.12, -0.45, 0.88, ...]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Word2Vec(&amp;quot;love&amp;quot;) → [-0.56, 0.77, -0.34, ...]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Word2Vec(&amp;quot;machine&amp;quot;) → [0.67, -0.12, 0.45, ...]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Word2Vec(&amp;quot;learning&amp;quot;) → [-0.23, 0.56, -0.78, ...]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些向量是从大量文本中学习到的，可以用于 NLP 任务，比如情感分析、文本分类等。&lt;/p&gt;
+&lt;h3 id="2-使用-glove-获取单词-embedding"&gt;&lt;strong&gt;2. 使用 GloVe 获取单词 Embedding&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;GloVe（Global Vectors for Word Representation）基于词共现矩阵构建词向量，它关注整个文本语料中词与词的共现关系。例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;GloVe(&amp;quot;I&amp;quot;) → [0.08, -0.34, 0.91, ...]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;GloVe(&amp;quot;love&amp;quot;) → [-0.63, 0.80, -0.25, ...]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;GloVe(&amp;quot;machine&amp;quot;) → [0.72, -0.10, 0.50, ...]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;GloVe(&amp;quot;learning&amp;quot;) → [-0.18, 0.50, -0.65, ...]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;GloVe 适用于静态的词向量训练，一旦训练完成，所有单词的表示不会随上下文变化。&lt;/p&gt;
+&lt;h3 id="3-使用-transformer-训练得到单词-embedding"&gt;&lt;strong&gt;3. 使用 Transformer 训练得到单词 Embedding&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;在 Transformer 模型（如 BERT、GPT）中，单词 Embedding 是在 &lt;strong&gt;自注意力机制&lt;/strong&gt; 的作用下动态生成的。例如，在 BERT 预训练模型中，我们可以将句子输入到 BERT 中，得到动态的单词表示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;BERT(&amp;quot;I&amp;quot;) → [0.10, -0.22, 0.75, ...]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;BERT(&amp;quot;love&amp;quot;) → [-0.50, 0.70, -0.30, ...]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;BERT(&amp;quot;machine&amp;quot;) → [0.65, -0.15, 0.40, ...]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;BERT(&amp;quot;learning&amp;quot;) → [-0.20, 0.55, -0.70, ...]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;与 Word2Vec 和 GloVe 不同，&lt;strong&gt;BERT 生成的单词向量会根据上下文变化&lt;/strong&gt;，例如“bank”在“river bank”（河岸）和“bank account”（银行账户）中的表示会不同。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Word2Vec 和 GloVe 生成的词向量是固定的，适用于大部分 NLP 任务。&lt;/li&gt;
+&lt;li&gt;Transformer（如 BERT）生成的词向量是动态的，更适用于需要理解上下文的任务（如问答、文本生成）。
+？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="位置embedding怎么表示"&gt;位置Embedding怎么表示？
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;简介回答：公式计算&lt;/strong&gt;
+&lt;img src="https://sleepman9.github.io/p/ai_model_transformer/image.png"
+width="640"
+height="136"
+srcset="https://sleepman9.github.io/p/ai_model_transformer/image_hu_6a7e6746fd1b2ec5.png 480w, https://sleepman9.github.io/p/ai_model_transformer/image_hu_92d1a977fc235fcb.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="470"
+data-flex-basis="1129px"
+&gt;&lt;/p&gt;
+&lt;p&gt;假设我们有一个句子：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;ldquo;I love NLP models.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Transformer 需要将这个句子转换为向量表示，其中包含单词的词向量（Word Embedding）和位置向量（Position Embedding）。假设我们使用 4 维的嵌入表示（为了简化示例），即每个单词的词向量和位置向量的维度均为 4。&lt;/p&gt;
+&lt;h3 id="1-计算单词的-embeddingword-embedding"&gt;&lt;strong&gt;1. 计算单词的 Embedding（Word Embedding）&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;假设使用预训练的 Word2Vec 或 Transformer 训练得到的单词嵌入：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Embedding(&amp;quot;I&amp;quot;) = [0.1, 0.3, 0.5, 0.7]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Embedding(&amp;quot;love&amp;quot;) = [0.2, 0.4, 0.6, 0.8]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Embedding(&amp;quot;NLP&amp;quot;) = [0.3, 0.5, 0.7, 0.9]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Embedding(&amp;quot;models&amp;quot;) = [0.4, 0.6, 0.8, 1.0]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2-计算位置-embeddingposition-embedding"&gt;&lt;strong&gt;2. 计算位置 Embedding（Position Embedding）&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;按照 Transformer 提出的正弦/余弦公式计算位置编码（这里只是示例，实际计算会更复杂）：&lt;/p&gt;
+&lt;p&gt;假设：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pos = 0&lt;/code&gt;（第一个单词 “I” 的位置），&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pos = 1&lt;/code&gt;（第二个单词 “love” 的位置），&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pos = 2&lt;/code&gt;（第三个单词 “NLP” 的位置），&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pos = 3&lt;/code&gt;（第四个单词 “models” 的位置）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使用正弦和余弦函数计算的示例值（假设 4 维度 PE）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;PE(0) = [sin(0), cos(0), sin(0/10000^(2/4)), cos(0/10000^(2/4))] = [0.0, 1.0, 0.0, 1.0]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PE(1) = [sin(1), cos(1), sin(1/10000^(2/4)), cos(1/10000^(2/4))] = [0.84, 0.54, 0.01, 0.99]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PE(2) = [sin(2), cos(2), sin(2/10000^(2/4)), cos(2/10000^(2/4))] = [0.91, -0.42, 0.02, 0.98]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PE(3) = [sin(3), cos(3), sin(3/10000^(2/4)), cos(3/10000^(2/4))] = [0.14, -0.99, 0.03, 0.97]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="3-计算最终的-transformer-输入"&gt;&lt;strong&gt;3. 计算最终的 Transformer 输入&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;将单词 Embedding 和位置 Embedding 相加，得到 Transformer 的输入向量：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;X(&amp;quot;I&amp;quot;) = [0.1, 0.3, 0.5, 0.7] + [0.0, 1.0, 0.0, 1.0] = [0.1, 1.3, 0.5, 1.7]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;X(&amp;quot;love&amp;quot;) = [0.2, 0.4, 0.6, 0.8] + [0.84, 0.54, 0.01, 0.99] = [1.04, 0.94, 0.61, 1.79]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;X(&amp;quot;NLP&amp;quot;) = [0.3, 0.5, 0.7, 0.9] + [0.91, -0.42, 0.02, 0.98] = [1.21, 0.08, 0.72, 1.88]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;X(&amp;quot;models&amp;quot;) = [0.4, 0.6, 0.8, 1.0] + [0.14, -0.99, 0.03, 0.97] = [0.54, -0.39, 0.83, 1.97]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="4-解释"&gt;&lt;strong&gt;4. 解释&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;最终输入的向量 &lt;code&gt;X&lt;/code&gt; 结合了单词的语义信息（Word Embedding）和单词在句子中的顺序信息（Position Embedding）。这样 Transformer 在处理时就可以利用这些信息进行有效的注意力计算。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Word Embedding&lt;/strong&gt; 代表了单词的语义信息。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Position Embedding&lt;/strong&gt; 通过正弦和余弦函数编码位置，使模型能感知单词的顺序。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;二者相加&lt;/strong&gt; 形成 Transformer 的输入，使得模型在不使用 RNN 的情况下仍然能捕捉句子结构信息。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="encode是怎么工作的"&gt;Encode是怎么工作的？
+&lt;/h2&gt;&lt;p&gt;内部&lt;code&gt;Multi-Head Attention&lt;/code&gt;，是由多个 &lt;code&gt;Self-Attention&lt;/code&gt;组成的。一些列的矩阵变换最终得到C矩阵。&lt;/p&gt;
+&lt;h2 id="怎么得到c矩阵"&gt;怎么得到C矩阵？
+&lt;/h2&gt;&lt;p&gt;上一个问题实际已经回答。&lt;/p&gt;
+&lt;h2 id="c矩阵的内部信息是什么样的"&gt;C矩阵的内部信息是什么样的?
+&lt;/h2&gt;&lt;p&gt;经过特殊编码，且的维度和原始矩阵X一致的输入信息。&lt;/p&gt;
+&lt;h2 id="decode内部是怎么实现的"&gt;Decode内部是怎么实现的？
+&lt;/h2&gt;&lt;p&gt;两个&lt;code&gt;Multi-Head Attention&lt;/code&gt;，第一个负责 &lt;code&gt;Masked&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="masked怎么实现"&gt;Masked怎么实现？
+&lt;/h2&gt;&lt;p&gt;Mask矩阵，将数据掩盖。&lt;/p&gt;
+&lt;h2 id="attention-机制是什么"&gt;Attention 机制是什么
+&lt;/h2&gt;&lt;p&gt;大概意思就是让Encoder编码出的c向量跟Decoder解码过程中的每一个输出进行加权运算，在解码的每一个过程中调整权重取到不一样的c向量，更通俗的讲就是c 就是包含“欢迎来北京”这句话的意思，翻译到第一个词“welcome”的时候，需要着重去看“欢迎”这个词&lt;/p&gt;
+&lt;p&gt;这里借用一个大佬说过的话：Attention听上去就是一个很屌，不明觉厉的东西，实际实现起来就是，哦原来是这么回事。总结一下吧，Attention机制就是让编码器编码出来的向量根据解码器要解码的东西动态变化的一种机制，貌似来源灵感就是人类视觉在看某一个东西的时候会有选择的针对重要的地方看。&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/194308943" target="_blank" rel="noopener"
+&gt;Seq2Seq模型介绍&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="reference"&gt;reference
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/338817680" target="_blank" rel="noopener"
+&gt;Transformer模型详解（图解最完整版）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://mp.weixin.qq.com/s/WDq8tUpfiKHNC6y_8pgHoA" target="_blank" rel="noopener"
+&gt;Transformer模型&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/403433120" target="_blank" rel="noopener"
+&gt;Transformer代码详解&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://www.baihezi.com/post/224153.html" target="_blank" rel="noopener"
+&gt;神经网络算法 – 一文搞懂 Transformer（总体架构 &amp;amp; 三种注意力层）&lt;/a&gt;&lt;/p&gt;</description></item><item><title>RNN(Recurrent Neural Networks-循环神经网络）</title><link>https://sleepman9.github.io/p/rnnrecurrent-neural-networks-%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link><pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/rnnrecurrent-neural-networks-%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid><description>&lt;img src="https://sleepman9.github.io/p/rnnrecurrent-neural-networks-%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/cover.png" alt="Featured image of post RNN(Recurrent Neural Networks-循环神经网络）" /&gt;&lt;p&gt;RNN的目的使用来处理序列数据。在传统的神经网络模型中，是从输入层到隐含层再到输出层，层与层之间是全连接的，每层之间的节点是无连接的。但是这种普通的神经网络对于很多问题却无能无力。例如，你要预测句子的下一个单词是什么，一般需要用到前面的单词，因为一个句子中前后单词并不是独立的。RNN之所以称为循环神经网路，即一个序列当前的输出与前面的输出也有关。具体的表现形式为网络会对前面的信息进行记忆并应用于当前输出的计算中，即隐藏层之间的节点不再无连接而是有连接的，并且隐藏层的输入不仅包括输入层的输出还包括上一时刻隐藏层的输出。
+&lt;img src="https://sleepman9.github.io/p/rnnrecurrent-neural-networks-%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image.png"
+width="1440"
+height="446"
+srcset="https://sleepman9.github.io/p/rnnrecurrent-neural-networks-%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image_hu_debc38dd52aae8eb.png 480w, https://sleepman9.github.io/p/rnnrecurrent-neural-networks-%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image_hu_ea2d902792e45d0c.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="322"
+data-flex-basis="774px"
+&gt;&lt;/p&gt;
+&lt;h2 id="基础-全连接层"&gt;基础-全连接层
+&lt;/h2&gt;&lt;h3 id="code"&gt;code
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;span class="lnt"&gt;27
+&lt;/span&gt;&lt;span class="lnt"&gt;28
+&lt;/span&gt;&lt;span class="lnt"&gt;29
+&lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;span class="lnt"&gt;32
+&lt;/span&gt;&lt;span class="lnt"&gt;33
+&lt;/span&gt;&lt;span class="lnt"&gt;34
+&lt;/span&gt;&lt;span class="lnt"&gt;35
+&lt;/span&gt;&lt;span class="lnt"&gt;36
+&lt;/span&gt;&lt;span class="lnt"&gt;37
+&lt;/span&gt;&lt;span class="lnt"&gt;38
+&lt;/span&gt;&lt;span class="lnt"&gt;39
+&lt;/span&gt;&lt;span class="lnt"&gt;40
+&lt;/span&gt;&lt;span class="lnt"&gt;41
+&lt;/span&gt;&lt;span class="lnt"&gt;42
+&lt;/span&gt;&lt;span class="lnt"&gt;43
+&lt;/span&gt;&lt;span class="lnt"&gt;44
+&lt;/span&gt;&lt;span class="lnt"&gt;45
+&lt;/span&gt;&lt;span class="lnt"&gt;46
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;torch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;torch.nn&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;nn&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;torch.optim&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;optim&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;torch.nn.functional&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;F&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 定义神经网络模型&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;SimpleNN&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Module&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;input_size&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num_classes&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;super&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SimpleNN&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fc1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Linear&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input_size&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 第一个全连接层&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fc2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Linear&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;32&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 第二个全连接层&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fc3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Linear&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;32&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num_classes&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 输出层，维度为类别数量&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;forward&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;F&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;relu&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fc1&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="c1"&gt;# ReLU激活函数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;F&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;relu&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fc2&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fc3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 最后一层不需要激活函数，因为我们会在损失函数中应用Softmax&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 模型实例化&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;input_size&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;128&lt;/span&gt; &lt;span class="c1"&gt;# 假设输入数据的特征维度为128&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;num_classes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="c1"&gt;# 假设有10个类别&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;model&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SimpleNN&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input_size&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num_classes&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 打印模型结构&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 损失函数和优化器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;criterion&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CrossEntropyLoss&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;# CrossEntropyLoss包含了Softmax&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;optimizer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;optim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Adam&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parameters&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;lr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.001&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 假设有一些数据用于训练&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# inputs: shape (batch_size, input_size)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# labels: shape (batch_size)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;inputs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;torch&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;32&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;input_size&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 32个样本，输入特征维度为128&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;labels&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;torch&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randint&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num_classes&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;32&lt;/span&gt;&lt;span class="p"&gt;,))&lt;/span&gt; &lt;span class="c1"&gt;# 32个样本的标签，范围在0到9之间&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 训练步骤&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;outputs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;inputs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 前向传播&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;loss&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;criterion&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outputs&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;labels&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 计算损失&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;optimizer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zero_grad&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;# 清空梯度&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;loss&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;backward&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;# 反向传播&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;optimizer&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;step&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;# 更新参数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 打印损失&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Loss: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;loss&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="rnnlstmslong-short-term-memory长短时记忆模型模型"&gt;RNN&amp;ndash;LSTMs(Long Short-Term Memory，长短时记忆模型)模型
+&lt;/h2&gt;&lt;h2 id="reference"&gt;Reference
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/30844905" target="_blank" rel="noopener"
+&gt;一文搞懂RNN（循环神经网络）基础篇&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://dennybritz.com/posts/wildml/implementing-a-neural-network-from-scratch/" target="_blank" rel="noopener"
+&gt;Implementing A Neural Network From Scratch in python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://blog.csdn.net/yuyu_297/article/details/139036238#:~:text=%E5%85%A8%E8%BF%9E%E6%8E%A5%E5%B1%82%EF%BC%88fully%20connected,%E9%83%BD%E5%BD%B1%E5%93%8D%E6%AF%8F%E4%B8%AA%E8%BE%93%E5%87%BA%E3%80%82" target="_blank" rel="noopener"
+&gt;卷积神经网络（CNN）自学笔记1：全连接层&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://blog.csdn.net/heyongluoyao8/article/details/48636251" target="_blank" rel="noopener"
+&gt;循环神经网络(RNN, Recurrent Neural Networks)介绍&lt;/a&gt;&lt;/p&gt;</description></item><item><title>AI_Model_Sep2Sep</title><link>https://sleepman9.github.io/p/ai_model_sep2sep/</link><pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/ai_model_sep2sep/</guid><description>&lt;img src="https://sleepman9.github.io/p/ai_model_sep2sep/cover.png" alt="Featured image of post AI_Model_Sep2Sep" /&gt;&lt;p&gt;所谓Seq2Seq(Sequence to Sequence)，即序列到序列模型，就是一种能够根据给定的序列，通过特定的生成方法生成另一个序列的方法，同时这两个序列可以不等长。这种结构又叫Encoder-Decoder模型，即编码-解码模型，其是RNN的一个变种，为了解决RNN要求序列等长的问题。
+&lt;img src="https://sleepman9.github.io/p/ai_model_sep2sep/image.png"
+width="814"
+height="244"
+srcset="https://sleepman9.github.io/p/ai_model_sep2sep/image_hu_b3de4b84ceb194b9.png 480w, https://sleepman9.github.io/p/ai_model_sep2sep/image_hu_32540237e90a3425.png 1024w"
+loading="lazy"
+alt="alt text"
+class="gallery-image"
+data-flex-grow="333"
+data-flex-basis="800px"
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果你开始提问，那说明你开始进步了！&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="seq2seq训练以及数据处理"&gt;Seq2Seq训练以及数据处理
+&lt;/h2&gt;&lt;p&gt;就拿人机对话为例，我们输入一句话，机器输出对应回答的句子，处理方法如下：&lt;/p&gt;
+&lt;p&gt;（1）假设有10000个问答句作为训练样本，我们统计得到1000个互异的字和每个字出现的次数；&lt;/p&gt;
+&lt;p&gt;（2）根据统计得到的这1000个字，按照字数从多到少排序，即0-999结束，得到字典表；&lt;/p&gt;
+&lt;p&gt;（3）基于得到字典表，对问答句进行one-hot编码；&lt;/p&gt;
+&lt;p&gt;（4）由于编码难度较大且0多，我们进行embedding降维，得到特征矩阵；&lt;/p&gt;
+&lt;p&gt;（5）得到特征矩阵后就可以作为输入，然后预测时输出的值是分类个数为1000的分类器，哪个概率最大预测所得就是对应的哪个字。&lt;/p&gt;
+&lt;h2 id="reference"&gt;Reference
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://blog.csdn.net/zhuge2017302307/article/details/119979892" target="_blank" rel="noopener"
+&gt;学习笔记十四——Seq2Seq模型&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Git on UNO's Page</title><link>https://sleepman9.github.io/tags/git/</link><description>Recent content in Git on UNO's Page</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 24 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sleepman9.github.io/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Git Practice</title><link>https://sleepman9.github.io/p/git-practice/</link><pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate><guid>https://sleepman9.github.io/p/git-practice/</guid><description>&lt;img src="https://sleepman9.github.io/p/git-practice/cover.webp" alt="Featured image of post Git Practice" /&gt;&lt;h2 id="学习网站"&gt;学习网站
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="https://learngitbranching.js.org/?locale=zh_CN" target="_blank" rel="noopener"
+&gt;Learn Git Branching&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://git-scm.com/doc" target="_blank" rel="noopener"
+&gt;Git文档&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="git代码基于实际开发流程"&gt;git代码（基于实际开发流程）
+&lt;/h2&gt;&lt;p&gt;ps:在vscode中可以可视化仓库的变化情况&lt;/p&gt;
+&lt;p&gt;ps:本文件主要使用命令行的形式，在vscode中可视化验证自己的操作是否正确&lt;/p&gt;
+&lt;h2 id="ssh-key权限-检查"&gt;ssh key&amp;amp;权限 检查
+&lt;/h2&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssh -vT git@gitlab.xxx.tech
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 把 ssh -vT 输出里关于 Offering public key、Authentications that can continue、No such identity 等几行贴出来，就能精确定位是“没key / 用错key / key无权限 / agent没加载 / 服务端拒绝”&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#也可以将输出的内容给GPT判断&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image.png"
+width="650"
+height="221"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image_hu_7530008470eb02bf.png 480w, https://sleepman9.github.io/p/git-practice/assets/image_hu_4332d896ac027dc2.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="294"
+data-flex-basis="705px"
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#在远端机器生成 key，并加到 GitLab&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;mkdir -p ~/.ssh &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; chmod &lt;span class="m"&gt;700&lt;/span&gt; ~/.ssh &lt;span class="c1"&gt;#创建目录，设置权限&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssh-keygen -t ed25519 -C &lt;span class="s2"&gt;&amp;#34;whwang02@gitlab.btd.tech&amp;#34;&lt;/span&gt; -f ~/.ssh/id_ed25519
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#ssh-keygen：生成 SSH 密钥对（私钥 + 公钥）。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#-t ed25519：指定密钥算法为 Ed25519（推荐，安全且速度快）。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#-C &amp;#34;whwang02@gitlab.btd.tech&amp;#34;：给公钥加一段注释（comment），#方便你在 GitLab 上识别这把 key 属于谁/哪台机器。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#-f ~/.ssh/id_ed25519：指定输出文件名：&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#私钥：~/.ssh/id_ed25519&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#公钥：~/.ssh/id_ed25519.pub 执行时通常会提示你输入 passphrase（可选）。设置了更安全，但每次使用可能需要解锁（可配 ssh-agent）。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;chmod &lt;span class="m"&gt;600&lt;/span&gt; ~/.ssh/id_ed25519
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;chmod &lt;span class="m"&gt;644&lt;/span&gt; ~/.ssh/id_ed25519.pub
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;cat ~/.ssh/id_ed25519.pub
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#验证&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ssh -T git@gitlab.xxx.tech &lt;span class="c1"&gt;#Welcome to GitLab, @whwang02!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="1-clone代码"&gt;1. Clone代码
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;假设已经将代码&lt;code&gt;clone&lt;/code&gt;​到本地了&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="2-拉取远程仓库最新代码"&gt;2. 拉取远程仓库最新代码
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;code&gt;git fetch&lt;/code&gt;​拉取远程所有更新。&lt;/p&gt;
+&lt;p&gt;​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03.png"
+width="431"
+height="401"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03_hu_37f0241b49c7e5d5.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241106100439-ut2gw03_hu_b6ba80cd7bd06570.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="107"
+data-flex-basis="257px"
+&gt;​&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以点击粉色节点查看变化内容。（这里不再使用git diff命令，可视化方便直观）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;​&lt;code&gt;git merge&lt;/code&gt;​合并到当前分支&lt;/p&gt;
+&lt;p&gt;​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65.png"
+width="425"
+height="388"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65_hu_25ce8cf7dbdbdff0.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241106102009-gppsf65_hu_9e37bb92f4130b74.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="109"
+data-flex-basis="262px"
+&gt;​&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="3提交代码"&gt;3.提交代码
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;​&lt;code&gt;git add .&lt;/code&gt;​将修改存入暂存区（stage）&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;git commit -m &amp;quot;备注信息&amp;quot;&lt;/code&gt;​提交已经存入到stage的内容&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;git push origin wwh_dev&lt;/code&gt;​将本地的&lt;code&gt;wwh_dev&lt;/code&gt;​分支，推送到&lt;code&gt;origin&lt;/code&gt;​远端&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;背景：在main分支开发完毕后，在没有commit的情况下，新建了分支mph_generator_dev当作是本次开发的备份，同样在没有commit的情况下，又新建了一个分支wwh_dev当作是提交分支。&lt;/p&gt;
+&lt;p&gt;warning：当我执行完&lt;code&gt;git push origin wwh_dev&lt;/code&gt;​ 后，其他分支的内容都回到了修改前&lt;br&gt;
+​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr.png"
+width="378"
+height="197"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr_hu_4c5b1d07a36fc464.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112102741-63lyvcr_hu_a732fbfb4ad96a40.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="460px"
+&gt;​&lt;br&gt;
+​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p.png"
+width="363"
+height="198"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p_hu_4df26ead3412d21c.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112102556-4b9js4p_hu_7a1e1d2c22163759.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="183"
+data-flex-basis="440px"
+&gt;​&lt;/p&gt;
+&lt;p&gt;error:猜想造成的原因是，创建其他分支之前没有&lt;code&gt;commit&lt;/code&gt;​ 造成的。此想法还没有验证。（TODO）&lt;/p&gt;
+&lt;p&gt;main分支没有commit的情况下新建了A分支，A分支git commit之后，main分支所有修改都消失了&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id="4向管理者提交pull-requests"&gt;4.向管理者提交pull requests
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在GUI页面中进行的。&lt;/p&gt;
+&lt;p&gt;​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm.png"
+width="642"
+height="846"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm_hu_2406b90c3e4f8b40.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241202141543-hlc6qfm_hu_156e170dbef5e9b1.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="182px"
+&gt;​&lt;/p&gt;
+&lt;p&gt;​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41.png"
+width="2072"
+height="390"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41_hu_7732936425f80697.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241202141630-8z1rx41_hu_197ad1765abac209.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="531"
+data-flex-basis="1275px"
+&gt;​&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;源分支：开发完成的分支&lt;/p&gt;
+&lt;p&gt;目标分支：项目分支&lt;/p&gt;
+&lt;ol start="2"&gt;
+&lt;li&gt;
+&lt;p&gt;解决冲突&lt;/p&gt;
+&lt;p&gt;在GUI界面上解决，并且在GUI界面，&lt;code&gt;git add .&lt;/code&gt;​和&lt;code&gt;git commit -m &amp;quot;备注信息&amp;quot;&lt;/code&gt;​&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;等待管理员接受PR,合并代码后，以此开发任务就完成了。&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id="41查看是否提交成功"&gt;4.1查看是否提交成功
+&lt;/h3&gt;&lt;p&gt;背景：在wwh_dev分支上开发，提交代码后，merge之后，想在其他分支看我提交的内容，同时保证一个分支时刻保持最新。问题来了。在Thermal5.0（想要保持最新的分支）看不到我提交的内容。&lt;/p&gt;
+&lt;p&gt;原因在于没有进行分支追踪：&lt;br&gt;
+执行 &lt;code&gt;git pull &amp;lt;远程&amp;gt; &amp;lt;分支&amp;gt;&lt;/code&gt;​ 例如：git pull origin Thermal5.0&lt;br&gt;
+执行之后，即可得到最新提交代码&lt;/p&gt;
+&lt;h3 id="42-添加分支跟踪"&gt;4.2 添加分支跟踪
+&lt;/h3&gt;&lt;p&gt;Git 分支追踪（Branch Tracking），通常被称为设置 “上游分支”（Upstream Branch）。简单来说，就是建立本地分支与远程分支之间的对应关系。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;没有追踪时&lt;/strong&gt;：你需要打全命令，明确告诉 Git 你想拉取或推送到哪里。
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git pull origin master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push origin master&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;有追踪时&lt;/strong&gt;：Git 已经知道当前分支对应哪个远程分支，只需要输入：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git pull&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;手动：&lt;/p&gt;
+&lt;p&gt;​&lt;code&gt;git branch --set-upstream-to=&amp;lt;remote_name&amp;gt;/&amp;lt;remote_branch&amp;gt; &amp;lt;branch_name&amp;gt;&lt;/code&gt;​&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;新建分支的时候建立追踪关系：&lt;/p&gt;
+&lt;p&gt;​&lt;code&gt;git checkout -b my_branch origin/develop&lt;/code&gt;​&lt;/p&gt;
+&lt;p&gt;​&lt;code&gt;git switch -c my_branch origin/develop&lt;/code&gt;​&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id="43-查看跟踪分支"&gt;4.3 查看跟踪分支
+&lt;/h3&gt;&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;git branch -vv&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id="5-再开启一个新开发任务"&gt;5. 再开启一个新开发任务
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;分支分配&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;​&lt;code&gt;main&lt;/code&gt;​分支，保持和origin远端的同步，不要在这个上面开发&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;dev&lt;/code&gt;​分支，每次最新任务的开发分支&lt;/li&gt;
+&lt;li&gt;​&lt;code&gt;dev_xx_backup&lt;/code&gt;​分支，开发完一个任务后的备份，拷贝来自&lt;code&gt;dev&lt;/code&gt;​分支，包含任务测试代码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分支管理&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;每次&lt;code&gt;push&lt;/code&gt;​提交后，等待管理员检查无误后，将&lt;code&gt;dev&lt;/code&gt;​分支删除&lt;/li&gt;
+&lt;li&gt;保证&lt;code&gt;main&lt;/code&gt;​分支最新，从&lt;code&gt;main&lt;/code&gt;​分支中新建一个分支当成当前任务的分支&lt;/li&gt;
+&lt;li&gt;此时&lt;code&gt;branch&lt;/code&gt;​结构中只包含，一个&lt;code&gt;main&lt;/code&gt;​分支，一个&lt;code&gt;dev&lt;/code&gt;​分支，和&lt;code&gt;每次任务的备份&lt;/code&gt;​分支&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h2 id="6source-control-graph"&gt;6.SOURCE CONTROL GRAPH
+&lt;/h2&gt;&lt;p&gt;ps：图片都来自&lt;code&gt;vscode&lt;/code&gt;​&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;来自于&lt;code&gt;git fetch&lt;/code&gt;​之后&lt;/p&gt;
+&lt;p&gt;​&lt;img src="https://sleepman9.github.io/assets/%e5%b1%8f%e5%b9%95%e6%88%aa%e5%9b%be%202024-11-12%20143950-20241112152941-6iufqqs.png"
+loading="lazy"
+alt="屏幕截图 2024-11-12 143950"
+&gt;​&lt;/p&gt;
+&lt;p&gt;解释：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;每一个实心圆代表每一次提交节点&lt;/li&gt;
+&lt;li&gt;不同颜色的线，表示不同开发人员的开发路线&lt;/li&gt;
+&lt;li&gt;&lt;span data-type="text" style="background-color: var(--b3-card-info-background); color: var(--b3-card-info-color);"&gt;蓝色空心圆&lt;/span&gt;表示当前所在的节点&lt;/li&gt;
+&lt;li&gt;圆环表示合并操作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;来自&lt;code&gt;git merge&lt;/code&gt;​之后&lt;/p&gt;
+&lt;p&gt;​&lt;img src="https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33.png"
+width="458"
+height="286"
+srcset="https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33_hu_8e9abc2f27a7b2c5.png 480w, https://sleepman9.github.io/p/git-practice/assets/image-20241112153120-r572v33_hu_93560f828cd11834.png 1024w"
+loading="lazy"
+alt="image"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="384px"
+&gt;​&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;框中标注的部分，当时是在GUI界面上修改分支冲突的，所以会从蓝色线程中分出一个分支到橙色线程的合并&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="删除远程分支"&gt;删除远程分支
+&lt;/h2&gt;&lt;p&gt;‍要删除 Git 仓库中的&lt;strong&gt;远程分支&lt;/strong&gt;，你可以使用以下命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git push &amp;lt;remote_name&amp;gt; --delete &amp;lt;branch_name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git push origin --delete feature/login
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这条命令会将远程名为 &lt;code&gt;origin&lt;/code&gt; 的仓库中的 &lt;code&gt;feature/login&lt;/code&gt; 分支删除。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;常见说明&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;remote_name&amp;gt;&lt;/code&gt; 通常是 &lt;code&gt;origin&lt;/code&gt;，可以通过 &lt;code&gt;git remote -v&lt;/code&gt; 查看。&lt;/li&gt;
+&lt;li&gt;删除远程分支不会影响本地的分支，如果你也想删除本地的，可以用：
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git branch -d &amp;lt;branch_name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;</description></item></channel></rss>
