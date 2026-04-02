@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseurl = "https://sleepman9.github.io/"
+baseurl = "https://uno-W.github.io/"
 languageCode = "en-us"
 title = "UNO's Page"
 theme = "hugo-theme-stack"
