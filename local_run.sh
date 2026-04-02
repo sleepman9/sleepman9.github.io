@@ -3,18 +3,18 @@ set -euo pipefail
 
 echo "[local_run]"
 
-if ! command -v hugo >/dev/null 2>&1; then
-	echo "[local_run] Hugo is not installed or not in PATH"
-	exit 1
-fi
-
 # Start hugo server in background so we can open browser automatically.
 hugo server -D &
 SERVER_PID=$!
 
-# Wait for server to initialize before opening the browser.
-sleep 2
+# 轮询检查服务器是否就绪
+echo "等待服务器启动..."
+while ! nc -z localhost 1313 2>/dev/null; do
+  sleep 0.5
+done
+
 open http://localhost:1313/
+echo "浏览器已打开，按 Ctrl+C 停止服务器"
 
 # Keep script attached to the server process.
 wait "$SERVER_PID"
