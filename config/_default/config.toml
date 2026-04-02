@@ -1,5 +1,9 @@
 # Change baseurl before deploy
+<<<<<<< HEAD
 baseurl = "https://uno-w.github.io/"
+=======
+baseurl = "https://uno-W.github.io/"
+>>>>>>> 69a0e76 (delete template post)
 languageCode = "en-us"
 title = "UNO's Page"
 theme = "hugo-theme-stack"
