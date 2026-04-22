@@ -142,6 +142,10 @@ tags:
 ## vscode ssh无法连接
 [我只教一次！vscode remote-ssh 连接失败的基本原理和优雅的解决方案](https://zhuanlan.zhihu.com/p/671718415)
 
+[解决VSCode Remote-SSH连接失败：glibc版本不兼容的实战指南](https://blog.csdn.net/weixin_42723849/article/details/159848299)
+
+[vscode便携模式配置](https://vscode.js.cn/docs/editor/portable#google_vignette)
+
 按照链接中的内容，在远程服务器上，将本机commit ID相关内容删除。（使用的mobaxterm连接远程服务器）
 
 ## 网络中断对正在执行程序的影响
@@ -192,3 +196,8 @@ python train.py: 你要运行的命令。
 
 ```
 
+## vscode ssh remote glibe版本不兼容
+
+[便携vscode ssh远程服务器无法 打开文件夹](https://blog.csdn.net/qq_53095317/article/details/160027322?spm=1001.2014.3001.5501)
+
+[便携式vscode 版本下载](https://update.code.visualstudio.com/1.97.2/darwin-arm64/stable)

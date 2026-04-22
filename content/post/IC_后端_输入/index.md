@@ -1,7 +1,7 @@
 ---
-title: IC_后端输入文件
-description: 输入哪些文件，有什么作用
-date: 2025-08-27
+title: IC_后端 guided
+description: reference《CMOS集成电路后端设计与实战》
+date: 2026-04-09
 # image: cover.png
 categories:
     - IC
@@ -11,6 +11,8 @@ tags:
 
 
 ## 后端设计需要导入的设计文件
+
+​![image](assets/input_data.png)​
 
 1. 逻辑综合后的网表netlist（门级）----解决实现什么样的功能  
    ​![image](assets/image-20250825103724-g56889z.png)​
@@ -60,3 +62,27 @@ tags:
 ## clock tree debug
 
 [Clock Tree Debugger](https://www.jianshu.com/p/1e84d86ab3c7)
+
+
+## 布局规划（Floorplan）
+1. 走线资源评估：水平方向，垂直方向走线资源对比 ---> 间距设置。
+2. 硬核堆叠高度：根据实际流⽚⼯艺下⼀个中等驱动能⼒的缓冲器（Buffer）可以驱动的合理距离作为参考。
+3. 合理电源网络设计：主要问题是电迁移所造成的⾦属连线的击穿问题和⼯作电压衰减所造成的噪声容限下降的问题。需要评估计算电源环和电源条带的宽度和数量。
+4. 电压降和EM（电迁移）
+5. 电源网络参数确定 power stripe & power ring
+
+## 单元放置（Placement）
+
+## 时钟树综合（Clock Tree Synthesis）
+
+## 全局与细节布线（NanoRoute）
+
+## 电压衰减分析（IR-drop & EM）
+
+## 时序验证与 ECO
+
+## 功能等价性检查
+
+## 物理验证（LVS / ERC / DRC）
+
+## 流片（Tapeout）
