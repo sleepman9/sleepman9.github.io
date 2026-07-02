@@ -201,3 +201,6 @@ python train.py: 你要运行的命令。
 [便携vscode ssh远程服务器无法 打开文件夹](https://blog.csdn.net/qq_53095317/article/details/160027322?spm=1001.2014.3001.5501)
 
 [便携式vscode 版本下载](https://update.code.visualstudio.com/1.97.2/darwin-arm64/stable)
+
+## chrome关闭更新
+[如何彻底禁用 Chrome 自动更新](https://blog.csdn.net/olixu/article/details/149290012)
