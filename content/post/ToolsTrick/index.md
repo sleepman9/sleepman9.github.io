@@ -1,6 +1,6 @@
 ---
-title: vscode相关技巧
-description: debug，插件，远程等
+title: 工具技巧
+description: debug，插件，远程等，vscode相关技巧
 date: 2025-03-24 
 image: cover.jpg
 categories:
